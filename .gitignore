@@ -1,2 +1,4 @@
 .settings
 *.project
+*.log
+orchestra.xml

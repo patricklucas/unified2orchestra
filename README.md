@@ -25,5 +25,9 @@ phrases.file=unified/FIX.5.0SP2_EP256_en_phrases.xml
 
 This process should automatically trigger the build process in GitHub. See `https://github.com/FIXTradingCommunity/unified2orchestra/actions` to retrieve the produced artifacts.
 
+### Build failure
+
+In your GitHub profile, visit `Settings/Notificatios/GitHub Actions` to control notifications of build failures.
+
 
 
