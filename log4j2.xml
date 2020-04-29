@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration>
+  <Properties>
+    <Property name="filename">unified2orchestra.log</Property>
+  </Properties>
+ 
+  <Appenders>
+    <File name="File" fileName="${filename}" append="false"/>
+  </Appenders>
+ 
+  <Loggers>
+    <Root level="info">
+      <AppenderRef ref="File"/>
+    </Root>
+  </Loggers>
+ 
+</Configuration>
