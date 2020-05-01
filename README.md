@@ -21,13 +21,22 @@ phrases.file=unified/FIX.5.0SP2_EP256_en_phrases.xml
 
 3. Commit the changes to Git and push. 
 
+### Build process
+
+Git push should automatically trigger the build process in GitHub. The process runs two applications:
+
+* Unified2OrchestraTransformer translates the Unified Repository file to an Orchestra file.
+* RepositoryValidator validates the produced Orchestra file. Currently it just makes sure that it conforms to the XML schema. Other validation rules may be added in the future.
+
 ### Retrieving artifacts
 
-This process should automatically trigger the build process in GitHub. See `https://github.com/FIXTradingCommunity/unified2orchestra/actions` to retrieve the produced artifacts.
+See `https://github.com/FIXTradingCommunity/unified2orchestra/actions` to retrieve the produced artifacts.
+
+* Artifact `orchestra` contains the intended Orchestra file.
+* Artifact `log` contains application logs. *Review any items logged by RepositoryValidator.* Even though unified2orchestra ran to completion does not mean that the resulting Orchestra file is valid according to the XML schema.
 
 ### Build failure
 
 In your GitHub profile, visit `Settings/Notificatios/GitHub Actions` to control notifications of build failures.
 
-
-
+Click on a build link to view GitHub Action process logs.

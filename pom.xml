@@ -7,17 +7,21 @@
 	<version>1.5.0-SNAPSHOT</version>
 	<packaging>pom</packaging>
 	<description>Convert Unified Repository to Orchestra</description>
+	<prerequisites>
+		<!-- supports toolchain configuration -->
+		<maven>3.3.1</maven>
+	</prerequisites>
 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<orchestra.file>orchestra.xml</orchestra.file>
-		<orchestra.version>1.5.0</orchestra.version>
+		<orchestra.version>1.6.1-SNAPSHOT</orchestra.version>
 	</properties>
 
 	<dependencies>
 		<dependency>
 			<groupId>io.fixprotocol.orchestra</groupId>
-			<artifactId>repository</artifactId>
+			<artifactId>repository-util</artifactId>
 			<version>${orchestra.version}</version>
 		</dependency>
 	</dependencies>
@@ -26,7 +30,13 @@
 		<plugins>
 			<plugin>
 				<groupId>org.codehaus.mojo</groupId>
+				<artifactId>versions-maven-plugin</artifactId>
+				<version>2.7</version>
+			</plugin>
+			<plugin>
+				<groupId>org.codehaus.mojo</groupId>
 				<artifactId>properties-maven-plugin</artifactId>
+				<version>1.0.0</version>
 				<executions>
 					<execution>
 						<phase>validate</phase>
@@ -44,6 +54,7 @@
 			<plugin>
 				<groupId>org.codehaus.mojo</groupId>
 				<artifactId>exec-maven-plugin</artifactId>
+				<version>1.6.0</version>
 				<executions>
 					<execution>
 						<id>transform</id>
@@ -70,14 +81,12 @@
 						<configuration>
 							<mainClass>io.fixprotocol.orchestra.repository.RepositoryValidator</mainClass>
 							<classpathScope>compile</classpathScope>
-							<systemProperties>
-								<systemProperty>
-									<key>log4j2.configurationFile</key>
-									<value>log4j2.xml</value>
-								</systemProperty>
-							</systemProperties>
 							<arguments>
+								<argument>-i</argument>
 								<argument>${orchestra.file}</argument>
+								<argument>-e</argument>
+								<argument>validator.log</argument>
+								<argument>-v</argument>
 							</arguments>
 						</configuration>
 					</execution>
