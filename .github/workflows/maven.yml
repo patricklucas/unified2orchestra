@@ -20,6 +20,10 @@ jobs:
       uses: actions/setup-java@v1
       with:
         java-version: 1.8
+    - name: Configure Maven settings
+      uses: s4u/maven-settings-action@v2.1.0
+      with:
+        sonatypeSnapshots: true
     - name: Build with Maven
       run: mvn -B package --file pom.xml
     - name: Upload a Build Artifact
