@@ -2,7 +2,7 @@
 
 ![Java CI with Maven](https://github.com/FIXTradingCommunity/unified2orchestra/workflows/Java%20CI%20with%20Maven/badge.svg)
 
-Automated conversion from Unified Repository 2010 Edition to Orchestra 
+Automated conversion from Unified Repository 2010 Edition to Orchestra and validation of results
 
 ## Usage
 
