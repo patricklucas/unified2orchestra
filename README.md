@@ -13,12 +13,20 @@ This process uses Git repository `git@github.com:FIXTradingCommunity/unified2orc
 ### Steps
 
 1. Add a Unified Repository file and its associated phrases file to the Git repository under the `unified` folder.
-2. Edit the `build.properties` file to give the paths of the two files by setting variables `unified.file` and `phrases.file`.
+2. Edit the `build.properties` file.
+
+#### Arguments
+* `unified.file` path of unified repository file to read
+* `phrases.file` path of the unified repository phrases file to read
+* `new.name` name of the stable FIX version to insert into the Orchestra file, typically `FIX.Latest`
+* `new.version` version of the Orchestra file, typically `FIX.Latest` followed by and underscore and EP number
 
 Example:
 ```
-unified.file=unified/FixRepository.xml
-phrases.file=unified/FIX.5.0SP2_EP256_en_phrases.xml
+unified.file=unified/FixRepository_EP259.xml
+phrases.file=unified/FIX.5.0SP2_EP259_en_phrases.xml
+new.name=FIX.Latest
+new.version=FIX.Latest_EP259
 ```
 
 3. Commit the changes to Git and push. 

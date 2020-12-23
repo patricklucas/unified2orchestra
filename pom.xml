@@ -15,7 +15,7 @@
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<orchestra.file>orchestra.xml</orchestra.file>
-		<orchestra.version>1.6.7</orchestra.version>
+		<orchestra.version>1.6.9</orchestra.version>
 	</properties>
 
 	<dependencies>
@@ -69,6 +69,8 @@
 								<argument>${unified.file}</argument>
 								<argument>${phrases.file}</argument>
 								<argument>${orchestra.file}</argument>
+								<argument>${new.name}</argument>
+								<argument>${new.version}</argument>
 							</arguments>
 						</configuration>
 					</execution>
