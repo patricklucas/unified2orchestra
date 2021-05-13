@@ -81,7 +81,7 @@
 							<goal>java</goal>
 						</goals>
 						<configuration>
-							<mainClass>io.fixprotocol.orchestra.repository.FixRepositoryValidator</mainClass>
+							<mainClass>io.fixprotocol.orchestra.repository.RepositoryValidator</mainClass>
 							<classpathScope>compile</classpathScope>
 							<arguments>
 								<argument>${orchestra.file}</argument>
