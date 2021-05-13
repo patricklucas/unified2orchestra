@@ -4,7 +4,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>io.fixprotocol.orchestra</groupId>
 	<artifactId>unified2orchestra</artifactId>
-	<version>1.5.0-SNAPSHOT</version>
+	<version>1.5.1-SNAPSHOT</version>
 	<packaging>pom</packaging>
 	<description>Convert Unified Repository to Orchestra</description>
 	<prerequisites>
@@ -15,7 +15,7 @@
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<orchestra.file>orchestra.xml</orchestra.file>
-		<orchestra.version>1.6.9</orchestra.version>
+		<orchestra.version>1.7.1</orchestra.version>
 	</properties>
 
 	<dependencies>
