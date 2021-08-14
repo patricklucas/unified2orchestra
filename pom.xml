@@ -15,7 +15,7 @@
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<orchestra.file>orchestra.xml</orchestra.file>
-		<orchestra.version>1.7.1</orchestra.version>
+		<orchestra.version>1.7.2</orchestra.version>
 	</properties>
 
 	<dependencies>
