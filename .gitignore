@@ -2,3 +2,4 @@
 *.project
 *.log
 orchestra.xml
+.DS_Store
