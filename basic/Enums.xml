@@ -4,8 +4,8 @@
        edition="2010"
        version="FIX.Latest"
        xsi:noNamespaceSchemaLocation="../../schema/Enums.xsd"
-       generated="2021-05-23T09:41:48.189Z"
-       latestEP="262">
+       generated="2021-05-23T09:52:04.468Z"
+       latestEP="264">
    <Enum added="FIX.2.7">
 		    <Tag>4</Tag>
 		    <Value>B</Value>
@@ -24722,10 +24722,10 @@ Variation margin (a daily offsetting of profits and losses) occurs as a result o
       <Sort>5</Sort>
       <Description>Subscribe to market data</Description>
    </Enum>
-   <Enum added="FIX.5.0SP2" addedEP="129">
+   <Enum added="FIX.5.0SP2" addedEP="129" updated="FIX.Latest" updatedEP="264">
       <Tag>1779</Tag>
       <Value>1</Value>
-      <SymbolicName>int</SymbolicName>
+      <SymbolicName>Int</SymbolicName>
       <Group>int</Group>
       <Sort>1</Sort>
       <Description>int</Description>
@@ -24762,10 +24762,10 @@ Variation margin (a daily offsetting of profits and losses) occurs as a result o
       <Sort>5</Sort>
       <Description>TagNum</Description>
    </Enum>
-   <Enum added="FIX.5.0SP2" addedEP="129">
+   <Enum added="FIX.5.0SP2" addedEP="129" updated="FIX.Latest" updatedEP="264">
       <Tag>1779</Tag>
       <Value>6</Value>
-      <SymbolicName>float</SymbolicName>
+      <SymbolicName>Float</SymbolicName>
       <Group>float</Group>
       <Sort>6</Sort>
       <Description>float</Description>
@@ -24810,10 +24810,10 @@ Variation margin (a daily offsetting of profits and losses) occurs as a result o
       <Sort>11</Sort>
       <Description>Percentage</Description>
    </Enum>
-   <Enum added="FIX.5.0SP2" addedEP="129">
+   <Enum added="FIX.5.0SP2" addedEP="129" updated="FIX.Latest" updatedEP="264">
       <Tag>1779</Tag>
       <Value>12</Value>
-      <SymbolicName>char</SymbolicName>
+      <SymbolicName>Char</SymbolicName>
       <Group>char</Group>
       <Sort>12</Sort>
       <Description>char</Description>
@@ -24898,10 +24898,10 @@ Variation margin (a daily offsetting of profits and losses) occurs as a result o
       <Sort>22</Sort>
       <Description>UTCDateOnly</Description>
    </Enum>
-   <Enum added="FIX.5.0SP2" addedEP="129">
+   <Enum added="FIX.5.0SP2" addedEP="129" updated="FIX.Latest" updatedEP="264">
       <Tag>1779</Tag>
       <Value>23</Value>
-      <SymbolicName>data</SymbolicName>
+      <SymbolicName>Data</SymbolicName>
       <Group>String</Group>
       <Sort>23</Sort>
       <Description>data</Description>
@@ -40802,37 +40802,37 @@ In the context of the trading obligation for shares (STO) under ESMA's Article 2
       <Description>Good for this Month (GFM)</Description>
       <Elaboration>An order that is valid until the end of the current month, i.e. from the time of order submission until the end of the last trading day of the current month.</Elaboration>
    </Enum>
-   <Enum added="FIX.5.0SP2" addedEP="253">
+   <Enum added="FIX.5.0SP2" addedEP="253" updated="FIX.Latest" updatedEP="264">
       <Tag>2669</Tag>
       <Value>3</Value>
       <SymbolicName>OrderLevelPublicationToSubscribers</SymbolicName>
       <Sort>3</Sort>
       <Description>Order level publication to subscribers</Description>
-      <Elaboration>Individual orders are displayed outside of the execution venue but only to subscribers.</Elaboration>
+      <Elaboration>Individual orders are displayed outside of the execution venue but only to subscribers. In the context of US CAT this can be used by Alternative Trading Systems (ATSs) to provide additional information related to price distribution.</Elaboration>
    </Enum>
-   <Enum added="FIX.5.0SP2" addedEP="253">
+   <Enum added="FIX.5.0SP2" addedEP="253" updated="FIX.Latest" updatedEP="264">
       <Tag>2669</Tag>
       <Value>4</Value>
       <SymbolicName>PriceLevelPublicationToSubscribers</SymbolicName>
       <Sort>4</Sort>
       <Description>Price level publication to subscribers</Description>
-      <Elaboration>Aggregated orders are displayed outside of the execution venue but only to subscribers.</Elaboration>
+      <Elaboration>Aggregated orders are displayed outside of the execution venue but only to subscribers. In the context of US CAT this can be used by Alternative Trading Systems (ATSs) to provide additional information related to price distribution.</Elaboration>
    </Enum>
-   <Enum added="FIX.5.0SP2" addedEP="253">
+   <Enum added="FIX.5.0SP2" addedEP="253" updated="FIX.Latest" updatedEP="264">
       <Tag>2669</Tag>
       <Value>5</Value>
       <SymbolicName>OrderLevelPublicationToThePublic</SymbolicName>
       <Sort>5</Sort>
       <Description>Order level publication to the public</Description>
-      <Elaboration>Individual orders are displayed outside of the execution venue via public quotation.</Elaboration>
+      <Elaboration>Individual orders are displayed outside of the execution venue via public quotation. In the context of US CAT this can be used by Alternative Trading Systems (ATSs) to provide additional information related to price distribution.</Elaboration>
    </Enum>
-   <Enum added="FIX.5.0SP2" addedEP="253">
+   <Enum added="FIX.5.0SP2" addedEP="253" updated="FIX.Latest" updatedEP="264">
       <Tag>2669</Tag>
       <Value>6</Value>
       <SymbolicName>PublicationInternalToExecutionVenue</SymbolicName>
       <Sort>6</Sort>
       <Description>Publication internal to execution venue</Description>
-      <Elaboration>Orders are not displayed outside of the execution venue.</Elaboration>
+      <Elaboration>Orders are not displayed outside of the execution venue. In the context of US CAT this can be used by Alternative Trading Systems (ATSs) to provide additional information related to price distribution.</Elaboration>
    </Enum>
    <Enum added="FIX.5.0SP2" addedEP="253">
       <Tag>770</Tag>
@@ -41965,6 +41965,14 @@ in that foreign jurisdiction.</Elaboration>
       <Sort>6</Sort>
       <Description>Special Segregated Account ID</Description>
       <Elaboration>Also referred to as SPSA ID. The Special Segregated Account identifier issued by Hong Kong Exchanges and Clearing..</Elaboration>
+   </Enum>
+   <Enum added="FIX.Latest" addedEP="264">
+      <Tag>1033</Tag>
+      <Value>FB</Value>
+      <SymbolicName>FloorBroker</SymbolicName>
+      <Group>FINRA OATS</Group>
+      <Sort>18</Sort>
+      <Description>Floor Broker</Description>
    </Enum>
    <Enum>
       <Tag>35</Tag>
