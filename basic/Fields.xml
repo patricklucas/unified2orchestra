@@ -4,8 +4,8 @@
         edition="2010"
         version="FIX.Latest"
         xsi:noNamespaceSchemaLocation="../../schema/Fields.xsd"
-        generated="2021-08-05T07:54:58.183Z"
-        latestEP="266">
+        generated="2021-09-01T22:09:37.488Z"
+        latestEP="268">
    <Field added="FIX.2.7">
 		    <Tag>1</Tag>
 		    <Name>Account</Name>
@@ -6826,14 +6826,14 @@ Primarily intended for US futures markets. Certain trading practices are permitt
 		    <NotReqXML>0</NotReqXML>
 		    <Description>Part of trading cycle when an instrument expires. Field is applicable for derivatives.</Description>
 	  </Field>
-   <Field added="FIX.4.4" updated="FIX.5.0SP2" updatedEP="141">
+   <Field added="FIX.4.4" updated="FIX.Latest" updatedEP="268">
       <Tag>828</Tag>
       <Name>TrdType</Name>
       <Type>int</Type>
       <AbbrName>TrdTyp</AbbrName>
       <NotReqXML>0</NotReqXML>
       <UnionDataType>Reserved1000Plus</UnionDataType>
-      <Description>Type of trade.</Description>
+      <Description>Type of trade assigned to a trade.</Description>
       <Elaboration>Note: several enumerations of this field duplicate the enumerations in TradePriceConditions(1839) field.  These may be deprecated from TrdType(828) in the future. TradePriceConditions(1839) is preferred in messages that support it.</Elaboration>
    </Field>
    <Field added="FIX.4.4">
@@ -7039,15 +7039,15 @@ Primarily intended for US futures markets. Certain trading practices are permitt
       <NotReqXML>0</NotReqXML>
       <Description>Type of quantity specified in quantity field. ContractMultiplier (tag 231) is required when QtyType = 1 (Contracts). UnitOfMeasure (tag 996) and TimeUnit (tag 997) are required when QtyType =  2 (Units of Measure per Time Unit).</Description>
    </Field>
-   <Field added="FIX.4.4">
-		    <Tag>855</Tag>
-		    <Name>SecondaryTrdType</Name>
-		    <Type>int</Type>
-		    <AbbrName>TrdTyp2</AbbrName>
-		    <NotReqXML>0</NotReqXML>
-		    <EnumDatatype>828</EnumDatatype>
-		    <Description>Additional TrdType(828) assigned to a trade by trade match system.</Description>
-	  </Field>
+   <Field added="FIX.4.4" updated="FIX.Latest" updatedEP="268">
+      <Tag>855</Tag>
+      <Name>SecondaryTrdType</Name>
+      <Type>int</Type>
+      <AbbrName>TrdTyp2</AbbrName>
+      <NotReqXML>0</NotReqXML>
+      <EnumDatatype>828</EnumDatatype>
+      <Description>Type of trade assigned to a trade. Used in addition to TrdType(828). Must not be used when only one trade type needs to be assigned.</Description>
+   </Field>
    <Field added="FIX.4.4">
 		    <Tag>856</Tag>
 		    <Name>TradeReportType</Name>
@@ -50038,5 +50038,15 @@ See ISITC "Payments Cash Purpose Codes" for list of payment type codes to use av
       <AbbrName>UPI</AbbrName>
       <NotReqXML>0</NotReqXML>
       <Description>Uniquely identifies the product of a security using ISO 4914 as filter criteria. See UPICode(2891) for further detail.</Description>
+   </Field>
+   <Field added="FIX.Latest" addedEP="268">
+      <Tag>2896</Tag>
+      <Name>TertiaryTrdType</Name>
+      <Type>int</Type>
+      <AbbrName>TrdTyp3</AbbrName>
+      <NotReqXML>0</NotReqXML>
+      <EnumDatatype>828</EnumDatatype>
+      <UnionDataType>Reserved1000Plus</UnionDataType>
+      <Description>Type of trade  assigned to a trade. Used in addition to TrdType(828) and SecondaryTrdType(855). Must not be used when only one additional trade type needs to be assigned.</Description>
    </Field>
 </Fields>
