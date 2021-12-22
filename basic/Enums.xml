@@ -4,8 +4,8 @@
        edition="2010"
        version="FIX.Latest"
        xsi:noNamespaceSchemaLocation="../../schema/Enums.xsd"
-       generated="2021-09-01T22:09:37.488Z"
-       latestEP="268">
+       generated="2021-09-01T22:26:04.593Z"
+       latestEP="269">
    <Enum added="FIX.2.7">
 		    <Tag>4</Tag>
 		    <Value>B</Value>
@@ -35928,13 +35928,13 @@ In the context of Market Model Typology (MMT), use of this value applies to TrdT
       <Description>Act/364</Description>
       <Elaboration>The actual number of days between Date1 and Date2, divided by 364.</Elaboration>
    </Enum>
-   <Enum added="FIX.5.0SP2" addedEP="201">
+   <Enum added="FIX.5.0SP2" addedEP="201" updated="FIX.Latest" updatedEP="269">
       <Tag>829</Tag>
       <Value>48</Value>
       <SymbolicName>MultilateralCompression</SymbolicName>
       <Sort>48</Sort>
       <Description>Multilateral compression</Description>
-      <Elaboration>A subtype of TrdType(828) = 57 (Netted trade) in order to identify a special case of compression.</Elaboration>
+      <Elaboration>Used to identify a special case of compression between multiple parties, e.g. for netted or portfolio trades.</Elaboration>
    </Enum>
    <Enum added="FIX.5.0SP2" addedEP="201">
       <Tag>875</Tag>
@@ -41714,6 +41714,14 @@ in that foreign jurisdiction.</Elaboration>
       <Sort>16</Sort>
       <Description>Reported outside of reporting hours</Description>
       <Elaboration>In the context of ESMA, trades published after the trade reporting facility being used (e.g. APA for trades brought onto a trading venue) closes, will be reported the following business day and not flagged as deferred (as the MiFID deferral regime is not applicable). This value distinguishes these types of trades from trades executed (and published) on the same business day. It is recommended that this value be set by the trade reporting facility, e.g. APAs, (as opposed to publishing investment firms) to ensure the most accurate use of this value.</Elaboration>
+   </Enum>
+   <Enum added="FIX.Latest" addedEP="269">
+      <Tag>829</Tag>
+      <Value>54</Value>
+      <SymbolicName>BilateralCompression</SymbolicName>
+      <Sort>54</Sort>
+      <Description>Bilateral compression</Description>
+      <Elaboration>Used to identify a special case of compression between two parties, e.g. for netted or portfolio trades.</Elaboration>
    </Enum>
    <Enum>
       <Tag>35</Tag>
