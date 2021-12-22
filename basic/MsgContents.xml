@@ -4,8 +4,8 @@
              edition="2010"
              version="FIX.Latest"
              xsi:noNamespaceSchemaLocation="../../schema/MsgContents.xsd"
-             generated="2021-08-05T08:00:07.984Z"
-             latestEP="267">
+             generated="2021-09-01T22:09:37.488Z"
+             latestEP="268">
    <MsgContent added="FIX.2.7">
 		    <ComponentID>1</ComponentID>
 		    <TagText>StandardHeader</TagText>
@@ -12518,13 +12518,14 @@ OrderOriginator</Description>
 		    <Position>7</Position>
 		    <Reqd>0</Reqd>
 	  </MsgContent>
-   <MsgContent added="FIX.4.4">
-		    <ComponentID>64</ComponentID>
-		    <TagText>855</TagText>
-		    <Indent>0</Indent>
-		    <Position>8</Position>
-		    <Reqd>0</Reqd>
-	  </MsgContent>
+   <MsgContent added="FIX.4.4" updated="FIX.Latest" updatedEP="268">
+      <ComponentID>64</ComponentID>
+      <TagText>855</TagText>
+      <Indent>0</Indent>
+      <Position>8</Position>
+      <Reqd>0</Reqd>
+      <Description>Conditionally requires presence of TrdType(828).</Description>
+   </MsgContent>
    <MsgContent added="FIX.4.4" addedEP="-1">
 		    <ComponentID>64</ComponentID>
 		    <TagText>1123</TagText>
@@ -87467,5 +87468,61 @@ If specified, ExecID(17) is required.
       <Indent>1</Indent>
       <Position>34.62</Position>
       <Reqd>0</Reqd>
+   </MsgContent>
+   <MsgContent added="FIX.Latest" addedEP="268">
+      <ComponentID>64</ComponentID>
+      <TagText>2896</TagText>
+      <Indent>0</Indent>
+      <Position>8.005</Position>
+      <Reqd>0</Reqd>
+      <Description>Conditionally requires presence of SecondaryTrdType(855).</Description>
+   </MsgContent>
+   <MsgContent added="FIX.Latest" addedEP="268">
+      <ComponentID>2031</ComponentID>
+      <TagText>855</TagText>
+      <Indent>1</Indent>
+      <Position>31.203</Position>
+      <Reqd>0</Reqd>
+      <Description>For optional use in reporting trades. Conditionally requires presence of TrdType(828).</Description>
+   </MsgContent>
+   <MsgContent added="FIX.Latest" addedEP="268">
+      <ComponentID>2031</ComponentID>
+      <TagText>2896</TagText>
+      <Indent>1</Indent>
+      <Position>31.206</Position>
+      <Reqd>0</Reqd>
+      <Description>For optional use in reporting trades. Conditionally requires presence of SecondaryTrdType(855).</Description>
+   </MsgContent>
+   <MsgContent added="FIX.Latest" addedEP="268">
+      <ComponentID>2031</ComponentID>
+      <TagText>2373</TagText>
+      <Indent>1</Indent>
+      <Position>31.63</Position>
+      <Reqd>0</Reqd>
+      <Description/>
+   </MsgContent>
+   <MsgContent added="FIX.Latest" addedEP="268">
+      <ComponentID>2032</ComponentID>
+      <TagText>855</TagText>
+      <Indent>1</Indent>
+      <Position>24.12</Position>
+      <Reqd>0</Reqd>
+      <Description>For optional use in reporting trades. Conditionally requires presence of TrdType(828).</Description>
+   </MsgContent>
+   <MsgContent added="FIX.Latest" addedEP="268">
+      <ComponentID>2032</ComponentID>
+      <TagText>2896</TagText>
+      <Indent>1</Indent>
+      <Position>24.13</Position>
+      <Reqd>0</Reqd>
+      <Description>For optional use in reporting trades. Conditionally requires presence of SecondaryTrdType(855).</Description>
+   </MsgContent>
+   <MsgContent added="FIX.Latest" addedEP="268">
+      <ComponentID>2032</ComponentID>
+      <TagText>2373</TagText>
+      <Indent>1</Indent>
+      <Position>24.73</Position>
+      <Reqd>0</Reqd>
+      <Description/>
    </MsgContent>
 </MsgContents>

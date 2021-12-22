@@ -4,8 +4,8 @@
        edition="2010"
        version="FIX.Latest"
        xsi:noNamespaceSchemaLocation="../../schema/Enums.xsd"
-       generated="2021-08-05T08:00:07.984Z"
-       latestEP="267">
+       generated="2021-09-01T22:09:37.488Z"
+       latestEP="268">
    <Enum added="FIX.2.7">
 		    <Tag>4</Tag>
 		    <Value>B</Value>
@@ -15471,13 +15471,17 @@
       <Sort>49</Sort>
       <Description>Derivative related transaction</Description>
    </Enum>
-   <Enum added="FIX.5.0" addedEP="47" updated="FIX.5.0SP2" updatedEP="141">
+   <Enum added="FIX.5.0" addedEP="47" updated="FIX.Latest" updatedEP="268">
       <Tag>828</Tag>
       <Value>50</Value>
       <SymbolicName>PortfolioTrade</SymbolicName>
       <Group/>
       <Sort>50</Sort>
       <Description>Portfolio trade</Description>
+      <Elaboration>Identifies a collection/basket of trades. In the context of bonds (e.g. corporate bonds) these are transacted as a single trade at an aggregate price for the entire portfolio and may be traded all-or-none or most-or-none depending on bilateral agreement.
+In the context of ESMA RTS 1 Article 2(b), may be used to refer to portfolio trades to distinguish between addressable and non-addressable volume.
+In the context of Market Model Typology (MMT), use of this value applies to SecondaryTrdType(855) or TertiaryTrdType(2896), and when used for MMT market data publication requires MDEntryType(269) = 2 (Trade).
+</Elaboration>
    </Enum>
    <Enum added="FIX.5.0" addedEP="47" updated="FIX.5.0SP2" updatedEP="141">
       <Tag>828</Tag>
@@ -30412,7 +30416,7 @@ When the price is not spread based.</Elaboration>
       <Sort>11</Sort>
       <Description>Settlement payment</Description>
    </Enum>
-   <Enum added="FIX.5.0SP2" addedEP="163">
+   <Enum added="FIX.5.0SP2" addedEP="163" deprecated="FIX.Latest" deprecatedEP="268">
       <Tag>277</Tag>
       <Value>6</Value>
       <SymbolicName>Benchmark</SymbolicName>
@@ -30451,13 +30455,13 @@ When the price is not spread based.</Elaboration>
       <Sort>61</Sort>
       <Description>Give-up Give-in trade</Description>
    </Enum>
-   <Enum added="FIX.5.0SP2" addedEP="163">
+   <Enum added="FIX.5.0SP2" addedEP="163" updated="FIX.Latest" updatedEP="268">
       <Tag>828</Tag>
       <Value>62</Value>
       <SymbolicName>DarkTrade</SymbolicName>
       <Sort>62</Sort>
       <Description>Dark trade</Description>
-      <Elaboration>A Market Model Typology dark trade might also come from a lit/hybrid book, when an aggressive lit order hits a resting dark order. </Elaboration>
+      <Elaboration>In the context of Market Model Typology (MMT), a dark trade might also come from a lit/hybrid book (e.g. when an aggressive lit order hits a resting dark order). The use of this value applies to TrdType(828), and when used for MMT market data publication requires MDEntryType(269) = 2 (Trade).</Elaboration>
    </Enum>
    <Enum added="FIX.5.0SP2" addedEP="163">
       <Tag>828</Tag>
@@ -30466,13 +30470,15 @@ When the price is not spread based.</Elaboration>
       <Sort>63</Sort>
       <Description>Technical trade</Description>
    </Enum>
-   <Enum added="FIX.5.0SP2" addedEP="163" updated="FIX.5.0SP2" updatedEP="216">
+   <Enum added="FIX.5.0SP2" addedEP="163" updated="FIX.Latest" updatedEP="268">
       <Tag>828</Tag>
       <Value>64</Value>
       <SymbolicName>Benchmark</SymbolicName>
       <Sort>64</Sort>
       <Description>Benchmark</Description>
-      <Elaboration>For Market Model Typology (MMT) the "benchmark" price depends on a benchmark which has no current price but was derived from a time series such as a VWAP.</Elaboration>
+      <Elaboration>In the context of ESMA RTS 1 Article 2(a), may be used to refer to benchmark trades.
+In the context of Market Model Typology (MMT), the "benchmark" price depends on a benchmark which has no current price but was derived from a time series such as a VWAP. The use of this value applies to SecondaryTrdType(855) or TertiaryTrdType(2896), and when used for MMT market data publication requires MDEntryType(269) = 2 (Trade).
+</Elaboration>
    </Enum>
    <Enum added="FIX.5.0SP2" addedEP="163">
       <Tag>1024</Tag>
@@ -35034,13 +35040,18 @@ In the context of EU SFTR reporting use the appropriate 4- or 1-character code n
       <Description>Exempt from recognition</Description>
       <Elaboration>Used with party role 21 "Clearing Organization" to indicate exemption (Y/N). Identifies a clearing agency as exempt from oversight in Ontario, i.e. one that 1) only provides limited services and does not present significant risks or 2) is foreign-based, indends to operate in Ontario but is subject to regulatory oversight in another jurisdiction.</Elaboration>
    </Enum>
-   <Enum added="FIX.5.0SP2" addedEP="192">
+   <Enum added="FIX.5.0SP2" addedEP="192" updated="FIX.Latest" updatedEP="268">
       <Tag>828</Tag>
       <Value>65</Value>
       <SymbolicName>PackageTrade</SymbolicName>
       <Sort>65</Sort>
       <Description>Package trade</Description>
-      <Elaboration>Identifies the pseudo-trade of a stream or collection of trades to be cleared and be reported as an atomic unit. The subsequent actual trades reported should not have this value.</Elaboration>
+      <Elaboration>Identifies the pseudo-trade of a stream or collection of trades to be transacted, cleared and be reported as an atomic unit. The subsequent actual trades reported should not have this value.
+
+In the context of ESMA RTS 2 Article 1(1)(b), may be used to refer to package transactions (excluding exchange for physicals).
+
+In the context of Market Model Typology (MMT), use of this value applies to TrdType(828), and when used for MMT market data publication requires MDEntryType(269) = 2 (Trade).
+</Elaboration>
    </Enum>
    <Enum added="FIX.5.0SP2" addedEP="192">
       <Tag>905</Tag>
@@ -41687,6 +41698,22 @@ in that foreign jurisdiction.</Elaboration>
       <Sort>56</Sort>
       <Description>Time Weighted Average Price</Description>
       <Elaboration>TWAP</Elaboration>
+   </Enum>
+   <Enum added="FIX.Latest" addedEP="268">
+      <Tag>829</Tag>
+      <Value>53</Value>
+      <SymbolicName>TrdSubmitVenueClrSettl</SymbolicName>
+      <Sort>53</Sort>
+      <Description>Trade submitted to venue for clearing and settlement</Description>
+      <Elaboration>Identifies trades brought on a trading venue purely for clearing and settlement purposes.</Elaboration>
+   </Enum>
+   <Enum added="FIX.Latest" addedEP="268">
+      <Tag>2670</Tag>
+      <Value>16</Value>
+      <SymbolicName>ReportedOutsideReportingHours</SymbolicName>
+      <Sort>16</Sort>
+      <Description>Reported outside of reporting hours</Description>
+      <Elaboration>In the context of ESMA, trades published after the trade reporting facility being used (e.g. APA for trades brought onto a trading venue) closes, will be reported the following business day and not flagged as deferred (as the MiFID deferral regime is not applicable). This value distinguishes these types of trades from trades executed (and published) on the same business day. It is recommended that this value be set by the trade reporting facility, e.g. APAs, (as opposed to publishing investment firms) to ensure the most accurate use of this value.</Elaboration>
    </Enum>
    <Enum>
       <Tag>35</Tag>
