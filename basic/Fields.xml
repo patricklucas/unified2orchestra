@@ -4,8 +4,8 @@
         edition="2010"
         version="FIX.Latest"
         xsi:noNamespaceSchemaLocation="../../schema/Fields.xsd"
-        generated="2021-05-23T09:57:14.249Z"
-        latestEP="265">
+        generated="2021-08-05T07:54:58.183Z"
+        latestEP="266">
    <Field added="FIX.2.7">
 		    <Tag>1</Tag>
 		    <Name>Account</Name>
@@ -49998,5 +49998,45 @@ See ISITC "Payments Cash Purpose Codes" for list of payment type codes to use av
       <AbbrName>Rltnshp</AbbrName>
       <NotReqXML>0</NotReqXML>
       <Description>Describes the type of relationship between the order identified by RelatedOrderID(2887) and the order outside of the RelatedOrderGrp component.</Description>
+   </Field>
+   <Field added="FIX.Latest" addedEP="266">
+      <Tag>2891</Tag>
+      <Name>UPICode</Name>
+      <Type>String</Type>
+      <AbbrName>UPI</AbbrName>
+      <NotReqXML>0</NotReqXML>
+      <Description>Uniquely identifies the product of a security using ISO 4914 standard, Unique Product Identifier (UPI). The DSB (Derivative Service Bureau Ltd) is acting as designated service provider for UPI System.</Description>
+   </Field>
+   <Field added="FIX.Latest" addedEP="266">
+      <Tag>2892</Tag>
+      <Name>DerivativeUPICode</Name>
+      <Type>String</Type>
+      <AbbrName>UPI</AbbrName>
+      <NotReqXML>0</NotReqXML>
+      <Description>Uniquely identifies the product of a derivative instrument using ISO 4914. See UPICode(2891) for further detail.</Description>
+   </Field>
+   <Field added="FIX.Latest" addedEP="266">
+      <Tag>2893</Tag>
+      <Name>LegUPICode</Name>
+      <Type>String</Type>
+      <AbbrName>UPI</AbbrName>
+      <NotReqXML>0</NotReqXML>
+      <Description>Uniquely identifies the product of a leg instrument using ISO 4914. See UPICode(2891) for further detail.</Description>
+   </Field>
+   <Field added="FIX.Latest" addedEP="266">
+      <Tag>2894</Tag>
+      <Name>UnderlyingUPICode</Name>
+      <Type>String</Type>
+      <AbbrName>UPI</AbbrName>
+      <NotReqXML>0</NotReqXML>
+      <Description>Uniquely identifies the product of an underlying instrument using ISO 4914. See UPICode(2891) for further detail.</Description>
+   </Field>
+   <Field added="FIX.Latest" addedEP="266">
+      <Tag>2895</Tag>
+      <Name>InstrumentScopeUPICode</Name>
+      <Type>String</Type>
+      <AbbrName>UPI</AbbrName>
+      <NotReqXML>0</NotReqXML>
+      <Description>Uniquely identifies the product of a security using ISO 4914 as filter criteria. See UPICode(2891) for further detail.</Description>
    </Field>
 </Fields>

@@ -4,8 +4,8 @@
        edition="2010"
        version="FIX.Latest"
        xsi:noNamespaceSchemaLocation="../../schema/Enums.xsd"
-       generated="2021-05-23T09:52:04.468Z"
-       latestEP="264">
+       generated="2021-08-05T07:54:58.183Z"
+       latestEP="266">
    <Enum added="FIX.2.7">
 		    <Tag>4</Tag>
 		    <Value>B</Value>
@@ -18620,198 +18620,6 @@ iii) submitting a transaction report to the Exchange, where the transaction repo
       <Description>FINRA OATS</Description>
    </Enum>
    <Enum added="FIX.4.4" addedEP="-1">
-		    <Tag>1035</Tag>
-		    <Value>ADD</Value>
-		    <SymbolicName>AddOnOrder</SymbolicName>
-		    <Group/>
-		    <Sort>1</Sort>
-		    <Description>Add-on Order</Description>
-	  </Enum>
-   <Enum added="FIX.4.4" addedEP="-1">
-		    <Tag>1035</Tag>
-		    <Value>AON</Value>
-		    <SymbolicName>AllOrNone</SymbolicName>
-		    <Group/>
-		    <Sort>2</Sort>
-		    <Description>All or None</Description>
-	  </Enum>
-   <Enum added="FIX.4.4" addedEP="-1">
-		    <Tag>1035</Tag>
-		    <Value>CNH</Value>
-		    <SymbolicName>CashNotHeld</SymbolicName>
-		    <Group/>
-		    <Sort>3</Sort>
-		    <Description>Cash Not Held</Description>
-	  </Enum>
-   <Enum added="FIX.4.4" addedEP="-1">
-		    <Tag>1035</Tag>
-		    <Value>DIR</Value>
-		    <SymbolicName>DirectedOrder</SymbolicName>
-		    <Group/>
-		    <Sort>4</Sort>
-		    <Description>Directed Order</Description>
-	  </Enum>
-   <Enum added="FIX.4.4" addedEP="-1">
-		    <Tag>1035</Tag>
-		    <Value>E.W</Value>
-		    <SymbolicName>ExchangeForPhysicalTransaction</SymbolicName>
-		    <Group/>
-		    <Sort>5</Sort>
-		    <Description>Exchange for Physical Transaction</Description>
-	  </Enum>
-   <Enum added="FIX.4.4" addedEP="-1">
-		    <Tag>1035</Tag>
-		    <Value>FOK</Value>
-		    <SymbolicName>FillOrKill</SymbolicName>
-		    <Group/>
-		    <Sort>6</Sort>
-		    <Description>Fill or Kill</Description>
-	  </Enum>
-   <Enum added="FIX.4.4" addedEP="-1">
-		    <Tag>1035</Tag>
-		    <Value>IO</Value>
-		    <SymbolicName>ImbalanceOnly</SymbolicName>
-		    <Group/>
-		    <Sort>7</Sort>
-		    <Description>Imbalance Only</Description>
-	  </Enum>
-   <Enum added="FIX.4.4" addedEP="-1">
-		    <Tag>1035</Tag>
-		    <Value>IOC</Value>
-		    <SymbolicName>ImmediateOrCancel</SymbolicName>
-		    <Group/>
-		    <Sort>8</Sort>
-		    <Description>Immediate or Cancel</Description>
-	  </Enum>
-   <Enum added="FIX.4.4" addedEP="-1">
-		    <Tag>1035</Tag>
-		    <Value>LOO</Value>
-		    <SymbolicName>LimitOnOpen</SymbolicName>
-		    <Group/>
-		    <Sort>9</Sort>
-		    <Description>Limit On Open</Description>
-	  </Enum>
-   <Enum added="FIX.4.4" addedEP="-1">
-		    <Tag>1035</Tag>
-		    <Value>LOC</Value>
-		    <SymbolicName>LimitOnClose</SymbolicName>
-		    <Group/>
-		    <Sort>10</Sort>
-		    <Description>Limit on Close</Description>
-	  </Enum>
-   <Enum added="FIX.4.4" addedEP="-1">
-		    <Tag>1035</Tag>
-		    <Value>MAO</Value>
-		    <SymbolicName>MarketAtOpen</SymbolicName>
-		    <Group/>
-		    <Sort>11</Sort>
-		    <Description>Market at Open</Description>
-	  </Enum>
-   <Enum added="FIX.4.4" addedEP="-1">
-		    <Tag>1035</Tag>
-		    <Value>MAC</Value>
-		    <SymbolicName>MarketAtClose</SymbolicName>
-		    <Group/>
-		    <Sort>12</Sort>
-		    <Description>Market at Close</Description>
-	  </Enum>
-   <Enum added="FIX.4.4" addedEP="-1">
-		    <Tag>1035</Tag>
-		    <Value>MOO</Value>
-		    <SymbolicName>MarketOnOpen</SymbolicName>
-		    <Group/>
-		    <Sort>13</Sort>
-		    <Description>Market on Open</Description>
-	  </Enum>
-   <Enum added="FIX.4.4" addedEP="-1">
-		    <Tag>1035</Tag>
-		    <Value>MOC</Value>
-		    <SymbolicName>MarketOnClose</SymbolicName>
-		    <Group/>
-		    <Sort>14</Sort>
-		    <Description>Market On Close</Description>
-	  </Enum>
-   <Enum added="FIX.4.4" addedEP="-1">
-		    <Tag>1035</Tag>
-		    <Value>MQT</Value>
-		    <SymbolicName>MinimumQuantity</SymbolicName>
-		    <Group/>
-		    <Sort>15</Sort>
-		    <Description>Minimum Quantity</Description>
-	  </Enum>
-   <Enum added="FIX.4.4" addedEP="-1">
-		    <Tag>1035</Tag>
-		    <Value>NH</Value>
-		    <SymbolicName>NotHeld</SymbolicName>
-		    <Group/>
-		    <Sort>16</Sort>
-		    <Description>Not Held</Description>
-	  </Enum>
-   <Enum added="FIX.4.4" addedEP="-1">
-		    <Tag>1035</Tag>
-		    <Value>OVD</Value>
-		    <SymbolicName>OverTheDay</SymbolicName>
-		    <Group/>
-		    <Sort>17</Sort>
-		    <Description>Over the Day</Description>
-	  </Enum>
-   <Enum added="FIX.4.4" addedEP="-1">
-		    <Tag>1035</Tag>
-		    <Value>PEG</Value>
-		    <SymbolicName>Pegged</SymbolicName>
-		    <Group/>
-		    <Sort>18</Sort>
-		    <Description>Pegged</Description>
-	  </Enum>
-   <Enum added="FIX.4.4" addedEP="-1">
-		    <Tag>1035</Tag>
-		    <Value>RSV</Value>
-		    <SymbolicName>ReserveSizeOrder</SymbolicName>
-		    <Group/>
-		    <Sort>19</Sort>
-		    <Description>Reserve Size Order</Description>
-	  </Enum>
-   <Enum added="FIX.4.4" addedEP="-1">
-		    <Tag>1035</Tag>
-		    <Value>S.W</Value>
-		    <SymbolicName>StopStockTransaction</SymbolicName>
-		    <Group/>
-		    <Sort>20</Sort>
-		    <Description>Stop Stock Transaction</Description>
-	  </Enum>
-   <Enum added="FIX.4.4" addedEP="-1">
-		    <Tag>1035</Tag>
-		    <Value>SCL</Value>
-		    <SymbolicName>Scale</SymbolicName>
-		    <Group/>
-		    <Sort>21</Sort>
-		    <Description>Scale</Description>
-	  </Enum>
-   <Enum added="FIX.4.4" addedEP="-1">
-		    <Tag>1035</Tag>
-		    <Value>TMO</Value>
-		    <SymbolicName>TimeOrder</SymbolicName>
-		    <Group/>
-		    <Sort>22</Sort>
-		    <Description>Time Order</Description>
-	  </Enum>
-   <Enum added="FIX.4.4" addedEP="-1">
-		    <Tag>1035</Tag>
-		    <Value>TS</Value>
-		    <SymbolicName>TrailingStop</SymbolicName>
-		    <Group/>
-		    <Sort>23</Sort>
-		    <Description>Trailing Stop</Description>
-	  </Enum>
-   <Enum added="FIX.4.4" addedEP="-1">
-		    <Tag>1035</Tag>
-		    <Value>WRK</Value>
-		    <SymbolicName>Work</SymbolicName>
-		    <Group/>
-		    <Sort>24</Sort>
-		    <Description>Work</Description>
-	  </Enum>
-   <Enum added="FIX.4.4" addedEP="-1">
 		    <Tag>1036</Tag>
 		    <Value>0</Value>
 		    <SymbolicName>Received</SymbolicName>
@@ -20176,30 +19984,6 @@ iii) submitting a transaction report to the Exchange, where the transaction repo
 		    <Group/>
 		    <Sort>9</Sort>
 		    <Description>MarketID or MarketID + MarketSegmentID</Description>
-	  </Enum>
-   <Enum added="FIX.5.0" addedEP="53">
-		    <Tag>1395</Tag>
-		    <Value>A</Value>
-		    <SymbolicName>Add</SymbolicName>
-		    <Group/>
-		    <Sort>1</Sort>
-		    <Description>Add</Description>
-	  </Enum>
-   <Enum added="FIX.5.0" addedEP="53">
-		    <Tag>1395</Tag>
-		    <Value>D</Value>
-		    <SymbolicName>Delete</SymbolicName>
-		    <Group/>
-		    <Sort>2</Sort>
-		    <Description>Delete</Description>
-	  </Enum>
-   <Enum added="FIX.5.0" addedEP="53">
-		    <Tag>1395</Tag>
-		    <Value>M</Value>
-		    <SymbolicName>Modify</SymbolicName>
-		    <Group/>
-		    <Sort>3</Sort>
-		    <Description>Modify</Description>
 	  </Enum>
    <Enum added="FIX.5.0" addedEP="56">
 		    <Tag>1409</Tag>
@@ -24632,34 +24416,6 @@ Variation margin (a daily offsetting of profits and losses) occurs as a result o
       <Description>Other</Description>
    </Enum>
    <Enum added="FIX.5.0SP2" addedEP="128">
-      <Tag>1762</Tag>
-      <Value>0</Value>
-      <SymbolicName>Accepted</SymbolicName>
-      <Sort>0</Sort>
-      <Description>Accepted</Description>
-   </Enum>
-   <Enum added="FIX.5.0SP2" addedEP="128">
-      <Tag>1762</Tag>
-      <Value>1</Value>
-      <SymbolicName>AcceptedWithChanges</SymbolicName>
-      <Sort>1</Sort>
-      <Description>Accepted with changes</Description>
-   </Enum>
-   <Enum added="FIX.5.0SP2" addedEP="128">
-      <Tag>1762</Tag>
-      <Value>2</Value>
-      <SymbolicName>Rejected</SymbolicName>
-      <Sort>2</Sort>
-      <Description>Rejected</Description>
-   </Enum>
-   <Enum added="FIX.5.0SP2" addedEP="128">
-      <Tag>1762</Tag>
-      <Value>3</Value>
-      <SymbolicName>AcceptancePending</SymbolicName>
-      <Sort>3</Sort>
-      <Description>Acceptence pending</Description>
-   </Enum>
-   <Enum added="FIX.5.0SP2" addedEP="128">
       <Tag>1763</Tag>
       <Value>0</Value>
       <SymbolicName>Accepted</SymbolicName>
@@ -28654,10 +28410,10 @@ When the price is not spread based.</Elaboration>
       <Description>1/1</Description>
       <Elaboration>If parties specify the Day Count Fraction to be 1/1 then in calculating the applicable amount, 1 is simply input into the calculation as the relevant Day Count Fraction. See also 2006 ISDA Definitions, Section 4.16. Day Count Fraction, paragraph (a).</Elaboration>
    </Enum>
-   <Enum added="FIX.5.0SP2" addedEP="161" updated="FIX.5.0SP2" updatedEP="254">
+   <Enum added="FIX.5.0SP2" addedEP="161" updated="FIX.Latest" updatedEP="266">
       <Tag>1950</Tag>
       <Value>1</Value>
-      <SymbolicName>ThrityThreeSixtyUS</SymbolicName>
+      <SymbolicName>ThirtyThreeSixtyUS</SymbolicName>
       <Sort>1</Sort>
       <Description>30/360 (30U/360 or Bond Basis)</Description>
       <Elaboration>See also ISO 15022 MICO code 'A001'.</Elaboration>
@@ -28921,81 +28677,6 @@ When the price is not spread based.</Elaboration>
       <SymbolicName>WesternEuropeanInsurance</SymbolicName>
       <Sort>10</Sort>
       <Description>Western European insurance</Description>
-   </Enum>
-   <Enum added="FIX.5.0SP2" addedEP="161">
-      <Tag>1974</Tag>
-      <Value>0</Value>
-      <SymbolicName>InitialBlockTrade</SymbolicName>
-      <Sort>0</Sort>
-      <Description>Initial block trade</Description>
-   </Enum>
-   <Enum added="FIX.5.0SP2" addedEP="161">
-      <Tag>1974</Tag>
-      <Value>1</Value>
-      <SymbolicName>Allocation</SymbolicName>
-      <Sort>1</Sort>
-      <Description>Allocation</Description>
-      <Elaboration>or determination that the block trade will not be further allocated.</Elaboration>
-   </Enum>
-   <Enum added="FIX.5.0SP2" addedEP="161">
-      <Tag>1974</Tag>
-      <Value>2</Value>
-      <SymbolicName>Clearing</SymbolicName>
-      <Sort>2</Sort>
-      <Description>Clearing</Description>
-   </Enum>
-   <Enum added="FIX.5.0SP2" addedEP="161">
-      <Tag>1974</Tag>
-      <Value>3</Value>
-      <SymbolicName>Compression</SymbolicName>
-      <Sort>3</Sort>
-      <Description>Compression</Description>
-   </Enum>
-   <Enum added="FIX.5.0SP2" addedEP="161">
-      <Tag>1974</Tag>
-      <Value>4</Value>
-      <SymbolicName>Novation</SymbolicName>
-      <Sort>4</Sort>
-      <Description>Novation</Description>
-   </Enum>
-   <Enum added="FIX.5.0SP2" addedEP="161">
-      <Tag>1974</Tag>
-      <Value>5</Value>
-      <SymbolicName>Termination</SymbolicName>
-      <Sort>5</Sort>
-      <Description>Termination</Description>
-   </Enum>
-   <Enum added="FIX.5.0SP2" addedEP="161">
-      <Tag>1975</Tag>
-      <Value>0</Value>
-      <SymbolicName>Current</SymbolicName>
-      <Sort>0</Sort>
-      <Description>Current</Description>
-      <Elaboration>The default</Elaboration>
-   </Enum>
-   <Enum added="FIX.5.0SP2" addedEP="161">
-      <Tag>1975</Tag>
-      <Value>1</Value>
-      <SymbolicName>Previous</SymbolicName>
-      <Sort>1</Sort>
-      <Description>Previous</Description>
-      <Elaboration>e.g. when reporting a cleared trade or novation of a previous trade.</Elaboration>
-   </Enum>
-   <Enum added="FIX.5.0SP2" addedEP="161">
-      <Tag>1975</Tag>
-      <Value>2</Value>
-      <SymbolicName>Block</SymbolicName>
-      <Sort>2</Sort>
-      <Description>Block</Description>
-      <Elaboration>e.g. when reporting an allocated subtrade.</Elaboration>
-   </Enum>
-   <Enum added="FIX.5.0SP2" addedEP="161">
-      <Tag>1975</Tag>
-      <Value>3</Value>
-      <SymbolicName>Related</SymbolicName>
-      <Sort>3</Sort>
-      <Description>Related</Description>
-      <Elaboration>e.g. when reporting a mixed swap</Elaboration>
    </Enum>
    <Enum added="FIX.5.0SP2" addedEP="161">
       <Tag>1980</Tag>

@@ -4,8 +4,8 @@
                edition="2010"
                version="FIX.Latest"
                xsi:noNamespaceSchemaLocation="../../schema/Abbreviations.xsd"
-               generated="2020-11-13T11:31:27.902Z"
-               latestEP="256">
+               generated="2021-08-05T07:54:58.183Z"
+               latestEP="266">
    <Abbreviation added="FIX.4.4">
 		    <Term>Account</Term>
 		    <AbbrTerm>Acct</AbbrTerm>
@@ -2371,5 +2371,15 @@ SideTradeReportingIndicator
       <Term>Arrangement</Term>
       <AbbrTerm>Arngmnt</AbbrTerm>
       <Usage>RoutingArrangementIndicator(2883)</Usage>
+   </Abbreviation>
+   <Abbreviation added="FIX.Latest" addedEP="266">
+      <Term>UPI</Term>
+      <AbbrTerm>UPI</AbbrTerm>
+      <Usage>UPICode,
+DerivativeUPICode,
+LegUPICode,
+UnderlyingInstrumentUPICode,
+InstrumentScopeUPICode
+</Usage>
    </Abbreviation>
 </Abbreviations>
