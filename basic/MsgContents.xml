@@ -4,8 +4,8 @@
              edition="2010"
              version="FIX.Latest"
              xsi:noNamespaceSchemaLocation="../../schema/MsgContents.xsd"
-             generated="2021-08-05T07:54:58.183Z"
-             latestEP="266">
+             generated="2021-08-05T08:00:07.984Z"
+             latestEP="267">
    <MsgContent added="FIX.2.7">
 		    <ComponentID>1</ComponentID>
 		    <TagText>StandardHeader</TagText>
@@ -87438,6 +87438,34 @@ If specified, ExecID(17) is required.
       <TagText>2895</TagText>
       <Indent>0</Indent>
       <Position>11.5</Position>
+      <Reqd>0</Reqd>
+   </MsgContent>
+   <MsgContent added="FIX.Latest" addedEP="267">
+      <ComponentID>2032</ComponentID>
+      <TagText>PriceLimits</TagText>
+      <Indent>1</Indent>
+      <Position>46.51</Position>
+      <Reqd>0</Reqd>
+   </MsgContent>
+   <MsgContent added="FIX.Latest" addedEP="267">
+      <ComponentID>2032</ComponentID>
+      <TagText>1143</TagText>
+      <Indent>1</Indent>
+      <Position>46.52</Position>
+      <Reqd>0</Reqd>
+   </MsgContent>
+   <MsgContent added="FIX.Latest" addedEP="267">
+      <ComponentID>2031</ComponentID>
+      <TagText>PriceLimits</TagText>
+      <Indent>1</Indent>
+      <Position>34.61</Position>
+      <Reqd>0</Reqd>
+   </MsgContent>
+   <MsgContent added="FIX.Latest" addedEP="267">
+      <ComponentID>2031</ComponentID>
+      <TagText>1143</TagText>
+      <Indent>1</Indent>
+      <Position>34.62</Position>
       <Reqd>0</Reqd>
    </MsgContent>
 </MsgContents>

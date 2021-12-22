@@ -4,8 +4,8 @@
        edition="2010"
        version="FIX.Latest"
        xsi:noNamespaceSchemaLocation="../../schema/Enums.xsd"
-       generated="2021-08-05T07:54:58.183Z"
-       latestEP="266">
+       generated="2021-08-05T08:00:07.984Z"
+       latestEP="267">
    <Enum added="FIX.2.7">
 		    <Tag>4</Tag>
 		    <Value>B</Value>
@@ -5562,13 +5562,14 @@
       <Sort>9</Sort>
       <Description>Trading session low price</Description>
    </Enum>
-   <Enum added="FIX.4.2" updated="FIX.5.0SP2" updatedEP="174">
+   <Enum added="FIX.4.2" updated="FIX.Latest" updatedEP="267">
       <Tag>269</Tag>
       <Value>9</Value>
-      <SymbolicName>TradingSessionVWAPPrice</SymbolicName>
+      <SymbolicName>VWAP</SymbolicName>
       <Group/>
       <Sort>10</Sort>
-      <Description>Trading session Volume Weighted Average Price (VWAP)</Description>
+      <Description>Volume Weighted Average Price</Description>
+      <Elaboration>VWAP</Elaboration>
    </Enum>
    <Enum added="FIX.4.3" updated="FIX.5.0SP2" updatedEP="174">
       <Tag>269</Tag>
@@ -41654,6 +41655,38 @@ in that foreign jurisdiction.</Elaboration>
       <Group>FINRA OATS</Group>
       <Sort>18</Sort>
       <Description>Floor Broker</Description>
+   </Enum>
+   <Enum added="FIX.Latest" addedEP="267">
+      <Tag>269</Tag>
+      <Value>g</Value>
+      <SymbolicName>ThresholdLimitPriceBanding</SymbolicName>
+      <Sort>42</Sort>
+      <Description>Threshold limits and price banding</Description>
+      <Elaboration>Conveys incremental real time change to pre-configured or previously disseminated pricing thresholds and/or banding parameters.</Elaboration>
+   </Enum>
+   <Enum added="FIX.Latest" addedEP="267">
+      <Tag>269</Tag>
+      <Value>h</Value>
+      <SymbolicName>DailyFinancingValue</SymbolicName>
+      <Sort>43</Sort>
+      <Description>Daily financing value</Description>
+      <Elaboration>The financing cost of rolling an analogous total return swap from the previous business day to the current business day. In the context of Adjusted Interest Rate (AIR) futures this is a component of the cleared futures price.</Elaboration>
+   </Enum>
+   <Enum added="FIX.Latest" addedEP="267">
+      <Tag>269</Tag>
+      <Value>i</Value>
+      <SymbolicName>AccruedFinancingValue</SymbolicName>
+      <Sort>44</Sort>
+      <Description>Accrued financing value</Description>
+      <Elaboration>The total of the daily funding values or amounts from a contract's first day of trading to the current day. In the context of Adjusted Interest Rate (AIR) futures this is a component of the cleared futures price.</Elaboration>
+   </Enum>
+   <Enum added="FIX.Latest" addedEP="267">
+      <Tag>269</Tag>
+      <Value>t</Value>
+      <SymbolicName>TWAP</SymbolicName>
+      <Sort>56</Sort>
+      <Description>Time Weighted Average Price</Description>
+      <Elaboration>TWAP</Elaboration>
    </Enum>
    <Enum>
       <Tag>35</Tag>
