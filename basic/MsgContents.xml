@@ -4,8 +4,8 @@
              edition="2010"
              version="FIX.Latest"
              xsi:noNamespaceSchemaLocation="../../schema/MsgContents.xsd"
-             generated="2021-05-23T09:35:58.531Z"
-             latestEP="261">
+             generated="2021-05-23T09:46:56.887Z"
+             latestEP="263">
    <MsgContent added="FIX.2.7">
 		    <ComponentID>1</ComponentID>
 		    <TagText>StandardHeader</TagText>
@@ -87289,6 +87289,27 @@ When the report is sent unsolicited, this is the payment calculation date as det
       <TagText>1934</TagText>
       <Indent>0</Indent>
       <Position>67.5</Position>
+      <Reqd>0</Reqd>
+   </MsgContent>
+   <MsgContent added="FIX.Latest" addedEP="263">
+      <ComponentID>27</ComponentID>
+      <TagText>TrdRegTimestamps</TagText>
+      <Indent>0</Indent>
+      <Position>56.5</Position>
+      <Reqd>0</Reqd>
+   </MsgContent>
+   <MsgContent added="FIX.Latest" addedEP="263">
+      <ComponentID>68</ComponentID>
+      <TagText>QuoteAttributeGrp</TagText>
+      <Indent>0</Indent>
+      <Position>33.25</Position>
+      <Reqd>0</Reqd>
+   </MsgContent>
+   <MsgContent added="FIX.Latest" addedEP="263">
+      <ComponentID>68</ComponentID>
+      <TagText>TrdRegTimestamps</TagText>
+      <Indent>0</Indent>
+      <Position>57.5</Position>
       <Reqd>0</Reqd>
    </MsgContent>
 </MsgContents>
