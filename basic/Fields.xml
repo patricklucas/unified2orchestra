@@ -4,8 +4,8 @@
         edition="2010"
         version="FIX.Latest"
         xsi:noNamespaceSchemaLocation="../../schema/Fields.xsd"
-        generated="2020-11-15T07:32:33.614Z"
-        latestEP="259">
+        generated="2021-05-23T09:52:04.468Z"
+        latestEP="264">
    <Field added="FIX.2.7">
 		    <Tag>1</Tag>
 		    <Name>Account</Name>
@@ -8447,13 +8447,13 @@ A Put Option will require a ratio value between -1 and 0</Description>
 		    <NotReqXML>0</NotReqXML>
 		    <Description>Used for an F/X entry. The forward points to be added to or subtracted from the spot rate to get the "all-in" rate in MDEntryPx. Expressed in decimal form. For example, 61.99 points is expressed and sent as 0.006199</Description>
 	  </Field>
-   <Field added="FIX.4.4" addedEP="9" updated="FIX.5.0SP2" updatedEP="182">
+   <Field added="FIX.4.4" addedEP="9" updated="FIX.Latest" updatedEP="264">
       <Tag>1028</Tag>
       <Name>ManualOrderIndicator</Name>
       <Type>Boolean</Type>
       <AbbrName>ManOrdInd</AbbrName>
       <NotReqXML>0</NotReqXML>
-      <Description>Indicates if the order was initially received manually (as opposed to electronically) or if it was entered manually (as opposed to entered by automated trading software).</Description>
+      <Description>Indicates if an order, quote or trade was initially received manually (as opposed to electronically) or if it was entered manually (as opposed to entered by automated trading software).</Description>
    </Field>
    <Field updated="FIX.5.0SP1" updatedEP="95" added="FIX.4.4" addedEP="9">
 		    <Tag>1029</Tag>

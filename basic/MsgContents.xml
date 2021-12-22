@@ -4,8 +4,8 @@
              edition="2010"
              version="FIX.Latest"
              xsi:noNamespaceSchemaLocation="../../schema/MsgContents.xsd"
-             generated="2021-05-23T09:46:56.887Z"
-             latestEP="263">
+             generated="2021-05-23T09:52:04.468Z"
+             latestEP="264">
    <MsgContent added="FIX.2.7">
 		    <ComponentID>1</ComponentID>
 		    <TagText>StandardHeader</TagText>
@@ -12647,13 +12647,14 @@ OrderOriginator</Description>
 		    <Position>19</Position>
 		    <Reqd>0</Reqd>
 	  </MsgContent>
-   <MsgContent updated="FIX.5.0SP2" updatedEP="141" added="FIX.4.3">
+   <MsgContent updated="FIX.Latest" updatedEP="264" added="FIX.4.3">
       <ComponentID>64</ComponentID>
       <TagText>17</TagText>
       <Indent>0</Indent>
       <Position>20</Position>
       <Reqd>0</Reqd>
-      <Description>Market (exchange) assigned execution identifier.</Description>
+      <Description>Market (exchange) assigned execution identifier as provided in the ExecutionReport(35=8) message.
+Conditionally required if  ExecRefID(19) is present and refers to the new execution identifer assigned by the market (exchange).</Description>
    </MsgContent>
    <MsgContent added="FIX.4.3">
 		    <ComponentID>64</ComponentID>
@@ -87310,6 +87311,59 @@ When the report is sent unsolicited, this is the payment calculation date as det
       <TagText>TrdRegTimestamps</TagText>
       <Indent>0</Indent>
       <Position>57.5</Position>
+      <Reqd>0</Reqd>
+   </MsgContent>
+   <MsgContent added="FIX.Latest" addedEP="264">
+      <ComponentID>14</ComponentID>
+      <TagText>2525</TagText>
+      <Indent>0</Indent>
+      <Position>86.538</Position>
+      <Reqd>0</Reqd>
+   </MsgContent>
+   <MsgContent added="FIX.Latest" addedEP="264">
+      <ComponentID>14</ComponentID>
+      <TagText>TrdRegPublicationGrp</TagText>
+      <Indent>0</Indent>
+      <Position>86.604</Position>
+      <Reqd>0</Reqd>
+   </MsgContent>
+   <MsgContent added="FIX.Latest" addedEP="264">
+      <ComponentID>14</ComponentID>
+      <TagText>2524</TagText>
+      <Indent>0</Indent>
+      <Position>86.608</Position>
+      <Reqd>0</Reqd>
+   </MsgContent>
+   <MsgContent added="FIX.Latest" addedEP="264">
+      <ComponentID>9</ComponentID>
+      <TagText>2525</TagText>
+      <Indent>0</Indent>
+      <Position>160.538</Position>
+      <Reqd>0</Reqd>
+   </MsgContent>
+   <MsgContent added="FIX.Latest" addedEP="264">
+      <ComponentID>64</ComponentID>
+      <TagText>1028</TagText>
+      <Indent>0</Indent>
+      <Position>12.5</Position>
+      <Reqd>0</Reqd>
+      <Description>May be used to indicate manual reporting of the trade.</Description>
+   </MsgContent>
+   <MsgContent added="FIX.Latest" addedEP="264">
+      <ComponentID>64</ComponentID>
+      <TagText>19</TagText>
+      <Indent>0</Indent>
+      <Position>21</Position>
+      <Reqd>0</Reqd>
+      <Description>Reference to an execution identifier previously assigned by the market (exchange).
+If specified, ExecID(17) is required.
+</Description>
+   </MsgContent>
+   <MsgContent added="FIX.Latest" addedEP="264">
+      <ComponentID>64</ComponentID>
+      <TagText>2524</TagText>
+      <Indent>0</Indent>
+      <Position>142.2</Position>
       <Reqd>0</Reqd>
    </MsgContent>
 </MsgContents>
