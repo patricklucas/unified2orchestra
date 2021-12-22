@@ -4,8 +4,8 @@
        edition="2010"
        version="FIX.Latest"
        xsi:noNamespaceSchemaLocation="../../schema/Enums.xsd"
-       generated="2021-05-23T08:41:45.886Z"
-       latestEP="260">
+       generated="2021-05-23T09:41:48.189Z"
+       latestEP="262">
    <Enum added="FIX.2.7">
 		    <Tag>4</Tag>
 		    <Value>B</Value>
@@ -40347,14 +40347,14 @@ In the context of MiFIR Article 4(1)(c) and Article 9(1)(a), when OrderAttribute
       <Description>Onshore</Description>
       <Elaboration>Used to indicate that the rate specified is an onshore rate which differs from its offshore rate.</Elaboration>
    </Enum>
-   <Enum added="FIX.5.0SP2" addedEP="248">
+   <Enum added="FIX.5.0SP2" addedEP="248" updated="FIX.Latest" updatedEP="262">
       <Tag>447</Tag>
       <Value>S</Value>
       <SymbolicName>FDID</SymbolicName>
       <Group>For all PartyRoles</Group>
       <Sort>16</Sort>
-      <Description>FDID (Firm designated identifier)</Description>
-      <Elaboration>A unique identifier required by the SEC for each trading account designated by Industry Members for purposes of reporting to CAT (Consolidated Audit Trail).</Elaboration>
+      <Description>Firm designated identifier</Description>
+      <Elaboration>Also referred to as FDID. A unique identifier required by the SEC for each trading account designated by Industry Members for purposes of reporting to CAT (Consolidated Audit Trail).</Elaboration>
    </Enum>
    <Enum added="FIX.5.0SP2" addedEP="249">
       <Tag>2804</Tag>
@@ -41939,6 +41939,32 @@ in that foreign jurisdiction.</Elaboration>
       <SymbolicName>FIXLatest</SymbolicName>
       <Sort>10</Sort>
       <Description>FIXLatest</Description>
+   </Enum>
+   <Enum added="FIX.Latest" addedEP="262">
+      <Tag>447</Tag>
+      <Value>T</Value>
+      <SymbolicName>SPSAID</SymbolicName>
+      <Group>For all PartyRoles</Group>
+      <Sort>17</Sort>
+      <Description>Special Segregated Account ID</Description>
+      <Elaboration>Also referred to as SPSA ID. The Special Segregated Account identifier issued by Hong Kong Exchanges and Clearing.</Elaboration>
+   </Enum>
+   <Enum added="FIX.Latest" addedEP="262">
+      <Tag>447</Tag>
+      <Value>U</Value>
+      <SymbolicName>MasterSPSAID</SymbolicName>
+      <Group>For all PartyRoles</Group>
+      <Sort>18</Sort>
+      <Description>Master Special Segregated Account ID</Description>
+      <Elaboration>Also referred to as Master SPSA ID.  The master identifier issued by Hong Kong Exchanges and Clearing for the aggregation of SPSA IDs.</Elaboration>
+   </Enum>
+   <Enum added="FIX.Latest" addedEP="262">
+      <Tag>660</Tag>
+      <Value>6</Value>
+      <SymbolicName>SPSAID</SymbolicName>
+      <Sort>6</Sort>
+      <Description>Special Segregated Account ID</Description>
+      <Elaboration>Also referred to as SPSA ID. The Special Segregated Account identifier issued by Hong Kong Exchanges and Clearing..</Elaboration>
    </Enum>
    <Enum>
       <Tag>35</Tag>
