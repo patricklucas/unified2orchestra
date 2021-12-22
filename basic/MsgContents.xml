@@ -4,8 +4,8 @@
              edition="2010"
              version="FIX.Latest"
              xsi:noNamespaceSchemaLocation="../../schema/MsgContents.xsd"
-             generated="2021-05-23T09:52:04.468Z"
-             latestEP="264">
+             generated="2021-05-23T09:57:14.249Z"
+             latestEP="265">
    <MsgContent added="FIX.2.7">
 		    <ComponentID>1</ComponentID>
 		    <TagText>StandardHeader</TagText>
@@ -87365,5 +87365,21 @@ If specified, ExecID(17) is required.
       <Indent>0</Indent>
       <Position>142.2</Position>
       <Reqd>0</Reqd>
+   </MsgContent>
+   <MsgContent added="FIX.Latest" addedEP="265">
+      <ComponentID>27</ComponentID>
+      <TagText>1080</TagText>
+      <Indent>0</Indent>
+      <Position>4.1</Position>
+      <Reqd>0</Reqd>
+      <Description>May be used to refer to a related quote.</Description>
+   </MsgContent>
+   <MsgContent added="FIX.Latest" addedEP="265">
+      <ComponentID>27</ComponentID>
+      <TagText>1081</TagText>
+      <Indent>0</Indent>
+      <Position>4.2</Position>
+      <Reqd>0</Reqd>
+      <Description>Conditionally required if RefOrderID(1080) is specified.</Description>
    </MsgContent>
 </MsgContents>

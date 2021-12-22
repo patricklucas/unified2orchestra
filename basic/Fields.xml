@@ -4,8 +4,8 @@
         edition="2010"
         version="FIX.Latest"
         xsi:noNamespaceSchemaLocation="../../schema/Fields.xsd"
-        generated="2021-05-23T09:52:04.468Z"
-        latestEP="264">
+        generated="2021-05-23T09:57:14.249Z"
+        latestEP="265">
    <Field added="FIX.2.7">
 		    <Tag>1</Tag>
 		    <Name>Account</Name>
@@ -2397,16 +2397,17 @@ See "Appendix 6-C"</Description>
 		    <NotReqXML>0</NotReqXML>
 		    <Description>Total number of quotes for the quote set.</Description>
 	  </Field>
-   <Field added="FIX.4.2">
-		    <Tag>305</Tag>
-		    <Name>UnderlyingSecurityIDSource</Name>
-		    <Type>String</Type>
-		    <AbbrName>Src</AbbrName>
-		    <NotReqXML>0</NotReqXML>
-		    <EnumDatatype>22</EnumDatatype>
-		    <Description>Underlying security's SecurityIDSource.
+   <Field added="FIX.4.2" updated="FIX.Latest" updatedEP="265">
+      <Tag>305</Tag>
+      <Name>UnderlyingSecurityIDSource</Name>
+      <Type>String</Type>
+      <AbbrName>Src</AbbrName>
+      <NotReqXML>0</NotReqXML>
+      <EnumDatatype>22</EnumDatatype>
+      <UnionDataType>Reserved100Plus</UnionDataType>
+      <Description>Underlying security's SecurityIDSource.
 Valid values: see SecurityIDSource (22) field</Description>
-	  </Field>
+   </Field>
    <Field added="FIX.4.2">
 		    <Tag>306</Tag>
 		    <Name>UnderlyingIssuer</Name>
@@ -4898,16 +4899,17 @@ See SymbolSfx (65) field for description</Description>
 		    <Description>Multileg instrument's individual security's SecurityID.
 See SecurityID (48) field for description</Description>
 	  </Field>
-   <Field added="FIX.4.3">
-		    <Tag>603</Tag>
-		    <Name>LegSecurityIDSource</Name>
-		    <Type>String</Type>
-		    <AbbrName>Src</AbbrName>
-		    <NotReqXML>0</NotReqXML>
-		    <EnumDatatype>22</EnumDatatype>
-		    <Description>Multileg instrument's individual security's SecurityIDSource.
+   <Field added="FIX.4.3" updated="FIX.Latest" updatedEP="265">
+      <Tag>603</Tag>
+      <Name>LegSecurityIDSource</Name>
+      <Type>String</Type>
+      <AbbrName>Src</AbbrName>
+      <NotReqXML>0</NotReqXML>
+      <EnumDatatype>22</EnumDatatype>
+      <UnionDataType>Reserved100Plus</UnionDataType>
+      <Description>Multileg instrument's individual security's SecurityIDSource.
 See SecurityIDSource (22) field for description</Description>
-	  </Field>
+   </Field>
    <Field added="FIX.4.3">
 		    <Tag>604</Tag>
 		    <Name>NoLegSecurityAltID</Name>
@@ -6254,16 +6256,17 @@ Same values as PartyRole (452)</Description>
 		    <Description>PartySubID value within a "second instance" Nested repeating group.
 Same values as PartySubID (523)</Description>
 	  </Field>
-   <Field added="FIX.4.4">
-		    <Tag>761</Tag>
-		    <Name>BenchmarkSecurityIDSource</Name>
-		    <Type>String</Type>
-		    <AbbrName>SecIDSrc</AbbrName>
-		    <NotReqXML>0</NotReqXML>
-		    <EnumDatatype>22</EnumDatatype>
-		    <Description>Identifies class or source of the BenchmarkSecurityID (699) value. Required if BenchmarkSecurityID is specified.
+   <Field added="FIX.4.4" updated="FIX.Latest" updatedEP="265">
+      <Tag>761</Tag>
+      <Name>BenchmarkSecurityIDSource</Name>
+      <Type>String</Type>
+      <AbbrName>SecIDSrc</AbbrName>
+      <NotReqXML>0</NotReqXML>
+      <EnumDatatype>22</EnumDatatype>
+      <UnionDataType>Reserved100Plus</UnionDataType>
+      <Description>Identifies class or source of the BenchmarkSecurityID (699) value. Required if BenchmarkSecurityID is specified.
 Same values as the SecurityIDSource (22) field</Description>
-	  </Field>
+   </Field>
    <Field updated="FIX.5.0SP2" updatedEP="254" added="FIX.4.4">
       <Tag>762</Tag>
       <Name>SecuritySubType</Name>
@@ -8996,15 +8999,16 @@ For pre-trade credit/risk limit check process, this is the reference to the plac
 		    <NotReqXML>0</NotReqXML>
 		    <Description>The value of the reference price that the order is pegged to. PeggedRefPrice + PegOffsetValue (211) = PeggedPrice (839) unless the limit price (44, Price) is breached. The values may not be exact due to rounding.</Description>
 	  </Field>
-   <Field added="FIX.4.4" addedEP="22">
-		    <Tag>1096</Tag>
-		    <Name>PegSecurityIDSource</Name>
-		    <Type>String</Type>
-		    <AbbrName>PegSecurityIDSource</AbbrName>
-		    <NotReqXML>0</NotReqXML>
-		    <EnumDatatype>22</EnumDatatype>
-		    <Description>Defines the identity of the security off whose prices the order will peg. Same values as SecurityIDSource (22)</Description>
-	  </Field>
+   <Field added="FIX.4.4" addedEP="22" updated="FIX.Latest" updatedEP="265">
+      <Tag>1096</Tag>
+      <Name>PegSecurityIDSource</Name>
+      <Type>String</Type>
+      <AbbrName>PegSecurityIDSource</AbbrName>
+      <NotReqXML>0</NotReqXML>
+      <EnumDatatype>22</EnumDatatype>
+      <UnionDataType>Reserved100Plus</UnionDataType>
+      <Description>Defines the identity of the security off whose prices the order will peg. Same values as SecurityIDSource (22)</Description>
+   </Field>
    <Field added="FIX.4.4" addedEP="22">
 		    <Tag>1097</Tag>
 		    <Name>PegSecurityID</Name>
@@ -9069,15 +9073,16 @@ For pre-trade credit/risk limit check process, this is the reference to the plac
 		    <NotReqXML>0</NotReqXML>
 		    <Description>Defines the identity of the security whose prices will be tracked by the trigger logic.</Description>
 	  </Field>
-   <Field added="FIX.5.0" addedEP="-1">
-		    <Tag>1105</Tag>
-		    <Name>TriggerSecurityIDSource</Name>
-		    <Type>String</Type>
-		    <AbbrName>TrgrSecIDSrc</AbbrName>
-		    <NotReqXML>0</NotReqXML>
-		    <EnumDatatype>22</EnumDatatype>
-		    <Description>Defines the identity of the security whose prices will be tracked by the trigger logic. Same values as SecurityIDSource (22).</Description>
-	  </Field>
+   <Field added="FIX.5.0" addedEP="-1" updated="FIX.Latest" updatedEP="265">
+      <Tag>1105</Tag>
+      <Name>TriggerSecurityIDSource</Name>
+      <Type>String</Type>
+      <AbbrName>TrgrSecIDSrc</AbbrName>
+      <NotReqXML>0</NotReqXML>
+      <EnumDatatype>22</EnumDatatype>
+      <UnionDataType>Reserved100Plus</UnionDataType>
+      <Description>Defines the identity of the security whose prices will be tracked by the trigger logic. Same values as SecurityIDSource (22).</Description>
+   </Field>
    <Field added="FIX.5.0" addedEP="-1">
 		    <Tag>1106</Tag>
 		    <Name>TriggerSecurityDesc</Name>
@@ -9990,15 +9995,16 @@ Values are bilaterally agreed.</Description>
 		    <NotReqXML>0</NotReqXML>
 		    <Description>Refer to definition for SecurityID(48)</Description>
 	  </Field>
-   <Field added="FIX.5.0" addedEP="52">
-		    <Tag>1217</Tag>
-		    <Name>DerivativeSecurityIDSource</Name>
-		    <Type>String</Type>
-		    <AbbrName>Src</AbbrName>
-		    <NotReqXML>0</NotReqXML>
-		    <EnumDatatype>22</EnumDatatype>
-		    <Description>Refer to definition for SecurityIDSoruce(22)</Description>
-	  </Field>
+   <Field added="FIX.5.0" addedEP="52" updated="FIX.Latest" updatedEP="265">
+      <Tag>1217</Tag>
+      <Name>DerivativeSecurityIDSource</Name>
+      <Type>String</Type>
+      <AbbrName>Src</AbbrName>
+      <NotReqXML>0</NotReqXML>
+      <EnumDatatype>22</EnumDatatype>
+      <UnionDataType>Reserved100Plus</UnionDataType>
+      <Description>Refer to definition for SecurityIDSoruce(22)</Description>
+   </Field>
    <Field added="FIX.5.0" addedEP="52">
 		    <Tag>1218</Tag>
 		    <Name>NoDerivativeSecurityAltID</Name>
@@ -12824,13 +12830,14 @@ See SymbolSfx(65) field for description.</Description>
       <Description>Used to limit instrument scope to specified security identifier.
 See SecurityID(48) field for description.</Description>
    </Field>
-   <Field added="FIX.5.0SP2" addedEP="105">
+   <Field added="FIX.5.0SP2" addedEP="105" updated="FIX.Latest" updatedEP="265">
       <Tag>1539</Tag>
       <Name>InstrumentScopeSecurityIDSource</Name>
       <Type>String</Type>
       <AbbrName>Src</AbbrName>
       <NotReqXML>0</NotReqXML>
       <EnumDatatype>22</EnumDatatype>
+      <UnionDataType>Reserved100Plus</UnionDataType>
       <Description>Used to limit instrument scope to specified security identifier source.
 See SecurityIDSource(22) field for description.</Description>
    </Field>
@@ -27518,13 +27525,14 @@ See http://www.fpml.org/coding-scheme/commodity-market-disruption-fallback for v
       <NotReqXML>0</NotReqXML>
       <Description>Specifies the identifier value of the security.</Description>
    </Field>
-   <Field added="FIX.5.0SP2" addedEP="169">
+   <Field added="FIX.5.0SP2" addedEP="169" updated="FIX.Latest" updatedEP="265">
       <Tag>41099</Tag>
       <Name>MarketDisruptionFallbackUnderlierSecurityIDSource</Name>
       <Type>String</Type>
       <AbbrName>Src</AbbrName>
       <NotReqXML>0</NotReqXML>
       <EnumDatatype>22</EnumDatatype>
+      <UnionDataType>Reserved100Plus</UnionDataType>
       <Description>Specifies the class or source scheme of the security identifier.</Description>
    </Field>
    <Field added="FIX.5.0SP2" addedEP="169">
@@ -28809,13 +28817,14 @@ For bullion see http://www.fixtradingcommunity.org/codelists#Bullion_Types for t
       <NotReqXML>0</NotReqXML>
       <Description>Specifies the market identifier for the commodity.</Description>
    </Field>
-   <Field added="FIX.5.0SP2" addedEP="169">
+   <Field added="FIX.5.0SP2" addedEP="169" updated="FIX.Latest" updatedEP="265">
       <Tag>41254</Tag>
       <Name>StreamCommoditySecurityIDSource</Name>
       <Type>String</Type>
       <AbbrName>Src</AbbrName>
       <NotReqXML>0</NotReqXML>
       <EnumDatatype>22</EnumDatatype>
+      <UnionDataType>Reserved100Plus</UnionDataType>
       <Description>Identifies the class or source of the StreamCommoditySecurityIDSource(41253) value.</Description>
    </Field>
    <Field added="FIX.5.0SP2" addedEP="169">
@@ -31017,13 +31026,14 @@ See http://www.fpml.org/coding-scheme/commodity-market-disruption-fallback for v
       <NotReqXML>0</NotReqXML>
       <Description>Specifies the identifier value of the security.</Description>
    </Field>
-   <Field added="FIX.5.0SP2" addedEP="169">
+   <Field added="FIX.5.0SP2" addedEP="169" updated="FIX.Latest" updatedEP="265">
       <Tag>41474</Tag>
       <Name>LegMarketDisruptionFallbackUnderlierSecurityIDSource</Name>
       <Type>String</Type>
       <AbbrName>Src</AbbrName>
       <NotReqXML>0</NotReqXML>
       <EnumDatatype>22</EnumDatatype>
+      <UnionDataType>Reserved100Plus</UnionDataType>
       <Description>Specifies the class or source scheme of the security identifier.</Description>
    </Field>
    <Field added="FIX.5.0SP2" addedEP="169">
@@ -32476,13 +32486,14 @@ For bullion see http://www.fixtradingcommunity.org/codelists#Bullion_Types for t
       <NotReqXML>0</NotReqXML>
       <Description>Specifies the market identifier for the commodity.</Description>
    </Field>
-   <Field added="FIX.5.0SP2" addedEP="169">
+   <Field added="FIX.5.0SP2" addedEP="169" updated="FIX.Latest" updatedEP="265">
       <Tag>41651</Tag>
       <Name>LegStreamCommoditySecurityIDSource</Name>
       <Type>String</Type>
       <AbbrName>Src</AbbrName>
       <NotReqXML>0</NotReqXML>
       <EnumDatatype>22</EnumDatatype>
+      <UnionDataType>Reserved100Plus</UnionDataType>
       <Description>Identifies the class or source of the LegStreamCommoditySecurityIDSource(41650) value.</Description>
    </Field>
    <Field added="FIX.5.0SP2" addedEP="169">
@@ -34658,13 +34669,14 @@ See http://www.fpml.org/coding-scheme/commodity-market-disruption-fallback for v
       <NotReqXML>0</NotReqXML>
       <Description>Specifies the identifier value of the security.</Description>
    </Field>
-   <Field added="FIX.5.0SP2" addedEP="169">
+   <Field added="FIX.5.0SP2" addedEP="169" updated="FIX.Latest" updatedEP="265">
       <Tag>41871</Tag>
       <Name>UnderlyingMarketDisruptionFallbackUnderlierSecurityIDSource</Name>
       <Type>String</Type>
       <AbbrName>Src</AbbrName>
       <NotReqXML>0</NotReqXML>
       <EnumDatatype>22</EnumDatatype>
+      <UnionDataType>Reserved100Plus</UnionDataType>
       <Description>Specifies the class or source scheme of the security identifier.</Description>
    </Field>
    <Field added="FIX.5.0SP2" addedEP="169">
@@ -35443,13 +35455,14 @@ For bullion see http://www.fixtradingcommunity.org/codelists#Bullion_Types for t
       <NotReqXML>0</NotReqXML>
       <Description>Specifies the market identifier for the commodity.</Description>
    </Field>
-   <Field added="FIX.5.0SP2" addedEP="169">
+   <Field added="FIX.5.0SP2" addedEP="169" updated="FIX.Latest" updatedEP="265">
       <Tag>41967</Tag>
       <Name>UnderlyingStreamCommoditySecurityIDSource</Name>
       <Type>String</Type>
       <AbbrName>Src</AbbrName>
       <NotReqXML>0</NotReqXML>
       <EnumDatatype>22</EnumDatatype>
+      <UnionDataType>Reserved100Plus</UnionDataType>
       <Description>Identifies the class or source of the UnderlyingStreamCommoditySecurityIDSource(41966) value.</Description>
    </Field>
    <Field added="FIX.5.0SP2" addedEP="169">
