@@ -4,8 +4,8 @@
              edition="2010"
              version="FIX.Latest"
              xsi:noNamespaceSchemaLocation="../../schema/MsgContents.xsd"
-             generated="2020-11-15T07:32:33.614Z"
-             latestEP="259">
+             generated="2021-05-23T09:35:58.531Z"
+             latestEP="261">
    <MsgContent added="FIX.2.7">
 		    <ComponentID>1</ComponentID>
 		    <TagText>StandardHeader</TagText>
@@ -86334,7 +86334,7 @@ When the report is sent unsolicited, this is the payment calculation date as det
       <Reqd>0</Reqd>
       <Description>May be used with TrdRegTimestampType(770)=34 (Reference time for NBBO).</Description>
    </MsgContent>
-   <!--DELETED MsgContent identified by ComponentID='1078' and TagText='2836'--><!--DELETED MsgContent identified by ComponentID='1078' and TagText='2835'--><MsgContent added="FIX.5.0SP2" addedEP="253">
+   <MsgContent added="FIX.5.0SP2" addedEP="253">
       <ComponentID>2061</ComponentID>
       <TagText>522</TagText>
       <Indent>1</Indent>
@@ -87262,5 +87262,33 @@ When the report is sent unsolicited, this is the payment calculation date as det
       <Position>1.5</Position>
       <Reqd>0</Reqd>
       <Description>Required if NoUnderlyingPaymentStreamFormulas(42981) &gt; 0</Description>
+   </MsgContent>
+   <MsgContent added="FIX.Latest" addedEP="261">
+      <ComponentID>14</ComponentID>
+      <TagText>1934</TagText>
+      <Indent>0</Indent>
+      <Position>64.04</Position>
+      <Reqd>0</Reqd>
+   </MsgContent>
+   <MsgContent added="FIX.Latest" addedEP="261">
+      <ComponentID>9</ComponentID>
+      <TagText>1934</TagText>
+      <Indent>0</Indent>
+      <Position>72.04</Position>
+      <Reqd>0</Reqd>
+   </MsgContent>
+   <MsgContent added="FIX.Latest" addedEP="261">
+      <ComponentID>27</ComponentID>
+      <TagText>1934</TagText>
+      <Indent>0</Indent>
+      <Position>67.2</Position>
+      <Reqd>0</Reqd>
+   </MsgContent>
+   <MsgContent added="FIX.Latest" addedEP="261">
+      <ComponentID>68</ComponentID>
+      <TagText>1934</TagText>
+      <Indent>0</Indent>
+      <Position>67.5</Position>
+      <Reqd>0</Reqd>
    </MsgContent>
 </MsgContents>
