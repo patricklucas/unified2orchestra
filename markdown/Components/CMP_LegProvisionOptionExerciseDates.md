@@ -1,0 +1,27 @@
+### Component LegProvisionOptionExerciseDates category Common (4048)
+
+The LegProvisionOptionExerciseDates is a subcomponent within the LegProvisionGrp component used to report the option exercise dates and times defined in the provision.
+
+| Name                                                 | Tag   | Req'd | Documentation                                                                                                                               |
+|------------------------------------------------------|-------|----------|-------------------------------------------------------------------------------------------------------------------------------|
+| LegProvisionOptionExerciseBusinessDayConvention      | 40476 |       | When specified, this overrides the business day convention defined in the LegDateAdjustment component in InstrumentLeg. The specified value would be specific to this instance of the leg provision option exercise dates. |
+| LegProvisionOptionExerciseBusinessCenterGrp          | group |       | When specified, this overrides the business centers defined in the LegDateAdjustment component in InstrumentLeg. The specified values would be specific to this instance of the leg provision option exercise dates.       |
+| LegProvisionOptionExerciseFixedDateGrp               | group |       |                                                                                                                                |
+| LegProvisionOptionExerciseEarliestDateOffsetPeriod   | 40478 |       | Conditionally required when LegProvisionOptionExerciseEarliestDateUnit(40479) is specified.                                                                                                                               |
+| LegProvisionOptionExerciseEarliestDateOffsetUnit     | 40479 |       | Conditionally required when LegProvisionOptionExerciseEarliestDatePeriod(40478) is specified.                                                                                                                              |
+| LegProvisionOptionExerciseFrequencyPeriod            | 40480 |       | Conditionally required when LegProvisionOptionExerciseFrequencyUnit(40481) is specified.                                                                                                                               |
+| LegProvisionOptionExerciseFrequencyUnit              | 40481 |       | Conditionally required when LegProvisionOptionExerciseFrequencyPeriod(40480) is specified.                                                                                                                               |
+| LegProvisionOptionExerciseStartDateUnadjusted        | 40482 |       |                                                                                                                                |
+| LegProvisionOptionExerciseStartDateRelativeTo        | 40483 |       |                                                                                                                                |
+| LegProvisionOptionExerciseStartDateOffsetPeriod      | 40484 |       | Conditionally required when LegProvisionOptionExerciseStartDateOffsetUnit(40485) is specified.                                                                                                                             |
+| LegProvisionOptionExerciseStartDateOffsetUnit        | 40485 |       | Conditionally required when LegProvisionOptionExerciseStartDateOffsetPeriod(40484) is specified.                                                                                                                           |
+| LegProvisionOptionExerciseStartDateOffsetDayType     | 40486 |       |                                                                                                                                |
+| LegProvisionOptionExerciseStartDateAdjusted          | 40487 |       |                                                                                                                                |
+| LegProvisionOptionExercisePeriodSkip                 | 40488 |       |                                                                                                                                |
+| LegProvisionOptionExerciseBoundsFirstDateUnadjusted  | 40489 |       |                                                                                                                                |
+| LegProvisionOptionExerciseBoundsLastDateUnadjusted   | 40490 |       |                                                                                                                                |
+| LegProvisionOptionExerciseEarliestTime               | 40491 |       |                                                                                                                                |
+| LegProvisionOptionExerciseEarliestTimeBusinessCenter | 40492 |       |                                                                                                                                |
+| LegProvisionOptionExerciseLatestTime                 | 40493 |       |                                                                                                                                |
+| LegProvisionOptionExerciseLatestTimeBusinessCenter   | 40494 |       |                                                                                                                                |
+

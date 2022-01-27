@@ -1,0 +1,14 @@
+### Codeset OrderOriginationCodeSet type int (1724)
+
+Identifies the origin of the order.
+
+| Name                                     | Value | Id      | Sort | Synopsis                                                          | Elaboration                                                                                                                               |
+|------------------------------------------|-------|---------|------|-------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------|
+| OrderReceivedFromCustomer                | 1     | 1724001 | 1    | Order received from a customer                                    |                                                                                                                                |
+| OrderReceivedFromWithinFirm              | 2     | 1724002 | 2    | Order received from within the firm                               |                                                                                                                                |
+| OrderReceivedFromAnotherBrokerDealer     | 3     | 1724003 | 3    | Order received from another broker-dealer                         |                                                                                                                                |
+| OrderReceivedFromCustomerOrWithFirm      | 4     | 1724004 | 4    | Order received from a customer or originated from within the firm |                                                                                                                                |
+| OrderReceivedFromDirectAccessCustomer    | 5     | 1724005 | 5    | Order received from a direct access or sponsored access customer  |                                                                                                                                |
+| OrderReceivedFromForeignDealerEquivalent | 6     | 1724006 | 6    | Order received from a foreign dealer equivalent                   | A foreign dealer equivalent is a person in the business of trading securities in a foreign jurisdiction in a manner analogous to an investment dealer and that is subject to the regulatory jurisdiction of a signatory to the International Organization of Securities Commissions’ (IOSCO) Multilateral Memorandum of Understanding/P/in that foreign jurisdiction. |
+| OrderReceivedFromExecutionOnlyService    | 7     | 1724007 | 7    | Order received from an execution-only service                     | The acceptance and execution of orders from customers for trades that the broker-dealer has not recommended and for which the broker-dealer takes no responsibility as to the appropriateness or suitability of orders accepted or account positions held.                                                                                                            |
+

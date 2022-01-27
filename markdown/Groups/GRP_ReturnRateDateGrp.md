@@ -1,0 +1,31 @@
+### Group ReturnRateDateGrp category Common (4378)
+
+ReturnRateDateGrp is a repeating subcomponent within the ReturnRateGrp component. It is used to specify the equity and dividend valuation dates for an equity return swap payment stream.
+
+| Name                                         | Tag   | Req'd | Documentation                                                                                                                               |
+|----------------------------------------------|-------|----------|-------------------------------------------------------------------------------------------------------------------------------|
+| NoReturnRateDates                            | 42709 |       |                                                                                                                                |
+| ReturnRateDateMode                           | 42710 |       | Required if NoReturnRateDates(42709) > 0.                                                                                                                               |
+| ReturnRateValuationDateGrp                   | group |       |                                                                                                                                |
+| ReturnRateValuationDateRelativeTo            | 42711 |       |                                                                                                                                |
+| ReturnRateValuationDateOffsetPeriod          | 42712 |       | Conditionally required when ReturnRateValuationDateOffsetUnit(42713) is specified.                                                                                                                               |
+| ReturnRateValuationDateOffsetUnit            | 42713 |       | Conditionally required when ReturnRateValuationDateOffsetPeriod(42712) is specified.                                                                                                                               |
+| ReturnRateValuationDateOffsetDayType         | 42714 |       |                                                                                                                                |
+| ReturnRateValuationStartDateUnadjusted       | 42715 |       |                                                                                                                                |
+| ReturnRateValuationStartDateRelativeTo       | 42716 |       |                                                                                                                                |
+| ReturnRateValuationStartDateOffsetPeriod     | 42717 |       | Conditionally required when ReturnRateValuationStartDateOffsetUnit(42718) is specified.                                                                                                                               |
+| ReturnRateValuationStartDateOffsetUnit       | 42718 |       | Conditionally required when ReturnRateValuationStartDateOffsetPeriod(42717) is specified.                                                                                                                               |
+| ReturnRateValuationStartDateOffsetDayType    | 42719 |       |                                                                                                                                |
+| ReturnRateValuationStartDateAdjusted         | 42720 |       |                                                                                                                                |
+| ReturnRateValuationEndDateUnadjusted         | 42721 |       |                                                                                                                                |
+| ReturnRateValuationEndDateRelativeTo         | 42722 |       |                                                                                                                                |
+| ReturnRateValuationEndDateOffsetPeriod       | 42723 |       | Conditionally required when ReturnRateValuationEndDateOffsetUnit(42724) is specified.                                                                                                                               |
+| ReturnRateValuationEndDateOffsetUnit         | 42724 |       | Conditionally required when ReturnRateValuationEndDateOffsetPeriod(42723) is specified.                                                                                                                               |
+| ReturnRateValuationEndDateOffsetDayType      | 42725 |       |                                                                                                                                |
+| ReturnRateValuationEndDateAdjusted           | 42726 |       |                                                                                                                                |
+| ReturnRateValuationFrequencyPeriod           | 42727 |       | Conditionally required when ReturnRateValuationFrequencyUnit(42728) is specified.                                                                                                                               |
+| ReturnRateValuationFrequencyUnit             | 42728 |       | Conditionally required when ReturnRateValuationFrequencyPeriod(42727) is specified.                                                                                                                               |
+| ReturnRateValuationFrequencyRollConvention   | 42729 |       | When specified, this overrides the date roll convention defined in the DateAdjustment component in Instrument. The specified values would be specific to this instance of the payment stream return rate valuation dates. |
+| ReturnRateValuationDateBusinessDayConvention | 42730 |       | When specified, this overrides the business day convention defined in the DateAdjustment component in Instrument. The specified value would be specific to payment stream return rate valuation dates.                    |
+| ReturnRateValuationDateBusinessCenterGrp     | group |       | When specified, this overrides the business day convention defined in the DateAdjustment component in Instrument. The specified values would be specific to payment stream return rate valuation dates.                   |
+

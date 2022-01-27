@@ -1,0 +1,22 @@
+### Component UnderlyingPaymentStreamCompoundingDates category Common (4400)
+
+UnderlyingPaymentStreamCompoundingDates is a subcomponent of the UnderlyingPaymentStream component used to specify the compounding dates of the stream - either specific, relative or periodic dates.
+
+| Name                                                         | Tag       | Req'd | Documentation                                                                                                                               |
+|--------------------------------------------------------------|-----------|----------|-------------------------------------------------------------------------------------------------------------------------------|
+| UnderlyingPaymentStreamCompoundingDatesBusinessDayConvention | 42904     |       | When specified, this overrides the business day convention defined in the UnderlyingDateAdjustment component in UnderlyingInstrument. The specified value would be specific to payment stream compounding dates.       |
+| UnderlyingPaymentStreamCompoundingDatesBusinessCenterGrp     | group     |       | When specified, this overrides the business centers defined in the UnderlyingDateAdjustment component in UnderlyingInstrument. The specified values would be specific to payment stream compounding dates.             |
+| UnderlyingPaymentStreamCompoundingDateGrp                    | group     |       |                                                                                                                                |
+| UnderlyingPaymentStreamCompoundingDatesRelativeTo            | 42905     |       |                                                                                                                                |
+| UnderlyingPaymentStreamCompoundingDatesOffsetPeriod          | 42906     |       | Conditionally required when UnderlyingPaymentStreamCompoundingDatesOffsetUnit(42907) is specified.                                                                                                                     |
+| UnderlyingPaymentStreamCompoundingDatesOffsetUnit            | 42907     |       | Conditionally required when UnderlyingPaymentStreamCompoundingDatesOffsetPeriod(42906) is specified.                                                                                                                   |
+| UnderlyingPaymentStreamCompoundingDatesOffsetDayType         | 42908     |       |                                                                                                                                |
+| UnderlyingPaymentStreamCompoundingPeriodSkip                 | 42909     |       |                                                                                                                                |
+| UnderlyingPaymentStreamCompoundingStartDate                  | component |       |                                                                                                                                |
+| UnderlyingPaymentStreamCompoundingEndDate                    | component |       |                                                                                                                                |
+| UnderlyingPaymentStreamCompoundingFrequencyPeriod            | 42910     |       | Conditionally required when UnderlyingPaymentStreamCompoundingFrequencyUnit(42911) is specified.                                                                                                                       |
+| UnderlyingPaymentStreamCompoundingFrequencyUnit              | 42911     |       | Conditionally required when UnderlyingPaymentStreamCompoundingFrequencyPeriod(42910) is specified.                                                                                                                     |
+| UnderlyingPaymentStreamCompoundingRollConvention             | 42912     |       | When specified, this overrides the date roll convention defined in the UnderlyingDateAdjustment component in UnderlyingInstrument. The specified value would be specific to this instance of the payment stream dates. |
+| UnderlyingPaymentStreamBoundsFirstDateUnadjusted             | 42913     |       |                                                                                                                                |
+| UnderlyingPaymentStreamBoundsLastDateUnadjusted              | 42914     |       |                                                                                                                                |
+

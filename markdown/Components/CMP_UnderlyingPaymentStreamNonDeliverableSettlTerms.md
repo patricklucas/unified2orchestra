@@ -1,0 +1,17 @@
+### Component UnderlyingPaymentStreamNonDeliverableSettlTerms category Common (4064)
+
+UnderlyingPaymentStreamNonDeliverableSettlTerms is a subcomponent of the UnderlyingPaymentStream component used to specify the non-deliverable settlement terms of the stream.
+
+| Name                                                                  | Tag       | Req'd | Documentation                                                                                                                               |
+|-----------------------------------------------------------------------|-----------|----------|-------------------------------------------------------------------------------------------------------------------------------|
+| UnderlyingPaymentStreamNonDeliverableRefCurrency                      | 40648     |       |                                                                                                                                |
+| UnderlyingPaymentStreamNonDeliverableFixingDatesBusinessDayConvention | 40649     |       | When specified, this overrides the business day convention defined in the UnderlyingDateAdjustment component in UnderlyingInstrument. The specified value would be specific to this instance of the underlying instrument's non-deliverable settlement terms. |
+| UnderlyingPaymentStreamNonDeliverableFixingDatesBusinessCenterGrp     | group     |       | When specified, this overrides the business centers defined in the UnderlyingDateAdjustment component in UnderlyingInstrument. The specified values would be specific to this instance of the underlying instrument's non-deliverable settlement terms.       |
+| UnderlyingPaymentStreamNonDeliverableFixingDatesRelativeTo            | 40651     |       |                                                                                                                                |
+| UnderlyingPaymentStreamNonDeliverableFixingDatesOffsetPeriod          | 40652     |       | Conditionally required when UnderlyingPaymentStreamNonDeliverableFixingDatesOffsetUnit(40653) is specified.                                                                                                                               |
+| UnderlyingPaymentStreamNonDeliverableFixingDatesOffsetUnit            | 40653     |       | Conditionally required when UnderlyingPaymentStreamNonDeliverableFixingDatesOffsetPeriod(40652) is specified.                                                                                                                               |
+| UnderlyingPaymentStreamNonDeliverableFixingDatesOffsetDayType         | 40654     |       |                                                                                                                                |
+| UnderlyingPaymentStreamNonDeliverableSettlRateSource                  | component |       |                                                                                                                                |
+| UnderlyingPaymentStreamNonDeliverableFixingDateGrp                    | group     |       |                                                                                                                                |
+| UnderlyingSettlRateDisruptionFallbackGrp                              | group     |       |                                                                                                                                |
+

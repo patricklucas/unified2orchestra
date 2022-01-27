@@ -1,0 +1,31 @@
+### Group LegReturnRateDateGrp category Common (4353)
+
+LegReturnRateDateGrp is a repeating subcomponent within the LegReturnRateGrp component. It is used to specify the equity and dividend valuation dates for an equity return swap payment stream.
+
+| Name                                            | Tag   | Req'd | Documentation                                                                                                                               |
+|-------------------------------------------------|-------|----------|-------------------------------------------------------------------------------------------------------------------------------|
+| NoLegReturnRateDates                            | 42508 |       |                                                                                                                                |
+| LegReturnRateDateMode                           | 42509 |       | Required if NoLegReturnRateDates(42508) > 0.                                                                                                                               |
+| LegReturnRateValuationDateGrp                   | group |       |                                                                                                                                |
+| LegReturnRateValuationDateRelativeTo            | 42510 |       |                                                                                                                                |
+| LegReturnRateValuationDateOffsetPeriod          | 42511 |       | Conditionally required when LegReturnRateValuationDateOffsetUnit(42512) is specified.                                                                                                                         |
+| LegReturnRateValuationDateOffsetUnit            | 42512 |       | Conditionally required when LegReturnRateValuationDateOffsetPeriod(42511) is specified.                                                                                                                       |
+| LegReturnRateValuationDateOffsetDayType         | 42513 |       |                                                                                                                                |
+| LegReturnRateValuationStartDateUnadjusted       | 42514 |       |                                                                                                                                |
+| LegReturnRateValuationStartDateRelativeTo       | 42515 |       |                                                                                                                                |
+| LegReturnRateValuationStartDateOffsetPeriod     | 42516 |       | Conditionally required when LegReturnRateValuationStartDateOffsetUnit(42517) is specified.                                                                                                                    |
+| LegReturnRateValuationStartDateOffsetUnit       | 42517 |       | Conditionally required when LegReturnRateValuationStartDateOffsetPeriod(42516) is specified.                                                                                                                  |
+| LegReturnRateValuationStartDateOffsetDayType    | 42518 |       |                                                                                                                                |
+| LegReturnRateValuationStartDateAdjusted         | 42519 |       |                                                                                                                                |
+| LegReturnRateValuationEndDateUnadjusted         | 42520 |       |                                                                                                                                |
+| LegReturnRateValuationEndDateRelativeTo         | 42521 |       |                                                                                                                                |
+| LegReturnRateValuationEndDateOffsetPeriod       | 42522 |       | Conditionally required when LegReturnRateValuationEndDateOffsetUnit(42523) is specified.                                                                                                                      |
+| LegReturnRateValuationEndDateOffsetUnit         | 42523 |       | Conditionally required when LegReturnRateValuationEndDateOffsetPeriod(42522) is specified.                                                                                                                    |
+| LegReturnRateValuationEndDateOffsetDayType      | 42524 |       |                                                                                                                                |
+| LegReturnRateValuationEndDateAdjusted           | 42525 |       |                                                                                                                                |
+| LegReturnRateValuationFrequencyPeriod           | 42526 |       | Conditionally required when LegReturnRateValuationFrequencyUnit(42527) is specified.                                                                                                                          |
+| LegReturnRateValuationFrequencyUnit             | 42527 |       | Conditionally required when LegReturnRateValuationFrequencyPeriod(42526) is specified.                                                                                                                        |
+| LegReturnRateValuationFrequencyRollConvention   | 42528 |       | When specified, this overrides the date roll convention defined in the LegDateAdjustment component in InstrumentLeg. The specified values would be specific to this instance of return rate valuation dates.  |
+| LegReturnRateValuationDateBusinessDayConvention | 42529 |       | When specified, this overrides the business day convention defined in the LegDateAdjustment component in InstrumentLeg. The specified value would be specific to payment stream return rate valuation dates.  |
+| LegReturnRateValuationDateBusinessCenterGrp     | group |       | When specified, this overrides the business day convention defined in the LegDateAdjustment component in InstrumentLeg. The specified values would be specific to payment stream return rate valuation dates. |
+

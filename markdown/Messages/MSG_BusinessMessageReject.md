@@ -1,0 +1,19 @@
+### Message BusinessMessageReject type j category BusinessReject (43)
+
+The Business Message Reject message can reject an application-level message which fulfills session-level rules and cannot be rejected via any other means. Note if the message fails a session-level rule (e.g. body length is incorrect), a session-level Reject message should be issued.
+
+| Name                 | Tag       | Req'd | Documentation                                                                                                                               |
+|----------------------|-----------|----------|-------------------------------------------------------------------------------------------------------------------------------|
+| StandardHeader       | component |   Y   | MsgType = j (lowercase)                                                                                                                               |
+| RefSeqNum            | 45        |       | MsgSeqNum of rejected message                                                                                                                               |
+| RefMsgType           | 372       |   Y   | The MsgType of the FIX message being referenced.                                                                                                                               |
+| RefApplVerID         | 1130      |       | Recommended when rejecting an application message that does not explicitly provide ApplVerID ( 1128) on the message being rejected. In this case the value from the DefaultApplVerID(1137) or the default value specified in the NoMsgTypes repeating group on the logon message should be provided.       |
+| RefApplExtID         | 1406      |       | Recommended when rejecting an application message that does not explicitly provide ApplExtID(1156) on the rejected message. In this case the value from the DefaultApplExtID(1407) or the default value specified in the NoMsgTypes repeating group on the logon message should be provided.               |
+| RefCstmApplVerID     | 1131      |       | Recommended when rejecting an application message that does not explicitly provide CstmApplVerID(1129) on the message being rejected. In this case the value from the DefaultCstmApplVerID(1408) or the default value specified in the NoMsgTypes repeating group on the logon message should be provided. |
+| BusinessRejectRefID  | 379       |       | The value of the business-level "ID" field on the message being referenced. Required unless the corresponding ID field (see list above) was not specified.                                                                                                                               |
+| BusinessRejectReason | 380       |   Y   | Code to identify reason for a Business Message Reject message.                                                                                                                               |
+| Text                 | 58        |       | Where possible, message to explain reason for rejection                                                                                                                               |
+| EncodedTextLen       | 354       |       | Must be set if EncodedText field is specified and must immediately precede it.                                                                                                                               |
+| EncodedText          | 355       |       | Encoded (non-ASCII characters) representation of the Text field in the encoded format specified via the MessageEncoding field.                                                                                                                               |
+| StandardTrailer      | component |   Y   |                                                                                                                                |
+

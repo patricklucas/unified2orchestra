@@ -1,0 +1,15 @@
+### Codeset TrdRegPublicationTypeCodeSet type int (2669)
+
+Specifies the type of regulatory trade publication.
+Additional reasons for the publication type may be specified in TrdRegPublicationReason(2670).
+
+| Name                                | Value | Id      | Sort | Synopsis                                | Elaboration                                                                                                                               |
+|-------------------------------------|-------|---------|------|-----------------------------------------|-------------------------------------------------------------------------------------------------------------------------------|
+| PreTradeTransparencyWaiver          | 0     | 2669001 | 0    | Pre-trade transparency waiver           | There are allowable waivers from the obligation to make public current bid/offer prices and trading depth. In the context of MiFIR, see Article 3 and Article 4.                                                                         |
+| PostTradeDeferral                   | 1     | 2669002 | 1    | Post-trade deferral                     | There are allowable deferrals for the post-trade publication of trade transactions. In the context of MiFIR, see Article 7(1).                                                                                                           |
+| ExemptFromPublication               | 2     | 2669003 | 2    | Exempt from publication                 | There are allowable exemptions for the post-trade publication of trade transactions. In the context of ESMA exemptions are specified in RTS 22 Annex I, Table 2, Field 65 and RTS 2 Article 14(1) and Article 15(1).                     |
+| OrderLevelPublicationToSubscribers  | 3     | 2669004 | 3    | Order level publication to subscribers  | Individual orders are displayed outside of the execution venue but only to subscribers. In the context of US CAT this can be used by Alternative Trading Systems (ATSs) to provide additional information related to price distribution. |
+| PriceLevelPublicationToSubscribers  | 4     | 2669005 | 4    | Price level publication to subscribers  | Aggregated orders are displayed outside of the execution venue but only to subscribers. In the context of US CAT this can be used by Alternative Trading Systems (ATSs) to provide additional information related to price distribution. |
+| OrderLevelPublicationToThePublic    | 5     | 2669006 | 5    | Order level publication to the public   | Individual orders are displayed outside of the execution venue via public quotation. In the context of US CAT this can be used by Alternative Trading Systems (ATSs) to provide additional information related to price distribution.    |
+| PublicationInternalToExecutionVenue | 6     | 2669007 | 6    | Publication internal to execution venue | Orders are not displayed outside of the execution venue. In the context of US CAT this can be used by Alternative Trading Systems (ATSs) to provide additional information related to price distribution.                                |
+

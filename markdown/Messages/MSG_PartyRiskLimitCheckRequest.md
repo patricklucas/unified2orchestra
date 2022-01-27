@@ -1,0 +1,31 @@
+### Message PartyRiskLimitCheckRequest type DF category PartiesAction (142)
+
+PartyRiskLimitCheckRequest is used to request for approval of credit or risk limit amount intended to be used by a party in a transaction from another party that holds the information.
+
+| Name                       | Tag       | Req'd | Documentation                                                                                                                               |
+|----------------------------|-----------|----------|-------------------------------------------------------------------------------------------------------------------------------|
+| StandardHeader             | component |   Y   | MsgType=DE                                                                                                                               |
+| RiskLimitCheckRequestID    | 2318      |       | Either RiskLimitCheckRequestID(2318) or RiskLimitCheckID(2319) must be specified. RiskLimitCheckRequestID(2318) is conditionally required in a message-chaining model in which a subsequent message may refer to a prior message via RiskLimitCheckRequestRefID(2322). The alternative is an entity-based model in which RiskLimitCheckID(2319) is used to statically identify a given request. In this case RiskLimitCheckID(2319) is required and RiskLimitRequestID(1666) can be optionally specified. |
+| RiskLimitCheckID           | 2319      |       | Either RiskLimitCheckRequestID(2318) or RiskLimitCheckID(2319) must be specified.                                                                                                                               |
+| RiskLimitCheckTransType    | 2320      |   Y   |                                                                                                                                |
+| RiskLimitCheckType         | 2321      |   Y   |                                                                                                                                |
+| RiskLimitCheckRequestRefID | 2322      |       | Conditionally required when RiskLimitCheckTransType(2320) = 1 (Cancel) or 2 (Replace), and message-chaining model is used.                                                                                                                               |
+| RefOrderID                 | 1080      |       | Used to specify the transaction reference for this limit check request.                                                                                                                               |
+| RefOrderIDSource           | 1081      |       | Identifies the type of reference specified in RefOrderID(1080) for this limit check request.                                                                                                                               |
+| RiskLimitCheckRequestType  | 2323      |       |                                                                                                                                |
+| RiskLimitCheckAmount       | 2324      |       | Specifies the amount being requested or consumed, as indicated by RiskLimitCheckType(2321).                                                                                                                               |
+| Currency                   | 15        |       |                                                                                                                                |
+| RiskLimitID                | 1670      |       |                                                                                                                                |
+| RequestingPartyGrp         | group     |       | May be used to identify the party making the limit check request and their role.                                                                                                                               |
+| Parties                    | group     |       | May be used to specify the trading party on which the limit check request is for. Each request is for a single trading party and the specified transaction reference.                                                                                                                               |
+| RelatedPartyDetailGrp      | group     |       |                                                                                                                                |
+| Instrument                 | component |       |                                                                                                                                |
+| LegOrdGrp                  | group     |       |                                                                                                                                |
+| UndInstrmtGrp              | group     |       |                                                                                                                                |
+| Side                       | 54        |       |                                                                                                                                |
+| TransactTime               | 60        |       |                                                                                                                                |
+| Text                       | 58        |       |                                                                                                                                |
+| EncodedTextLen             | 354       |       | Must be set if EncodedText(355) field is specified and must immediately precede it.                                                                                                                               |
+| EncodedText                | 355       |       | Encoded (non-ASCII characters) representation of the Text(58) field in the encoded format specified via the MessageEncoding(347) field.                                                                                                                               |
+| StandardTrailer            | component |   Y   |                                                                                                                                |
+

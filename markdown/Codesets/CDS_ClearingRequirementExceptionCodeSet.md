@@ -1,0 +1,13 @@
+### Codeset ClearingRequirementExceptionCodeSet type int (1932)
+
+Specifies whether a party to a swap is using an exception to a clearing requirement. In the US, one such clearing requirement is CFTC's rule pursuant to CEA Section 2(h)(1).
+
+| Name                       | Value | Id      | Sort | Synopsis                     | Elaboration                                                                                                                               |
+|----------------------------|-------|---------|------|------------------------------|-------------------------------------------------------------------------------------------------------------------------------|
+| NoException                | 0     | 1932001 | 0    | No exception                 |                                                                                                                                |
+| Exception                  | 1     | 1932002 | 1    | Exception                    | Used to indicate an exception to a clearing requirement without elaborating on the type of exception.                                                                                                                               |
+| EndUserException           | 2     | 1932003 | 2    | End-user exception           | In the US, see CFTC Final Rule on End-User Exception to Clearing Requirements for Swaps Fact Sheet http://www.cftc.gov/ucm/groups/public/@newsroom/documents/file/eue_factsheet_final.pdf                                                                                |
+| InterAffiliateException    | 3     | 1932004 | 3    | Inter-affiliate exception    | In the US, see CFTC Final Rule - Clearing Exemption for Swaps Between Certain Affiliated Entities http://www.cftc.gov//ucm/groups/public/@lrfederalregister/documents/file/2013-07970a.pdf                                                                               |
+| TreasuryAffiliateException | 4     | 1932005 | 4    | Treasury affiliate exception | In the US, see CFTC No Action Letter 13-22 No Action Relief from the Clearing Requirement for Swaps Entered into by Eligible Treasury Affiliates http://www.cftc.gov/ucm/groups/public/@lrlettergeneral/documents/letter/13-22.pdf                                       |
+| CooperativeException       | 5     | 1932006 | 5    | Cooperative exception        | Clearing exception for certain swaps entered into by cooperatives. In the US, see Regulation 50.51(a) Definition of Exempt Cooperative: https://www.federalregister.gov/articles/2013/08/22/2013-19945/clearing-exemption-for-certain-swaps-entered-into-by-cooperatives |
+

@@ -1,0 +1,16 @@
+### Group OrdAllocGrp category Common (2036)
+
+| Name             | Tag   | Req'd | Documentation                                                                                                                               |
+|------------------|-------|----------|-------------------------------------------------------------------------------------------------------------------------------|
+| NoOrders         | 73    |       | Indicates number of orders to be combined for allocation. If order(s) were manually delivered set to 1 (one).Required when AllocNoOrdersType = 1                                                                                                                               |
+| ClOrdID          | 11    |       | Order identifier assigned by client if order(s) were electronically delivered over FIX (or otherwise assigned a ClOrdID) and executed. If order(s) were manually delivered (or otherwise not delivered over FIX) this field should contain string "MANUAL". Note where an order has undergone one or more cancel/replaces, this should be the ClOrdID of the most recent version of the order./P/Required when NoOrders(73) > 0 and must be the first repeating field in the group. |
+| OrderID          | 37    |       |                                                                                                                                |
+| SecondaryOrderID | 198   |       | Can be used to provide order id used by exchange or executing system.                                                                                                                               |
+| SecondaryClOrdID | 526   |       |                                                                                                                                |
+| ListID           | 66    |       | Required for List Orders.                                                                                                                               |
+| NestedParties2   | group |       | Insert here the set of "NestedParties2" fields defined in "Common Components of Application Messages"/P/This is used to identify the executing broker for step in/give in trades                                                                                                                               |
+| OrderQty         | 38    |       |                                                                                                                                |
+| OrderAvgPx       | 799   |       | Average price for this order./P/For FX, if specified, expressed in terms of Currency(15).                                                                                                                               |
+| OrderBookingQty  | 800   |       | Quantity of this order that is being booked out by this message (will be equal to or less than this order's OrderQty)/P/Note that the sum of the OrderBookingQty values in this repeating group must equal the total quantity being allocated (in Quantity (53) field)                                                                                                                               |
+| OrdType          | 40    |       |                                                                                                                                |
+

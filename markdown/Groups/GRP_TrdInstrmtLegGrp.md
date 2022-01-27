@@ -1,0 +1,43 @@
+### Group TrdInstrmtLegGrp category TradeCapture (2063)
+
+| Name                        | Tag       | Req'd | Documentation                                                                                                                               |
+|-----------------------------|-----------|----------|-------------------------------------------------------------------------------------------------------------------------------|
+| NoLegs                      | 555       |       |                                                                                                                                |
+| InstrumentLeg               | component |       | Required if NoLegs(555) > 0.                                                                                                                               |
+| LegFinancingDetails         | component |       |                                                                                                                                |
+| LegPositionAmountData       | group     |       |                                                                                                                                |
+| LegOrderQty                 | 685       |       | Quantity ordered for this leg as provided during order entry.                                                                                                                               |
+| LegQty                      | 687       |       | The LegQty(687) field is deprecated. The use of LegOrderQty(685) is recommended instead.                                                                                                                               |
+| LegMidPx                    | 2346      |       |                                                                                                                                |
+| LegSwapType                 | 690       |       | Instead of LegOrderQty(685) requests that the sellside calculate LegOrderQty(685) based on opposite Leg.                                                                                                                 |
+| LegReportID                 | 990       |       | Additional attribute to store the trade or trade report identifier of the leg.                                                                                                                               |
+| LegNumber                   | 1152      |       | Allow sequencing of legs for a strategy to be captured.                                                                                                                               |
+| LegStipulations             | group     |       |                                                                                                                                |
+| LegAccount                  | 2680      |       |                                                                                                                                |
+| LegClearingAccountType      | 1817      |       | Provide if different from the value specified for the overall multileg security in ClearingAccountType(1816) in the Instrument component.                                                                                |
+| LegPositionEffect           | 564       |       | Provide if different from the value specified for the overall multileg security in PositionEffect(77) in the Instrument component.                                                                                       |
+| LegCoveredOrUncovered       | 565       |       | Provide if different from the value specified for the overall multileg security in CoveredOrUncovered(203) in the Instrument component.                                                                                  |
+| NestedParties               | group     |       |                                                                                                                                |
+| LegRefID                    | 654       |       | Use of LegRefID(654) in this component is deprecated. Recommend the use of LegID(1788) in the InstrumentLeg component.                                                                                                   |
+| LegSettlType                | 587       |       |                                                                                                                                |
+| LegSettlDate                | 588       |       | Takes precedence over a calculated LegSettlType(587) when specified regardless of LegSettlType(587) value./P/Conditionally required when LegSettlType(587) = B(Broken date).                                             |
+| LegLastPx                   | 637       |       | Used to report the execution price assigned to the leg of the multileg instrument.                                                                                                                               |
+| LegPriceType                | 686       |       | Indicates the price type provided with each leg of a multi-leg trade                                                                                                                               |
+| LegSettlCurrency            | 675       |       |                                                                                                                                |
+| LegLastForwardPoints        | 1073      |       |                                                                                                                                |
+| LegCalculatedCcyLastQty     | 1074      |       |                                                                                                                                |
+| LegGrossTradeAmt            | 1075      |       | For FX Futures can be used to express the notional value of a trade when LegLastQty(1418) and other quantity fields are expressed in terms of number of contracts - LegContractMultiplier(231) is required in this case. |
+| LegShortSaleExemptionReason | 1689      |       | Available for optional use when LegSide(624) = 6 (Sell short exempt) in InstrumentLeg component.                                                                                                                         |
+| LegVolatility               | 1379      |       |                                                                                                                                |
+| LegDividendYield            | 1381      |       |                                                                                                                                |
+| LegCurrencyRatio            | 1383      |       |                                                                                                                                |
+| LegExecInst                 | 1384      |       |                                                                                                                                |
+| LegLastQty                  | 1418      |       | Quantity executed for this leg.                                                                                                                               |
+| LegQtyType                  | 1591      |       | Leg quantity type to be specified at the leg level. Can be different for each leg.                                                                                                                               |
+| LegLastMultipliedQty        | 2358      |       |                                                                                                                                |
+| LegTotalTradeQty            | 2357      |       |                                                                                                                                |
+| LegTotalTradeMultipliedQty  | 2360      |       |                                                                                                                                |
+| LegTotalGrossTradeAmt       | 2359      |       |                                                                                                                                |
+| TradeCapLegUnderlyingsGrp   | group     |       |                                                                                                                                |
+| LegDifferentialPrice        | 2492      |       |                                                                                                                                |
+

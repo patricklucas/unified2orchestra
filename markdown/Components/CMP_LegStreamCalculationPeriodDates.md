@@ -1,0 +1,25 @@
+### Component LegStreamCalculationPeriodDates category Common (4034)
+
+LegStreamCalculationPeriodDates is a subcomponent of the LegStreamGrp component used to specify the calculation period dates of the stream.
+
+| Name                                               | Tag   | Req'd | Documentation                                                                                                                               |
+|----------------------------------------------------|-------|----------|-------------------------------------------------------------------------------------------------------------------------------|
+| LegStreamCalculationPeriodDatesXID                 | 41641 |       |                                                                                                                                |
+| LegStreamCalculationPeriodDatesXIDRef              | 41642 |       |                                                                                                                                |
+| LegStreamCalculationPeriodBusinessDayConvention    | 40265 |       | When specified, this overrides the business day convention defined in the LegDateAdjustment component in InstrumentLeg. The specified value would be specific to this instance of the leg stream calculation period dates. |
+| LegStreamCalculationPeriodBusinessCenterGrp        | group |       | When specified, this overrides the business centers defined in the LegDateAdjustment component in InstrumentLeg. The specified values would be specific to this instance of the leg stream calculation period dates.       |
+| LegStreamCalculationPeriodDateGrp                  | group |       |                                                                                                                                |
+| LegStreamFirstPeriodStartDateUnadjusted            | 40267 |       |                                                                                                                                |
+| LegStreamFirstPeriodStartDateBusinessDayConvention | 40268 |       | When specified, this overrides the business day convention defined in the LegDateAdjustment component in InstrumentLeg. The specified value would be specific to this instance of the leg stream calculation period dates. |
+| LegStreamFirstPeriodStartDateBusinessCenterGrp     | group |       | When specified, this overrides the business centers defined in the LegDateAdjustment component in InstrumentLeg. The specified values would be specific to this instance of the leg stream calculation period dates.       |
+| LegStreamFirstPeriodStartDateAdjusted              | 40270 |       |                                                                                                                                |
+| LegStreamFirstRegularPeriodStartDateUnadjusted     | 40271 |       |                                                                                                                                |
+| LegStreamFirstCompoundingPeriodEndDateUnadjusted   | 40272 |       |                                                                                                                                |
+| LegStreamLastRegularPeriodEndDateUnadjusted        | 40273 |       |                                                                                                                                |
+| LegStreamCalculationFrequencyPeriod                | 40274 |       | Conditionally required when LegStreamCalculationFrequencyUnit(40275) is specified.                                                                                                                               |
+| LegStreamCalculationFrequencyUnit                  | 40275 |       | Conditionally required when LegStreamCalculationFrequencyPeriod(40274) is specified.                                                                                                                               |
+| LegStreamCalculationRollConvention                 | 40276 |       | When specified, this overrides the date roll convention defined in the LegDateAdjustment component in InstrumentLeg. The specified values would be specific to this instance of the stream calculation period dates.       |
+| LegStreamCalculationBalanceOfFirstPeriod           | 41643 |       |                                                                                                                                |
+| LegStreamCalculationCorrectionPeriod               | 41644 |       | Conditionally required when LegStreamCalculationCorrectionUnit(41645) is specified.                                                                                                                               |
+| LegStreamCalculationCorrectionUnit                 | 41645 |       | Conditionally required when LegStreamCalculationCorrectionPeriod(41644) is specified.                                                                                                                               |
+
