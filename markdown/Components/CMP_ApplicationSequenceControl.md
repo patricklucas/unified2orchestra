@@ -1,0 +1,11 @@
+### Component ApplicationSequenceControl category Common (1057)
+
+The ApplicationSequenceControl is used for application sequencing and recovery. Consisting of ApplSeqNum (1181), ApplID (1180), ApplLastSeqNum (1350), and ApplResendFlag (1352), FIX application messages that carries this component block will be able to use application level sequencing. ApplID, ApplSeqNum and ApplLastSeqNum fields identify the application id, application sequence number and the previous application sequence number (in case of intentional gaps) on each application message that carries this block.
+
+| Name           | Tag  | Req'd | Documentation                                                                                                                               |
+|----------------|------|----------|-------------------------------------------------------------------------------------------------------------------------------|
+| ApplID         | 1180 |       | Identifies the application with which a message is associated. Used only if application sequencing is in effect.                                                                                                                               |
+| ApplSeqNum     | 1181 |       | Application sequence number assigned to the message by the application generating the message. Used only if application sequencing is in effect. Conditionally required if ApplID has been specified.                                                                                                                               |
+| ApplLastSeqNum | 1350 |       | The previous sequence number in the application sequence stream. Permits an application to publish messages with sequence gaps where it cannot be avoided. Used only if application sequencing is in effect. Conditionally required if ApplID has been specified                                                                                           |
+| ApplResendFlag | 1352 |       | Used to indicate that a message is being sent in response to an Application Message Request. Used only if application sequencing is in effect. It is possible for both ApplResendFlag and PossDupFlag to be set on the same message if the Sender's cache size is greater than zero and the message is being resent due to a session level resend request. |
+

@@ -1,0 +1,33 @@
+### Message AllocationInstructionAck type P category Allocation (24)
+
+In versions of FIX prior to version 4.4, this message was known as the Allocation ACK message.
+The Allocation Instruction Ack message is used to acknowledge the receipt of and provide status for an Allocation Instruction message.
+
+| Name                 | Tag       | Req'd | Documentation                                                                                                                               |
+|----------------------|-----------|----------|-------------------------------------------------------------------------------------------------------------------------------|
+| StandardHeader       | component |   Y   | MsgType = P                                                                                                                               |
+| AllocID              | 70        |   Y   |                                                                                                                                |
+| AllocRequestID       | 2758      |       | May be used to link to a previously submitted AllocationInstructionAlertRequest(35=DU) message.                                                                                                                               |
+| Instrument           | component |       |                                                                                                                                |
+| Parties              | group     |       |                                                                                                                                |
+| SecondaryAllocID     | 793       |       | Optional second identifier for the allocation instruction being acknowledged (need not be unique)                                                                                                                               |
+| AllocGroupID         | 1730      |       | Group identifier assigned by the clearinghouse                                                                                                                               |
+| FirmGroupID          | 1728      |       | Firm assigned entity identifier for the allocation                                                                                                                               |
+| AvgPxGroupID         | 1731      |       | Firm designated group identifier for average pricing                                                                                                                               |
+| TradeDate            | 75        |       |                                                                                                                                |
+| TransactTime         | 60        |       | Date/Time Allocation Instruction Ack generated                                                                                                                               |
+| AllocStatus          | 87        |   Y   | Denotes the status of the allocation instruction; received (but not yet processed), rejected (at block or account level) or accepted (and processed).                                                                                                                               |
+| AllocRejCode         | 88        |       | Required for AllocStatus = 1 ( block level reject) and for AllocStatus 2 (account level reject) if the individual accounts and reject reasons are not provided in this message                                                                                                                               |
+| AllocType            | 626       |       |                                                                                                                                |
+| AllocIntermedReqType | 808       |       | Required if AllocType = 8 (Request to Intermediary)/P/Indicates status that is requested to be transmitted to counterparty by the intermediary (i.e. clearing house)                                                                                                                               |
+| MatchStatus          | 573       |       | Denotes whether the financial details provided on the Allocation Instruction were successfully matched.                                                                                                                               |
+| Text                 | 58        |       | Can include explanation for AllocRejCode = 7 (other)                                                                                                                               |
+| EncodedTextLen       | 354       |       | Must be set if EncodedText(355) field is specified and must immediately precede it.                                                                                                                               |
+| EncodedText          | 355       |       | Encoded (non-ASCII characters) representation of the Text(58) field in the encoded format specified via the MessageEncoding(347) field.                                                                                                                               |
+| RejectText           | 1328      |       |                                                                                                                                |
+| EncodedRejectTextLen | 1664      |       | Must be set if EncodedRejectText(1665) field is specified and must immediately precede it.                                                                                                                               |
+| EncodedRejectText    | 1665      |       | Encoded (non-ASCII characters) representation of the RejectText(1328) field in the encoded format specified via the MessageEncoding(347) field.                                                                                                                               |
+| RegulatoryTradeIDGrp | group     |       |                                                                                                                                |
+| AllocAckGrp          | group     |       | This repeating group is optionally used for messages with AllocStatus = 2 (account level reject) to provide details of the individual accounts that caused the rejection, together with reject reasons. This group should not be populated when AllocStatus has any other value./P/Indicates number of allocation groups to follow. |
+| StandardTrailer      | component |   Y   |                                                                                                                                |
+
