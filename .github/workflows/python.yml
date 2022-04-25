@@ -7,23 +7,23 @@ jobs:
 
     runs-on: ubuntu-latest
 
-  steps:
-  - uses: actions/checkout@v3
-  - name: Install dependencies
-    uses: actions/setup-python@v3
-    with:
-      python-version: '3.9'
-      cache: 'pip'
-    run: pip install -r requirements.txt
-  - name: Run orchestra-transposer
-    run: python3 orchestratransposer.py -f unif -t orch -o orchestra-p.xml unified/FixRepository.xml unified/FIX.Latest_EP269_en_phrases.xml
-  - name: Upload a Build Artifact
-    uses: actions/upload-artifact@v2
-    with:
-      name: orchestra-python
-      path: orchestra-p.xml 
-  - name: Upload Process Log
-    uses: actions/upload-artifact@v2
-    with:
-      name: log=python
-      path: orchestra-p.log  
+    steps:
+    - uses: actions/checkout@v3
+    - name: Install dependencies
+      uses: actions/setup-python@v3
+      with:
+        python-version: '3.9'
+        cache: 'pip'
+    - run: pip install -r requirements.txt
+    - name: Run orchestra-transposer
+      run: python3 orchestratransposer.py -f unif -t orch -o orchestra-p.xml unified/FixRepository.xml unified/FIX.Latest_EP269_en_phrases.xml
+    - name: Upload a Build Artifact
+      uses: actions/upload-artifact@v2
+      with:
+        name: orchestra-python
+        path: orchestra-p.xml 
+    - name: Upload Process Log
+      uses: actions/upload-artifact@v2
+      with:
+        name: log=python
+        path: orchestra-p.log  
