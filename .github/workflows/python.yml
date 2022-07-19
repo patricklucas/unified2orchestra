@@ -23,7 +23,7 @@ jobs:
       uses: actions/upload-artifact@v2
       with:
         name: orchestra-python
-        path: *-p.xml
+        path: "*-p.xml"
     - name: Upload Process Log
       uses: actions/upload-artifact@v2
       with:
