@@ -15,15 +15,17 @@ jobs:
         python-version: '3.9'
         cache: 'pip'
     - run: pip install -r requirements.txt
-    - name: Run orchestra-transposer
+    - name: Run unified2orchestra
       run: python3 orchestratransposer.py unified/FixRepository.xml unified/FIX.Latest_en_phrases.xml -f unif -t orch -o orchestra-p.xml
+    - name: Run orchestra2unified
+      run: python3 orchestratransposer.py orchestra-p.xml -f orch -t unif -o FixRepository-p.xml FIX.Latest_en_phrases-p.xml 
     - name: Upload a Build Artifact
       uses: actions/upload-artifact@v2
       with:
         name: orchestra-python
-        path: orchestra-p.xml 
+        path: *-p.xml
     - name: Upload Process Log
       uses: actions/upload-artifact@v2
       with:
         name: log-python
-        path: orchestra-p.log  
+        path: orchestra.log  
