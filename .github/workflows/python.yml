@@ -16,7 +16,7 @@ jobs:
         cache: 'pip'
     - run: pip install -r requirements.txt
     - name: Run orchestra-transposer
-      run: python3 orchestratransposer.py unified/FixRepository.xml unified/FIX.Latest_EP272_en_phrases.xml -f unif -t orch -o orchestra-p.xml
+      run: python3 orchestratransposer.py unified/FixRepository.xml unified/FIX.Latest_en_phrases.xml -f unif -t orch -o orchestra-p.xml
     - name: Upload a Build Artifact
       uses: actions/upload-artifact@v2
       with:
@@ -25,5 +25,5 @@ jobs:
     - name: Upload Process Log
       uses: actions/upload-artifact@v2
       with:
-        name: log=python
+        name: log-python
         path: orchestra-p.log  
