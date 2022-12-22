@@ -4,8 +4,8 @@
              edition="2010"
              version="FIX.Latest"
              xsi:noNamespaceSchemaLocation="../../schema/MsgContents.xsd"
-             generated="2022-09-27T14:17:21.008Z"
-             latestEP="273">
+             generated="2022-10-05T10:06:09.654Z"
+             latestEP="274">
    <MsgContent added="FIX.2.7">
 		    <ComponentID>1</ComponentID>
 		    <TagText>StandardHeader</TagText>
@@ -88711,6 +88711,34 @@ If specified, ExecID(17) is required.
       <TagText>2899</TagText>
       <Indent>0</Indent>
       <Position>10.2</Position>
+      <Reqd>0</Reqd>
+   </MsgContent>
+   <MsgContent added="FIX.Latest" addedEP="274">
+      <ComponentID>9</ComponentID>
+      <TagText>2961</TagText>
+      <Indent>0</Indent>
+      <Position>32.01</Position>
+      <Reqd>0</Reqd>
+   </MsgContent>
+   <MsgContent added="FIX.Latest" addedEP="274">
+      <ComponentID>64</ComponentID>
+      <TagText>2961</TagText>
+      <Indent>0</Indent>
+      <Position>8.007</Position>
+      <Reqd>0</Reqd>
+   </MsgContent>
+   <MsgContent added="FIX.Latest" addedEP="274">
+      <ComponentID>2031</ComponentID>
+      <TagText>2961</TagText>
+      <Indent>1</Indent>
+      <Position>13.3</Position>
+      <Reqd>0</Reqd>
+   </MsgContent>
+   <MsgContent added="FIX.Latest" addedEP="274">
+      <ComponentID>2032</ComponentID>
+      <TagText>2961</TagText>
+      <Indent>1</Indent>
+      <Position>24.02</Position>
       <Reqd>0</Reqd>
    </MsgContent>
 </MsgContents>

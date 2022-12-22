@@ -4,8 +4,8 @@
         edition="2010"
         version="FIX.Latest"
         xsi:noNamespaceSchemaLocation="../../schema/Fields.xsd"
-        generated="2022-09-27T14:17:21.008Z"
-        latestEP="273">
+        generated="2022-10-05T10:06:09.654Z"
+        latestEP="274">
    <Field added="FIX.2.7">
 		    <Tag>1</Tag>
 		    <Name>Account</Name>
@@ -50892,5 +50892,13 @@ Conditionally required when one or both symbols in UnderlyingSymbol(311) represe
       <NotReqXML>0</NotReqXML>
       <EnumDatatype>2897</EnumDatatype>
       <Description>Identifies the class or source of the SettlPriceUnitOfMeasureCurrency(1887) value.</Description>
+   </Field>
+   <Field added="FIX.Latest" addedEP="274">
+      <Tag>2961</Tag>
+      <Name>AnonymousTradeIndicator</Name>
+      <Type>Boolean</Type>
+      <AbbrName>AnonymsTrdInd</AbbrName>
+      <NotReqXML>0</NotReqXML>
+      <Description>Indicates whether the trade or transaction was executed anonymously. </Description>
    </Field>
 </Fields>
