@@ -4,8 +4,8 @@
              edition="2010"
              version="FIX.Latest"
              xsi:noNamespaceSchemaLocation="../../schema/MsgContents.xsd"
-             generated="2022-10-05T10:06:09.654Z"
-             latestEP="274">
+             generated="2022-12-21T10:51:33.076Z"
+             latestEP="275">
    <MsgContent added="FIX.2.7">
 		    <ComponentID>1</ComponentID>
 		    <TagText>StandardHeader</TagText>
@@ -6711,14 +6711,14 @@ For NDFs this is required.</Description>
 		    <Reqd>1</Reqd>
 		    <Description>Must refer to the MDReqID of the request.</Description>
 	  </MsgContent>
-   <MsgContent added="FIX.5.0" addedEP="-1">
-		    <ComponentID>32</ComponentID>
-		    <TagText>Parties</TagText>
-		    <Indent>0</Indent>
-		    <Position>2.1</Position>
-		    <Reqd>0</Reqd>
-		    <Description>Insert here the set of Parties (firm identification) fields defined in "Common Components of Application Messages</Description>
-	  </MsgContent>
+   <MsgContent added="FIX.5.0" addedEP="-1" updated="FIX.Latest" updatedEP="275">
+      <ComponentID>32</ComponentID>
+      <TagText>Parties</TagText>
+      <Indent>0</Indent>
+      <Position>2.1</Position>
+      <Reqd>0</Reqd>
+      <Description>Insert here the set of Parties (firm identification) fields defined in "Common Components of Application Messages".</Description>
+   </MsgContent>
    <MsgContent added="FIX.4.2">
 		    <ComponentID>32</ComponentID>
 		    <TagText>281</TagText>
@@ -17081,15 +17081,15 @@ Indicates status that is requested to be transmitted to counterparty by the inte
 		    <Position>37</Position>
 		    <Reqd>1</Reqd>
 	  </MsgContent>
-   <MsgContent updated="FIX.5.0SP1" updatedEP="82" added="FIX.4.4">
-		    <ComponentID>78</ComponentID>
-		    <TagText>Instrument</TagText>
-		    <Indent>0</Indent>
-		    <Position>38</Position>
-		    <Reqd>1</Reqd>
-		    <Description>Components of Application Messages".
+   <MsgContent updated="FIX.Latest" updatedEP="275" added="FIX.4.4">
+      <ComponentID>78</ComponentID>
+      <TagText>Instrument</TagText>
+      <Indent>0</Indent>
+      <Position>38</Position>
+      <Reqd>1</Reqd>
+      <Description>Insert here the set of "Instrument" fields defined in "Common Components of Application Messages".
 For NDFs, fixing date (specified in MaturityDate(541)) is required. Fixing time (specified in MaturityTime(1079)) is optional.</Description>
-	  </MsgContent>
+   </MsgContent>
    <MsgContent added="FIX.4.4">
 		    <ComponentID>78</ComponentID>
 		    <TagText>InstrumentExtension</TagText>
@@ -88739,6 +88739,20 @@ If specified, ExecID(17) is required.
       <TagText>2961</TagText>
       <Indent>1</Indent>
       <Position>24.02</Position>
+      <Reqd>0</Reqd>
+   </MsgContent>
+   <MsgContent added="FIX.Latest" addedEP="275">
+      <ComponentID>70</ComponentID>
+      <TagText>RegulatoryTradeIDGrp</TagText>
+      <Indent>0</Indent>
+      <Position>9.3</Position>
+      <Reqd>0</Reqd>
+   </MsgContent>
+   <MsgContent added="FIX.Latest" addedEP="275">
+      <ComponentID>80</ComponentID>
+      <TagText>RegulatoryTradeIDGrp</TagText>
+      <Indent>0</Indent>
+      <Position>5.3</Position>
       <Reqd>0</Reqd>
    </MsgContent>
 </MsgContents>

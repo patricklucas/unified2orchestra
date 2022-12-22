@@ -4,8 +4,8 @@
        edition="2010"
        version="FIX.Latest"
        xsi:noNamespaceSchemaLocation="../../schema/Enums.xsd"
-       generated="2022-09-27T14:17:21.008Z"
-       latestEP="273">
+       generated="2022-12-21T10:51:33.076Z"
+       latestEP="275">
    <Enum added="FIX.2.7">
 		    <Tag>4</Tag>
 		    <Value>B</Value>
@@ -42129,6 +42129,13 @@ in that foreign jurisdiction.</Elaboration>
       <SymbolicName>DigitalTokenIdentifier</SymbolicName>
       <Sort>33</Sort>
       <Description>Digital Token Identifier (ISO 24165)</Description>
+   </Enum>
+   <Enum added="FIX.Latest" addedEP="275">
+      <Tag>1905</Tag>
+      <Value>1</Value>
+      <SymbolicName>UniqueTransactionIdentifier</SymbolicName>
+      <Sort>1</Sort>
+      <Description>Unique Transaction Identifier (ISO 23897)</Description>
    </Enum>
    <Enum>
       <Tag>35</Tag>

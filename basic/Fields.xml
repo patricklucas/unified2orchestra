@@ -4,8 +4,8 @@
         edition="2010"
         version="FIX.Latest"
         xsi:noNamespaceSchemaLocation="../../schema/Fields.xsd"
-        generated="2022-10-05T10:06:09.654Z"
-        latestEP="274">
+        generated="2022-12-21T10:51:33.076Z"
+        latestEP="275">
    <Field added="FIX.2.7">
 		    <Tag>1</Tag>
 		    <Name>Account</Name>
@@ -3057,12 +3057,12 @@ Bilaterally agreed values of data type "String" that start with a character can 
 		    <NotReqXML>1</NotReqXML>
 		    <Description>Number of MsgTypes (35) in repeating group.</Description>
 	  </Field>
-   <Field added="FIX.4.2" updated="FIX.Latest" updatedEP="271">
+   <Field added="FIX.4.2" updated="FIX.Latest" updatedEP="275">
       <Tag>385</Tag>
       <Name>MsgDirection</Name>
       <Type>char</Type>
       <AbbrName>MsgDirctn</AbbrName>
-      <NotReqXML>1</NotReqXML>
+      <NotReqXML>0</NotReqXML>
       <Description>Specifies the direction of the message.</Description>
    </Field>
    <Field added="FIX.4.2">
@@ -4283,14 +4283,14 @@ Same values as PartyIDSource (447)</Description>
 		    <NotReqXML>0</NotReqXML>
 		    <Description>Total number of orders affected by either the OrderMassActionRequest(MsgType=CA) or OrderMassCancelRequest(MsgType=Q).</Description>
 	  </Field>
-   <Field added="FIX.4.3">
-		    <Tag>534</Tag>
-		    <Name>NoAffectedOrders</Name>
-		    <Type>NumInGroup</Type>
-		    <AbbrName>NoAffctdOrds</AbbrName>
-		    <NotReqXML>0</NotReqXML>
-		    <Description>Number of affected orders in the repeating group of order ids.</Description>
-	  </Field>
+   <Field added="FIX.4.3" updated="FIX.Latest" updatedEP="275">
+      <Tag>534</Tag>
+      <Name>NoAffectedOrders</Name>
+      <Type>NumInGroup</Type>
+      <AbbrName>NoAffctdOrds</AbbrName>
+      <NotReqXML>1</NotReqXML>
+      <Description>Number of affected orders in the repeating group of order ids.</Description>
+   </Field>
    <Field added="FIX.4.3" updated="FIX.5.0SP2" updatedEP="131">
       <Tag>535</Tag>
       <Name>AffectedOrderID</Name>
@@ -4676,14 +4676,14 @@ If this field is not specified, the default will be "N"</Description>
 		    <NotReqXML>0</NotReqXML>
 		    <Description>Specific device number, terminal number or station where trade was entered</Description>
 	  </Field>
-   <Field added="FIX.4.3">
-		    <Tag>580</Tag>
-		    <Name>NoDates</Name>
-		    <Type>NumInGroup</Type>
-		    <AbbrName>NoDts</AbbrName>
-		    <NotReqXML>0</NotReqXML>
-		    <Description>Number of Date fields provided in date range</Description>
-	  </Field>
+   <Field added="FIX.4.3" updated="FIX.Latest" updatedEP="275">
+      <Tag>580</Tag>
+      <Name>NoDates</Name>
+      <Type>NumInGroup</Type>
+      <AbbrName>NoDts</AbbrName>
+      <NotReqXML>1</NotReqXML>
+      <Description>Number of Date fields provided in date range</Description>
+   </Field>
    <Field added="FIX.4.3">
 		    <Tag>581</Tag>
 		    <Name>AccountType</Name>
@@ -4901,15 +4901,15 @@ See SecurityID (48) field for description</Description>
       <Description>Multileg instrument's individual security's SecurityIDSource.
 See SecurityIDSource (22) field for description</Description>
    </Field>
-   <Field added="FIX.4.3">
-		    <Tag>604</Tag>
-		    <Name>NoLegSecurityAltID</Name>
-		    <Type>NumInGroup</Type>
-		    <AbbrName>NoLegSecAltID</AbbrName>
-		    <NotReqXML>0</NotReqXML>
-		    <Description>Multileg instrument's individual security's NoSecurityAltID.
+   <Field added="FIX.4.3" updated="FIX.Latest" updatedEP="275">
+      <Tag>604</Tag>
+      <Name>NoLegSecurityAltID</Name>
+      <Type>NumInGroup</Type>
+      <AbbrName>NoLegSecAltID</AbbrName>
+      <NotReqXML>1</NotReqXML>
+      <Description>Multileg instrument's individual security's NoSecurityAltID.
 See NoSecurityAltID (454) field for description</Description>
-	  </Field>
+   </Field>
    <Field added="FIX.4.3">
 		    <Tag>605</Tag>
 		    <Name>LegSecurityAltID</Name>
@@ -8060,14 +8060,14 @@ Same values as PartySubIDType (803)</Description>
       <NotReqXML>0</NotReqXML>
       <Description>Originating source of the request.</Description>
    </Field>
-   <Field added="FIX.4.4" addedEP="4">
-		    <Tag>980</Tag>
-		    <Name>SecurityUpdateAction</Name>
-		    <Type>char</Type>
-		    <AbbrName>UpdActn</AbbrName>
-		    <NotReqXML>0</NotReqXML>
-		    <Description/>
-	  </Field>
+   <Field added="FIX.4.4" addedEP="4" updated="FIX.Latest" updatedEP="275">
+      <Tag>980</Tag>
+      <Name>SecurityUpdateAction</Name>
+      <Type>char</Type>
+      <AbbrName>UpdActn</AbbrName>
+      <NotReqXML>0</NotReqXML>
+      <Description>Specifies the action taken or to be taken for the specified instrument or list of instruments.</Description>
+   </Field>
    <Field added="FIX.4.4" addedEP="4">
 		    <Tag>981</Tag>
 		    <Name>NoExpiration</Name>
@@ -9729,12 +9729,12 @@ Values are bilaterally agreed.</Description>
       <NotReqXML>1</NotReqXML>
       <Description>The length of the SecurityXML(1185) data block.</Description>
    </Field>
-   <Field added="FIX.5.0" addedEP="49" updated="FIX.5.0SP2" updatedEP="145">
+   <Field added="FIX.5.0" addedEP="49" updated="FIX.Latest" updatedEP="275">
       <Tag>1185</Tag>
       <Name>SecurityXML</Name>
       <Type>XMLData</Type>
       <AbbrName>SecXML</AbbrName>
-      <NotReqXML>1</NotReqXML>
+      <NotReqXML>0</NotReqXML>
       <Description>XML definition for the security.</Description>
    </Field>
    <Field added="FIX.5.0" addedEP="49" updated="FIX.5.0SP2" updatedEP="145">
@@ -10586,12 +10586,12 @@ See EncodedSecurityDesc(351) for complete definition.
 See SecurityXMLLen(1184) for complete definition.
 </Description>
    </Field>
-   <Field added="FIX.5.0" addedEP="52" updated="FIX.Latest" updatedEP="271">
+   <Field added="FIX.5.0" addedEP="52" updated="FIX.Latest" updatedEP="275">
       <Tag>1283</Tag>
       <Name>DerivativeSecurityXML</Name>
       <Type>XMLData</Type>
       <AbbrName>SecXML</AbbrName>
-      <NotReqXML>1</NotReqXML>
+      <NotReqXML>0</NotReqXML>
       <Description>XML definition for the security.
 See SecurityXML(1185) for complete definition.
 </Description>
@@ -11356,14 +11356,14 @@ At this time there are no encryption methods defined by FPL.</Description>
 		    <UnionDataType>Reserved100Plus</UnionDataType>
 		    <Description>Status of a FIX session</Description>
 	  </Field>
-   <Field added="FIX.5.0" addedEP="56">
-		    <Tag>1410</Tag>
-		    <Name>DefaultVerIndicator</Name>
-		    <Type>Boolean</Type>
-		    <AbbrName>DfltVerInd</AbbrName>
-		    <NotReqXML>0</NotReqXML>
-		    <Description/>
-	  </Field>
+   <Field added="FIX.5.0" addedEP="56" updated="FIX.Latest" updatedEP="275">
+      <Tag>1410</Tag>
+      <Name>DefaultVerIndicator</Name>
+      <Type>Boolean</Type>
+      <AbbrName>DfltVerInd</AbbrName>
+      <NotReqXML>0</NotReqXML>
+      <Description>Indicates that the application version identified in the fields RefApplVerID(1130), RefApplExtID(1406), and RefCstmApplVerID(1131) is the default for the message type identified in RefMsgType(372) field.</Description>
+   </Field>
    <Field added="FIX.4.4">
 		    <Tag>809</Tag>
 		    <Name>NoUsernames</Name>
@@ -11750,22 +11750,22 @@ Same values as ExecInst(18)</Description>
 		    <NotReqXML>0</NotReqXML>
 		    <Description>Refer to definition of PartySubID(523)</Description>
 	  </Field>
-   <Field added="FIX.5.0" addedEP="69">
-		    <Tag>1413</Tag>
-		    <Name>NoNested4PartySubIDs</Name>
-		    <Type>NumInGroup</Type>
-		    <AbbrName>NoNested4PartySubIDs</AbbrName>
-		    <NotReqXML>0</NotReqXML>
-		    <Description>Refer to definition of NoPartySubIDs(802)</Description>
-	  </Field>
-   <Field added="FIX.5.0" addedEP="69">
-		    <Tag>1414</Tag>
-		    <Name>NoNested4PartyIDs</Name>
-		    <Type>NumInGroup</Type>
-		    <AbbrName>NoNested4PartyIDs</AbbrName>
-		    <NotReqXML>0</NotReqXML>
-		    <Description>Refer to definition of NoPartyIDs(453)</Description>
-	  </Field>
+   <Field added="FIX.5.0" addedEP="69" updated="FIX.Latest" updatedEP="275">
+      <Tag>1413</Tag>
+      <Name>NoNested4PartySubIDs</Name>
+      <Type>NumInGroup</Type>
+      <AbbrName>NoNested4PartySubIDs</AbbrName>
+      <NotReqXML>1</NotReqXML>
+      <Description>Refer to definition of NoPartySubIDs(802)</Description>
+   </Field>
+   <Field added="FIX.5.0" addedEP="69" updated="FIX.Latest" updatedEP="275">
+      <Tag>1414</Tag>
+      <Name>NoNested4PartyIDs</Name>
+      <Type>NumInGroup</Type>
+      <AbbrName>NoNested4PartyIDs</AbbrName>
+      <NotReqXML>1</NotReqXML>
+      <Description>Refer to definition of NoPartyIDs(453)</Description>
+   </Field>
    <Field added="FIX.5.0" addedEP="69">
 		    <Tag>1415</Tag>
 		    <Name>Nested4PartyID</Name>
@@ -14571,11 +14571,11 @@ See PriceUnitOfMeasureCurrency(1717) for complete definition.
       <NotReqXML>0</NotReqXML>
       <Description>Unique identifier for a specific NoEntitlements(1773) repeating group instance.</Description>
    </Field>
-   <Field added="FIX.5.0SP2" addedEP="129" updated="FIX.Latest" updatedEP="271">
+   <Field added="FIX.5.0SP2" addedEP="129" updated="FIX.Latest" updatedEP="275">
       <Tag>1777</Tag>
       <Name>NoEntitlementAttrib</Name>
       <Type>NumInGroup</Type>
-      <NotReqXML>0</NotReqXML>
+      <NotReqXML>1</NotReqXML>
       <Description>Number of entitlement attributes.</Description>
    </Field>
    <Field added="FIX.5.0SP2" addedEP="129">
@@ -15095,11 +15095,11 @@ Values "4000" and above are reserved for bilaterally agreed upon user defined en
       <NotReqXML>0</NotReqXML>
       <Description>Reference month if there is no applicable UnderlyingMaturityMonth(313) value for the contract or security.</Description>
    </Field>
-   <Field added="FIX.5.0SP2" addedEP="141">
+   <Field added="FIX.5.0SP2" addedEP="141" updated="FIX.Latest" updatedEP="275">
       <Tag>1838</Tag>
       <Name>NoTradePriceConditions</Name>
       <Type>NumInGroup</Type>
-      <NotReqXML>0</NotReqXML>
+      <NotReqXML>1</NotReqXML>
       <Description>Number of trade price conditions.</Description>
    </Field>
    <Field added="FIX.5.0SP2" addedEP="141">
@@ -15119,11 +15119,11 @@ Values "4000" and above are reserved for bilaterally agreed upon user defined en
       <Description>Identifies the status of an allocation when using a pre-clear workflow. </Description>
       <Elaboration>Note: This is different from the give-up process where a trade is cleared and then given up and goes through the allocation flow.</Elaboration>
    </Field>
-   <Field added="FIX.5.0SP2" addedEP="141">
+   <Field added="FIX.5.0SP2" addedEP="141" updated="FIX.Latest" updatedEP="275">
       <Tag>1841</Tag>
       <Name>NoTradeQtys</Name>
       <Type>NumInGroup</Type>
-      <NotReqXML>0</NotReqXML>
+      <NotReqXML>1</NotReqXML>
       <Description>Number of trade quantities.</Description>
    </Field>
    <Field added="FIX.5.0SP2" addedEP="141">
@@ -15142,11 +15142,11 @@ Values "4000" and above are reserved for bilaterally agreed upon user defined en
       <NotReqXML>0</NotReqXML>
       <Description>Trade quantity.</Description>
    </Field>
-   <Field added="FIX.5.0SP2" addedEP="141">
+   <Field added="FIX.5.0SP2" addedEP="141" updated="FIX.Latest" updatedEP="275">
       <Tag>1844</Tag>
       <Name>NoTradeAllocAmts</Name>
       <Type>NumInGroup</Type>
-      <NotReqXML>0</NotReqXML>
+      <NotReqXML>1</NotReqXML>
       <Description>Number of trade allocation amount entries.</Description>
    </Field>
    <Field added="FIX.5.0SP2" addedEP="141">
@@ -15232,11 +15232,11 @@ Values "4000" and above are reserved for bilaterally agreed upon user defined en
       <NotReqXML>0</NotReqXML>
       <Description>The identifier for the average price group for the trade side.  See also AvgPxGroupID(1731).</Description>
    </Field>
-   <Field added="FIX.5.0SP2" addedEP="142">
+   <Field added="FIX.5.0SP2" addedEP="142" updated="FIX.Latest" updatedEP="275">
       <Tag>1855</Tag>
       <Name>NoRelatedTrades</Name>
       <Type>NumInGroup</Type>
-      <NotReqXML>0</NotReqXML>
+      <NotReqXML>1</NotReqXML>
       <Description>Number of related trades.</Description>
    </Field>
    <Field added="FIX.5.0SP2" addedEP="142">
@@ -15279,11 +15279,11 @@ Values "4000" and above are reserved for bilaterally agreed upon user defined en
       <NotReqXML>0</NotReqXML>
       <Description>Quantity of the related trade which can be less than or equal to the actual quantity of the related trade. For example, when one trade offsets another across asset classes.</Description>
    </Field>
-   <Field added="FIX.5.0SP2" addedEP="142">
+   <Field added="FIX.5.0SP2" addedEP="142" updated="FIX.Latest" updatedEP="275">
       <Tag>1861</Tag>
       <Name>NoRelatedPositions</Name>
       <Type>NumInGroup</Type>
-      <NotReqXML>0</NotReqXML>
+      <NotReqXML>1</NotReqXML>
       <Description>Number of related positions.</Description>
    </Field>
    <Field added="FIX.5.0SP2" addedEP="142">
@@ -15326,11 +15326,11 @@ Values "4000" and above are reserved for bilaterally agreed upon user defined en
       <NotReqXML>0</NotReqXML>
       <Description>Unique identifier for the ask side of the quote assigned by the quote issuer.</Description>
    </Field>
-   <Field added="FIX.5.0SP2" addedEP="144">
+   <Field added="FIX.5.0SP2" addedEP="144" updated="FIX.Latest" updatedEP="275">
       <Tag>1868</Tag>
       <Name>NoValueChecks</Name>
       <Type>NumInGroup</Type>
-      <NotReqXML>0</NotReqXML>
+      <NotReqXML>1</NotReqXML>
       <Description>Number of value check entries.</Description>
    </Field>
    <Field added="FIX.5.0SP2" addedEP="144">
@@ -15357,11 +15357,12 @@ Values "4000" and above are reserved for bilaterally agreed upon user defined en
       <NotReqXML>1</NotReqXML>
       <Description>The length of the LegSecurityXML(1872) data block.</Description>
    </Field>
-   <Field added="FIX.5.0SP2" addedEP="145">
+   <Field added="FIX.5.0SP2" addedEP="145" updated="FIX.Latest" updatedEP="275">
       <Tag>1872</Tag>
       <Name>LegSecurityXML</Name>
       <Type>XMLData</Type>
-      <NotReqXML>1</NotReqXML>
+      <AbbrName>SecXML</AbbrName>
+      <NotReqXML>0</NotReqXML>
       <Description>XML definition for the leg security.</Description>
    </Field>
    <Field added="FIX.5.0SP2" addedEP="145">
@@ -15380,11 +15381,12 @@ Values "4000" and above are reserved for bilaterally agreed upon user defined en
       <NotReqXML>1</NotReqXML>
       <Description>The length of the UnderlyingSecurityXML(1875) data block. </Description>
    </Field>
-   <Field added="FIX.5.0SP2" addedEP="145">
+   <Field added="FIX.5.0SP2" addedEP="145" updated="FIX.Latest" updatedEP="275">
       <Tag>1875</Tag>
       <Name>UnderlyingSecurityXML</Name>
       <Type>XMLData</Type>
-      <NotReqXML>1</NotReqXML>
+      <AbbrName>SecXML</AbbrName>
+      <NotReqXML>0</NotReqXML>
       <Description>XML definition for the underlying security. </Description>
    </Field>
    <Field added="FIX.5.0SP2" addedEP="145">
@@ -15499,18 +15501,18 @@ Conditionally required when SettlPriceUnitOfMeasure(1886)=Ccy.</Description>
       <Description>Timestamp of the match event. For off-exchange trades the time at which the deal was matched by the exchange.
 This timestamp will be the same on all the trades and will not change when a trade is modified.</Description>
    </Field>
-   <Field added="FIX.5.0SP2" addedEP="150">
+   <Field added="FIX.5.0SP2" addedEP="150" updated="FIX.Latest" updatedEP="275">
       <Tag>1889</Tag>
       <Name>NoInstrmtMatchSides</Name>
       <Type>NumInGroup</Type>
-      <NotReqXML>0</NotReqXML>
+      <NotReqXML>1</NotReqXML>
       <Description>Number of instrument match sides.</Description>
    </Field>
-   <Field added="FIX.5.0SP2" addedEP="150">
+   <Field added="FIX.5.0SP2" addedEP="150" updated="FIX.Latest" updatedEP="275">
       <Tag>1890</Tag>
       <Name>NoTrdMatchSides</Name>
       <Type>NumInGroup</Type>
-      <NotReqXML>0</NotReqXML>
+      <NotReqXML>1</NotReqXML>
       <Description>Number of trade match sides.</Description>
    </Field>
    <Field added="FIX.5.0SP2" addedEP="150" updated="FIX.5.0SP2" updatedEP="215">
@@ -15522,11 +15524,11 @@ This timestamp will be the same on all the trades and will not change when a tra
       <Description>Used to identify each price level, step or clip within a match event.</Description>
       <Elaboration>The identifier may represent a grouping of matched resting orders at a given price level that was matched by an aggressor order. For example, an aggressive order sweeping through 2 price levels that included 3 resting orders would have two different TrdMatchSubID(1891) values.</Elaboration>
    </Field>
-   <Field added="FIX.5.0SP2" addedEP="150">
+   <Field added="FIX.5.0SP2" addedEP="150" updated="FIX.Latest" updatedEP="275">
       <Tag>1892</Tag>
       <Name>NoLegExecs</Name>
       <Type>NumInGroup</Type>
-      <NotReqXML>0</NotReqXML>
+      <NotReqXML>1</NotReqXML>
       <Description>Number of instrument leg executions.</Description>
    </Field>
    <Field added="FIX.5.0SP2" addedEP="150">
@@ -15733,13 +15735,14 @@ For a QuoteRequest(35=R) message, this is the time by which the Quote(35=S) mess
       <NotReqXML>0</NotReqXML>
       <Description>Identifies the event which caused origination of the identifier in RegulatoryTradeID(1903). When more than one event is the cause, use the higher enumeration value.  For example, if the identifier is originated due to an allocated trade which was cleared and reported, use the enumeration value 2 (Clearing).</Description>
    </Field>
-   <Field added="FIX.5.0SP2" addedEP="161" updated="FIX.Latest" updatedEP="271">
+   <Field added="FIX.5.0SP2" addedEP="161" updated="FIX.Latest" updatedEP="275">
       <Tag>1905</Tag>
       <Name>RegulatoryTradeIDSource</Name>
       <Type>String</Type>
       <AbbrName>Src</AbbrName>
       <NotReqXML>0</NotReqXML>
-      <Description>Identifies the reporting entity that originated the value in RegulatoryTradeID(1903). The reporting entity identifier may be assigned by a regulator.</Description>
+      <Description>Identifies the reporting entity that originated the value in RegulatoryTradeID(1903). The reporting entity identifier may be assigned by a regulator or from a supported standard identifier source scheme.</Description>
+      <Elaboration>In the context of CFTC usage for Unique Swap Identifier (USI), this field is required to convey the namespace of the entity creating the USI, in accordance to the USI Data Standard (https://www.cftc.gov/sites/default/files/idc/groups/public/@swaps/documents/dfsubmission/usidatastandards100112.pdf). For standardized identifier source schemes, such as the Unique Transaction Identifier (UTI), the source scheme is identified using supported code values.</Elaboration>
    </Field>
    <Field added="FIX.5.0SP2" addedEP="161" updated="FIX.5.0SP2" updatedEP="222">
       <Tag>1906</Tag>
@@ -15772,13 +15775,15 @@ Contextual hierarchy of events for the same trade or transaction maybe captured 
       <NotReqXML>0</NotReqXML>
       <Description>Trade identifier required by government regulators or other regulatory organizations for regulatory reporting purposes.  For example, unique swap identifer (USI) as required by the U.S. Commodity Futures Trading Commission.</Description>
    </Field>
-   <Field added="FIX.5.0SP2" addedEP="161">
+   <Field added="FIX.5.0SP2" addedEP="161" updated="FIX.Latest" updatedEP="275">
       <Tag>1910</Tag>
       <Name>AllocRegulatoryTradeIDSource</Name>
       <Type>String</Type>
       <AbbrName>Src</AbbrName>
       <NotReqXML>0</NotReqXML>
-      <Description>Identifies the reporting entity that originated the value in AllocRegulatoryTradeID(1909).  The reporting entity identifier may be assigned by a regulator.</Description>
+      <EnumDatatype>1905</EnumDatatype>
+      <Description>Identifies the reporting entity that originated the value in RegulatoryTradeID(1903). The reporting entity identifier may be assigned by a regulator or from a supported standard identifier source scheme.</Description>
+      <Elaboration>In the context of CFTC usage for Unique Swap Identifier (USI), this field is required to convey the namespace of the entity creating the USI, in accordance to the USI Data Standard (https://www.cftc.gov/sites/default/files/idc/groups/public/@swaps/documents/dfsubmission/usidatastandards100112.pdf). For standardized identifier source schemes, such as the Unique Transaction Identifier (UTI), the source scheme is identified using supported code values.</Elaboration>
    </Field>
    <Field added="FIX.5.0SP2" addedEP="161">
       <Tag>1911</Tag>
@@ -16207,13 +16212,15 @@ See http://www.fpml.org/coding-scheme/master-confirmation-annex-type for values.
       <NotReqXML>0</NotReqXML>
       <Description>Trade identifier required by government regulators or other regulatory organziations for regulatory reporting purposes.  For example, unique swap identifier (USI) as required by the U.S. Commodity Futures Trading Commission.  </Description>
    </Field>
-   <Field added="FIX.5.0SP2" addedEP="161">
+   <Field added="FIX.5.0SP2" addedEP="161" updated="FIX.Latest" updatedEP="275">
       <Tag>1973</Tag>
       <Name>SideRegulatoryTradeIDSource</Name>
       <Type>String</Type>
       <AbbrName>Src</AbbrName>
       <NotReqXML>0</NotReqXML>
-      <Description>Identifies the  reporting entity that originated the value in SideRegulatoryTradeID(1972).  The reporting entity identifier may be assigned by a regulator.</Description>
+      <EnumDatatype>1905</EnumDatatype>
+      <Description>Identifies the reporting entity that originated the value in RegulatoryTradeID(1903). The reporting entity identifier may be assigned by a regulator or from a supported standard identifier source scheme.</Description>
+      <Elaboration>In the context of CFTC usage for Unique Swap Identifier (USI), this field is required to convey the namespace of the entity creating the USI, in accordance to the USI Data Standard (https://www.cftc.gov/sites/default/files/idc/groups/public/@swaps/documents/dfsubmission/usidatastandards100112.pdf). For standardized identifier source schemes, such as the Unique Transaction Identifier (UTI), the source scheme is identified using supported code values.</Elaboration>
    </Field>
    <Field added="FIX.5.0SP2" addedEP="161">
       <Tag>1974</Tag>
@@ -50087,31 +50094,31 @@ SideCollateralReinvestmentCurrencyCodeSource(2932) may be used to disambiguate t
       <EnumDatatype>2883</EnumDatatype>
       <Description>Indicates whether a routing arrangement is in place, e.g. between two brokers. May be used together with ContraOrderOrigination(2882) to further describe the origin of an order.</Description>
    </Field>
-   <Field added="FIX.5.0SP2" addedEP="257" updated="FIX.Latest" updatedEP="271">
+   <Field added="FIX.5.0SP2" addedEP="257" updated="FIX.Latest" updatedEP="275">
       <Tag>43109</Tag>
       <Name>PaymentStreamFormulaLength</Name>
       <Type>Length</Type>
       <AssociatedDataTag>42684</AssociatedDataTag>
       <AbbrName>FrmlaLen</AbbrName>
-      <NotReqXML>1</NotReqXML>
+      <NotReqXML>0</NotReqXML>
       <Description>Byte length of encoded (non-ASCII characters) PaymentStreamFormula(42648) field.</Description>
    </Field>
-   <Field added="FIX.5.0SP2" addedEP="257" updated="FIX.Latest" updatedEP="271">
+   <Field added="FIX.5.0SP2" addedEP="257" updated="FIX.Latest" updatedEP="275">
       <Tag>43110</Tag>
       <Name>LegPaymentStreamFormulaLength</Name>
       <Type>Length</Type>
       <AssociatedDataTag>42486</AssociatedDataTag>
       <AbbrName>FrmlaLen</AbbrName>
-      <NotReqXML>1</NotReqXML>
+      <NotReqXML>0</NotReqXML>
       <Description>Byte length of encoded (non-ASCII characters) LegPaymentStreamFormula(42486) field.</Description>
    </Field>
-   <Field added="FIX.5.0SP2" addedEP="257" updated="FIX.Latest" updatedEP="271">
+   <Field added="FIX.5.0SP2" addedEP="257" updated="FIX.Latest" updatedEP="275">
       <Tag>43111</Tag>
       <Name>UnderlyingPaymentStreamFormulaLength</Name>
       <Type>Length</Type>
       <AssociatedDataTag>42982</AssociatedDataTag>
       <AbbrName>FrmlaLen</AbbrName>
-      <NotReqXML>1</NotReqXML>
+      <NotReqXML>0</NotReqXML>
       <Description>Byte length of encoded (non-ASCII characters) UnderlyingPaymentStreamFormula(42982) field.</Description>
    </Field>
    <Field added="FIX.5.0SP2" addedEP="258">
