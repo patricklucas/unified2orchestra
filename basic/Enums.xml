@@ -4,8 +4,8 @@
        edition="2010"
        version="FIX.Latest"
        xsi:noNamespaceSchemaLocation="../../schema/Enums.xsd"
-       generated="2022-08-04T15:15:39.42Z"
-       latestEP="272">
+       generated="2022-09-27T14:17:21.008Z"
+       latestEP="273">
    <Enum added="FIX.2.7">
 		    <Tag>4</Tag>
 		    <Value>B</Value>
@@ -675,14 +675,14 @@
       <Sort>5</Sort>
       <Description>RIC</Description>
    </Enum>
-   <Enum added="FIX.4.1">
-		    <Tag>22</Tag>
-		    <Value>6</Value>
-		    <SymbolicName>ISOCurrencyCode</SymbolicName>
-		    <Group/>
-		    <Sort>6</Sort>
-		    <Description>ISO Currency Code</Description>
-	  </Enum>
+   <Enum added="FIX.4.1" updated="FIX.Latest" updatedEP="273">
+      <Tag>22</Tag>
+      <Value>6</Value>
+      <SymbolicName>ISOCurrencyCode</SymbolicName>
+      <Group/>
+      <Sort>6</Sort>
+      <Description>ISO Currency Code (ISO 4217)</Description>
+   </Enum>
    <Enum added="FIX.4.1">
 		    <Tag>22</Tag>
 		    <Value>7</Value>
@@ -42070,6 +42070,65 @@ in that foreign jurisdiction.</Elaboration>
       <SymbolicName>TONAR</SymbolicName>
       <Sort>56</Sort>
       <Description>Tokyo Overnight Average Rate</Description>
+   </Enum>
+   <Enum added="FIX.Latest" addedEP="273">
+      <Tag>22</Tag>
+      <Value>Y</Value>
+      <SymbolicName>DigitalTokenIdentifier</SymbolicName>
+      <Sort>33</Sort>
+      <Description>Digital Token Identifier (ISO 24165)</Description>
+   </Enum>
+   <Enum added="FIX.Latest" addedEP="273">
+      <Tag>167</Tag>
+      <Value>DIGITAL</Value>
+      <SymbolicName>DigitalAsset</SymbolicName>
+      <Group>Other</Group>
+      <Sort>12</Sort>
+      <Description>Digital Asset</Description>
+      <Elaboration>Asset that exists only in digital form or which is the digital representation of another asset (Source: ISO 24165 - Terms and Definitions).</Elaboration>
+   </Enum>
+   <Enum added="FIX.Latest" addedEP="273">
+      <Tag>2897</Tag>
+      <Value>1</Value>
+      <SymbolicName>CUSIP</SymbolicName>
+      <Sort>1</Sort>
+      <Description>CUSIP</Description>
+   </Enum>
+   <Enum added="FIX.Latest" addedEP="273">
+      <Tag>2897</Tag>
+      <Value>2</Value>
+      <SymbolicName>SEDOL</SymbolicName>
+      <Sort>2</Sort>
+      <Description>SEDOL</Description>
+   </Enum>
+   <Enum added="FIX.Latest" addedEP="273">
+      <Tag>2897</Tag>
+      <Value>4</Value>
+      <SymbolicName>ISINNumber</SymbolicName>
+      <Sort>4</Sort>
+      <Description>ISIN</Description>
+   </Enum>
+   <Enum added="FIX.Latest" addedEP="273">
+      <Tag>2897</Tag>
+      <Value>6</Value>
+      <SymbolicName>ISOCurrencyCode</SymbolicName>
+      <Sort>6</Sort>
+      <Description>ISO Currency Code (ISO 4217)</Description>
+   </Enum>
+   <Enum added="FIX.Latest" addedEP="273">
+      <Tag>2897</Tag>
+      <Value>S</Value>
+      <SymbolicName>FinancialInstrumentGlobalIdentifier</SymbolicName>
+      <Sort>27</Sort>
+      <Description>Financial Instrument Global Identifier </Description>
+      <Elaboration>An Object Management Group (OMG) standard. Also referred to as FIGI. Formerly known as "Bloomberg Open Symbology BBGID".</Elaboration>
+   </Enum>
+   <Enum added="FIX.Latest" addedEP="273">
+      <Tag>2897</Tag>
+      <Value>Y</Value>
+      <SymbolicName>DigitalTokenIdentifier</SymbolicName>
+      <Sort>33</Sort>
+      <Description>Digital Token Identifier (ISO 24165)</Description>
    </Enum>
    <Enum>
       <Tag>35</Tag>

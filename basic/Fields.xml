@@ -4,8 +4,8 @@
         edition="2010"
         version="FIX.Latest"
         xsi:noNamespaceSchemaLocation="../../schema/Fields.xsd"
-        generated="2022-08-01T13:01:00.859Z"
-        latestEP="271">
+        generated="2022-09-27T14:17:21.008Z"
+        latestEP="273">
    <Field added="FIX.2.7">
 		    <Tag>1</Tag>
 		    <Name>Account</Name>
@@ -124,14 +124,17 @@ For Fixed Income trades AvgPx is always expressed as percent-of-par, regardless 
 		    <Description>Total quantity (e.g. number of shares) filled.
 (Prior to FIX 4.2 this field was of type int)</Description>
 	  </Field>
-   <Field added="FIX.2.7">
-		    <Tag>15</Tag>
-		    <Name>Currency</Name>
-		    <Type>Currency</Type>
-		    <AbbrName>Ccy</AbbrName>
-		    <NotReqXML>0</NotReqXML>
-		    <Description>Identifies currency used for price. Absence of this field is interpreted as the default for the security. It is recommended that systems provide the currency value whenever possible. See "Appendix 6-A: Valid Currency Codes" for information on obtaining valid values.</Description>
-	  </Field>
+   <Field added="FIX.2.7" updated="FIX.Latest" updatedEP="273">
+      <Tag>15</Tag>
+      <Name>Currency</Name>
+      <Type>Currency</Type>
+      <AbbrName>Ccy</AbbrName>
+      <NotReqXML>0</NotReqXML>
+      <Description>Identifies currency used for price or quantity fields, depending on the asset class being traded. CurrencyCodeSource(2897) may be used to disambiguate the code source scheme used, and ISO 4217 is the default scheme if absent.
+
+Absence of this field is interpreted as the default currency for the security as defined by the respective reference data. It is recommended that systems provide the currency value whenever possible. </Description>
+      <Elaboration>For securities trading and digital assets traded securities-style, identifies the currency used to denote the price. Absence of this field is interpreted as the default for the security. For Foreign Exchange (FX) and digital assets traded FX-style, identifies the dealt currency used to denominate the quantity related field(s).</Elaboration>
+   </Field>
    <Field added="FIX.2.7">
 		    <Tag>16</Tag>
 		    <Name>EndSeqNo</Name>
@@ -1616,15 +1619,15 @@ See Volume 3: "Pre-Trade Message Targeting/Routing"</Description>
 Spread to Benchmark: Basis points relative to a benchmark. To be expressed as "count of basis points" (vs. an absolute value). E.g. High Grade Corporate Bonds may express price as basis points relative to benchmark (the BenchmarkCurveName (22) field). Note: Basis points can be negative.
 Swap Spread: Target spread for a swap.</Description>
 	  </Field>
-   <Field added="FIX.4.2">
-		    <Tag>220</Tag>
-		    <Name>BenchmarkCurveCurrency</Name>
-		    <Type>Currency</Type>
-		    <AbbrName>Ccy</AbbrName>
-		    <NotReqXML>0</NotReqXML>
-		    <Description>Identifies currency used for benchmark curve. See "Appendix 6-A: Valid Currency Codes" for information on obtaining valid values.
-(Note tag # was reserved in FIX 4.1, added in FIX 4.3)</Description>
-	  </Field>
+   <Field added="FIX.4.2" updated="FIX.Latest" updatedEP="273">
+      <Tag>220</Tag>
+      <Name>BenchmarkCurveCurrency</Name>
+      <Type>Currency</Type>
+      <AbbrName>Ccy</AbbrName>
+      <NotReqXML>0</NotReqXML>
+      <Description>Specifies currency used for benchmark curve. 
+BenchmarkCurveCurrencyCodeSource(2950) may be used to disambiguate the code source scheme used, and ISO 4217 is the default scheme if absent.</Description>
+   </Field>
    <Field added="FIX.4.2">
 		    <Tag>221</Tag>
 		    <Name>BenchmarkCurveName</Name>
@@ -2511,15 +2514,14 @@ See StrikePrice (202) field for description</Description>
 		    <Description>Underlying security's OptAttribute.
 See OptAttribute (206) field for description</Description>
 	  </Field>
-   <Field added="FIX.4.2">
-		    <Tag>318</Tag>
-		    <Name>UnderlyingCurrency</Name>
-		    <Type>Currency</Type>
-		    <AbbrName>Ccy</AbbrName>
-		    <NotReqXML>0</NotReqXML>
-		    <Description>Underlying security's Currency.
-See Currency (5) field for description and valid values</Description>
-	  </Field>
+   <Field added="FIX.4.2" updated="FIX.Latest" updatedEP="273">
+      <Tag>318</Tag>
+      <Name>UnderlyingCurrency</Name>
+      <Type>Currency</Type>
+      <AbbrName>Ccy</AbbrName>
+      <NotReqXML>0</NotReqXML>
+      <Description>Underlying security's currency.</Description>
+   </Field>
    <Field added="FIX.4.2">
 		    <Tag>320</Tag>
 		    <Name>SecurityReqID</Name>
@@ -3806,14 +3808,15 @@ The default, if RoundingDirection (468) is specified without RoundingModulus, is
 		    <NotReqXML>0</NotReqXML>
 		    <Description>Specifies currency to be used for Cash Distributions see "Appendix 6-A Valid Currency Codes".</Description>
 	  </Field>
-   <Field added="FIX.4.3">
-		    <Tag>479</Tag>
-		    <Name>CommCurrency</Name>
-		    <Type>Currency</Type>
-		    <AbbrName>Ccy</AbbrName>
-		    <NotReqXML>0</NotReqXML>
-		    <Description>Specifies currency to be use for Commission (12) if the Commission currency is different from the Deal Currency - see "Appendix 6-A; Valid Currency Codes".</Description>
-	  </Field>
+   <Field added="FIX.4.3" updated="FIX.Latest" updatedEP="273">
+      <Tag>479</Tag>
+      <Name>CommCurrency</Name>
+      <Type>Currency</Type>
+      <AbbrName>Ccy</AbbrName>
+      <NotReqXML>0</NotReqXML>
+      <Description>Specifies currency to be used for Commission(12) if the commission currency is different from the deal currency. 
+CommCurrencyCodeSource(2922) may be used to disambiguate the code source scheme used, and ISO 4217 is the default scheme if absent.</Description>
+   </Field>
    <Field added="FIX.4.3">
 		    <Tag>480</Tag>
 		    <Name>CancellationRights</Name>
@@ -12579,13 +12582,13 @@ For Quotes: The period of time a quoted price is tradable(i.e. on-the-wire) befo
       <Description>The remaining limit amount available between the counterparties.  The type of limit is specified in LimitAmtType(1631).
 						Bilateral agreements dictate the units and maximum value of this field.</Description>
    </Field>
-   <Field added="FIX.5.0SP2" addedEP="100">
+   <Field added="FIX.5.0SP2" addedEP="100" updated="FIX.Latest" updatedEP="273">
       <Tag>1634</Tag>
       <Name>LimitAmtCurrency</Name>
       <Type>Currency</Type>
       <AbbrName>LmtAmtCcy</AbbrName>
       <NotReqXML>0</NotReqXML>
-      <Description>Indicates the currency that the limit amount is specified in.  See Currency(15) for additional description and valid values.</Description>
+      <Description>Indicates the currency that the limit amount is specified in. </Description>
    </Field>
    <Field added="FIX.5.0SP2" addedEP="102">
       <Tag>1635</Tag>
@@ -26209,13 +26212,14 @@ See http://www.fpml.org/coding-scheme/business-center for standard 4-character c
       <NotReqXML>0</NotReqXML>
       <Description>Specifies when the payout is to occur.</Description>
    </Field>
-   <Field added="FIX.5.0SP2" addedEP="169">
+   <Field added="FIX.5.0SP2" addedEP="169" updated="FIX.Latest" updatedEP="273">
       <Tag>2122</Tag>
       <Name>ComplexOptPayoutCurrency</Name>
       <Type>Currency</Type>
       <AbbrName>OptCcy</AbbrName>
       <NotReqXML>0</NotReqXML>
-      <Description>Specifies the currency of the payout amount. Uses ISO 4217 currency codes.</Description>
+      <Description>Specifies the currency of the payout amount. 
+ComplexOptPayoutCurrencyCodeSource(2941) may be used to disambiguate the code source scheme used, and ISO 4217 is the default scheme if absent.</Description>
    </Field>
    <Field added="FIX.5.0SP2" addedEP="169">
       <Tag>2123</Tag>
@@ -26225,22 +26229,24 @@ See http://www.fpml.org/coding-scheme/business-center for standard 4-character c
       <NotReqXML>0</NotReqXML>
       <Description>Specifies the price percentage at which the complex event takes effect. Impact of the event price is determined by the ComplexEventType(1484).</Description>
    </Field>
-   <Field added="FIX.5.0SP2" addedEP="169">
+   <Field added="FIX.5.0SP2" addedEP="169" updated="FIX.Latest" updatedEP="273">
       <Tag>2124</Tag>
       <Name>ComplexEventCurrencyOne</Name>
       <Type>Currency</Type>
       <AbbrName>Ccy1</AbbrName>
       <NotReqXML>0</NotReqXML>
-      <Description>Specifies the first or only reference currency of the trade. Uses ISO 4217 currency codes.</Description>
+      <Description>Specifies the first or only reference currency of the trade. 
+ComplexEventCurrencyOneCodeSource(2942) may be used to disambiguate the code source scheme used, and ISO 4217 is the default scheme if absent.</Description>
       <Elaboration>Applicable for complex FX option strategies.</Elaboration>
    </Field>
-   <Field added="FIX.5.0SP2" addedEP="169">
+   <Field added="FIX.5.0SP2" addedEP="169" updated="FIX.Latest" updatedEP="273">
       <Tag>2125</Tag>
       <Name>ComplexEventCurrencyTwo</Name>
       <Type>Currency</Type>
       <AbbrName>Ccy2</AbbrName>
       <NotReqXML>0</NotReqXML>
-      <Description>Specifies the second reference currencyof the trade. Uses ISO 4217 currency codes.</Description>
+      <Description>Specifies the second reference currency of the trade. 
+ComplexEventCurrencyTwoCodeSource(2943) may be used to disambiguate the code source scheme used, and ISO 4217 is the default scheme if absent.</Description>
       <Elaboration>Applicable for complex FX option strategies.</Elaboration>
    </Field>
    <Field added="FIX.5.0SP2" addedEP="169">
@@ -30246,13 +30252,14 @@ See http://www.fpml.org/coding-scheme/business-center for standard 4-character c
       <EnumDatatype>2121</EnumDatatype>
       <Description>Specifies when the payout is to occur.</Description>
    </Field>
-   <Field added="FIX.5.0SP2" addedEP="169">
+   <Field added="FIX.5.0SP2" addedEP="169" updated="FIX.Latest" updatedEP="273">
       <Tag>2226</Tag>
       <Name>LegComplexOptPayoutCurrency</Name>
       <Type>Currency</Type>
       <AbbrName>OptCcy</AbbrName>
       <NotReqXML>0</NotReqXML>
-      <Description>Specifies the currency of the payout amount. Uses ISO 4217 currency codes.</Description>
+      <Description>Specifies the currency of the payout amount. 
+LegComplexOptPayoutCurrencyCodeSource(2944) may be used to disambiguate the code source scheme used, and ISO 4217 is the default scheme if absent.</Description>
    </Field>
    <Field added="FIX.5.0SP2" addedEP="169">
       <Tag>2227</Tag>
@@ -30306,22 +30313,24 @@ See http://www.fpml.org/coding-scheme/business-center for standard 4-character c
       <Description>Specifies the condition between complex events when more than one event is specified.
 Multiple barrier events would use an "or" condition since only one can be effective at a given time. A set of digital range events would use an "and" condition since both conditions must be in effect for a payout to result.</Description>
    </Field>
-   <Field added="FIX.5.0SP2" addedEP="169">
+   <Field added="FIX.5.0SP2" addedEP="169" updated="FIX.Latest" updatedEP="273">
       <Tag>2233</Tag>
       <Name>LegComplexEventCurrencyOne</Name>
       <Type>Currency</Type>
       <AbbrName>Ccy1</AbbrName>
       <NotReqXML>0</NotReqXML>
-      <Description>Specifies the first or only reference currency of the trade. Uses ISO 4217 currency codes.</Description>
+      <Description>Specifies the first or only reference currency of the trade. 
+LegComplexEventCurrencyOneCodeSource(2945) may be used to disambiguate the code source scheme used, and ISO 4217 is the default scheme if absent.</Description>
       <Elaboration>Applicable for complex FX option strategies.</Elaboration>
    </Field>
-   <Field added="FIX.5.0SP2" addedEP="169">
+   <Field added="FIX.5.0SP2" addedEP="169" updated="FIX.Latest" updatedEP="273">
       <Tag>2234</Tag>
       <Name>LegComplexEventCurrencyTwo</Name>
       <Type>Currency</Type>
       <AbbrName>Ccy2</AbbrName>
       <NotReqXML>0</NotReqXML>
-      <Description>Specifies the second reference currency of the trade.  Uses ISO 4217 currency codes.</Description>
+      <Description>Specifies the second reference currency of the trade. 
+LegComplexEventCurrencyTwoCodeSource(2946) may be used to disambiguate the code source scheme used, and ISO 4217 is the default scheme if absent.</Description>
       <Elaboration>Applicable for complex FX option strategies.</Elaboration>
    </Field>
    <Field added="FIX.5.0SP2" addedEP="169">
@@ -33494,13 +33503,14 @@ See http://www.fpml.org/coding-scheme/business-center for standard 4-character c
       <EnumDatatype>2121</EnumDatatype>
       <Description>The time when the payout is to occur.</Description>
    </Field>
-   <Field added="FIX.5.0SP2" addedEP="169">
+   <Field added="FIX.5.0SP2" addedEP="169" updated="FIX.Latest" updatedEP="273">
       <Tag>2266</Tag>
       <Name>UnderlyingComplexOptPayoutCurrency</Name>
       <Type>Currency</Type>
       <AbbrName>OptCcy</AbbrName>
       <NotReqXML>0</NotReqXML>
-      <Description>Specifies the currency of the payout amount. Uses ISO 4217 currency codes.</Description>
+      <Description>Specifies the currency of the payout amount. 
+UnderlyingComplexOptPayoutCurrencyCodeSource(2947) may be used to disambiguate the code source scheme used, and ISO 4217 is the default scheme if absent.</Description>
    </Field>
    <Field added="FIX.5.0SP2" addedEP="169">
       <Tag>2267</Tag>
@@ -33510,22 +33520,24 @@ See http://www.fpml.org/coding-scheme/business-center for standard 4-character c
       <NotReqXML>0</NotReqXML>
       <Description>Specifies the price percentage at which the complex event takes effect. Impact of the event price is determined by the UnderlyingComplexEventType(2046).</Description>
    </Field>
-   <Field added="FIX.5.0SP2" addedEP="169">
+   <Field added="FIX.5.0SP2" addedEP="169" updated="FIX.Latest" updatedEP="273">
       <Tag>2268</Tag>
       <Name>UnderlyingComplexEventCurrencyOne</Name>
       <Type>Currency</Type>
       <AbbrName>Ccy1</AbbrName>
       <NotReqXML>0</NotReqXML>
-      <Description>Specifies the first or only reference currency of the trade. Uses ISO 4217 currency codes.</Description>
+      <Description>Specifies the first or only reference currency of the trade. 
+UnderlyingComplexEventCurrencyOneCodeSource(2948) may be used to disambiguate the code source scheme used, and ISO 4217 is the default scheme if absent.</Description>
       <Elaboration>Applicable for complex FX option strategies.</Elaboration>
    </Field>
-   <Field added="FIX.5.0SP2" addedEP="169">
+   <Field added="FIX.5.0SP2" addedEP="169" updated="FIX.Latest" updatedEP="273">
       <Tag>2269</Tag>
       <Name>UnderlyingComplexEventCurrencyTwo</Name>
       <Type>Currency</Type>
       <AbbrName>Ccy2</AbbrName>
       <NotReqXML>0</NotReqXML>
-      <Description>Specifies the second reference currency of the trade. Uses ISO 4217 currency codes.</Description>
+      <Description>Specifies the second reference currency of the trade. 
+UnderlyingComplexEventCurrencyTwoCodeSource(2949) may be used to disambiguate the code source scheme used, and ISO 4217 is the default scheme if absent.</Description>
       <Elaboration>Applicable for complex FX option strategies.</Elaboration>
    </Field>
    <Field added="FIX.5.0SP2" addedEP="169">
@@ -40105,13 +40117,14 @@ See http://www.fixtradingcommunity.org/codelists#Misc_Fee_Sub_Types for code lis
       <EnumDatatype>13</EnumDatatype>
       <Description>Specifies the basis or unit used to calculate the commission.</Description>
    </Field>
-   <Field added="FIX.5.0SP2" addedEP="204">
+   <Field added="FIX.5.0SP2" addedEP="204" updated="FIX.Latest" updatedEP="273">
       <Tag>2643</Tag>
       <Name>CommissionCurrency</Name>
       <Type>Currency</Type>
       <AbbrName>Ccy</AbbrName>
       <NotReqXML>0</NotReqXML>
-      <Description>Specifies the currency denomination of the commission amount if different from the trade's currency. Uses ISO 4217 currency codes.</Description>
+      <Description>Specifies the currency denomination of the commission amount if different from the trade's currency. 
+CommissionCurrencyCodeSource(2923) may be used to disambiguate the code source scheme used, and ISO 4217 is the default scheme if absent.</Description>
    </Field>
    <Field added="FIX.5.0SP2" addedEP="204" updated="FIX.5.0SP2" updatedEP="223">
       <Tag>2644</Tag>
@@ -40220,13 +40233,14 @@ See http://www.fixtradingcommunity.org/codelists#Misc_Fee_Sub_Types for code lis
       <EnumDatatype>13</EnumDatatype>
       <Description>Specifies the basis or unit used to calculate the commission.</Description>
    </Field>
-   <Field added="FIX.5.0SP2" addedEP="204">
+   <Field added="FIX.5.0SP2" addedEP="204" updated="FIX.Latest" updatedEP="273">
       <Tag>2657</Tag>
       <Name>AllocCommissionCurrency</Name>
       <Type>Currency</Type>
       <AbbrName>Ccy</AbbrName>
       <NotReqXML>0</NotReqXML>
-      <Description>Specifies the currency denomination of the commission amount if different from the trade's currency. Uses ISO 4217 currency codes.</Description>
+      <Description>Specifies the currency denomination of the commission amount if different from the trade's currency. 
+AllocCommissionCurrencyCodeSource(2925) may be used to disambiguate the code source scheme used, and ISO 4217 is the default scheme if absent.</Description>
    </Field>
    <Field added="FIX.5.0SP2" addedEP="204">
       <Tag>2658</Tag>
@@ -46228,13 +46242,14 @@ See http://www.fixtradingcommunity.org/codelists#Extraordinary_Event_Type for co
       <NotReqXML>0</NotReqXML>
       <Description>Notional value for the equity or bond underlier.</Description>
    </Field>
-   <Field added="FIX.5.0SP2" addedEP="208">
+   <Field added="FIX.5.0SP2" addedEP="208" updated="FIX.Latest" updatedEP="273">
       <Tag>2615</Tag>
       <Name>UnderlyingNotionalCurrency</Name>
       <Type>Currency</Type>
       <AbbrName>NotlCcy</AbbrName>
       <NotReqXML>0</NotReqXML>
-      <Description>Specifies the currency denomination of the notional value. Uses ISO 4217 currency codes.</Description>
+      <Description>Specifies the currency denomination of the notional value. 
+UnderlyingNotionalCurrencyCodeSource(2921) may be used to disambiguate the code source scheme used, and ISO 4217 is the default scheme if absent.</Description>
    </Field>
    <Field added="FIX.5.0SP2" addedEP="208">
       <Tag>2616</Tag>
@@ -48400,13 +48415,14 @@ See ContraryInstructionEligibilityIndicator(2685) for complete definition.
       <EnumDatatype>2632</EnumDatatype>
       <Description>The type of value in CurrentCollateralAmount(1704).</Description>
    </Field>
-   <Field added="FIX.5.0SP2" addedEP="227">
+   <Field added="FIX.5.0SP2" addedEP="227" updated="FIX.Latest" updatedEP="273">
       <Tag>2695</Tag>
       <Name>SideCollateralCurrency</Name>
       <Type>Currency</Type>
       <AbbrName>Ccy</AbbrName>
       <NotReqXML>0</NotReqXML>
-      <Description>Specifies the currency of the collateral; optional, defaults to the settlement currency if not specified. Uses ISO 4217 Currency Code.</Description>
+      <Description>Specifies the currency of the collateral; optional, defaults to settlement currency if not specified. 
+SideCollateralCurrencyCodeSource(2930) may be used to disambiguate the code source scheme used, and ISO 4217 is the default scheme if absent.</Description>
    </Field>
    <Field added="FIX.5.0SP2" addedEP="227">
       <Tag>2696</Tag>
@@ -49514,13 +49530,14 @@ See https://www.fixtrading.org/packages/PayDisputeReason for the list of applica
       <NotReqXML>0</NotReqXML>
       <Description>The payment amount for the specified PostTradePaymentType(2824).</Description>
    </Field>
-   <Field added="FIX.5.0SP2" addedEP="249">
+   <Field added="FIX.5.0SP2" addedEP="249" updated="FIX.Latest" updatedEP="273">
       <Tag>2818</Tag>
       <Name>PostTradePaymentCurrency</Name>
       <Type>Currency</Type>
       <AbbrName>Ccy</AbbrName>
       <NotReqXML>0</NotReqXML>
-      <Description>Specifies the currency in which PostTradePaymentAmount(2817) is denominated. Uses ISO 4271 currency codes.</Description>
+      <Description>Specifies the currency in which PostTradePaymentAmount(2817) is denominated. 
+PostTradePaymentCurrencyCodeSource(2956) may be used to disambiguate the code source scheme used, and ISO 4217 is the default scheme if absent.</Description>
    </Field>
    <Field added="FIX.5.0SP2" addedEP="249">
       <Tag>2819</Tag>
@@ -49719,13 +49736,14 @@ See ISITC "Payments Cash Purpose Codes" for list of payment type codes to use av
       <NotReqXML>0</NotReqXML>
       <Description>The cash amount of the specified re-investment type.</Description>
    </Field>
-   <Field added="FIX.5.0SP2" addedEP="254">
+   <Field added="FIX.5.0SP2" addedEP="254" updated="FIX.Latest" updatedEP="273">
       <Tag>2843</Tag>
       <Name>CollateralReinvestmentCurrency</Name>
       <Type>Currency</Type>
       <AbbrName>Ccy</AbbrName>
       <NotReqXML>0</NotReqXML>
-      <Description>The currency denomination of the re-invested cash amount. Uses ISO 4217 currency codes.</Description>
+      <Description>The currency denomination of the re-invested cash amount. 
+CollateralReinvestmentCurrencyCodeSource(2931) may be used to disambiguate the code source scheme used, and ISO 4217 is the default scheme if absent.</Description>
    </Field>
    <Field added="FIX.5.0SP2" addedEP="254">
       <Tag>2844</Tag>
@@ -49752,13 +49770,14 @@ See ISITC "Payments Cash Purpose Codes" for list of payment type codes to use av
       <UnionDataType>Reserved100Plus</UnionDataType>
       <Description>Specifies the funding source used to finance margin or collateralized loan.</Description>
    </Field>
-   <Field added="FIX.5.0SP2" addedEP="254">
+   <Field added="FIX.5.0SP2" addedEP="254" updated="FIX.Latest" updatedEP="273">
       <Tag>2847</Tag>
       <Name>FundingSourceCurrency</Name>
       <Type>Currency</Type>
       <AbbrName>Ccy</AbbrName>
       <NotReqXML>0</NotReqXML>
-      <Description>Currency denomination of the market value of the funding source. Uses ISO 4217 currency codes.</Description>
+      <Description>Currency denomination of the market value of the funding source. 
+FundingSourceCurrencyCodeSource(2954) may be used to disambiguate the code source scheme used, and ISO 4217 is the default scheme if absent.</Description>
    </Field>
    <Field added="FIX.5.0SP2" addedEP="254">
       <Tag>2848</Tag>
@@ -49906,13 +49925,14 @@ See ISITC "Payments Cash Purpose Codes" for list of payment type codes to use av
       <NotReqXML>0</NotReqXML>
       <Description>The cash amount of the specified re-investment type.</Description>
    </Field>
-   <Field added="FIX.5.0SP2" addedEP="254">
+   <Field added="FIX.5.0SP2" addedEP="254" updated="FIX.Latest" updatedEP="273">
       <Tag>2866</Tag>
       <Name>SideCollateralReinvestmentCurrency</Name>
       <Type>Currency</Type>
       <AbbrName>Ccy</AbbrName>
       <NotReqXML>0</NotReqXML>
-      <Description>The currency denomination of the re-invested cash amount. Uses ISO 4217 currency codes.</Description>
+      <Description>The currency denomination of the re-invested cash amount. 
+SideCollateralReinvestmentCurrencyCodeSource(2932) may be used to disambiguate the code source scheme used, and ISO 4217 is the default scheme if absent.</Description>
    </Field>
    <Field added="FIX.5.0SP2" addedEP="254">
       <Tag>2867</Tag>
@@ -50293,5 +50313,584 @@ See ISITC "Payments Cash Purpose Codes" for list of payment type codes to use av
       <NotReqXML>0</NotReqXML>
       <EnumDatatype>22</EnumDatatype>
       <Description>Source for the second floating rate index identified in UnderlyingPaymentStreamRateIndex2ID(43122).</Description>
+   </Field>
+   <Field added="FIX.Latest" addedEP="273">
+      <Tag>2897</Tag>
+      <Name>CurrencyCodeSource</Name>
+      <Type>String</Type>
+      <AbbrName>CcySrc</AbbrName>
+      <NotReqXML>0</NotReqXML>
+      <Description>Identifies class or source of the Currency(15) value.</Description>
+   </Field>
+   <Field added="FIX.Latest" addedEP="273">
+      <Tag>2898</Tag>
+      <Name>LegCurrencyCodeSource</Name>
+      <Type>String</Type>
+      <AbbrName>CcySrc</AbbrName>
+      <NotReqXML>0</NotReqXML>
+      <EnumDatatype>2897</EnumDatatype>
+      <Description>Identifies class or source of the LegCurrency(556) value.</Description>
+   </Field>
+   <Field added="FIX.Latest" addedEP="273">
+      <Tag>2899</Tag>
+      <Name>SettlCurrencyCodeSource</Name>
+      <Type>String</Type>
+      <AbbrName>SettlCcySrc</AbbrName>
+      <NotReqXML>0</NotReqXML>
+      <EnumDatatype>2897</EnumDatatype>
+      <Description>Identifies class or source of the SettlCurrency(120) value.</Description>
+   </Field>
+   <Field added="FIX.Latest" addedEP="273">
+      <Tag>2900</Tag>
+      <Name>LegSettlCurrencyCodeSource</Name>
+      <Type>String</Type>
+      <AbbrName>SettlCcySrc</AbbrName>
+      <NotReqXML>0</NotReqXML>
+      <EnumDatatype>2897</EnumDatatype>
+      <Description>Identifies class or source of the LegSettlCurrency(675) value.</Description>
+   </Field>
+   <Field added="FIX.Latest" addedEP="273">
+      <Tag>2901</Tag>
+      <Name>SideCurrencyCodeSource</Name>
+      <Type>String</Type>
+      <AbbrName>CcySrc</AbbrName>
+      <NotReqXML>0</NotReqXML>
+      <EnumDatatype>2897</EnumDatatype>
+      <Description>Identifies class or source of the SideCurrency(1154) value.</Description>
+   </Field>
+   <Field added="FIX.Latest" addedEP="273">
+      <Tag>2902</Tag>
+      <Name>SideSettlCurrencyCodeSource</Name>
+      <Type>String</Type>
+      <AbbrName>SettlCcySrc</AbbrName>
+      <NotReqXML>0</NotReqXML>
+      <EnumDatatype>2897</EnumDatatype>
+      <Description>Identifies class or source of the SideSettlCurrency(1155) value.</Description>
+   </Field>
+   <Field added="FIX.Latest" addedEP="273">
+      <Tag>2903</Tag>
+      <Name>SettlementAmountCurrencyCodeSource</Name>
+      <Type>String</Type>
+      <AbbrName>CcySrc</AbbrName>
+      <NotReqXML>0</NotReqXML>
+      <EnumDatatype>2897</EnumDatatype>
+      <Description>Identifies class or source of the SettlementAmountCurrency(1702) value.</Description>
+   </Field>
+   <Field added="FIX.Latest" addedEP="273">
+      <Tag>2904</Tag>
+      <Name>StrikeCurrencyCodeSource</Name>
+      <Type>String</Type>
+      <AbbrName>StrkCcySrc</AbbrName>
+      <NotReqXML>0</NotReqXML>
+      <EnumDatatype>2897</EnumDatatype>
+      <Description>Identifies class or source of the StrikeCurrency(947) value.</Description>
+   </Field>
+   <Field added="FIX.Latest" addedEP="273">
+      <Tag>2905</Tag>
+      <Name>UnitOfMeasureCurrencyCodeSource</Name>
+      <Type>String</Type>
+      <AbbrName>UOMCcySrc</AbbrName>
+      <NotReqXML>0</NotReqXML>
+      <EnumDatatype>2897</EnumDatatype>
+      <Description>Identifies class or source of the UnitOfMeasureCurrency(1716) value.</Description>
+   </Field>
+   <Field added="FIX.Latest" addedEP="273">
+      <Tag>2906</Tag>
+      <Name>PriceUnitOfMeasureCurrencyCodeSource</Name>
+      <Type>String</Type>
+      <AbbrName>PxUOMCcySrc</AbbrName>
+      <NotReqXML>0</NotReqXML>
+      <EnumDatatype>2897</EnumDatatype>
+      <Description>Identifies class or source of the PriceUnitOfMeasureCurrency(1717) value.</Description>
+   </Field>
+   <Field added="FIX.Latest" addedEP="273">
+      <Tag>2907</Tag>
+      <Name>PriceQuoteCurrencyCodeSource</Name>
+      <Type>String</Type>
+      <AbbrName>PxQteCcySrc</AbbrName>
+      <NotReqXML>0</NotReqXML>
+      <EnumDatatype>2897</EnumDatatype>
+      <Description>Identifies class or source of the PriceQuoteCurrency(1524) value.</Description>
+   </Field>
+   <Field added="FIX.Latest" addedEP="273">
+      <Tag>2908</Tag>
+      <Name>LegStrikeCurrencyCodeSource</Name>
+      <Type>String</Type>
+      <AbbrName>StrkCcySrc</AbbrName>
+      <NotReqXML>0</NotReqXML>
+      <EnumDatatype>2897</EnumDatatype>
+      <Description>Identifies class or source of the LegStrikeCurrency(942) value.</Description>
+   </Field>
+   <Field added="FIX.Latest" addedEP="273">
+      <Tag>2909</Tag>
+      <Name>LegUnitOfMeasureCurrencyCodeSource</Name>
+      <Type>String</Type>
+      <AbbrName>UOMCcySrc</AbbrName>
+      <NotReqXML>0</NotReqXML>
+      <EnumDatatype>2897</EnumDatatype>
+      <Description>Identifies class or source of the LegUnitOfMeasureCurrency(1720) value.</Description>
+   </Field>
+   <Field added="FIX.Latest" addedEP="273">
+      <Tag>2910</Tag>
+      <Name>LegPriceUnitOfMeasureCurrencyCodeSource</Name>
+      <Type>String</Type>
+      <AbbrName>PxUOMCcySrc</AbbrName>
+      <NotReqXML>0</NotReqXML>
+      <EnumDatatype>2897</EnumDatatype>
+      <Description>Identifies class or source of the LegPriceUnitOfMeasureCurrency(1721) value.</Description>
+   </Field>
+   <Field added="FIX.Latest" addedEP="273">
+      <Tag>2911</Tag>
+      <Name>LegPriceQuoteCurrencyCodeSource</Name>
+      <Type>String</Type>
+      <AbbrName>PxQteCcySrc</AbbrName>
+      <NotReqXML>0</NotReqXML>
+      <EnumDatatype>2897</EnumDatatype>
+      <Description>Identifies class or source of the LegPriceQuoteCurrency(1528) value.</Description>
+   </Field>
+   <Field added="FIX.Latest" addedEP="273">
+      <Tag>2912</Tag>
+      <Name>DerivativeStrikeCurrencyCodeSource</Name>
+      <Type>String</Type>
+      <AbbrName>StrkCcySrc</AbbrName>
+      <NotReqXML>0</NotReqXML>
+      <EnumDatatype>2897</EnumDatatype>
+      <Description>Identifies class or source of the DerivativeStrikeCurrency(1262) value.</Description>
+   </Field>
+   <Field added="FIX.Latest" addedEP="273">
+      <Tag>2913</Tag>
+      <Name>DerivativeUnitOfMeasureCurrencyCodeSource</Name>
+      <Type>String</Type>
+      <AbbrName>UOMCcySrc</AbbrName>
+      <NotReqXML>0</NotReqXML>
+      <EnumDatatype>2897</EnumDatatype>
+      <Description>Identifies class or source of the DerivativeUnitOfMeasureCurrency(1722) value.</Description>
+   </Field>
+   <Field added="FIX.Latest" addedEP="273">
+      <Tag>2914</Tag>
+      <Name>DerivativePriceUnitOfMeasureCurrencyCodeSource</Name>
+      <Type>String</Type>
+      <AbbrName>PxUOMCcySrc</AbbrName>
+      <NotReqXML>0</NotReqXML>
+      <EnumDatatype>2897</EnumDatatype>
+      <Description>Identifies class or source of the DerivativePriceUnitOfMeasureCurrency(1723) value.</Description>
+   </Field>
+   <Field added="FIX.Latest" addedEP="273">
+      <Tag>2915</Tag>
+      <Name>DerivativePriceQuoteCurrencyCodeSource</Name>
+      <Type>String</Type>
+      <AbbrName>PxQteCcySrc</AbbrName>
+      <NotReqXML>0</NotReqXML>
+      <EnumDatatype>2897</EnumDatatype>
+      <Description>Identifies class or source of the DerivativePriceQuoteCurrency(1576) value.</Description>
+   </Field>
+   <Field added="FIX.Latest" addedEP="273">
+      <Tag>2916</Tag>
+      <Name>UnderlyingCurrencyCodeSource</Name>
+      <Type>String</Type>
+      <AbbrName>CcySrc</AbbrName>
+      <NotReqXML>0</NotReqXML>
+      <EnumDatatype>2897</EnumDatatype>
+      <Description>Identifies class or source of the UnderlyingCurrency(318) value.</Description>
+   </Field>
+   <Field added="FIX.Latest" addedEP="273">
+      <Tag>2917</Tag>
+      <Name>UnderlyingStrikeCurrencyCodeSource</Name>
+      <Type>String</Type>
+      <AbbrName>StrkCcySrc</AbbrName>
+      <NotReqXML>0</NotReqXML>
+      <EnumDatatype>2897</EnumDatatype>
+      <Description>Identifies class or source of the UnderlyingStrikeCurrency(941) value.</Description>
+   </Field>
+   <Field added="FIX.Latest" addedEP="273">
+      <Tag>2918</Tag>
+      <Name>UnderlyingUnitOfMeasureCurrencyCodeSource</Name>
+      <Type>String</Type>
+      <AbbrName>UOMCcySrc</AbbrName>
+      <NotReqXML>0</NotReqXML>
+      <EnumDatatype>2897</EnumDatatype>
+      <Description>Identifies class or source of the UnderlyingUnitOfMeasureCurrency(1718) value.
+</Description>
+   </Field>
+   <Field added="FIX.Latest" addedEP="273">
+      <Tag>2919</Tag>
+      <Name>UnderlyingPriceUnitOfMeasureCurrencyCodeSource</Name>
+      <Type>String</Type>
+      <AbbrName>PxUOMCcySrc</AbbrName>
+      <NotReqXML>0</NotReqXML>
+      <EnumDatatype>2897</EnumDatatype>
+      <Description>Identifies class or source of the UnderlyingPriceUnitOfMeasureCurrency(1719) value.</Description>
+   </Field>
+   <Field added="FIX.Latest" addedEP="273">
+      <Tag>2920</Tag>
+      <Name>UnderlyingPriceQuoteCurrencyCodeSource</Name>
+      <Type>String</Type>
+      <AbbrName>PxQteCcySrc</AbbrName>
+      <NotReqXML>0</NotReqXML>
+      <EnumDatatype>2897</EnumDatatype>
+      <Description>Identifies class or source of the UnderlyingPriceQuoteCurrency(1526) value.</Description>
+   </Field>
+   <Field added="FIX.Latest" addedEP="273">
+      <Tag>2921</Tag>
+      <Name>UnderlyingNotionalCurrencyCodeSource</Name>
+      <Type>String</Type>
+      <AbbrName>NotlCcySrc</AbbrName>
+      <NotReqXML>0</NotReqXML>
+      <EnumDatatype>2897</EnumDatatype>
+      <Description>Identifies class or source of the UnderlyingNotionalCurrency(2615) value.</Description>
+   </Field>
+   <Field added="FIX.Latest" addedEP="273">
+      <Tag>2922</Tag>
+      <Name>CommCurrencyCodeSource</Name>
+      <Type>String</Type>
+      <AbbrName>CcySrc</AbbrName>
+      <NotReqXML>0</NotReqXML>
+      <EnumDatatype>2897</EnumDatatype>
+      <Description>Identifies class or source of the CommCurrency(479) value.</Description>
+   </Field>
+   <Field added="FIX.Latest" addedEP="273">
+      <Tag>2923</Tag>
+      <Name>CommissionCurrencyCodeSource</Name>
+      <Type>String</Type>
+      <AbbrName>CcySrc</AbbrName>
+      <NotReqXML>0</NotReqXML>
+      <EnumDatatype>2897</EnumDatatype>
+      <Description>Identifies class or source of the CommissionCurrency(2643) value.</Description>
+   </Field>
+   <Field added="FIX.Latest" addedEP="273">
+      <Tag>2924</Tag>
+      <Name>CommissionUnitOfMeasureCurrencyCodeSource</Name>
+      <Type>String</Type>
+      <AbbrName>UOMCcySrc</AbbrName>
+      <NotReqXML>0</NotReqXML>
+      <EnumDatatype>2897</EnumDatatype>
+      <Description>Identifies class or source of the CommissionUnitOfMeasureCurrency(2645) value.</Description>
+   </Field>
+   <Field added="FIX.Latest" addedEP="273">
+      <Tag>2925</Tag>
+      <Name>AllocCommissionCurrencyCodeSource</Name>
+      <Type>String</Type>
+      <AbbrName>CcySrc</AbbrName>
+      <NotReqXML>0</NotReqXML>
+      <EnumDatatype>2897</EnumDatatype>
+      <Description>Identifies class or source of the AllocCommissionCurrency(2657) value.</Description>
+   </Field>
+   <Field added="FIX.Latest" addedEP="273">
+      <Tag>2926</Tag>
+      <Name>AllocCommissionUnitOfMeasureCurrencyCodeSource</Name>
+      <Type>String</Type>
+      <AbbrName>UOMCcySrc</AbbrName>
+      <NotReqXML>0</NotReqXML>
+      <EnumDatatype>2897</EnumDatatype>
+      <Description>Identifies class or source of the AllocCommissionUnitOfMeasureCurrency(2659) value.</Description>
+   </Field>
+   <Field added="FIX.Latest" addedEP="273">
+      <Tag>2927</Tag>
+      <Name>AllocSettlCurrencyCodeSource</Name>
+      <Type>String</Type>
+      <AbbrName>AllocSettlCcySrc</AbbrName>
+      <NotReqXML>0</NotReqXML>
+      <EnumDatatype>2897</EnumDatatype>
+      <Description>Identifies class or source of the AllocSettlCurrency(736) value.</Description>
+   </Field>
+   <Field added="FIX.Latest" addedEP="273">
+      <Tag>2928</Tag>
+      <Name>LegAllocSettlCurrencyCodeSource</Name>
+      <Type>String</Type>
+      <AbbrName>AllocSettlCcySrc</AbbrName>
+      <NotReqXML>0</NotReqXML>
+      <EnumDatatype>2897</EnumDatatype>
+      <Description>Identifies class or source of the LegAllocSettlCurrency(1367) value.</Description>
+   </Field>
+   <Field added="FIX.Latest" addedEP="273">
+      <Tag>2929</Tag>
+      <Name>CollateralCurrencyCodeSource</Name>
+      <Type>String</Type>
+      <AbbrName>CcySrc</AbbrName>
+      <NotReqXML>0</NotReqXML>
+      <EnumDatatype>2897</EnumDatatype>
+      <Description>Identifies class or source of the CollateralCurrency(1705) value.</Description>
+   </Field>
+   <Field added="FIX.Latest" addedEP="273">
+      <Tag>2930</Tag>
+      <Name>SideCollateralCurrencyCodeSource</Name>
+      <Type>String</Type>
+      <AbbrName>CcySrc</AbbrName>
+      <NotReqXML>0</NotReqXML>
+      <EnumDatatype>2897</EnumDatatype>
+      <Description>Identifies class or source of the SideCollateralCurrency(2695) value.</Description>
+   </Field>
+   <Field added="FIX.Latest" addedEP="273">
+      <Tag>2931</Tag>
+      <Name>CollateralReinvestmentCurrencyCodeSource</Name>
+      <Type>String</Type>
+      <AbbrName>CcySrc</AbbrName>
+      <NotReqXML>0</NotReqXML>
+      <EnumDatatype>2897</EnumDatatype>
+      <Description>Identifies class or source of the CollateralReinvestmentCurrency(2843) value.</Description>
+   </Field>
+   <Field added="FIX.Latest" addedEP="273">
+      <Tag>2932</Tag>
+      <Name>SideCollateralReinvestmentCurrencyCodeSource</Name>
+      <Type>String</Type>
+      <AbbrName>CcySrc</AbbrName>
+      <NotReqXML>0</NotReqXML>
+      <EnumDatatype>2897</EnumDatatype>
+      <Description>Identifies class or source of the SideCollateralReinvestmentCurrency(2866) value.</Description>
+   </Field>
+   <Field added="FIX.Latest" addedEP="273">
+      <Tag>2933</Tag>
+      <Name>TradeAllocCurrencyCodeSource</Name>
+      <Type>String</Type>
+      <AbbrName>CcySrc</AbbrName>
+      <NotReqXML>0</NotReqXML>
+      <EnumDatatype>2897</EnumDatatype>
+      <Description>Identifies class or source of the TradeAllocCurrency(1847) value.</Description>
+   </Field>
+   <Field added="FIX.Latest" addedEP="273">
+      <Tag>2934</Tag>
+      <Name>TradingCurrencyCodeSource</Name>
+      <Type>String</Type>
+      <AbbrName>TrdCcySrc</AbbrName>
+      <NotReqXML>0</NotReqXML>
+      <EnumDatatype>2897</EnumDatatype>
+      <Description>Identifies class or source of the TradingCurrency(1245) value.</Description>
+   </Field>
+   <Field added="FIX.Latest" addedEP="273">
+      <Tag>2935</Tag>
+      <Name>LimitAmtCurrencyCodeSource</Name>
+      <Type>String</Type>
+      <AbbrName>LmtAmtCcySrc</AbbrName>
+      <NotReqXML>0</NotReqXML>
+      <EnumDatatype>2897</EnumDatatype>
+      <Description>Identifies class or source of the LimitAmtCurrency(1634) value.</Description>
+   </Field>
+   <Field added="FIX.Latest" addedEP="273">
+      <Tag>2936</Tag>
+      <Name>PosQtyUnitOfMeasureCurrencyCodeSource</Name>
+      <Type>String</Type>
+      <AbbrName>UOMCcySrc</AbbrName>
+      <NotReqXML>0</NotReqXML>
+      <EnumDatatype>2897</EnumDatatype>
+      <Description>Identifies class or source of the PosQtyUnitOfMeasureCurrency(1835) value.</Description>
+   </Field>
+   <Field added="FIX.Latest" addedEP="273">
+      <Tag>2937</Tag>
+      <Name>PositionCurrencyCodeSource</Name>
+      <Type>String</Type>
+      <AbbrName>CcySrc</AbbrName>
+      <NotReqXML>0</NotReqXML>
+      <EnumDatatype>2897</EnumDatatype>
+      <Description>Identifies class or source of the PositionCurrency(1055) value.</Description>
+   </Field>
+   <Field added="FIX.Latest" addedEP="273">
+      <Tag>2938</Tag>
+      <Name>LegPosCurrencyCodeSource</Name>
+      <Type>String</Type>
+      <AbbrName>CcySrc</AbbrName>
+      <NotReqXML>0</NotReqXML>
+      <EnumDatatype>2897</EnumDatatype>
+      <Description>Identifies class or source of the LegPosCurrency(1589) value.</Description>
+   </Field>
+   <Field added="FIX.Latest" addedEP="273">
+      <Tag>2939</Tag>
+      <Name>RiskLimitCurrencyCodeSource</Name>
+      <Type>String</Type>
+      <AbbrName>CcySrc</AbbrName>
+      <NotReqXML>0</NotReqXML>
+      <EnumDatatype>2897</EnumDatatype>
+      <Description>Identifies class or source of the RiskLimitCurrency(1532) value.</Description>
+   </Field>
+   <Field added="FIX.Latest" addedEP="273">
+      <Tag>2940</Tag>
+      <Name>EntitlementAttribCurrencyCodeSource</Name>
+      <Type>String</Type>
+      <AbbrName>CcySrc</AbbrName>
+      <NotReqXML>0</NotReqXML>
+      <EnumDatatype>2897</EnumDatatype>
+      <Description>Identifies class or source of the EntitlementAttribCurrency(1781) value.</Description>
+   </Field>
+   <Field added="FIX.Latest" addedEP="273">
+      <Tag>2941</Tag>
+      <Name>ComplexOptPayoutCurrencyCodeSource</Name>
+      <Type>String</Type>
+      <AbbrName>OptCcySrc</AbbrName>
+      <NotReqXML>0</NotReqXML>
+      <EnumDatatype>2897</EnumDatatype>
+      <Description>Identifies class or source of the ComplexOptPayoutCurrency(2122) value.</Description>
+   </Field>
+   <Field added="FIX.Latest" addedEP="273">
+      <Tag>2942</Tag>
+      <Name>ComplexEventCurrencyOneCodeSource</Name>
+      <Type>String</Type>
+      <AbbrName>Ccy1Src</AbbrName>
+      <NotReqXML>0</NotReqXML>
+      <EnumDatatype>2897</EnumDatatype>
+      <Description>Identifies class or source of the ComplexEventCurrencyOne(2124) value.</Description>
+   </Field>
+   <Field added="FIX.Latest" addedEP="273">
+      <Tag>2943</Tag>
+      <Name>ComplexEventCurrencyTwoCodeSource</Name>
+      <Type>String</Type>
+      <AbbrName>Ccy2Src</AbbrName>
+      <NotReqXML>0</NotReqXML>
+      <EnumDatatype>2897</EnumDatatype>
+      <Description>Identifies class or source of the ComplexEventCurrencyTwo(2125) value.</Description>
+   </Field>
+   <Field added="FIX.Latest" addedEP="273">
+      <Tag>2944</Tag>
+      <Name>LegComplexOptPayoutCurrencyCodeSource</Name>
+      <Type>String</Type>
+      <AbbrName>OptCcySrc</AbbrName>
+      <NotReqXML>0</NotReqXML>
+      <EnumDatatype>2897</EnumDatatype>
+      <Description>Identifies class or source of the LegComplexOptPayoutCurrency(2226) value.</Description>
+   </Field>
+   <Field added="FIX.Latest" addedEP="273">
+      <Tag>2945</Tag>
+      <Name>LegComplexEventCurrencyOneCodeSource</Name>
+      <Type>String</Type>
+      <AbbrName>Ccy1Src</AbbrName>
+      <NotReqXML>0</NotReqXML>
+      <EnumDatatype>2897</EnumDatatype>
+      <Description>Identifies class or source of the LegComplexEventCurrencyOne(2233) value.</Description>
+   </Field>
+   <Field added="FIX.Latest" addedEP="273">
+      <Tag>2946</Tag>
+      <Name>LegComplexEventCurrencyTwoCodeSource</Name>
+      <Type>String</Type>
+      <AbbrName>Ccy2Src</AbbrName>
+      <NotReqXML>0</NotReqXML>
+      <EnumDatatype>2897</EnumDatatype>
+      <Description>Identifies class or source of the LegComplexEventCurrencyTwo(2234) value.</Description>
+   </Field>
+   <Field added="FIX.Latest" addedEP="273">
+      <Tag>2947</Tag>
+      <Name>UnderlyingComplexOptPayoutCurrencyCodeSource</Name>
+      <Type>String</Type>
+      <AbbrName>OptCcySrc</AbbrName>
+      <NotReqXML>0</NotReqXML>
+      <EnumDatatype>2897</EnumDatatype>
+      <Description>Identifies class or source of the UnderlyingComplexOptPayoutCurrency(2266) value.</Description>
+   </Field>
+   <Field added="FIX.Latest" addedEP="273">
+      <Tag>2948</Tag>
+      <Name>UnderlyingComplexEventCurrencyOneCodeSource</Name>
+      <Type>String</Type>
+      <AbbrName>Ccy1Src</AbbrName>
+      <NotReqXML>0</NotReqXML>
+      <EnumDatatype>2897</EnumDatatype>
+      <Description>Identifies class or source of the UnderlyingComplexEventCurrencyOne(2268) value.</Description>
+   </Field>
+   <Field added="FIX.Latest" addedEP="273">
+      <Tag>2949</Tag>
+      <Name>UnderlyingComplexEventCurrencyTwoCodeSource</Name>
+      <Type>String</Type>
+      <AbbrName>Ccy2Src</AbbrName>
+      <NotReqXML>0</NotReqXML>
+      <EnumDatatype>2897</EnumDatatype>
+      <Description>Identifies class or source of the UnderlyingComplexEventCurrencyTwo(2269) value.</Description>
+   </Field>
+   <Field added="FIX.Latest" addedEP="273">
+      <Tag>2950</Tag>
+      <Name>BenchmarkCurveCurrencyCodeSource</Name>
+      <Type>String</Type>
+      <AbbrName>CcySrc</AbbrName>
+      <NotReqXML>0</NotReqXML>
+      <EnumDatatype>2897</EnumDatatype>
+      <Description>Identifies class or source of the BenchmarkCurveCurrency(220) value.</Description>
+   </Field>
+   <Field added="FIX.Latest" addedEP="273">
+      <Tag>2951</Tag>
+      <Name>LegBenchmarkCurveCurrencyCodeSource</Name>
+      <Type>String</Type>
+      <AbbrName>CcySrc</AbbrName>
+      <NotReqXML>0</NotReqXML>
+      <EnumDatatype>2897</EnumDatatype>
+      <Description>Identifies class or source of the LegBenchmarkCurveCurrency(676) value.</Description>
+   </Field>
+   <Field added="FIX.Latest" addedEP="273">
+      <Tag>2952</Tag>
+      <Name>AgreementCurrencyCodeSource</Name>
+      <Type>String</Type>
+      <AbbrName>AgmtCcySrc</AbbrName>
+      <NotReqXML>0</NotReqXML>
+      <EnumDatatype>2897</EnumDatatype>
+      <Description>Identifies class or source of the AgreementCurrency(918) value.</Description>
+   </Field>
+   <Field added="FIX.Latest" addedEP="273">
+      <Tag>2953</Tag>
+      <Name>LegAgreementCurrencyCodeSource</Name>
+      <Type>String</Type>
+      <AbbrName>AgmtCcySrc</AbbrName>
+      <NotReqXML>0</NotReqXML>
+      <EnumDatatype>2897</EnumDatatype>
+      <Description>Identifies class or source of the LegAgreementCurrency(2495) value.</Description>
+   </Field>
+   <Field added="FIX.Latest" addedEP="273">
+      <Tag>2954</Tag>
+      <Name>FundingSourceCurrencyCodeSource</Name>
+      <Type>String</Type>
+      <AbbrName>CcySrc</AbbrName>
+      <NotReqXML>0</NotReqXML>
+      <EnumDatatype>2897</EnumDatatype>
+      <Description>Identifies class or source of the FundingSourceCurrency(2847) value.</Description>
+   </Field>
+   <Field added="FIX.Latest" addedEP="273">
+      <Tag>2955</Tag>
+      <Name>PayCollectCurrencyCodeSource</Name>
+      <Type>String</Type>
+      <AbbrName>CcySrc</AbbrName>
+      <NotReqXML>0</NotReqXML>
+      <EnumDatatype>2897</EnumDatatype>
+      <Description>Identifies class or source of the PayCollectCurrency(1709) value.</Description>
+   </Field>
+   <Field added="FIX.Latest" addedEP="273">
+      <Tag>2956</Tag>
+      <Name>PostTradePaymentCurrencyCodeSource</Name>
+      <Type>String</Type>
+      <AbbrName>CcySrc</AbbrName>
+      <NotReqXML>0</NotReqXML>
+      <EnumDatatype>2897</EnumDatatype>
+      <Description>Identifies class or source of the PostTradePaymentCurrency(2818) value.</Description>
+   </Field>
+   <Field added="FIX.Latest" addedEP="273">
+      <Tag>2957</Tag>
+      <Name>SymbolPositionNumber</Name>
+      <Type>int</Type>
+      <AbbrName>SymPosNum</AbbrName>
+      <NotReqXML>0</NotReqXML>
+      <Description>Reference to the first or second currency or digital asset in Symbol(55) for FX-style trading. 
+Conditionally required when one or both symbols in Symbol(55) represent a digital asset.
+</Description>
+   </Field>
+   <Field added="FIX.Latest" addedEP="273">
+      <Tag>2958</Tag>
+      <Name>LegSymbolPositionNumber</Name>
+      <Type>int</Type>
+      <AbbrName>SymPosNum</AbbrName>
+      <NotReqXML>0</NotReqXML>
+      <Description>Reference to the first or second currency or digital asset in LegSymbol(600) for FX-style trading. 
+Conditionally required when one or both symbols in LegSymbol(600) represent a digital asset.
+</Description>
+   </Field>
+   <Field added="FIX.Latest" addedEP="273">
+      <Tag>2959</Tag>
+      <Name>UnderlyingSymbolPositionNumber</Name>
+      <Type>int</Type>
+      <AbbrName>SymPosNum</AbbrName>
+      <NotReqXML>0</NotReqXML>
+      <Description>Reference to the first or second currency or digital asset in UnderlyingSymbol(311) for FX-style trading. 
+Conditionally required when one or both symbols in UnderlyingSymbol(311) represent a digital asset.
+</Description>
+   </Field>
+   <Field added="FIX.Latest" addedEP="273">
+      <Tag>2960</Tag>
+      <Name>SettlPriceUnitOfMeasureCurrencyCodeSource</Name>
+      <Type>String</Type>
+      <AbbrName>SetPxUOMCcySrc</AbbrName>
+      <NotReqXML>0</NotReqXML>
+      <EnumDatatype>2897</EnumDatatype>
+      <Description>Identifies the class or source of the SettlPriceUnitOfMeasureCurrency(1887) value.</Description>
    </Field>
 </Fields>
