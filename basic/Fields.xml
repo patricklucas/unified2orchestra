@@ -4,8 +4,8 @@
         edition="2010"
         version="FIX.Latest"
         xsi:noNamespaceSchemaLocation="../../schema/Fields.xsd"
-        generated="2021-09-01T22:09:37.488Z"
-        latestEP="268">
+        generated="2022-08-01T11:55:36.172Z"
+        latestEP="270">
    <Field added="FIX.2.7">
 		    <Tag>1</Tag>
 		    <Name>Account</Name>
@@ -65,17 +65,14 @@ For Fixed Income trades AvgPx is always expressed as percent-of-par, regardless 
 		    <NotReqXML>1</NotReqXML>
 		    <Description>Message sequence number of first message in range to be resent</Description>
 	  </Field>
-   <Field added="FIX.2.7" issue="SPEC-376">
-		    <Tag>8</Tag>
-		    <Name>BeginString</Name>
-		    <Type>String</Type>
-		    <AbbrName>BeginString</AbbrName>
-		    <NotReqXML>1</NotReqXML>
-		    <Description>Identifies beginning of new message and protocol version. ALWAYS FIRST FIELD IN MESSAGE. (Always unencrypted)
-Valid values:
-FIXT.1.1
-</Description>
-	  </Field>
+   <Field added="FIX.2.7" issue="SPEC-376" updated="FIX.Latest" updatedEP="270">
+      <Tag>8</Tag>
+      <Name>BeginString</Name>
+      <Type>String</Type>
+      <AbbrName>BeginString</AbbrName>
+      <NotReqXML>1</NotReqXML>
+      <Description>Identifies beginning of new message and session protocol version by means of a session profile identifier (see FIX Session Layer for details). ALWAYS FIRST FIELD IN MESSAGE. (Always unencrypted).</Description>
+   </Field>
    <Field added="FIX.2.7">
 		    <Tag>9</Tag>
 		    <Name>BodyLength</Name>
@@ -9263,14 +9260,14 @@ For pre-trade credit/risk limit check process, this is the reference to the plac
 		    <NotReqXML>0</NotReqXML>
 		    <Description>Used to preserve original secondary trade id when original trade is being referenced in a subsequent trade transaction such as a transfer</Description>
 	  </Field>
-   <Field added="FIX.4.4" addedEP="16">
-		    <Tag>1128</Tag>
-		    <Name>ApplVerID</Name>
-		    <Type>String</Type>
-		    <AbbrName>ApplVerID</AbbrName>
-		    <NotReqXML>0</NotReqXML>
-		    <Description>Specifies the service pack release being applied at message level. Enumerated field with values assigned at time of service pack release</Description>
-	  </Field>
+   <Field added="FIX.4.4" addedEP="16" updated="FIX.Latest" updatedEP="270">
+      <Tag>1128</Tag>
+      <Name>ApplVerID</Name>
+      <Type>String</Type>
+      <AbbrName>ApplVerID</AbbrName>
+      <NotReqXML>0</NotReqXML>
+      <Description>Specifies the application layer version being applied at the message level. </Description>
+   </Field>
    <Field added="FIX.4.4" addedEP="16">
 		    <Tag>1129</Tag>
 		    <Name>CstmApplVerID</Name>

@@ -4,8 +4,8 @@
        edition="2010"
        version="FIX.Latest"
        xsi:noNamespaceSchemaLocation="../../schema/Enums.xsd"
-       generated="2021-09-01T22:26:04.593Z"
-       latestEP="269">
+       generated="2022-08-01T11:55:36.172Z"
+       latestEP="270">
    <Enum added="FIX.2.7">
 		    <Tag>4</Tag>
 		    <Value>B</Value>
@@ -41722,6 +41722,28 @@ in that foreign jurisdiction.</Elaboration>
       <Sort>54</Sort>
       <Description>Bilateral compression</Description>
       <Elaboration>Used to identify a special case of compression between two parties, e.g. for netted or portfolio trades.</Elaboration>
+   </Enum>
+   <Enum added="FIX.Latest" addedEP="270">
+      <Tag>8</Tag>
+      <Value>FIX.4.2</Value>
+      <SymbolicName>FIX42</SymbolicName>
+      <Sort>1</Sort>
+      <Description>Session profile FIX.4.2</Description>
+   </Enum>
+   <Enum added="FIX.Latest" addedEP="270">
+      <Tag>8</Tag>
+      <Value>FIX.4.4</Value>
+      <SymbolicName>FIX44</SymbolicName>
+      <Sort>2</Sort>
+      <Description>Session profile FIX4</Description>
+   </Enum>
+   <Enum added="FIX.Latest" addedEP="270">
+      <Tag>8</Tag>
+      <Value>FIXT.1.1</Value>
+      <SymbolicName>FIXT11</SymbolicName>
+      <Sort>3</Sort>
+      <Description>Session profile FIXT or LFXIT</Description>
+      <Elaboration>The choice between FIXT and LFIXT is subject to counterparty agreement.</Elaboration>
    </Enum>
    <Enum>
       <Tag>35</Tag>
