@@ -4,8 +4,8 @@
         edition="2010"
         version="FIX.Latest"
         xsi:noNamespaceSchemaLocation="../../schema/Fields.xsd"
-        generated="2022-08-01T11:55:36.172Z"
-        latestEP="270">
+        generated="2022-08-01T13:01:00.859Z"
+        latestEP="271">
    <Field added="FIX.2.7">
 		    <Tag>1</Tag>
 		    <Name>Account</Name>
@@ -1565,14 +1565,14 @@ Indicates how the receiver (i.e. third party) of allocation information should h
 		    <NotReqXML>1</NotReqXML>
 		    <Description>Length of the XmlData data block.</Description>
 	  </Field>
-   <Field added="FIX.4.2">
-		    <Tag>213</Tag>
-		    <Name>XmlData</Name>
-		    <Type>data</Type>
-		    <AbbrName>XmlData</AbbrName>
-		    <NotReqXML>1</NotReqXML>
-		    <Description>Actual XML data stream (e.g. FIXML). See approriate XML reference (e.g. FIXML). Note: may contain embedded SOH characters.</Description>
-	  </Field>
+   <Field added="FIX.4.2" updated="FIX.Latest" updatedEP="271">
+      <Tag>213</Tag>
+      <Name>XmlData</Name>
+      <Type>XMLData</Type>
+      <AbbrName>XmlData</AbbrName>
+      <NotReqXML>1</NotReqXML>
+      <Description>Actual XML data stream (e.g. FIXML). See appropriate XML reference (e.g. FIXML). Note: may contain embedded SOH characters.</Description>
+   </Field>
    <Field added="FIX.4.2">
 		    <Tag>214</Tag>
 		    <Name>SettlInstRefID</Name>
@@ -2272,14 +2272,14 @@ See "Appendix 6-C"</Description>
 		    <NotReqXML>0</NotReqXML>
 		    <Description>Selling party in a trade</Description>
 	  </Field>
-   <Field added="FIX.4.2">
-		    <Tag>290</Tag>
-		    <Name>MDEntryPositionNo</Name>
-		    <Type>int</Type>
-		    <AbbrName>PosNo</AbbrName>
-		    <NotReqXML>0</NotReqXML>
-		    <Description>Display position of a bid or offer, numbered from most competitive to least competitive, per market side, beginning with .</Description>
-	  </Field>
+   <Field added="FIX.4.2" updated="FIX.Latest" updatedEP="271">
+      <Tag>290</Tag>
+      <Name>MDEntryPositionNo</Name>
+      <Type>int</Type>
+      <AbbrName>PosNo</AbbrName>
+      <NotReqXML>0</NotReqXML>
+      <Description>Display position of a bid or offer, numbered from most competitive to least competitive, per market side, beginning with 1.</Description>
+   </Field>
    <Field added="FIX.4.2">
 		    <Tag>291</Tag>
 		    <Name>FinancialStatus</Name>
@@ -2394,7 +2394,7 @@ See "Appendix 6-C"</Description>
 		    <NotReqXML>0</NotReqXML>
 		    <Description>Total number of quotes for the quote set.</Description>
 	  </Field>
-   <Field added="FIX.4.2" updated="FIX.Latest" updatedEP="265">
+   <Field added="FIX.4.2" updated="FIX.Latest" updatedEP="271">
       <Tag>305</Tag>
       <Name>UnderlyingSecurityIDSource</Name>
       <Type>String</Type>
@@ -2402,8 +2402,7 @@ See "Appendix 6-C"</Description>
       <NotReqXML>0</NotReqXML>
       <EnumDatatype>22</EnumDatatype>
       <UnionDataType>Reserved100Plus</UnionDataType>
-      <Description>Underlying security's SecurityIDSource.
-Valid values: see SecurityIDSource (22) field</Description>
+      <Description>Identifies class or source of the UnderlyingSecurityID(309) value.</Description>
    </Field>
    <Field added="FIX.4.2">
 		    <Tag>306</Tag>
@@ -3056,14 +3055,14 @@ Bilaterally agreed values of data type "String" that start with a character can 
 		    <NotReqXML>1</NotReqXML>
 		    <Description>Number of MsgTypes (35) in repeating group.</Description>
 	  </Field>
-   <Field added="FIX.4.2">
-		    <Tag>385</Tag>
-		    <Name>MsgDirection</Name>
-		    <Type>char</Type>
-		    <AbbrName>MsgDirctn</AbbrName>
-		    <NotReqXML>1</NotReqXML>
-		    <Description>Specifies the direction of the messsage.</Description>
-	  </Field>
+   <Field added="FIX.4.2" updated="FIX.Latest" updatedEP="271">
+      <Tag>385</Tag>
+      <Name>MsgDirection</Name>
+      <Type>char</Type>
+      <AbbrName>MsgDirctn</AbbrName>
+      <NotReqXML>1</NotReqXML>
+      <Description>Specifies the direction of the message.</Description>
+   </Field>
    <Field added="FIX.4.2">
 		    <Tag>386</Tag>
 		    <Name>NoTradingSessions</Name>
@@ -3373,15 +3372,14 @@ FT00, FT250, STOX - Free text</Description>
 		    <NotReqXML>0</NotReqXML>
 		    <Description>Total number of strike price entries across all messages. Should be the sum of all NoStrikes (428) in each message that has repeating strike price entries related to the same ListID (66). Used to support fragmentation.</Description>
 	  </Field>
-   <Field added="FIX.4.2" updated="FIX.5.0SP2" updatedEP="207">
+   <Field added="FIX.4.2" updated="FIX.Latest" updatedEP="271">
       <Tag>423</Tag>
       <Name>PriceType</Name>
       <Type>int</Type>
       <AbbrName>PxTyp</AbbrName>
       <NotReqXML>0</NotReqXML>
       <Description>Code to represent the price type.</Description>
-      <Elaboration>For Financing transactions PriceType(423) implies the "repo type" - Fixed or Floating - 9 (Yield) or 6 (Spread) respectively - and Price(44) gives the corresponding "repo rate".
-See Volume 1 "Glossary" for further value definitions.</Elaboration>
+      <Elaboration/>
    </Field>
    <Field added="FIX.4.2">
 		    <Tag>424</Tag>
@@ -3617,17 +3615,16 @@ See "Appendix 6-G - Use of &lt;Parties&gt; Component Block"</Description>
 		    <NotReqXML>0</NotReqXML>
 		    <Description>Alternate Security identifier value for this security of SecurityAltIDSource (456) type (e.g. CUSIP, SEDOL, ISIN, etc). Requires SecurityAltIDSource.</Description>
 	  </Field>
-   <Field added="FIX.4.3">
-		    <Tag>456</Tag>
-		    <Name>SecurityAltIDSource</Name>
-		    <Type>String</Type>
-		    <AbbrName>AltIDSrc</AbbrName>
-		    <NotReqXML>0</NotReqXML>
-		    <EnumDatatype>22</EnumDatatype>
-		    <Description>Identifies class or source of the SecurityAltID (455) value. Required if SecurityAltID is specified.
-Valid values:
-Same valid values as the SecurityIDSource (22) field</Description>
-	  </Field>
+   <Field added="FIX.4.3" updated="FIX.Latest" updatedEP="271">
+      <Tag>456</Tag>
+      <Name>SecurityAltIDSource</Name>
+      <Type>String</Type>
+      <AbbrName>AltIDSrc</AbbrName>
+      <NotReqXML>0</NotReqXML>
+      <EnumDatatype>22</EnumDatatype>
+      <UnionDataType>Reserved100Plus</UnionDataType>
+      <Description>Identifies class or source of the SecurityAltID(455) value.</Description>
+   </Field>
    <Field added="FIX.4.3">
 		    <Tag>457</Tag>
 		    <Name>NoUnderlyingSecurityAltID</Name>
@@ -3644,17 +3641,17 @@ Same valid values as the SecurityIDSource (22) field</Description>
 		    <NotReqXML>0</NotReqXML>
 		    <Description>Alternate Security identifier value for this underlying security of UnderlyingSecurityAltIDSource (459) type (e.g. CUSIP, SEDOL, ISIN, etc). Requires UnderlyingSecurityAltIDSource.</Description>
 	  </Field>
-   <Field added="FIX.4.3">
-		    <Tag>459</Tag>
-		    <Name>UnderlyingSecurityAltIDSource</Name>
-		    <Type>String</Type>
-		    <AbbrName>AltIDSrc</AbbrName>
-		    <NotReqXML>0</NotReqXML>
-		    <EnumDatatype>22</EnumDatatype>
-		    <Description>Identifies class or source of the UnderlyingSecurityAltID (458) value. Required if UnderlyingSecurityAltID is specified.
-Valid values:
-Same valid values as the SecurityIDSource (22) field</Description>
-	  </Field>
+   <Field added="FIX.4.3" updated="FIX.Latest" updatedEP="271">
+      <Tag>459</Tag>
+      <Name>UnderlyingSecurityAltIDSource</Name>
+      <Type>String</Type>
+      <AbbrName>AltIDSrc</AbbrName>
+      <NotReqXML>0</NotReqXML>
+      <EnumDatatype>22</EnumDatatype>
+      <UnionDataType>Reserved100Plus</UnionDataType>
+      <Description>Identifies class or source of the UnderlyingSecurityAltID(458) value. 
+Required if UnderlyingSecurityAltID is specified. </Description>
+   </Field>
    <Field added="FIX.4.3">
 		    <Tag>460</Tag>
 		    <Name>Product</Name>
@@ -3776,14 +3773,14 @@ The default, if RoundingDirection (468) is specified without RoundingModulus, is
 		    <NotReqXML>0</NotReqXML>
 		    <Description>Set of Correspondence address details, possibly including phone, fax, etc.</Description>
 	  </Field>
-   <Field added="FIX.4.3">
-		    <Tag>475</Tag>
-		    <Name>InvestorCountryOfResidence</Name>
-		    <Type>Country</Type>
-		    <AbbrName>InvestorCtryOfResidence</AbbrName>
-		    <NotReqXML>0</NotReqXML>
-		    <Description>The ISO 366 Country code (2 character) identifying which country the beneficial investor is resident for tax purposes.</Description>
-	  </Field>
+   <Field added="FIX.4.3" updated="FIX.Latest" updatedEP="271">
+      <Tag>475</Tag>
+      <Name>InvestorCountryOfResidence</Name>
+      <Type>Country</Type>
+      <AbbrName>InvestorCtryOfResidence</AbbrName>
+      <NotReqXML>0</NotReqXML>
+      <Description>The ISO 3166 Country code (2 character) identifying which country the beneficial investor is resident for tax purposes.</Description>
+   </Field>
    <Field added="FIX.4.3">
 		    <Tag>476</Tag>
 		    <Name>PaymentRef</Name>
@@ -3792,17 +3789,15 @@ The default, if RoundingDirection (468) is specified without RoundingModulus, is
 		    <NotReqXML>0</NotReqXML>
 		    <Description>"Settlement Payment Reference" - A free format Payment reference to assist with reconciliation, e.g. a Client and/or Order ID number.</Description>
 	  </Field>
-   <Field added="FIX.4.3">
-		    <Tag>477</Tag>
-		    <Name>DistribPaymentMethod</Name>
-		    <Type>int</Type>
-		    <AbbrName>DistribPmtMethod</AbbrName>
-		    <NotReqXML>0</NotReqXML>
-		    <UnionDataType>Reserved100Plus</UnionDataType>
-		    <Description>A code identifying the payment method for a (fractional) distribution.
-13 through 998 are reserved for future use
-Values above 1000 are available for use by private agreement among counterparties</Description>
-	  </Field>
+   <Field added="FIX.4.3" updated="FIX.Latest" updatedEP="271">
+      <Tag>477</Tag>
+      <Name>DistribPaymentMethod</Name>
+      <Type>int</Type>
+      <AbbrName>DistribPmtMethod</AbbrName>
+      <NotReqXML>0</NotReqXML>
+      <UnionDataType>Reserved1000Plus</UnionDataType>
+      <Description>Identifies the payment method for a (fractional) distribution. Used for CIV.</Description>
+   </Field>
    <Field added="FIX.4.3">
 		    <Tag>478</Tag>
 		    <Name>CashDistribCurr</Name>
@@ -3917,16 +3912,15 @@ For derivatives a date and time stamp to indicate when this order was booked wit
 		    <NotReqXML>0</NotReqXML>
 		    <Description>The issue number of the payment card as specified on the card being used for payment. This is only applicable to certain types of card.</Description>
 	  </Field>
-   <Field added="FIX.4.3">
-		    <Tag>492</Tag>
-		    <Name>PaymentMethod</Name>
-		    <Type>int</Type>
-		    <AbbrName>PmtMethod</AbbrName>
-		    <NotReqXML>0</NotReqXML>
-		    <UnionDataType>Reserved1000Plus</UnionDataType>
-		    <Description>A code identifying the Settlement payment method. 16 through 998 are reserved for future use
-Values above 1000 are available for use by private agreement among counterparties</Description>
-	  </Field>
+   <Field added="FIX.4.3" updated="FIX.Latest" updatedEP="271">
+      <Tag>492</Tag>
+      <Name>PaymentMethod</Name>
+      <Type>int</Type>
+      <AbbrName>PmtMethod</AbbrName>
+      <NotReqXML>0</NotReqXML>
+      <UnionDataType>Reserved1000Plus</UnionDataType>
+      <Description>Identifies the settlement payment method.</Description>
+   </Field>
    <Field added="FIX.4.3">
 		    <Tag>493</Tag>
 		    <Name>RegistAcctType</Name>
@@ -3945,18 +3939,15 @@ Values above 1000 are available for use by private agreement among counterpartie
 		    <NotReqXML>0</NotReqXML>
 		    <Description>Free format text defining the designation to be associated with a holding on the register. Used to identify assets of a specific underlying investor using a common registration, e.g. a broker's nominee or street name.</Description>
 	  </Field>
-   <Field added="FIX.4.3">
-		    <Tag>495</Tag>
-		    <Name>TaxAdvantageType</Name>
-		    <Type>int</Type>
-		    <AbbrName>TaxAdvantageTyp</AbbrName>
-		    <NotReqXML>0</NotReqXML>
-		    <UnionDataType>Reserved1000Plus</UnionDataType>
-		    <Description>For CIV - a code identifying the type of tax exempt account in which purchased shares/units are to be held.
-30 - 998 are reserved for future use by recognized taxation authorities
-999=Other
-values above 1000 are available for use by private agreement among counterparties</Description>
-	  </Field>
+   <Field added="FIX.4.3" updated="FIX.Latest" updatedEP="271">
+      <Tag>495</Tag>
+      <Name>TaxAdvantageType</Name>
+      <Type>int</Type>
+      <AbbrName>TaxAdvantageTyp</AbbrName>
+      <NotReqXML>0</NotReqXML>
+      <UnionDataType>Reserved1000Plus</UnionDataType>
+      <Description>Identifies the type of tax exempt account in which purchases shares/units are to be held. Used for CIV.</Description>
+   </Field>
    <Field added="FIX.4.3">
 		    <Tag>496</Tag>
 		    <Name>RegistRejReasonText</Name>
@@ -4727,17 +4718,17 @@ If this field is not specified, the default will be "N"</Description>
 		    <NotReqXML>0</NotReqXML>
 		    <Description>Value assigned by issuer of Mass Status Request to uniquely identify the request</Description>
 	  </Field>
-   <Field updated="FIX.5.0SP1" updatedEP="85" added="FIX.4.3">
-		    <Tag>585</Tag>
-		    <Name>MassStatusReqType</Name>
-		    <Type>int</Type>
-		    <AbbrName>MassStatReqTyp</AbbrName>
-		    <BaseCategory>OrderMassHandling</BaseCategory>
-		    <BaseCategoryAbbrName>ReqTyp</BaseCategoryAbbrName>
-		    <NotReqXML>0</NotReqXML>
-		    <UnionDataType>Reserved100Plus</UnionDataType>
-		    <Description>Mass Status Request Type</Description>
-	  </Field>
+   <Field updated="FIX.Latest" updatedEP="271" added="FIX.4.3">
+      <Tag>585</Tag>
+      <Name>MassStatusReqType</Name>
+      <Type>int</Type>
+      <AbbrName>MassStatReqTyp</AbbrName>
+      <BaseCategory>OrderMassHandling</BaseCategory>
+      <BaseCategoryAbbrName>ReqTyp</BaseCategoryAbbrName>
+      <NotReqXML>0</NotReqXML>
+      <UnionDataType>Reserved100Plus</UnionDataType>
+      <Description>Specifies the type or scope of the mass order status request.</Description>
+   </Field>
    <Field added="FIX.4.3">
 		    <Tag>586</Tag>
 		    <Name>OrigOrdModTime</Name>
@@ -4925,16 +4916,18 @@ See NoSecurityAltID (454) field for description</Description>
 		    <Description>Multileg instrument's individual security's SecurityAltID.
 See SecurityAltID (455) field for description</Description>
 	  </Field>
-   <Field added="FIX.4.3">
-		    <Tag>606</Tag>
-		    <Name>LegSecurityAltIDSource</Name>
-		    <Type>String</Type>
-		    <AbbrName>SecAltIDSrc</AbbrName>
-		    <NotReqXML>0</NotReqXML>
-		    <EnumDatatype>22</EnumDatatype>
-		    <Description>Multileg instrument's individual security's SecurityAltIDSource.
-See SecurityAltIDSource (456) field for description</Description>
-	  </Field>
+   <Field added="FIX.4.3" updated="FIX.Latest" updatedEP="271">
+      <Tag>606</Tag>
+      <Name>LegSecurityAltIDSource</Name>
+      <Type>String</Type>
+      <AbbrName>SecAltIDSrc</AbbrName>
+      <NotReqXML>0</NotReqXML>
+      <EnumDatatype>22</EnumDatatype>
+      <UnionDataType>Reserved100Plus</UnionDataType>
+      <Description>Alternate identifier for individual leg security of a multileg instrument.
+See SecurityAltIDSource(456) field for complete definition.
+</Description>
+   </Field>
    <Field added="FIX.4.3">
 		    <Tag>607</Tag>
 		    <Name>LegProduct</Name>
@@ -5510,15 +5503,15 @@ See IndividualAllocID (467) for description and valid values.</Description>
 		    <Description>Leg allocation quantity.
 See AllocQty (80) for description and valid values.</Description>
 	  </Field>
-   <Field added="FIX.4.4">
-		    <Tag>674</Tag>
-		    <Name>LegAllocAcctIDSource</Name>
-		    <Type>String</Type>
-		    <AbbrName>AllocAcctIDSrc</AbbrName>
-		    <NotReqXML>0</NotReqXML>
-		    <Description>The source of the LegAllocAccount (671)
-See AllocAcctIDSource (661) for description and valid values.</Description>
-	  </Field>
+   <Field added="FIX.4.4" updated="FIX.Latest" updatedEP="271">
+      <Tag>674</Tag>
+      <Name>LegAllocAcctIDSource</Name>
+      <Type>int</Type>
+      <AbbrName>AllocAcctIDSrc</AbbrName>
+      <NotReqXML>0</NotReqXML>
+      <EnumDatatype>660</EnumDatatype>
+      <Description>Identifies the source of the LegAllocAccount(671).</Description>
+   </Field>
    <Field added="FIX.4.4">
 		    <Tag>675</Tag>
 		    <Name>LegSettlCurrency</Name>
@@ -5630,13 +5623,13 @@ See OrderQty (38) for description and valid values</Description>
 		    <Description>The price type of the LegBidPx (681) and/or LegOfferPx (684).
 See PriceType (423) for description and valid values</Description>
 	  </Field>
-   <Field added="FIX.4.4" deprecated="FIX.5.0SP1" updated="FIX.5.0SP2" updatedEP="131">
+   <Field added="FIX.4.4" deprecated="FIX.5.0SP1" updated="FIX.Latest" updatedEP="271">
       <Tag>687</Tag>
       <Name>LegQty</Name>
       <Type>Qty</Type>
       <AbbrName>Qty</AbbrName>
       <NotReqXML>0</NotReqXML>
-      <Description>This field is deprecated and has been replaced by LegOrderQty(865). This field will likely be removed from the FIX standard in a future version.</Description>
+      <Description>This field is deprecated and has been replaced by LegOrderQty(685). This field will likely be removed from the FIX standard in a future version.</Description>
    </Field>
    <Field added="FIX.4.4">
 		    <Tag>688</Tag>
@@ -6253,7 +6246,7 @@ Same values as PartyRole (452)</Description>
 		    <Description>PartySubID value within a "second instance" Nested repeating group.
 Same values as PartySubID (523)</Description>
 	  </Field>
-   <Field added="FIX.4.4" updated="FIX.Latest" updatedEP="265">
+   <Field added="FIX.4.4" updated="FIX.Latest" updatedEP="271">
       <Tag>761</Tag>
       <Name>BenchmarkSecurityIDSource</Name>
       <Type>String</Type>
@@ -6261,8 +6254,8 @@ Same values as PartySubID (523)</Description>
       <NotReqXML>0</NotReqXML>
       <EnumDatatype>22</EnumDatatype>
       <UnionDataType>Reserved100Plus</UnionDataType>
-      <Description>Identifies class or source of the BenchmarkSecurityID (699) value. Required if BenchmarkSecurityID is specified.
-Same values as the SecurityIDSource (22) field</Description>
+      <Description>Identifies class or source of the BenchmarkSecurityID(699) value. 
+Required if BenchmarkSecurityID is specified.</Description>
    </Field>
    <Field updated="FIX.5.0SP2" updatedEP="254" added="FIX.4.4">
       <Tag>762</Tag>
@@ -7175,14 +7168,14 @@ Primarily intended for US futures markets. Certain trading practices are permitt
 		    <UnionDataType>Reserved100Plus</UnionDataType>
 		    <Description>Code to represent the type of instrument attribute</Description>
 	  </Field>
-   <Field added="FIX.4.4">
-		    <Tag>872</Tag>
-		    <Name>InstrAttribValue</Name>
-		    <Type>String</Type>
-		    <AbbrName>Val</AbbrName>
-		    <NotReqXML>0</NotReqXML>
-		    <Description>Attribute value appropriate to the InstrAttribType (87) field.</Description>
-	  </Field>
+   <Field added="FIX.4.4" updated="FIX.Latest" updatedEP="271">
+      <Tag>872</Tag>
+      <Name>InstrAttribValue</Name>
+      <Type>String</Type>
+      <AbbrName>Val</AbbrName>
+      <NotReqXML>0</NotReqXML>
+      <Description>Attribute value appropriate to the InstrAttribType (871) field.</Description>
+   </Field>
    <Field added="FIX.4.4">
 		    <Tag>873</Tag>
 		    <Name>DatedDate</Name>
@@ -7944,14 +7937,14 @@ Same values as PartySubIDType (803)</Description>
 		    <NotReqXML>0</NotReqXML>
 		    <Description>Identifies a Security List message.</Description>
 	  </Field>
-   <Field added="FIX.4.4" addedEP="4">
-		    <Tag>965</Tag>
-		    <Name>SecurityStatus</Name>
-		    <Type>String</Type>
-		    <AbbrName>Status</AbbrName>
-		    <NotReqXML>0</NotReqXML>
-		    <Description>Used for derivatives. Denotes the current state of the Instrument.</Description>
-	  </Field>
+   <Field added="FIX.4.4" addedEP="4" updated="FIX.Latest" updatedEP="271">
+      <Tag>965</Tag>
+      <Name>SecurityStatus</Name>
+      <Type>String</Type>
+      <AbbrName>Status</AbbrName>
+      <NotReqXML>0</NotReqXML>
+      <Description>Indicates the current state of the instrument.</Description>
+   </Field>
    <Field added="FIX.4.4" addedEP="4">
 		    <Tag>966</Tag>
 		    <Name>SettleOnOpenFlag</Name>
@@ -8207,24 +8200,27 @@ For gold futures contracts, a UnitOfMeasure is oz_tr (Troy ounce) with a UnitOfM
 		    <Description>Unit of time associated with the contract.
 NOTE: Additional values may be used by mutual agreement of the counterparties</Description>
 	  </Field>
-   <Field added="FIX.4.4" addedEP="5">
-		    <Tag>998</Tag>
-		    <Name>UnderlyingUnitOfMeasure</Name>
-		    <Type>String</Type>
-		    <AbbrName>UOM</AbbrName>
-		    <NotReqXML>0</NotReqXML>
-		    <EnumDatatype>996</EnumDatatype>
-		    <Description>Refer to defintion of UnitOfMeasure(996)</Description>
-	  </Field>
-   <Field added="FIX.4.4" addedEP="5">
-		    <Tag>999</Tag>
-		    <Name>LegUnitOfMeasure</Name>
-		    <Type>String</Type>
-		    <AbbrName>UOM</AbbrName>
-		    <NotReqXML>0</NotReqXML>
-		    <EnumDatatype>996</EnumDatatype>
-		    <Description>Refer to defintion of UnitOfMeasure(996)</Description>
-	  </Field>
+   <Field added="FIX.4.4" addedEP="5" updated="FIX.Latest" updatedEP="271">
+      <Tag>998</Tag>
+      <Name>UnderlyingUnitOfMeasure</Name>
+      <Type>String</Type>
+      <AbbrName>UOM</AbbrName>
+      <NotReqXML>0</NotReqXML>
+      <EnumDatatype>996</EnumDatatype>
+      <Description>Underlying unit of measure.
+See UnitOfMeasure(996) for complete definition.</Description>
+   </Field>
+   <Field added="FIX.4.4" addedEP="5" updated="FIX.Latest" updatedEP="271">
+      <Tag>999</Tag>
+      <Name>LegUnitOfMeasure</Name>
+      <Type>String</Type>
+      <AbbrName>UOM</AbbrName>
+      <NotReqXML>0</NotReqXML>
+      <EnumDatatype>996</EnumDatatype>
+      <Description>Multileg instrument unit of measure.
+See UnitOfMeasure(996) for complete definition.
+</Description>
+   </Field>
    <Field added="FIX.4.4" addedEP="5">
 		    <Tag>1000</Tag>
 		    <Name>UnderlyingTimeUnit</Name>
@@ -8283,15 +8279,15 @@ NOTE: Additional values may be used by mutual agreement of the counterparties</D
 		    <NotReqXML>0</NotReqXML>
 		    <Description>Used on a multi-sided trade to convey reason for execution</Description>
 	  </Field>
-   <Field updated="FIX.5.0SP1" updatedEP="95" added="FIX.4.4" addedEP="5">
-		    <Tag>1008</Tag>
-		    <Name>SideTrdSubTyp</Name>
-		    <Type>int</Type>
-		    <AbbrName>TrdSubTyp</AbbrName>
-		    <NotReqXML>0</NotReqXML>
-		    <EnumDatatype>829</EnumDatatype>
-		    <Description>Used on a multi-sided trade to specify the type of trade for a given side. Same values as TrdSubType (829).</Description>
-	  </Field>
+   <Field updated="FIX.Latest" updatedEP="271" added="FIX.4.4" addedEP="5">
+      <Tag>1008</Tag>
+      <Name>SideTrdSubType</Name>
+      <Type>int</Type>
+      <AbbrName>TrdSubTyp</AbbrName>
+      <NotReqXML>0</NotReqXML>
+      <EnumDatatype>829</EnumDatatype>
+      <Description>Used on a multi-sided trade to specify the type of trade for a given side. Same values as TrdSubType (829).</Description>
+   </Field>
    <Field updated="FIX.5.0SP2" updatedEP="161" added="FIX.4.4" addedEP="5">
       <Tag>1009</Tag>
       <Name>SideLastQty</Name>
@@ -8407,14 +8403,14 @@ A Put Option will require a ratio value between -1 and 0</Description>
 		    <NotReqXML>0</NotReqXML>
 		    <Description>Describes a class of service for a given data feed, ie Regular and Market Maker, Bandwidth Intensive or Bandwidth Conservative</Description>
 	  </Field>
-   <Field added="FIX.4.4" addedEP="7">
-		    <Tag>1023</Tag>
-		    <Name>MDPriceLevel</Name>
-		    <Type>int</Type>
-		    <AbbrName>MDPxLvl</AbbrName>
-		    <NotReqXML>0</NotReqXML>
-		    <Description>Integer to convey the level of a bid or offer at a given price level. This is in contrast to MDEntryPositionNo which is used to convey the position of an order within a Price level</Description>
-	  </Field>
+   <Field added="FIX.4.4" addedEP="7" updated="FIX.Latest" updatedEP="271">
+      <Tag>1023</Tag>
+      <Name>MDPriceLevel</Name>
+      <Type>int</Type>
+      <AbbrName>MDPxLvl</AbbrName>
+      <NotReqXML>0</NotReqXML>
+      <Description>Integer to convey the level of a bid or offer at a given price level. This is in contrast to MDEntryPositionNo(290) which is used to convey the position of an order within a price level.</Description>
+   </Field>
    <Field added="FIX.4.4" addedEP="7" updated="FIX.5.0SP2" updatedEP="216">
       <Tag>1024</Tag>
       <Name>MDOriginType</Name>
@@ -9422,14 +9418,14 @@ For pre-trade credit/risk limit check process, this is the reference to the plac
 		    <NotReqXML>0</NotReqXML>
 		    <Description>Specific time of event. To be used in combination with EventDate [866]</Description>
 	  </Field>
-   <Field added="FIX.5.0" addedEP="42">
-		    <Tag>1146</Tag>
-		    <Name>MinPriceIncrementAmount</Name>
-		    <Type>Amt</Type>
-		    <AbbrName>MinPxIncrAmt</AbbrName>
-		    <NotReqXML>0</NotReqXML>
-		    <Description>Minimum price increment amount associated with the MinPriceIncrement ( tag 969). For listed derivatives, the value can be calculated by multiplying MinPriceIncrement by ContractValueFactor(231).</Description>
-	  </Field>
+   <Field added="FIX.5.0" addedEP="42" updated="FIX.Latest" updatedEP="271">
+      <Tag>1146</Tag>
+      <Name>MinPriceIncrementAmount</Name>
+      <Type>Amt</Type>
+      <AbbrName>MinPxIncrAmt</AbbrName>
+      <NotReqXML>0</NotReqXML>
+      <Description>Minimum price increment amount associated with MinPriceIncrement(969). For listed derivatives, the value can be calculated by multiplying MinPriceIncrement(969) with ContractMultiplier(231).</Description>
+   </Field>
    <Field added="FIX.5.0" addedEP="42">
 		    <Tag>1147</Tag>
 		    <Name>UnitOfMeasureQty</Name>
@@ -9967,32 +9963,38 @@ Values are bilaterally agreed.</Description>
 		    <NotReqXML>0</NotReqXML>
 		    <Description>Attribute value appropriate to the NestedInstrAttribType field</Description>
 	  </Field>
-   <Field added="FIX.5.0" addedEP="52">
-		    <Tag>1214</Tag>
-		    <Name>DerivativeSymbol</Name>
-		    <Type>String</Type>
-		    <AbbrName>Sym</AbbrName>
-		    <NotReqXML>0</NotReqXML>
-		    <Description>Refer to definition for Symbol(55)</Description>
-	  </Field>
-   <Field added="FIX.5.0" addedEP="52">
-		    <Tag>1215</Tag>
-		    <Name>DerivativeSymbolSfx</Name>
-		    <Type>String</Type>
-		    <AbbrName>Sfx</AbbrName>
-		    <NotReqXML>0</NotReqXML>
-		    <EnumDatatype>65</EnumDatatype>
-		    <Description>Refer to definition for SymbolSfx(65)</Description>
-	  </Field>
-   <Field added="FIX.5.0" addedEP="52">
-		    <Tag>1216</Tag>
-		    <Name>DerivativeSecurityID</Name>
-		    <Type>String</Type>
-		    <AbbrName>ID</AbbrName>
-		    <NotReqXML>0</NotReqXML>
-		    <Description>Refer to definition for SecurityID(48)</Description>
-	  </Field>
-   <Field added="FIX.5.0" addedEP="52" updated="FIX.Latest" updatedEP="265">
+   <Field added="FIX.5.0" addedEP="52" updated="FIX.Latest" updatedEP="271">
+      <Tag>1214</Tag>
+      <Name>DerivativeSymbol</Name>
+      <Type>String</Type>
+      <AbbrName>Sym</AbbrName>
+      <NotReqXML>0</NotReqXML>
+      <Description>Ticker symbol. Common, human understood representation of the security. 
+See Symbol(55) for complete definition.</Description>
+   </Field>
+   <Field added="FIX.5.0" addedEP="52" updated="FIX.Latest" updatedEP="271">
+      <Tag>1215</Tag>
+      <Name>DerivativeSymbolSfx</Name>
+      <Type>String</Type>
+      <AbbrName>Sfx</AbbrName>
+      <NotReqXML>0</NotReqXML>
+      <EnumDatatype>65</EnumDatatype>
+      <Description>Additional information about the security (e.g. preferred, warrants, etc.). 
+See SymbolSfx(65) for complete definition.
+</Description>
+   </Field>
+   <Field added="FIX.5.0" addedEP="52" updated="FIX.Latest" updatedEP="271">
+      <Tag>1216</Tag>
+      <Name>DerivativeSecurityID</Name>
+      <Type>String</Type>
+      <AbbrName>ID</AbbrName>
+      <NotReqXML>0</NotReqXML>
+      <Description>Security identifier value (e.g. CUSIP, SEDOL, ISIN, etc).
+Requires DerivativeSecurityIDSource(1217).
+See SecurityID(48) for complete definition.
+</Description>
+   </Field>
+   <Field added="FIX.5.0" addedEP="52" updated="FIX.Latest" updatedEP="271">
       <Tag>1217</Tag>
       <Name>DerivativeSecurityIDSource</Name>
       <Type>String</Type>
@@ -10000,33 +10002,37 @@ Values are bilaterally agreed.</Description>
       <NotReqXML>0</NotReqXML>
       <EnumDatatype>22</EnumDatatype>
       <UnionDataType>Reserved100Plus</UnionDataType>
-      <Description>Refer to definition for SecurityIDSoruce(22)</Description>
+      <Description>Identifies class or source of the DerivativeSecurityID(1217) value.
+See SecurityIDSource(22) for complete definition.
+</Description>
    </Field>
-   <Field added="FIX.5.0" addedEP="52">
-		    <Tag>1218</Tag>
-		    <Name>NoDerivativeSecurityAltID</Name>
-		    <Type>NumInGroup</Type>
-		    <AbbrName>NoDerivativeSecurityAltID</AbbrName>
-		    <NotReqXML>1</NotReqXML>
-		    <Description>Refer to definition for NoSecurityAltID(454)</Description>
-	  </Field>
-   <Field added="FIX.5.0" addedEP="52">
-		    <Tag>1219</Tag>
-		    <Name>DerivativeSecurityAltID</Name>
-		    <Type>String</Type>
-		    <AbbrName>ID</AbbrName>
-		    <NotReqXML>0</NotReqXML>
-		    <Description>Refer to definition for SecurityAltID(455)</Description>
-	  </Field>
-   <Field added="FIX.5.0" addedEP="52">
-		    <Tag>1220</Tag>
-		    <Name>DerivativeSecurityAltIDSource</Name>
-		    <Type>String</Type>
-		    <AbbrName>Src</AbbrName>
-		    <NotReqXML>0</NotReqXML>
-		    <EnumDatatype>22</EnumDatatype>
-		    <Description>Refer to definition for SecurityAltIDSource(456)</Description>
-	  </Field>
+   <Field added="FIX.5.0" addedEP="52" updated="FIX.Latest" updatedEP="271">
+      <Tag>1218</Tag>
+      <Name>NoDerivativeSecurityAltID</Name>
+      <Type>NumInGroup</Type>
+      <AbbrName>NoDerivativeSecurityAltID</AbbrName>
+      <NotReqXML>1</NotReqXML>
+      <Description>Number of alternate derivative security IDs.</Description>
+   </Field>
+   <Field added="FIX.5.0" addedEP="52" updated="FIX.Latest" updatedEP="271">
+      <Tag>1219</Tag>
+      <Name>DerivativeSecurityAltID</Name>
+      <Type>String</Type>
+      <AbbrName>ID</AbbrName>
+      <NotReqXML>0</NotReqXML>
+      <Description>Alternate derivative security identifier value of DerivativeSecurityAltIDSource(1220) type. 
+Requires DerivativeSecurityAltIDSource(1220).</Description>
+   </Field>
+   <Field added="FIX.5.0" addedEP="52" updated="FIX.Latest" updatedEP="271">
+      <Tag>1220</Tag>
+      <Name>DerivativeSecurityAltIDSource</Name>
+      <Type>String</Type>
+      <AbbrName>Src</AbbrName>
+      <NotReqXML>0</NotReqXML>
+      <EnumDatatype>22</EnumDatatype>
+      <UnionDataType>Reserved100Plus</UnionDataType>
+      <Description>Identifies class or source of the DerivativeSecurityAltID(1219) value.</Description>
+   </Field>
    <Field added="FIX.5.0" addedEP="52">
 		    <Tag>1221</Tag>
 		    <Name>SecondaryLowLimitPrice</Name>
@@ -10059,14 +10065,15 @@ Values are bilaterally agreed.</Description>
 		    <NotReqXML>0</NotReqXML>
 		    <Description>Allows strike rule to be referenced via an identifier so that rules do not need to be explicitly enumerated</Description>
 	  </Field>
-   <Field added="FIX.5.0" addedEP="52">
-		    <Tag>1225</Tag>
-		    <Name>DerivativeOptPayAmount</Name>
-		    <Type>Amt</Type>
-		    <AbbrName>OptPayAmt</AbbrName>
-		    <NotReqXML>0</NotReqXML>
-		    <Description>Cash amount indicating the pay out associated with an option. For binary options this is a fixed amount</Description>
-	  </Field>
+   <Field added="FIX.5.0" addedEP="52" updated="FIX.Latest" updatedEP="271">
+      <Tag>1225</Tag>
+      <Name>DerivativeOptPayAmount</Name>
+      <Type>Amt</Type>
+      <AbbrName>OptPayAmt</AbbrName>
+      <NotReqXML>0</NotReqXML>
+      <Description>Cash amount indicating the pay out associated with an option. For binary options this is a fixed amount.
+See OptPayoutAmount(1195) for complete definition.  </Description>
+   </Field>
    <Field added="FIX.5.0" addedEP="52">
 		    <Tag>1226</Tag>
 		    <Name>EndMaturityMonthYear</Name>
@@ -10083,14 +10090,15 @@ Values are bilaterally agreed.</Description>
 		    <NotReqXML>0</NotReqXML>
 		    <Description>Identifies an entire suite of products for a given market. In Futures this may be "interest rates", "agricultural", "equity indexes", etc.</Description>
 	  </Field>
-   <Field added="FIX.5.0" addedEP="52">
-		    <Tag>1228</Tag>
-		    <Name>DerivativeProductComplex</Name>
-		    <Type>String</Type>
-		    <AbbrName>ProdCmplx</AbbrName>
-		    <NotReqXML>0</NotReqXML>
-		    <Description>Refer to ProductComplex(1227)</Description>
-	  </Field>
+   <Field added="FIX.5.0" addedEP="52" updated="FIX.Latest" updatedEP="271">
+      <Tag>1228</Tag>
+      <Name>DerivativeProductComplex</Name>
+      <Type>String</Type>
+      <AbbrName>ProdCmplx</AbbrName>
+      <NotReqXML>0</NotReqXML>
+      <Description>Identifies an entire suite of products for a given market. 
+See ProductComplex(1227) for complete definition.</Description>
+   </Field>
    <Field added="FIX.5.0" addedEP="52">
 		    <Tag>1229</Tag>
 		    <Name>MaturityMonthYearIncrement</Name>
@@ -10179,14 +10187,15 @@ Values are bilaterally agreed.</Description>
 		    <NotReqXML>0</NotReqXML>
 		    <Description>Used to indicate if a product or group of product supports the creation of flexible securities</Description>
 	  </Field>
-   <Field added="FIX.5.0" addedEP="52">
-		    <Tag>1243</Tag>
-		    <Name>DerivFlexProductEligibilityIndicator</Name>
-		    <Type>Boolean</Type>
-		    <AbbrName>FlexProdElig</AbbrName>
-		    <NotReqXML>0</NotReqXML>
-		    <Description>Refer to FlexProductEligibilityIndicator(1242)</Description>
-	  </Field>
+   <Field added="FIX.5.0" addedEP="52" updated="FIX.Latest" updatedEP="271">
+      <Tag>1243</Tag>
+      <Name>DerivFlexProductEligibilityIndicator</Name>
+      <Type>Boolean</Type>
+      <AbbrName>FlexProdElig</AbbrName>
+      <NotReqXML>0</NotReqXML>
+      <Description>Used to indicate if a product or group of product supports the creation of flexible securities.
+See FlexProductEligibilityIndicator(1242) for complete definition.</Description>
+   </Field>
    <Field added="FIX.5.0" addedEP="52">
 		    <Tag>1244</Tag>
 		    <Name>FlexibleIndicator</Name>
@@ -10203,449 +10212,542 @@ Values are bilaterally agreed.</Description>
 		    <NotReqXML>0</NotReqXML>
 		    <Description>Used when the trading currency can differ from the price currency</Description>
 	  </Field>
-   <Field added="FIX.5.0" addedEP="52">
-		    <Tag>1246</Tag>
-		    <Name>DerivativeProduct</Name>
-		    <Type>int</Type>
-		    <AbbrName>Prod</AbbrName>
-		    <NotReqXML>0</NotReqXML>
-		    <EnumDatatype>460</EnumDatatype>
-		    <Description/>
-	  </Field>
-   <Field added="FIX.5.0" addedEP="52">
-		    <Tag>1247</Tag>
-		    <Name>DerivativeSecurityGroup</Name>
-		    <Type>String</Type>
-		    <AbbrName>SecGrp</AbbrName>
-		    <NotReqXML>0</NotReqXML>
-		    <Description/>
-	  </Field>
-   <Field added="FIX.5.0" addedEP="52">
-		    <Tag>1248</Tag>
-		    <Name>DerivativeCFICode</Name>
-		    <Type>String</Type>
-		    <AbbrName>CFI</AbbrName>
-		    <NotReqXML>0</NotReqXML>
-		    <Description/>
-	  </Field>
-   <Field added="FIX.5.0" addedEP="52">
-		    <Tag>1249</Tag>
-		    <Name>DerivativeSecurityType</Name>
-		    <Type>String</Type>
-		    <AbbrName>SecTyp</AbbrName>
-		    <NotReqXML>0</NotReqXML>
-		    <EnumDatatype>167</EnumDatatype>
-		    <Description/>
-	  </Field>
-   <Field added="FIX.5.0" addedEP="52">
-		    <Tag>1250</Tag>
-		    <Name>DerivativeSecuritySubType</Name>
-		    <Type>String</Type>
-		    <AbbrName>SecSubTyp</AbbrName>
-		    <NotReqXML>0</NotReqXML>
-		    <Description/>
-	  </Field>
-   <Field added="FIX.5.0" addedEP="52">
-		    <Tag>1251</Tag>
-		    <Name>DerivativeMaturityMonthYear</Name>
-		    <Type>MonthYear</Type>
-		    <AbbrName>MMY</AbbrName>
-		    <NotReqXML>0</NotReqXML>
-		    <Description/>
-	  </Field>
-   <Field added="FIX.5.0" addedEP="52">
-		    <Tag>1252</Tag>
-		    <Name>DerivativeMaturityDate</Name>
-		    <Type>LocalMktDate</Type>
-		    <AbbrName>MatDt</AbbrName>
-		    <NotReqXML>0</NotReqXML>
-		    <Description/>
-	  </Field>
-   <Field added="FIX.5.0" addedEP="52">
-		    <Tag>1253</Tag>
-		    <Name>DerivativeMaturityTime</Name>
-		    <Type>TZTimeOnly</Type>
-		    <AbbrName>MatTm</AbbrName>
-		    <NotReqXML>0</NotReqXML>
-		    <Description/>
-	  </Field>
-   <Field added="FIX.5.0" addedEP="52">
-		    <Tag>1254</Tag>
-		    <Name>DerivativeSettleOnOpenFlag</Name>
-		    <Type>String</Type>
-		    <AbbrName>OpenCloseSettlFlag</AbbrName>
-		    <NotReqXML>0</NotReqXML>
-		    <Description/>
-	  </Field>
-   <Field added="FIX.5.0" addedEP="52">
-		    <Tag>1255</Tag>
-		    <Name>DerivativeInstrmtAssignmentMethod</Name>
-		    <Type>char</Type>
-		    <AbbrName>AsgnMeth</AbbrName>
-		    <NotReqXML>0</NotReqXML>
-		    <EnumDatatype>1049</EnumDatatype>
-		    <Description/>
-	  </Field>
-   <Field updated="FIX.5.0SP1" updatedEP="76" added="FIX.5.0" addedEP="52">
-		    <Tag>1256</Tag>
-		    <Name>DerivativeSecurityStatus</Name>
-		    <Type>String</Type>
-		    <AbbrName>Status</AbbrName>
-		    <NotReqXML>0</NotReqXML>
-		    <EnumDatatype>965</EnumDatatype>
-		    <Description/>
-	  </Field>
-   <Field added="FIX.5.0" addedEP="52">
-		    <Tag>1257</Tag>
-		    <Name>DerivativeInstrRegistry</Name>
-		    <Type>String</Type>
-		    <AbbrName>Rgstry</AbbrName>
-		    <NotReqXML>0</NotReqXML>
-		    <Description/>
-	  </Field>
-   <Field added="FIX.5.0" addedEP="52">
-		    <Tag>1258</Tag>
-		    <Name>DerivativeCountryOfIssue</Name>
-		    <Type>Country</Type>
-		    <AbbrName>Ctry</AbbrName>
-		    <NotReqXML>0</NotReqXML>
-		    <Description/>
-	  </Field>
-   <Field added="FIX.5.0" addedEP="52">
-		    <Tag>1259</Tag>
-		    <Name>DerivativeStateOrProvinceOfIssue</Name>
-		    <Type>String</Type>
-		    <AbbrName>StPrv</AbbrName>
-		    <NotReqXML>0</NotReqXML>
-		    <Description/>
-	  </Field>
-   <Field added="FIX.5.0" addedEP="52">
-		    <Tag>1260</Tag>
-		    <Name>DerivativeLocaleOfIssue</Name>
-		    <Type>String</Type>
-		    <AbbrName>Lcl</AbbrName>
-		    <NotReqXML>0</NotReqXML>
-		    <Description/>
-	  </Field>
-   <Field added="FIX.5.0" addedEP="52">
-		    <Tag>1261</Tag>
-		    <Name>DerivativeStrikePrice</Name>
-		    <Type>Price</Type>
-		    <AbbrName>StrkPx</AbbrName>
-		    <NotReqXML>0</NotReqXML>
-		    <Description/>
-	  </Field>
-   <Field added="FIX.5.0" addedEP="52">
-		    <Tag>1262</Tag>
-		    <Name>DerivativeStrikeCurrency</Name>
-		    <Type>Currency</Type>
-		    <AbbrName>StrkCcy</AbbrName>
-		    <NotReqXML>0</NotReqXML>
-		    <Description/>
-	  </Field>
-   <Field added="FIX.5.0" addedEP="52">
-		    <Tag>1263</Tag>
-		    <Name>DerivativeStrikeMultiplier</Name>
-		    <Type>float</Type>
-		    <AbbrName>StrkMult</AbbrName>
-		    <NotReqXML>0</NotReqXML>
-		    <Description/>
-	  </Field>
-   <Field added="FIX.5.0" addedEP="52">
-		    <Tag>1264</Tag>
-		    <Name>DerivativeStrikeValue</Name>
-		    <Type>float</Type>
-		    <AbbrName>StrkValu</AbbrName>
-		    <NotReqXML>0</NotReqXML>
-		    <Description/>
-	  </Field>
-   <Field added="FIX.5.0" addedEP="52">
-		    <Tag>1265</Tag>
-		    <Name>DerivativeOptAttribute</Name>
-		    <Type>char</Type>
-		    <AbbrName>OptAt</AbbrName>
-		    <NotReqXML>0</NotReqXML>
-		    <Description/>
-	  </Field>
-   <Field added="FIX.5.0" addedEP="52">
-		    <Tag>1266</Tag>
-		    <Name>DerivativeContractMultiplier</Name>
-		    <Type>float</Type>
-		    <AbbrName>Mult</AbbrName>
-		    <NotReqXML>0</NotReqXML>
-		    <Description/>
-	  </Field>
-   <Field added="FIX.5.0" addedEP="52">
-		    <Tag>1267</Tag>
-		    <Name>DerivativeMinPriceIncrement</Name>
-		    <Type>float</Type>
-		    <AbbrName>MinPxIncr</AbbrName>
-		    <NotReqXML>0</NotReqXML>
-		    <Description/>
-	  </Field>
-   <Field added="FIX.5.0" addedEP="52">
-		    <Tag>1268</Tag>
-		    <Name>DerivativeMinPriceIncrementAmount</Name>
-		    <Type>Amt</Type>
-		    <AbbrName>MinPxIncrAmt</AbbrName>
-		    <NotReqXML>0</NotReqXML>
-		    <Description/>
-	  </Field>
-   <Field added="FIX.5.0" addedEP="52">
-		    <Tag>1269</Tag>
-		    <Name>DerivativeUnitOfMeasure</Name>
-		    <Type>String</Type>
-		    <AbbrName>UOM</AbbrName>
-		    <NotReqXML>0</NotReqXML>
-		    <EnumDatatype>996</EnumDatatype>
-		    <Description/>
-	  </Field>
-   <Field added="FIX.5.0" addedEP="52">
-		    <Tag>1270</Tag>
-		    <Name>DerivativeUnitOfMeasureQty</Name>
-		    <Type>Qty</Type>
-		    <AbbrName>UOMQty</AbbrName>
-		    <NotReqXML>0</NotReqXML>
-		    <Description/>
-	  </Field>
-   <Field added="FIX.5.0" addedEP="52">
-		    <Tag>1271</Tag>
-		    <Name>DerivativeTimeUnit</Name>
-		    <Type>String</Type>
-		    <AbbrName>TmUnit</AbbrName>
-		    <NotReqXML>0</NotReqXML>
-		    <EnumDatatype>997</EnumDatatype>
-		    <Description/>
-	  </Field>
-   <Field added="FIX.5.0" addedEP="52">
-		    <Tag>1272</Tag>
-		    <Name>DerivativeSecurityExchange</Name>
-		    <Type>Exchange</Type>
-		    <AbbrName>Exch</AbbrName>
-		    <NotReqXML>0</NotReqXML>
-		    <Description/>
-	  </Field>
-   <Field added="FIX.5.0" addedEP="52">
-		    <Tag>1273</Tag>
-		    <Name>DerivativePositionLimit</Name>
-		    <Type>int</Type>
-		    <AbbrName>PosLmt</AbbrName>
-		    <NotReqXML>0</NotReqXML>
-		    <Description/>
-	  </Field>
-   <Field added="FIX.5.0" addedEP="52">
-		    <Tag>1274</Tag>
-		    <Name>DerivativeNTPositionLimit</Name>
-		    <Type>int</Type>
-		    <AbbrName>NTPosLmt</AbbrName>
-		    <NotReqXML>0</NotReqXML>
-		    <Description/>
-	  </Field>
-   <Field added="FIX.5.0" addedEP="52">
-		    <Tag>1275</Tag>
-		    <Name>DerivativeIssuer</Name>
-		    <Type>String</Type>
-		    <AbbrName>Issr</AbbrName>
-		    <NotReqXML>0</NotReqXML>
-		    <Description/>
-	  </Field>
-   <Field added="FIX.5.0" addedEP="52">
-		    <Tag>1276</Tag>
-		    <Name>DerivativeIssueDate</Name>
-		    <Type>LocalMktDate</Type>
-		    <AbbrName>IssDt</AbbrName>
-		    <NotReqXML>0</NotReqXML>
-		    <Description/>
-	  </Field>
-   <Field added="FIX.5.0" addedEP="52" updated="FIX.5.0SP2" updatedEP="229">
+   <Field added="FIX.5.0" addedEP="52" updated="FIX.Latest" updatedEP="271">
+      <Tag>1246</Tag>
+      <Name>DerivativeProduct</Name>
+      <Type>int</Type>
+      <AbbrName>Prod</AbbrName>
+      <NotReqXML>0</NotReqXML>
+      <EnumDatatype>460</EnumDatatype>
+      <Description>The type of product the security is associated with. 
+See Product(460) for complete definition.</Description>
+   </Field>
+   <Field added="FIX.5.0" addedEP="52" updated="FIX.Latest" updatedEP="271">
+      <Tag>1247</Tag>
+      <Name>DerivativeSecurityGroup</Name>
+      <Type>String</Type>
+      <AbbrName>SecGrp</AbbrName>
+      <NotReqXML>0</NotReqXML>
+      <Description>An exchange specific name assigned to a group of related securities which may be concurrently affected by market events and actions.
+See SecurityGroup(1151) for complete definition.
+</Description>
+   </Field>
+   <Field added="FIX.5.0" addedEP="52" updated="FIX.Latest" updatedEP="271">
+      <Tag>1248</Tag>
+      <Name>DerivativeCFICode</Name>
+      <Type>String</Type>
+      <AbbrName>CFI</AbbrName>
+      <NotReqXML>0</NotReqXML>
+      <Description>The type of security using ISO 10962 standard, Classification of Financial Instruments (CFI code) values. 
+See CFICode(461) for complete definition.</Description>
+   </Field>
+   <Field added="FIX.5.0" addedEP="52" updated="FIX.Latest" updatedEP="271">
+      <Tag>1249</Tag>
+      <Name>DerivativeSecurityType</Name>
+      <Type>String</Type>
+      <AbbrName>SecTyp</AbbrName>
+      <NotReqXML>0</NotReqXML>
+      <EnumDatatype>167</EnumDatatype>
+      <Description>The type of security. 
+See SecurityType(167) for complete definition.</Description>
+   </Field>
+   <Field added="FIX.5.0" addedEP="52" updated="FIX.Latest" updatedEP="271">
+      <Tag>1250</Tag>
+      <Name>DerivativeSecuritySubType</Name>
+      <Type>String</Type>
+      <AbbrName>SecSubTyp</AbbrName>
+      <NotReqXML>0</NotReqXML>
+      <Description>Sub-type qualification/identification of the security type. 
+See SecuritySubType(762) for complete definition.</Description>
+   </Field>
+   <Field added="FIX.5.0" addedEP="52" updated="FIX.Latest" updatedEP="271">
+      <Tag>1251</Tag>
+      <Name>DerivativeMaturityMonthYear</Name>
+      <Type>MonthYear</Type>
+      <AbbrName>MMY</AbbrName>
+      <NotReqXML>0</NotReqXML>
+      <Description>Month and Year of the maturity (used for standardized futures and options). 
+See MaturityMonthYear(200) for complete definition.</Description>
+   </Field>
+   <Field added="FIX.5.0" addedEP="52" updated="FIX.Latest" updatedEP="271">
+      <Tag>1252</Tag>
+      <Name>DerivativeMaturityDate</Name>
+      <Type>LocalMktDate</Type>
+      <AbbrName>MatDt</AbbrName>
+      <NotReqXML>0</NotReqXML>
+      <Description>Date of maturity.
+See MaturityDate(541) for complete definition.
+</Description>
+   </Field>
+   <Field added="FIX.5.0" addedEP="52" updated="FIX.Latest" updatedEP="271">
+      <Tag>1253</Tag>
+      <Name>DerivativeMaturityTime</Name>
+      <Type>TZTimeOnly</Type>
+      <AbbrName>MatTm</AbbrName>
+      <NotReqXML>0</NotReqXML>
+      <Description>Time of security's maturity expressed in local time with offset to UTC specified.
+See MaturityTime(1079) for complete definition.</Description>
+   </Field>
+   <Field added="FIX.5.0" addedEP="52" updated="FIX.Latest" updatedEP="271">
+      <Tag>1254</Tag>
+      <Name>DerivativeSettleOnOpenFlag</Name>
+      <Type>String</Type>
+      <AbbrName>OpenCloseSettlFlag</AbbrName>
+      <NotReqXML>0</NotReqXML>
+      <Description>Indicator to determine if instrument is settle on open.
+See SettleOnOpenFlag(966) for complete definition.
+</Description>
+   </Field>
+   <Field added="FIX.5.0" addedEP="52" updated="FIX.Latest" updatedEP="271">
+      <Tag>1255</Tag>
+      <Name>DerivativeInstrmtAssignmentMethod</Name>
+      <Type>char</Type>
+      <AbbrName>AsgnMeth</AbbrName>
+      <NotReqXML>0</NotReqXML>
+      <EnumDatatype>1049</EnumDatatype>
+      <Description>Method under which assignment was conducted.
+See InstrmtAssignmentMethod(1049) for complete definition.
+</Description>
+   </Field>
+   <Field updated="FIX.Latest" updatedEP="271" added="FIX.5.0" addedEP="52">
+      <Tag>1256</Tag>
+      <Name>DerivativeSecurityStatus</Name>
+      <Type>String</Type>
+      <AbbrName>Status</AbbrName>
+      <NotReqXML>0</NotReqXML>
+      <EnumDatatype>965</EnumDatatype>
+      <Description>Indicates the current state of the derivative instrument.
+See SecurityStatus(965) for complete definition.
+</Description>
+   </Field>
+   <Field added="FIX.5.0" addedEP="52" updated="FIX.Latest" updatedEP="271">
+      <Tag>1257</Tag>
+      <Name>DerivativeInstrRegistry</Name>
+      <Type>String</Type>
+      <AbbrName>Rgstry</AbbrName>
+      <NotReqXML>0</NotReqXML>
+      <Description>Values may include BIC for the depository or custodian who maintain ownership records, the ISO country code for the location of the record, or the value ZZ to specify physical ownership of the security (e.g. stock certificate).
+See InstrRegistry(543) for complete definition.
+</Description>
+   </Field>
+   <Field added="FIX.5.0" addedEP="52" updated="FIX.Latest" updatedEP="271">
+      <Tag>1258</Tag>
+      <Name>DerivativeCountryOfIssue</Name>
+      <Type>Country</Type>
+      <AbbrName>Ctry</AbbrName>
+      <NotReqXML>0</NotReqXML>
+      <Description>ISO Country code of instrument issue (e.g. the country portion typically used in ISIN).
+See CountryOfIssue(470) for complete definition.
+</Description>
+   </Field>
+   <Field added="FIX.5.0" addedEP="52" updated="FIX.Latest" updatedEP="271">
+      <Tag>1259</Tag>
+      <Name>DerivativeStateOrProvinceOfIssue</Name>
+      <Type>String</Type>
+      <AbbrName>StPrv</AbbrName>
+      <NotReqXML>0</NotReqXML>
+      <Description>A two-character state or province abbreviation.
+See StateOrProvinceOfIssue(471) for complete definition.
+</Description>
+   </Field>
+   <Field added="FIX.5.0" addedEP="52" updated="FIX.Latest" updatedEP="271">
+      <Tag>1260</Tag>
+      <Name>DerivativeLocaleOfIssue</Name>
+      <Type>String</Type>
+      <AbbrName>Lcl</AbbrName>
+      <NotReqXML>0</NotReqXML>
+      <Description>Identifies the locale or region of issue. 
+See LocaleOfIssue(472) for complete definition.</Description>
+   </Field>
+   <Field added="FIX.5.0" addedEP="52" updated="FIX.Latest" updatedEP="271">
+      <Tag>1261</Tag>
+      <Name>DerivativeStrikePrice</Name>
+      <Type>Price</Type>
+      <AbbrName>StrkPx</AbbrName>
+      <NotReqXML>0</NotReqXML>
+      <Description>Strike price for an option.
+See StrikePrice(202) for complete definition.
+</Description>
+   </Field>
+   <Field added="FIX.5.0" addedEP="52" updated="FIX.Latest" updatedEP="271">
+      <Tag>1262</Tag>
+      <Name>DerivativeStrikeCurrency</Name>
+      <Type>Currency</Type>
+      <AbbrName>StrkCcy</AbbrName>
+      <NotReqXML>0</NotReqXML>
+      <Description>Currency in which the strike price is denominated.
+See StrikeCurrency(947) for complete definition.
+</Description>
+   </Field>
+   <Field added="FIX.5.0" addedEP="52" updated="FIX.Latest" updatedEP="271">
+      <Tag>1263</Tag>
+      <Name>DerivativeStrikeMultiplier</Name>
+      <Type>float</Type>
+      <AbbrName>StrkMult</AbbrName>
+      <NotReqXML>0</NotReqXML>
+      <Description>Multiplier applied to the strike price for the purpose of calculating the settlement value.
+See StrikeMultiplier(967) for complete definition.</Description>
+   </Field>
+   <Field added="FIX.5.0" addedEP="52" updated="FIX.Latest" updatedEP="271">
+      <Tag>1264</Tag>
+      <Name>DerivativeStrikeValue</Name>
+      <Type>float</Type>
+      <AbbrName>StrkValu</AbbrName>
+      <NotReqXML>0</NotReqXML>
+      <Description>The number of shares/units for the financial instrument involved in the option trade.
+See StrikeValue(968) for complete definition.
+</Description>
+   </Field>
+   <Field added="FIX.5.0" addedEP="52" updated="FIX.Latest" updatedEP="271">
+      <Tag>1265</Tag>
+      <Name>DerivativeOptAttribute</Name>
+      <Type>char</Type>
+      <AbbrName>OptAt</AbbrName>
+      <NotReqXML>0</NotReqXML>
+      <Description>Provided to support versioning of option contracts as a result of corporate actions or events. Use of this field is defined by counterparty agreement or market conventions.
+See OptAttribute(206) for complete definition.
+</Description>
+   </Field>
+   <Field added="FIX.5.0" addedEP="52" updated="FIX.Latest" updatedEP="271">
+      <Tag>1266</Tag>
+      <Name>DerivativeContractMultiplier</Name>
+      <Type>float</Type>
+      <AbbrName>Mult</AbbrName>
+      <NotReqXML>0</NotReqXML>
+      <Description>Specifies the ratio or multiply factor to convert from nominal units (e.g. contracts) to total units (e.g. shares) (e.g. 1.0, 100, 1000, etc.).
+See ContractMultiplier(231) for complete definition.
+</Description>
+   </Field>
+   <Field added="FIX.5.0" addedEP="52" updated="FIX.Latest" updatedEP="271">
+      <Tag>1267</Tag>
+      <Name>DerivativeMinPriceIncrement</Name>
+      <Type>float</Type>
+      <AbbrName>MinPxIncr</AbbrName>
+      <NotReqXML>0</NotReqXML>
+      <Description>Minimum price increase for a given exchange-traded Instrument.
+See MinPriceIncrement(969) for complete definition.
+</Description>
+   </Field>
+   <Field added="FIX.5.0" addedEP="52" updated="FIX.Latest" updatedEP="271">
+      <Tag>1268</Tag>
+      <Name>DerivativeMinPriceIncrementAmount</Name>
+      <Type>Amt</Type>
+      <AbbrName>MinPxIncrAmt</AbbrName>
+      <NotReqXML>0</NotReqXML>
+      <Description>Minimum price increment amount associated with the minimum price increment.
+See MinPriceIncrementAmount(1146) for complete definition.
+</Description>
+   </Field>
+   <Field added="FIX.5.0" addedEP="52" updated="FIX.Latest" updatedEP="271">
+      <Tag>1269</Tag>
+      <Name>DerivativeUnitOfMeasure</Name>
+      <Type>String</Type>
+      <AbbrName>UOM</AbbrName>
+      <NotReqXML>0</NotReqXML>
+      <EnumDatatype>996</EnumDatatype>
+      <Description>The unit of measure of the underlying commodity upon which the contract is based. 
+See UnitOfMeasure(996) for complete definition.
+</Description>
+   </Field>
+   <Field added="FIX.5.0" addedEP="52" updated="FIX.Latest" updatedEP="271">
+      <Tag>1270</Tag>
+      <Name>DerivativeUnitOfMeasureQty</Name>
+      <Type>Qty</Type>
+      <AbbrName>UOMQty</AbbrName>
+      <NotReqXML>0</NotReqXML>
+      <Description>Used to indicate the quantity of the underlying commodity unit of measure on which the contract is based. 
+See UnitOfMeasureQty(1147) for complete definition.
+</Description>
+   </Field>
+   <Field added="FIX.5.0" addedEP="52" updated="FIX.Latest" updatedEP="271">
+      <Tag>1271</Tag>
+      <Name>DerivativeTimeUnit</Name>
+      <Type>String</Type>
+      <AbbrName>TmUnit</AbbrName>
+      <NotReqXML>0</NotReqXML>
+      <EnumDatatype>997</EnumDatatype>
+      <Description>Unit of time associated with the contract.
+NOTE: Additional values may be used by mutual agreement of the counterparties.
+See TimeUnit(997) for complete definition.
+</Description>
+   </Field>
+   <Field added="FIX.5.0" addedEP="52" updated="FIX.Latest" updatedEP="271">
+      <Tag>1272</Tag>
+      <Name>DerivativeSecurityExchange</Name>
+      <Type>Exchange</Type>
+      <AbbrName>Exch</AbbrName>
+      <NotReqXML>0</NotReqXML>
+      <Description>Market used to help identify a security.
+See SecurityExchange(207) for complete definition.
+</Description>
+   </Field>
+   <Field added="FIX.5.0" addedEP="52" updated="FIX.Latest" updatedEP="271">
+      <Tag>1273</Tag>
+      <Name>DerivativePositionLimit</Name>
+      <Type>int</Type>
+      <AbbrName>PosLmt</AbbrName>
+      <NotReqXML>0</NotReqXML>
+      <Description>Position limit for a given exchange-traded product.
+See PositionLimit(970) for complete definition.
+</Description>
+   </Field>
+   <Field added="FIX.5.0" addedEP="52" updated="FIX.Latest" updatedEP="271">
+      <Tag>1274</Tag>
+      <Name>DerivativeNTPositionLimit</Name>
+      <Type>int</Type>
+      <AbbrName>NTPosLmt</AbbrName>
+      <NotReqXML>0</NotReqXML>
+      <Description>Position limit in the near-term contract for a given exchange-traded product.
+See NTPositionLimit(971) for complete definition.
+</Description>
+   </Field>
+   <Field added="FIX.5.0" addedEP="52" updated="FIX.Latest" updatedEP="271">
+      <Tag>1275</Tag>
+      <Name>DerivativeIssuer</Name>
+      <Type>String</Type>
+      <AbbrName>Issr</AbbrName>
+      <NotReqXML>0</NotReqXML>
+      <Description>Name of security issuer. 
+See Issuer(106) for complete definition.
+</Description>
+   </Field>
+   <Field added="FIX.5.0" addedEP="52" updated="FIX.Latest" updatedEP="271">
+      <Tag>1276</Tag>
+      <Name>DerivativeIssueDate</Name>
+      <Type>LocalMktDate</Type>
+      <AbbrName>IssDt</AbbrName>
+      <NotReqXML>0</NotReqXML>
+      <Description>The date on which the security is issued. 
+See IssueDate(225) for complete definition.</Description>
+   </Field>
+   <Field added="FIX.5.0" addedEP="52" updated="FIX.Latest" updatedEP="271">
       <Tag>1277</Tag>
       <Name>DerivativeEncodedIssuerLen</Name>
       <Type>Length</Type>
       <AssociatedDataTag>1278</AssociatedDataTag>
       <AbbrName>EncIssrLen</AbbrName>
       <NotReqXML>0</NotReqXML>
-      <Description/>
+      <Description>Byte length of encoded (non-ASCII characters) DerivativeEncodedSecurityDesc (1281) field.
+See EncodedIssuerLen(348) for complete definition.
+</Description>
    </Field>
-   <Field added="FIX.5.0" addedEP="52">
-		    <Tag>1278</Tag>
-		    <Name>DerivativeEncodedIssuer</Name>
-		    <Type>data</Type>
-		    <AbbrName>EncIssr</AbbrName>
-		    <NotReqXML>0</NotReqXML>
-		    <Description/>
-	  </Field>
-   <Field added="FIX.5.0" addedEP="52">
-		    <Tag>1279</Tag>
-		    <Name>DerivativeSecurityDesc</Name>
-		    <Type>String</Type>
-		    <AbbrName>Desc</AbbrName>
-		    <NotReqXML>0</NotReqXML>
-		    <Description/>
-	  </Field>
-   <Field added="FIX.5.0" addedEP="52" updated="FIX.5.0SP2" updatedEP="229">
+   <Field added="FIX.5.0" addedEP="52" updated="FIX.Latest" updatedEP="271">
+      <Tag>1278</Tag>
+      <Name>DerivativeEncodedIssuer</Name>
+      <Type>data</Type>
+      <AbbrName>EncIssr</AbbrName>
+      <NotReqXML>0</NotReqXML>
+      <Description>Encoded (non-ASCII characters) representation of the DerivativeIssuer(1275) field in the encoded format specified via the MessageEncoding (347) field. If used, the ASCII (English) representation should also be specified in the DerivativeIssuer(1275) field.
+See EncodedIssuer(349) for complete definition.
+</Description>
+   </Field>
+   <Field added="FIX.5.0" addedEP="52" updated="FIX.Latest" updatedEP="271">
+      <Tag>1279</Tag>
+      <Name>DerivativeSecurityDesc</Name>
+      <Type>String</Type>
+      <AbbrName>Desc</AbbrName>
+      <NotReqXML>0</NotReqXML>
+      <Description>Can be used by the venue or one of the trading parties to provide a non-normative textual description for the financial instrument.
+See SecurityDesc(107) for complete definition.
+</Description>
+   </Field>
+   <Field added="FIX.5.0" addedEP="52" updated="FIX.Latest" updatedEP="271">
       <Tag>1280</Tag>
       <Name>DerivativeEncodedSecurityDescLen</Name>
       <Type>Length</Type>
       <AssociatedDataTag>1281</AssociatedDataTag>
       <AbbrName>EncSecDescLen</AbbrName>
       <NotReqXML>0</NotReqXML>
-      <Description/>
+      <Description>Byte length of encoded (non-ASCII characters) DerivativeEncodedSecurityDesc (1281) field.
+See EncodedSecurityDescLen(350) for complete definition.
+</Description>
    </Field>
-   <Field added="FIX.5.0" addedEP="52">
-		    <Tag>1281</Tag>
-		    <Name>DerivativeEncodedSecurityDesc</Name>
-		    <Type>data</Type>
-		    <AbbrName>EncSecDesc</AbbrName>
-		    <NotReqXML>0</NotReqXML>
-		    <Description/>
-	  </Field>
-   <Field added="FIX.5.0" addedEP="52">
-		    <Tag>1282</Tag>
-		    <Name>DerivativeSecurityXMLLen</Name>
-		    <Type>Length</Type>
-		    <AssociatedDataTag>1283</AssociatedDataTag>
-		    <AbbrName>SecXMLLen</AbbrName>
-		    <NotReqXML>1</NotReqXML>
-		    <Description>Refer to definition SecurityXMLLen(1184)</Description>
-	  </Field>
-   <Field added="FIX.5.0" addedEP="52">
-		    <Tag>1283</Tag>
-		    <Name>DerivativeSecurityXML</Name>
-		    <Type>data</Type>
-		    <AbbrName>SecXML</AbbrName>
-		    <NotReqXML>1</NotReqXML>
-		    <Description>Refer to definition of SecurityXML(1185)</Description>
-	  </Field>
-   <Field added="FIX.5.0" addedEP="52">
-		    <Tag>1284</Tag>
-		    <Name>DerivativeSecurityXMLSchema</Name>
-		    <Type>String</Type>
-		    <AbbrName>Schema</AbbrName>
-		    <NotReqXML>0</NotReqXML>
-		    <Description>Refer to definition of SecurityXMLSchema(1186)</Description>
-	  </Field>
-   <Field added="FIX.5.0" addedEP="52">
-		    <Tag>1285</Tag>
-		    <Name>DerivativeContractSettlMonth</Name>
-		    <Type>MonthYear</Type>
-		    <AbbrName>CSetMo</AbbrName>
-		    <NotReqXML>0</NotReqXML>
-		    <Description/>
-	  </Field>
-   <Field added="FIX.5.0" addedEP="52">
-		    <Tag>1286</Tag>
-		    <Name>NoDerivativeEvents</Name>
-		    <Type>NumInGroup</Type>
-		    <AbbrName>NoDerivativeEvents</AbbrName>
-		    <NotReqXML>1</NotReqXML>
-		    <Description/>
-	  </Field>
-   <Field added="FIX.5.0" addedEP="52">
-		    <Tag>1287</Tag>
-		    <Name>DerivativeEventType</Name>
-		    <Type>int</Type>
-		    <AbbrName>EventTyp</AbbrName>
-		    <NotReqXML>0</NotReqXML>
-		    <EnumDatatype>865</EnumDatatype>
-		    <Description/>
-	  </Field>
-   <Field added="FIX.5.0" addedEP="52">
-		    <Tag>1288</Tag>
-		    <Name>DerivativeEventDate</Name>
-		    <Type>LocalMktDate</Type>
-		    <AbbrName>Dt</AbbrName>
-		    <NotReqXML>0</NotReqXML>
-		    <Description/>
-	  </Field>
-   <Field added="FIX.5.0" addedEP="52">
-		    <Tag>1289</Tag>
-		    <Name>DerivativeEventTime</Name>
-		    <Type>UTCTimestamp</Type>
-		    <AbbrName>Tm</AbbrName>
-		    <NotReqXML>0</NotReqXML>
-		    <Description/>
-	  </Field>
-   <Field added="FIX.5.0" addedEP="52">
-		    <Tag>1290</Tag>
-		    <Name>DerivativeEventPx</Name>
-		    <Type>Price</Type>
-		    <AbbrName>Px</AbbrName>
-		    <NotReqXML>0</NotReqXML>
-		    <Description/>
-	  </Field>
-   <Field added="FIX.5.0" addedEP="52">
-		    <Tag>1291</Tag>
-		    <Name>DerivativeEventText</Name>
-		    <Type>String</Type>
-		    <AbbrName>Txt</AbbrName>
-		    <NotReqXML>0</NotReqXML>
-		    <Description/>
-	  </Field>
-   <Field added="FIX.5.0" addedEP="52">
-		    <Tag>1292</Tag>
-		    <Name>NoDerivativeInstrumentParties</Name>
-		    <Type>NumInGroup</Type>
-		    <NotReqXML>1</NotReqXML>
-		    <Description>Refer to definition of NoParties(453)</Description>
-	  </Field>
-   <Field added="FIX.5.0" addedEP="52">
-		    <Tag>1293</Tag>
-		    <Name>DerivativeInstrumentPartyID</Name>
-		    <Type>String</Type>
-		    <AbbrName>ID</AbbrName>
-		    <NotReqXML>0</NotReqXML>
-		    <Description>Refer to definition of PartyID(448)</Description>
-	  </Field>
-   <Field added="FIX.5.0" addedEP="52" updated="FIX.5.0SP2" updatedEP="208">
+   <Field added="FIX.5.0" addedEP="52" updated="FIX.Latest" updatedEP="271">
+      <Tag>1281</Tag>
+      <Name>DerivativeEncodedSecurityDesc</Name>
+      <Type>data</Type>
+      <AbbrName>EncSecDesc</AbbrName>
+      <NotReqXML>0</NotReqXML>
+      <Description>Encoded (non-ASCII characters) representation of the DerivativeSecurityDesc(1279) field in the encoded format specified via the MessageEncoding (347) field. If used, the ASCII (English) representation should also be specified in the DerivativeSecurityDesc(1279) field.
+See EncodedSecurityDesc(351) for complete definition.
+</Description>
+   </Field>
+   <Field added="FIX.5.0" addedEP="52" updated="FIX.Latest" updatedEP="271">
+      <Tag>1282</Tag>
+      <Name>DerivativeSecurityXMLLen</Name>
+      <Type>Length</Type>
+      <AssociatedDataTag>1283</AssociatedDataTag>
+      <AbbrName>SecXMLLen</AbbrName>
+      <NotReqXML>1</NotReqXML>
+      <Description>The length of the DerivativeSecurityXML(1283) data block.
+See SecurityXMLLen(1184) for complete definition.
+</Description>
+   </Field>
+   <Field added="FIX.5.0" addedEP="52" updated="FIX.Latest" updatedEP="271">
+      <Tag>1283</Tag>
+      <Name>DerivativeSecurityXML</Name>
+      <Type>XMLData</Type>
+      <AbbrName>SecXML</AbbrName>
+      <NotReqXML>1</NotReqXML>
+      <Description>XML definition for the security.
+See SecurityXML(1185) for complete definition.
+</Description>
+   </Field>
+   <Field added="FIX.5.0" addedEP="52" updated="FIX.Latest" updatedEP="271">
+      <Tag>1284</Tag>
+      <Name>DerivativeSecurityXMLSchema</Name>
+      <Type>String</Type>
+      <AbbrName>Schema</AbbrName>
+      <NotReqXML>0</NotReqXML>
+      <Description>The schema used to validate the contents of DerivativeSecurityXML(1283).
+See SecurityXMLSchema(1186) for complete definition.
+</Description>
+   </Field>
+   <Field added="FIX.5.0" addedEP="52" updated="FIX.Latest" updatedEP="271">
+      <Tag>1285</Tag>
+      <Name>DerivativeContractSettlMonth</Name>
+      <Type>MonthYear</Type>
+      <AbbrName>CSetMo</AbbrName>
+      <NotReqXML>0</NotReqXML>
+      <Description>Specifies when the contract (i.e. MBS/TBA) will settle.
+See ContractSettlMonth(667) for complete definition.
+</Description>
+   </Field>
+   <Field added="FIX.5.0" addedEP="52" updated="FIX.Latest" updatedEP="271">
+      <Tag>1286</Tag>
+      <Name>NoDerivativeEvents</Name>
+      <Type>NumInGroup</Type>
+      <AbbrName>NoDerivativeEvents</AbbrName>
+      <NotReqXML>1</NotReqXML>
+      <Description>Number of repeating DerivativeEventType entries.</Description>
+   </Field>
+   <Field added="FIX.5.0" addedEP="52" updated="FIX.Latest" updatedEP="271">
+      <Tag>1287</Tag>
+      <Name>DerivativeEventType</Name>
+      <Type>int</Type>
+      <AbbrName>EventTyp</AbbrName>
+      <NotReqXML>0</NotReqXML>
+      <EnumDatatype>865</EnumDatatype>
+      <Description>Code to represent the type of event.
+See EventType(865) for complete definition.
+</Description>
+   </Field>
+   <Field added="FIX.5.0" addedEP="52" updated="FIX.Latest" updatedEP="271">
+      <Tag>1288</Tag>
+      <Name>DerivativeEventDate</Name>
+      <Type>LocalMktDate</Type>
+      <AbbrName>Dt</AbbrName>
+      <NotReqXML>0</NotReqXML>
+      <Description>Date of event.
+See EventDate(866) for complete definition.
+</Description>
+   </Field>
+   <Field added="FIX.5.0" addedEP="52" updated="FIX.Latest" updatedEP="271">
+      <Tag>1289</Tag>
+      <Name>DerivativeEventTime</Name>
+      <Type>UTCTimestamp</Type>
+      <AbbrName>Tm</AbbrName>
+      <NotReqXML>0</NotReqXML>
+      <Description>Specific time of event. To be used in combination with DerivativeEventDate(1288).
+See EventTime(1145) for complete definition.
+</Description>
+   </Field>
+   <Field added="FIX.5.0" addedEP="52" updated="FIX.Latest" updatedEP="271">
+      <Tag>1290</Tag>
+      <Name>DerivativeEventPx</Name>
+      <Type>Price</Type>
+      <AbbrName>Px</AbbrName>
+      <NotReqXML>0</NotReqXML>
+      <Description>Predetermined price of issue at event.
+See EventPx(867) for complete definition.
+</Description>
+   </Field>
+   <Field added="FIX.5.0" addedEP="52" updated="FIX.Latest" updatedEP="271">
+      <Tag>1291</Tag>
+      <Name>DerivativeEventText</Name>
+      <Type>String</Type>
+      <AbbrName>Txt</AbbrName>
+      <NotReqXML>0</NotReqXML>
+      <Description>Comments related to the event.
+See EventText(868) for complete definition.
+</Description>
+   </Field>
+   <Field added="FIX.5.0" addedEP="52" updated="FIX.Latest" updatedEP="271">
+      <Tag>1292</Tag>
+      <Name>NoDerivativeInstrumentParties</Name>
+      <Type>NumInGroup</Type>
+      <NotReqXML>1</NotReqXML>
+      <Description>Number of repeating derivative instrument party entries.
+</Description>
+   </Field>
+   <Field added="FIX.5.0" addedEP="52" updated="FIX.Latest" updatedEP="271">
+      <Tag>1293</Tag>
+      <Name>DerivativeInstrumentPartyID</Name>
+      <Type>String</Type>
+      <AbbrName>ID</AbbrName>
+      <NotReqXML>0</NotReqXML>
+      <Description>Party identifier/code. 
+See PartyID(448) for complete definition.
+</Description>
+   </Field>
+   <Field added="FIX.5.0" addedEP="52" updated="FIX.Latest" updatedEP="271">
       <Tag>1294</Tag>
       <Name>DerivativeInstrumentPartyIDSource</Name>
       <Type>char</Type>
       <AbbrName>Src</AbbrName>
       <NotReqXML>0</NotReqXML>
       <EnumDatatype>447</EnumDatatype>
-      <Description>Refer to definition of PartyIDSource(447)</Description>
+      <Description>Identifies class or source of the DerivativeInstrumentPartyID (1293) value. 
+Required if DerivativeInstrumentPartyID(1293) is specified.
+See PartyIDSource(447) for complete definition.</Description>
    </Field>
-   <Field added="FIX.5.0" addedEP="52">
-		    <Tag>1295</Tag>
-		    <Name>DerivativeInstrumentPartyRole</Name>
-		    <Type>int</Type>
-		    <AbbrName>R</AbbrName>
-		    <NotReqXML>0</NotReqXML>
-		    <EnumDatatype>452</EnumDatatype>
-		    <Description>REfer to definition of PartyRole(452)</Description>
-	  </Field>
-   <Field added="FIX.5.0" addedEP="52">
-		    <Tag>1296</Tag>
-		    <Name>NoDerivativeInstrumentPartySubIDs</Name>
-		    <Type>NumInGroup</Type>
-		    <NotReqXML>1</NotReqXML>
-		    <Description>Refer to definition for NoPartySubIDs(802)</Description>
-	  </Field>
-   <Field added="FIX.5.0" addedEP="52">
-		    <Tag>1297</Tag>
-		    <Name>DerivativeInstrumentPartySubID</Name>
-		    <Type>String</Type>
-		    <AbbrName>ID</AbbrName>
-		    <NotReqXML>0</NotReqXML>
-		    <Description>Refer to definition for PartySubID(523)</Description>
-	  </Field>
-   <Field added="FIX.5.0" addedEP="52">
-		    <Tag>1298</Tag>
-		    <Name>DerivativeInstrumentPartySubIDType</Name>
-		    <Type>int</Type>
-		    <AbbrName>Typ</AbbrName>
-		    <NotReqXML>0</NotReqXML>
-		    <EnumDatatype>803</EnumDatatype>
-		    <Description>Refer to definition for PartySubIDType(803)</Description>
-	  </Field>
-   <Field added="FIX.5.0" addedEP="52" updated="FIX.5.0SP2" updatedEP="161">
+   <Field added="FIX.5.0" addedEP="52" updated="FIX.Latest" updatedEP="271">
+      <Tag>1295</Tag>
+      <Name>DerivativeInstrumentPartyRole</Name>
+      <Type>int</Type>
+      <AbbrName>R</AbbrName>
+      <NotReqXML>0</NotReqXML>
+      <EnumDatatype>452</EnumDatatype>
+      <Description>Identifies the type or role of the DerivativeInstrumentPartyID (1293) specified.
+See PartyRole(452) for complete definition.
+</Description>
+   </Field>
+   <Field added="FIX.5.0" addedEP="52" updated="FIX.Latest" updatedEP="271">
+      <Tag>1296</Tag>
+      <Name>NoDerivativeInstrumentPartySubIDs</Name>
+      <Type>NumInGroup</Type>
+      <NotReqXML>1</NotReqXML>
+      <Description>Number of derivative instrument party sub IDs.
+</Description>
+   </Field>
+   <Field added="FIX.5.0" addedEP="52" updated="FIX.Latest" updatedEP="271">
+      <Tag>1297</Tag>
+      <Name>DerivativeInstrumentPartySubID</Name>
+      <Type>String</Type>
+      <AbbrName>ID</AbbrName>
+      <NotReqXML>0</NotReqXML>
+      <Description>Party sub-identifier. 
+See PartySubID(523) for complete definition.</Description>
+   </Field>
+   <Field added="FIX.5.0" addedEP="52" updated="FIX.Latest" updatedEP="271">
+      <Tag>1298</Tag>
+      <Name>DerivativeInstrumentPartySubIDType</Name>
+      <Type>int</Type>
+      <AbbrName>Typ</AbbrName>
+      <NotReqXML>0</NotReqXML>
+      <EnumDatatype>803</EnumDatatype>
+      <Description>Type of party sub-identifier. 
+See PartySubIDType(803) for complete definition.</Description>
+   </Field>
+   <Field added="FIX.5.0" addedEP="52" updated="FIX.Latest" updatedEP="271">
       <Tag>1299</Tag>
       <Name>DerivativeExerciseStyle</Name>
       <Type>int</Type>
       <AbbrName>ExerStyle</AbbrName>
       <NotReqXML>0</NotReqXML>
       <EnumDatatype>1194</EnumDatatype>
-      <Description>Type of exercise of a derivatives security</Description>
+      <Description>Type of exercise.
+See ExerciseStyle(1194) for complete definition.</Description>
    </Field>
    <Field added="FIX.5.0" addedEP="52">
 		    <Tag>1300</Tag>
@@ -10728,13 +10830,13 @@ Values are bilaterally agreed.</Description>
 		    <NotReqXML>1</NotReqXML>
 		    <Description>Number of Market Segments on which a security may trade.</Description>
 	  </Field>
-   <Field added="FIX.5.0" addedEP="52">
-		    <Tag>1311</Tag>
-		    <Name>NoDerivativeInstrAttrib</Name>
-		    <Type>NumInGroup</Type>
-		    <NotReqXML>1</NotReqXML>
-		    <Description/>
-	  </Field>
+   <Field added="FIX.5.0" addedEP="52" updated="FIX.Latest" updatedEP="271">
+      <Tag>1311</Tag>
+      <Name>NoDerivativeInstrAttrib</Name>
+      <Type>NumInGroup</Type>
+      <NotReqXML>1</NotReqXML>
+      <Description>Number of instrument attributes.</Description>
+   </Field>
    <Field added="FIX.5.0" addedEP="52">
 		    <Tag>1312</Tag>
 		    <Name>NoNestedInstrAttrib</Name>
@@ -10742,100 +10844,116 @@ Values are bilaterally agreed.</Description>
 		    <NotReqXML>1</NotReqXML>
 		    <Description/>
 	  </Field>
-   <Field added="FIX.5.0" addedEP="52">
-		    <Tag>1313</Tag>
-		    <Name>DerivativeInstrAttribType</Name>
-		    <Type>int</Type>
-		    <AbbrName>Typ</AbbrName>
-		    <NotReqXML>0</NotReqXML>
-		    <EnumDatatype>871</EnumDatatype>
-		    <Description>Refer to definition of InstrAttribType(871)</Description>
-	  </Field>
-   <Field added="FIX.5.0" addedEP="52">
-		    <Tag>1314</Tag>
-		    <Name>DerivativeInstrAttribValue</Name>
-		    <Type>String</Type>
-		    <AbbrName>Val</AbbrName>
-		    <NotReqXML>0</NotReqXML>
-		    <Description>Refer to definition of InstrAttribValue(872)</Description>
-	  </Field>
-   <Field added="FIX.5.0" addedEP="52">
-		    <Tag>1315</Tag>
-		    <Name>DerivativePriceUnitOfMeasure</Name>
-		    <Type>String</Type>
-		    <AbbrName>PxUOM</AbbrName>
-		    <NotReqXML>0</NotReqXML>
-		    <EnumDatatype>996</EnumDatatype>
-		    <Description>Refer to definition for PriceUnitOfMeasure(1191)</Description>
-	  </Field>
-   <Field added="FIX.5.0" addedEP="52">
-		    <Tag>1316</Tag>
-		    <Name>DerivativePriceUnitOfMeasureQty</Name>
-		    <Type>Qty</Type>
-		    <AbbrName>PxUOMQty</AbbrName>
-		    <NotReqXML>0</NotReqXML>
-		    <Description>Refer to definition of PriceUnitOfMeasureQty(1192)</Description>
-	  </Field>
-   <Field added="FIX.5.0" addedEP="52" updated="FIX.5.0SP2" updatedEP="169">
+   <Field added="FIX.5.0" addedEP="52" updated="FIX.Latest" updatedEP="271">
+      <Tag>1313</Tag>
+      <Name>DerivativeInstrAttribType</Name>
+      <Type>int</Type>
+      <AbbrName>Typ</AbbrName>
+      <NotReqXML>0</NotReqXML>
+      <EnumDatatype>871</EnumDatatype>
+      <Description>Type of instrument attribute.
+See InstrAttribType(871) for complete definition.</Description>
+   </Field>
+   <Field added="FIX.5.0" addedEP="52" updated="FIX.Latest" updatedEP="271">
+      <Tag>1314</Tag>
+      <Name>DerivativeInstrAttribValue</Name>
+      <Type>String</Type>
+      <AbbrName>Val</AbbrName>
+      <NotReqXML>0</NotReqXML>
+      <Description>Attribute value appropriate to the DerivativeInstrAttribValue(1313) field. 
+See InstrAttribValue(872) for complete definition.</Description>
+   </Field>
+   <Field added="FIX.5.0" addedEP="52" updated="FIX.Latest" updatedEP="271">
+      <Tag>1315</Tag>
+      <Name>DerivativePriceUnitOfMeasure</Name>
+      <Type>String</Type>
+      <AbbrName>PxUOM</AbbrName>
+      <NotReqXML>0</NotReqXML>
+      <EnumDatatype>996</EnumDatatype>
+      <Description>Used to express the UOM of the price if different from the contract. 
+See PriceUnitOfMeasureQty(1191) for complete definition.</Description>
+   </Field>
+   <Field added="FIX.5.0" addedEP="52" updated="FIX.Latest" updatedEP="271">
+      <Tag>1316</Tag>
+      <Name>DerivativePriceUnitOfMeasureQty</Name>
+      <Type>Qty</Type>
+      <AbbrName>PxUOMQty</AbbrName>
+      <NotReqXML>0</NotReqXML>
+      <Description>Used to express the UOM Quantity of the price if different from the contract. 
+See PriceUnitOfMeasureQty(1192) for complete definition.</Description>
+   </Field>
+   <Field added="FIX.5.0" addedEP="52" updated="FIX.Latest" updatedEP="271">
       <Tag>1317</Tag>
       <Name>DerivativeSettlMethod</Name>
       <Type>String</Type>
       <AbbrName>SettlMeth</AbbrName>
       <NotReqXML>0</NotReqXML>
       <EnumDatatype>1193</EnumDatatype>
-      <Description>Settlement method for a contract or instrument. Additional values may be used with bilateral agreement.</Description>
+      <Description>Settlement method for a contract or instrument. 
+See SettlMethod(1193) for complete definition.</Description>
    </Field>
-   <Field added="FIX.5.0" addedEP="52">
-		    <Tag>1318</Tag>
-		    <Name>DerivativePriceQuoteMethod</Name>
-		    <Type>String</Type>
-		    <AbbrName>PxQteMeth</AbbrName>
-		    <NotReqXML>0</NotReqXML>
-		    <EnumDatatype>1196</EnumDatatype>
-		    <Description>Refer to definition of PriceQuoteMethod(1196)</Description>
-	  </Field>
-   <Field updated="FIX.5.0SP1" updatedEP="83" added="FIX.5.0" addedEP="52">
-		    <Tag>1319</Tag>
-		    <Name>DerivativeValuationMethod</Name>
-		    <Type>String</Type>
-		    <AbbrName>ValMeth</AbbrName>
-		    <NotReqXML>0</NotReqXML>
-		    <EnumDatatype>1197</EnumDatatype>
-		    <Description>Refer to definition of ValuationMethod(1197).</Description>
-	  </Field>
-   <Field added="FIX.5.0" addedEP="52">
-		    <Tag>1320</Tag>
-		    <Name>DerivativeListMethod</Name>
-		    <Type>int</Type>
-		    <AbbrName>ListMeth</AbbrName>
-		    <NotReqXML>0</NotReqXML>
-		    <EnumDatatype>1198</EnumDatatype>
-		    <Description>Indicates whether instruments are pre-listed only or can also be defined via user request</Description>
-	  </Field>
-   <Field added="FIX.5.0" addedEP="52">
-		    <Tag>1321</Tag>
-		    <Name>DerivativeCapPrice</Name>
-		    <Type>Price</Type>
-		    <AbbrName>CapPx</AbbrName>
-		    <NotReqXML>0</NotReqXML>
-		    <Description>Refer to definition of CapPrice(1199)</Description>
-	  </Field>
-   <Field added="FIX.5.0" addedEP="52">
-		    <Tag>1322</Tag>
-		    <Name>DerivativeFloorPrice</Name>
-		    <Type>Price</Type>
-		    <AbbrName>FlrPx</AbbrName>
-		    <NotReqXML>0</NotReqXML>
-		    <Description>Refer to definition of FloorPrice(1200)</Description>
-	  </Field>
-   <Field added="FIX.5.0" addedEP="52" updated="FIX.5.0SP2" updatedEP="238">
+   <Field added="FIX.5.0" addedEP="52" updated="FIX.Latest" updatedEP="271">
+      <Tag>1318</Tag>
+      <Name>DerivativePriceQuoteMethod</Name>
+      <Type>String</Type>
+      <AbbrName>PxQteMeth</AbbrName>
+      <NotReqXML>0</NotReqXML>
+      <EnumDatatype>1196</EnumDatatype>
+      <Description>Specifies the method for price quotation.
+See PriceQuoteMethod(1196) for complete definition.
+</Description>
+   </Field>
+   <Field updated="FIX.Latest" updatedEP="271" added="FIX.5.0" addedEP="52">
+      <Tag>1319</Tag>
+      <Name>DerivativeValuationMethod</Name>
+      <Type>String</Type>
+      <AbbrName>ValMeth</AbbrName>
+      <NotReqXML>0</NotReqXML>
+      <EnumDatatype>1197</EnumDatatype>
+      <Description>Specifies the method for price quotation.
+See ValuationMethod(1197) for complete definition.
+</Description>
+   </Field>
+   <Field added="FIX.5.0" addedEP="52" updated="FIX.Latest" updatedEP="271">
+      <Tag>1320</Tag>
+      <Name>DerivativeListMethod</Name>
+      <Type>int</Type>
+      <AbbrName>ListMeth</AbbrName>
+      <NotReqXML>0</NotReqXML>
+      <EnumDatatype>1198</EnumDatatype>
+      <Description>Indicates whether instruments are pre-listed only or can also be defined via user request. 
+See ListMethod(1198) for complete definition.
+</Description>
+   </Field>
+   <Field added="FIX.5.0" addedEP="52" updated="FIX.Latest" updatedEP="271">
+      <Tag>1321</Tag>
+      <Name>DerivativeCapPrice</Name>
+      <Type>Price</Type>
+      <AbbrName>CapPx</AbbrName>
+      <NotReqXML>0</NotReqXML>
+      <Description>Used to express the ceiling price of a capped call.
+See CapPrice(1199) for complete definition.</Description>
+   </Field>
+   <Field added="FIX.5.0" addedEP="52" updated="FIX.Latest" updatedEP="271">
+      <Tag>1322</Tag>
+      <Name>DerivativeFloorPrice</Name>
+      <Type>Price</Type>
+      <AbbrName>FlrPx</AbbrName>
+      <NotReqXML>0</NotReqXML>
+      <Description>Used to express the floor price of a capped put.
+See FloorPrice(1200) for complete definition.
+</Description>
+   </Field>
+   <Field added="FIX.5.0" addedEP="52" updated="FIX.Latest" updatedEP="271">
       <Tag>1323</Tag>
       <Name>DerivativePutOrCall</Name>
       <Type>int</Type>
       <AbbrName>PutCall</AbbrName>
       <NotReqXML>0</NotReqXML>
       <EnumDatatype>201</EnumDatatype>
-      <Description>Indicates whether an option contract is a put, call, chooser or undetermined.</Description>
+      <Description>Indicates whether an option contract is a put, call, chooser or undetermined. 
+See PutOrCall(201) for complete definition.
+</Description>
    </Field>
    <Field added="FIX.5.0" addedEP="52" updated="FIX.5.0SP2" updatedEP="128">
       <Tag>1324</Tag>
@@ -11043,12 +11161,15 @@ Values are bilaterally agreed.</Description>
       <NotReqXML>0</NotReqXML>
       <Description>Refer to definition for SecurityAltID(455)</Description>
    </Field>
-   <Field added="FIX.5.0" addedEP="55" deprecated="FIX.5.0SP2" deprecatedEP="187">
+   <Field added="FIX.5.0" addedEP="55" deprecated="FIX.5.0SP2" deprecatedEP="187"
+          updated="FIX.Latest"
+          updatedEP="271">
       <Tag>1336</Tag>
       <Name>UnderlyingLegSecurityAltIDSource</Name>
       <Type>String</Type>
       <AbbrName>AltIDSrc</AbbrName>
       <NotReqXML>0</NotReqXML>
+      <UnionDataType>Reserved100Plus</UnionDataType>
       <Description>Refer to definition for SecurityAltIDSource(456)</Description>
    </Field>
    <Field added="FIX.5.0" addedEP="55" deprecated="FIX.5.0SP2" deprecatedEP="187">
@@ -11751,16 +11872,15 @@ Primarily used by futures exchanges to indicate the CTICode (customer type indic
 		    <NotReqXML>0</NotReqXML>
 		    <Description>Indicates the type of multiplier being applied to the contract. Can be optionally used to further define what unit ContractMultiplier(tag 231) is expressed in.</Description>
 	  </Field>
-   <Field added="FIX.5.0SP1" addedEP="80">
-		    <Tag>1436</Tag>
-		    <Name>LegContractMultiplierUnit</Name>
-		    <Type>int</Type>
-		    <AbbrName>MultTyp</AbbrName>
-		    <NotReqXML>0</NotReqXML>
-		    <EnumDatatype>1435</EnumDatatype>
-		    <Description>"Indicates the type of multiplier being applied to the contract. Can be optionally used to further define what unit LegContractMultiplier(tag 614) is expressed in.
-</Description>
-	  </Field>
+   <Field added="FIX.5.0SP1" addedEP="80" updated="FIX.Latest" updatedEP="271">
+      <Tag>1436</Tag>
+      <Name>LegContractMultiplierUnit</Name>
+      <Type>int</Type>
+      <AbbrName>MultTyp</AbbrName>
+      <NotReqXML>0</NotReqXML>
+      <EnumDatatype>1435</EnumDatatype>
+      <Description>Indicates the type of multiplier being applied to the contract. Can be optionally used to further define what unit LegContractMultiplier(614) is expressed in.</Description>
+   </Field>
    <Field added="FIX.5.0SP1" addedEP="80" updated="FIX.5.0SP2" updatedEP="204">
       <Tag>1437</Tag>
       <Name>UnderlyingContractMultiplierUnit</Name>
@@ -11771,15 +11891,17 @@ Primarily used by futures exchanges to indicate the CTICode (customer type indic
       <Description>Indicates the type of multiplier being applied to the contract. </Description>
       <Elaboration>Can be optionally used to further define what unit UnderlyingContractMultiplier(436) is expressed in.</Elaboration>
    </Field>
-   <Field added="FIX.5.0SP1" addedEP="80">
-		    <Tag>1438</Tag>
-		    <Name>DerivativeContractMultiplierUnit</Name>
-		    <Type>int</Type>
-		    <AbbrName>MultTyp</AbbrName>
-		    <NotReqXML>0</NotReqXML>
-		    <EnumDatatype>1435</EnumDatatype>
-		    <Description>Indicates the type of multiplier being applied to the contract. Can be optionally used to further define what unit DerivativeContractMultiplier(tag 1266)is expressed in.</Description>
-	  </Field>
+   <Field added="FIX.5.0SP1" addedEP="80" updated="FIX.Latest" updatedEP="271">
+      <Tag>1438</Tag>
+      <Name>DerivativeContractMultiplierUnit</Name>
+      <Type>int</Type>
+      <AbbrName>MultTyp</AbbrName>
+      <NotReqXML>0</NotReqXML>
+      <EnumDatatype>1435</EnumDatatype>
+      <Description>Indicates the type of multiplier being applied to the contract. Can be optionally used to further define what unit DerivativeContractMultiplier(1266)is expressed in.
+See ContractMultiplierUnit(1435) for complete definition.
+</Description>
+   </Field>
    <Field added="FIX.5.0SP1" addedEP="80" updated="FIX.5.0SP2" updatedEP="238">
       <Tag>1439</Tag>
       <Name>FlowScheduleType</Name>
@@ -11809,16 +11931,18 @@ Primarily used by futures exchanges to indicate the CTICode (customer type indic
 		    <UnionDataType>Reserved100Plus</UnionDataType>
 		    <Description>The industry standard flow schedule by which electricity or natural gas is traded. Schedules exist by regions and on-peak and off-peak status, such as "Western Peak".</Description>
 	  </Field>
-   <Field added="FIX.5.0SP1" addedEP="80">
-		    <Tag>1442</Tag>
-		    <Name>DerivativeFlowScheduleType</Name>
-		    <Type>int</Type>
-		    <AbbrName>FlowSchedTyp</AbbrName>
-		    <NotReqXML>0</NotReqXML>
-		    <EnumDatatype>1439</EnumDatatype>
-		    <UnionDataType>Reserved100Plus</UnionDataType>
-		    <Description>The industry standard flow schedule by which electricity or natural gas is traded. Schedules exist by regions and on-peak and off-peak status, such as "Western Peak".</Description>
-	  </Field>
+   <Field added="FIX.5.0SP1" addedEP="80" updated="FIX.Latest" updatedEP="271">
+      <Tag>1442</Tag>
+      <Name>DerivativeFlowScheduleType</Name>
+      <Type>int</Type>
+      <AbbrName>FlowSchedTyp</AbbrName>
+      <NotReqXML>0</NotReqXML>
+      <EnumDatatype>1439</EnumDatatype>
+      <UnionDataType>Reserved100Plus</UnionDataType>
+      <Description>The industry standard flow schedule by which electricity or natural gas is traded. Schedules exist by regions and on-peak and off-peak status, such as "Western Peak".
+See FlowScheduleType(1439) for complete definition.
+</Description>
+   </Field>
    <Field added="FIX.5.0SP1" addedEP="81">
 		    <Tag>1443</Tag>
 		    <Name>FillLiquidityInd</Name>
@@ -12034,21 +12158,23 @@ Same values as PartyRole (452)</Description>
 		    <NotReqXML>0</NotReqXML>
 		    <Description>Specifies a description or name of a Security List.</Description>
 	  </Field>
-   <Field added="FIX.5.0SP1" addedEP="87">
-		    <Tag>1468</Tag>
-		    <Name>EncodedSecurityListDescLen</Name>
-		    <Type>Length</Type>
-		    <AssociatedDataTag>1469</AssociatedDataTag>
-		    <NotReqXML>1</NotReqXML>
-		    <Description>Byte length of encoded (non-ASCII characters) EncodedSecurityListDesc (tbd) field.</Description>
-	  </Field>
-   <Field added="FIX.5.0SP1" addedEP="87">
-		    <Tag>1469</Tag>
-		    <Name>EncodedSecurityListDesc</Name>
-		    <Type>data</Type>
-		    <NotReqXML>1</NotReqXML>
-		    <Description>Encoded (non-ASCII characters) representation of the SecurityListDesc (1467) field in the encoded format specified via the MessageEncoding (347) field. If used, the ASCII (English) representation should also be specified in the SecurityListDesc field.</Description>
-	  </Field>
+   <Field added="FIX.5.0SP1" addedEP="87" updated="FIX.Latest" updatedEP="271">
+      <Tag>1468</Tag>
+      <Name>EncodedSecurityListDescLen</Name>
+      <Type>Length</Type>
+      <AssociatedDataTag>1469</AssociatedDataTag>
+      <AbbrName>EncListDescLen</AbbrName>
+      <NotReqXML>0</NotReqXML>
+      <Description>Byte length of encoded (non-ASCII characters) EncodedSecurityListDesc(1469) field.</Description>
+   </Field>
+   <Field added="FIX.5.0SP1" addedEP="87" updated="FIX.Latest" updatedEP="271">
+      <Tag>1469</Tag>
+      <Name>EncodedSecurityListDesc</Name>
+      <Type>data</Type>
+      <AbbrName>EncListDesc</AbbrName>
+      <NotReqXML>0</NotReqXML>
+      <Description>Encoded (non-ASCII characters) representation of the SecurityListDesc(1467) field in the encoded format specified via the MessageEncoding(347) field. If used, the ASCII (English) representation should also be specified in the SecurityListDesc(1467) field.</Description>
+   </Field>
    <Field added="FIX.5.0SP1" addedEP="87">
 		    <Tag>1470</Tag>
 		    <Name>SecurityListType</Name>
@@ -12075,15 +12201,15 @@ Same values as PartyRole (452)</Description>
 		    <NotReqXML>0</NotReqXML>
 		    <Description>Unique identifier for a News message</Description>
 	  </Field>
-   <Field added="FIX.5.0SP1" addedEP="90">
-		    <Tag>1473</Tag>
-		    <Name>NewsCategory</Name>
-		    <Type>int</Type>
-		    <AbbrName>NewsCatgy</AbbrName>
-		    <NotReqXML>0</NotReqXML>
-		    <UnionDataType>Reserved100Plus</UnionDataType>
-		    <Description>Category of news mesage.</Description>
-	  </Field>
+   <Field added="FIX.5.0SP1" addedEP="90" updated="FIX.Latest" updatedEP="271">
+      <Tag>1473</Tag>
+      <Name>NewsCategory</Name>
+      <Type>int</Type>
+      <AbbrName>NewsCatgy</AbbrName>
+      <NotReqXML>0</NotReqXML>
+      <UnionDataType>Reserved100Plus</UnionDataType>
+      <Description>Category of news message.</Description>
+   </Field>
    <Field added="FIX.5.0SP1" addedEP="90">
 		    <Tag>1474</Tag>
 		    <Name>LanguageCode</Name>
@@ -12599,12 +12725,13 @@ For Quotes: The period of time a quoted price is tradable(i.e. on-the-wire) befo
       <UnionDataType>Reserved100Plus</UnionDataType>
       <Description>Identifies class or source of the RelatedSecurityID (1650) value. </Description>
    </Field>
-   <Field added="FIX.5.0SP2" addedEP="103" updated="FIX.5.0SP2" updatedEP="187">
+   <Field added="FIX.5.0SP2" addedEP="103" updated="FIX.Latest" updatedEP="271">
       <Tag>1652</Tag>
       <Name>RelatedSecurityType</Name>
       <Type>String</Type>
       <AbbrName>SecTyp</AbbrName>
       <NotReqXML>0</NotReqXML>
+      <EnumDatatype>167</EnumDatatype>
       <Description>Security type of the related instrument. </Description>
    </Field>
    <Field added="FIX.5.0SP2" addedEP="103" updated="FIX.5.0SP2" updatedEP="187">
@@ -12854,14 +12981,16 @@ See SecurityIDSource(22) field for description.</Description>
       <Description>Used to limit instrument scope to specified security alternate identifier.
 See SecurityAltID(455) field for description.</Description>
    </Field>
-   <Field added="FIX.5.0SP2" addedEP="105">
+   <Field added="FIX.5.0SP2" addedEP="105" updated="FIX.Latest" updatedEP="271">
       <Tag>1542</Tag>
       <Name>InstrumentScopeSecurityAltIDSource</Name>
       <Type>String</Type>
       <AbbrName>AltIDSrc</AbbrName>
       <NotReqXML>0</NotReqXML>
+      <EnumDatatype>22</EnumDatatype>
+      <UnionDataType>Reserved100Plus</UnionDataType>
       <Description>Used to limit instrument scope to specified security alternate identifier source.
-See SecurityAltIDSource(456) field for description.</Description>
+See SecurityAltIDSource(456) field for complete definition.</Description>
    </Field>
    <Field added="FIX.5.0SP2" addedEP="105">
       <Tag>1543</Tag>
@@ -13150,20 +13279,22 @@ See SettlType(63) field for description.</Description>
       <Description>Used to limit instrument scope to specified security exchange.
 See SecurityExchange(207) field for description.</Description>
    </Field>
-   <Field added="FIX.5.0SP2" addedEP="105" updated="FIX.5.0SP2" updatedEP="208">
+   <Field added="FIX.5.0SP2" addedEP="105" updated="FIX.Latest" updatedEP="271">
       <Tag>1620</Tag>
       <Name>InstrumentScopeEncodedSecurityDescLen</Name>
       <Type>Length</Type>
       <AssociatedDataTag>1621</AssociatedDataTag>
-      <NotReqXML>1</NotReqXML>
+      <AbbrName>EncDescLen</AbbrName>
+      <NotReqXML>0</NotReqXML>
       <Description>Byte length of encoded (non-ASCII characters) InstrumentScopeEncodedSecurityDesc (1621) field</Description>
    </Field>
-   <Field added="FIX.5.0SP2" addedEP="105">
+   <Field added="FIX.5.0SP2" addedEP="105" updated="FIX.Latest" updatedEP="271">
       <Tag>1621</Tag>
       <Name>InstrumentScopeEncodedSecurityDesc</Name>
       <Type>data</Type>
-      <NotReqXML>1</NotReqXML>
-      <Description>Encoded (non-ASCII characters) representation of the InstrumentScopeSecurityDesc (1556) field in the encoded format specified via the MessageEncoding (347) field. If used, the ASCII (English) representation should also be specified in the InstrumentScopeSecurityDesc field.</Description>
+      <AbbrName>EncDesc</AbbrName>
+      <NotReqXML>0</NotReqXML>
+      <Description>Encoded (non-ASCII characters) representation of the InstrumentScopeSecurityDesc(1556) field in the encoded format specified via the MessageEncoding(347) field. If used, the ASCII (English) representation should also be specified in the InstrumentScopeSecurityDesc(1556) field.</Description>
    </Field>
    <Field added="FIX.5.0SP2" addedEP="105">
       <Tag>1656</Tag>
@@ -13492,13 +13623,14 @@ Also used in pricing Trade at Settlement (TAS) and Trade At Marker (TAM) contrac
       <NotReqXML>0</NotReqXML>
       <Description>Default currency in which the price is quoted. Defined at the instrument level. Used in place of Currency (tag 15) to express the currency of a product when the former is implemented as the FX dealt currency.</Description>
    </Field>
-   <Field added="FIX.5.0SP2" addedEP="107">
+   <Field added="FIX.5.0SP2" addedEP="107" updated="FIX.Latest" updatedEP="271">
       <Tag>1576</Tag>
       <Name>DerivativePriceQuoteCurrency</Name>
       <Type>Currency</Type>
       <AbbrName>PxQteCcy</AbbrName>
       <NotReqXML>0</NotReqXML>
-      <Description>Default currency in which the price is quoted. Defined at the instrument level. Used in place of Currency (tag 15) to express the currency of a product when the former is implemented as the FX dealt currency.</Description>
+      <Description>Default currency in which the price is quoted. Defined at the instrument level. Used in place of Currency(tag 15) to express the currency of a product when the former is implemented as the FX dealt currency.
+See PriceQuoteCurrency(1524) for complete definition.</Description>
    </Field>
    <Field added="FIX.5.0SP2" addedEP="107">
       <Tag>1582</Tag>
@@ -13976,21 +14108,21 @@ Also used in pricing Trade at Settlement (TAS) and Trade At Marker (TAM) contrac
       <NotReqXML>0</NotReqXML>
       <Description>Firm reference information, usually internal information, that is part of the initial message. The information would not be carried forward (e.g to Take-up Firm) and preserved with the transaction.</Description>
    </Field>
-   <Field added="FIX.5.0SP2" addedEP="118" updated="FIX.5.0SP2" updatedEP="141">
+   <Field added="FIX.5.0SP2" addedEP="118" updated="FIX.Latest" updatedEP="271">
       <Tag>1733</Tag>
       <Name>EncodedFirmAllocTextLen</Name>
       <Type>Length</Type>
       <AssociatedDataTag>1734</AssociatedDataTag>
       <AbbrName>EncFirmTxtLen</AbbrName>
-      <NotReqXML>1</NotReqXML>
+      <NotReqXML>0</NotReqXML>
       <Description>Byte length of encoded (non-ASCII characters) EncodedFirmAllocText(1734) field.</Description>
    </Field>
-   <Field added="FIX.5.0SP2" addedEP="118" updated="FIX.5.0SP2" updatedEP="141">
+   <Field added="FIX.5.0SP2" addedEP="118" updated="FIX.Latest" updatedEP="271">
       <Tag>1734</Tag>
       <Name>EncodedFirmAllocText</Name>
       <Type>data</Type>
       <AbbrName>EncFirmTxt</AbbrName>
-      <NotReqXML>1</NotReqXML>
+      <NotReqXML>0</NotReqXML>
       <Description>Encoded (non-ASCII characters) representation of the FirmAllocText(1732) field in the encoded format specified via the MessageEncoding(347) field. If used, the ASCII (English) represention should also be specified in FirmAllocText(1732) field.</Description>
    </Field>
    <Field added="FIX.5.0SP2" addedEP="118" updated="FIX.5.0SP2" updatedEP="141">
@@ -14147,21 +14279,27 @@ Also used in pricing Trade at Settlement (TAS) and Trade At Marker (TAM) contrac
       <NotReqXML>0</NotReqXML>
       <Description>Indicates the currency of the price unit of measure. Conditionally required when LegPriceUnitOfMeasure(1421) = Ccy</Description>
    </Field>
-   <Field added="FIX.5.0SP2" addedEP="122">
+   <Field added="FIX.5.0SP2" addedEP="122" updated="FIX.Latest" updatedEP="271">
       <Tag>1722</Tag>
       <Name>DerivativeUnitOfMeasureCurrency</Name>
       <Type>Currency</Type>
       <AbbrName>UOMCcy</AbbrName>
       <NotReqXML>0</NotReqXML>
-      <Description>Indicates the currency of the unit of measure. Conditionally required when DerivativeUnitOfMeasure(1269) = Ccy</Description>
+      <Description>Indicates the currency of the unit of measure.
+Conditionally required when DerivativeUnitOfMeasure(1269) = Ccy.
+See UnitOfMeasureCurrency(1716) for complete definition.  
+</Description>
    </Field>
-   <Field added="FIX.5.0SP2" addedEP="122">
+   <Field added="FIX.5.0SP2" addedEP="122" updated="FIX.Latest" updatedEP="271">
       <Tag>1723</Tag>
       <Name>DerivativePriceUnitOfMeasureCurrency</Name>
       <Type>Currency</Type>
       <AbbrName>PxUOMCcy</AbbrName>
       <NotReqXML>0</NotReqXML>
-      <Description>Indicates the currency of the price unit of measure. Conditionally required when DerivativePriceUnitOfMeasure(1315) = Ccy</Description>
+      <Description>Indicates the currency of the price unit of measure. 
+Conditionally required when DerivativePriceUnitOfMeasure(1315) = Ccy.
+See PriceUnitOfMeasureCurrency(1717) for complete definition.
+</Description>
    </Field>
    <Field added="FIX.5.0SP2" addedEP="124">
       <Tag>1744</Tag>
@@ -14430,10 +14568,10 @@ Also used in pricing Trade at Settlement (TAS) and Trade At Marker (TAM) contrac
       <NotReqXML>0</NotReqXML>
       <Description>Unique identifier for a specific NoEntitlements(1773) repeating group instance.</Description>
    </Field>
-   <Field added="FIX.5.0SP2" addedEP="129">
+   <Field added="FIX.5.0SP2" addedEP="129" updated="FIX.Latest" updatedEP="271">
       <Tag>1777</Tag>
       <Name>NoEntitlementAttrib</Name>
-      <Type>int</Type>
+      <Type>NumInGroup</Type>
       <NotReqXML>0</NotReqXML>
       <Description>Number of entitlement attributes.</Description>
    </Field>
@@ -15592,13 +15730,13 @@ For a QuoteRequest(35=R) message, this is the time by which the Quote(35=S) mess
       <NotReqXML>0</NotReqXML>
       <Description>Identifies the event which caused origination of the identifier in RegulatoryTradeID(1903). When more than one event is the cause, use the higher enumeration value.  For example, if the identifier is originated due to an allocated trade which was cleared and reported, use the enumeration value 2 (Clearing).</Description>
    </Field>
-   <Field added="FIX.5.0SP2" addedEP="161">
+   <Field added="FIX.5.0SP2" addedEP="161" updated="FIX.Latest" updatedEP="271">
       <Tag>1905</Tag>
       <Name>RegulatoryTradeIDSource</Name>
       <Type>String</Type>
       <AbbrName>Src</AbbrName>
       <NotReqXML>0</NotReqXML>
-      <Description>Identifies the reporting entity that originated the value in RegulatoryTradeID(1903). The reporting entitiy identifier may be assigned by a regulator.</Description>
+      <Description>Identifies the reporting entity that originated the value in RegulatoryTradeID(1903). The reporting entity identifier may be assigned by a regulator.</Description>
    </Field>
    <Field added="FIX.5.0SP2" addedEP="161" updated="FIX.5.0SP2" updatedEP="222">
       <Tag>1906</Tag>
@@ -16245,14 +16383,14 @@ Other values may be used by mutual agreement of the counterparties.</Description
       <UnionDataType>Reserved100Plus</UnionDataType>
       <Description>The day count convention used in interest calculations for a bond or an interest bearing security.</Description>
    </Field>
-   <Field added="FIX.5.0SP2" addedEP="161">
+   <Field added="FIX.5.0SP2" addedEP="161" updated="FIX.Latest" updatedEP="271">
       <Tag>1994</Tag>
       <Name>UnderlyingObligationID</Name>
       <Type>String</Type>
       <AbbrName>ObligID</AbbrName>
       <NotReqXML>0</NotReqXML>
       <Description>For a CDS basket or pool identifies the reference obligation.</Description>
-      <Elaboration>UnderlyingObligationID(1994) is reserved for the reference entity for baskets or pools. In a CDS single name the reference entity is identified in insrument ID and the obligations are identified in UnderlyingObligationID(1994).</Elaboration>
+      <Elaboration>UnderlyingObligationID(1994) is reserved for the reference entity for baskets or pools. In a CDS single name the reference entity is identified in instrument ID and the obligations are identified in UnderlyingObligationID(1994).</Elaboration>
    </Field>
    <Field added="FIX.5.0SP2" addedEP="161">
       <Tag>1995</Tag>
@@ -16390,14 +16528,14 @@ Other values may be used by mutual agreement of the counterparties.</Description
       <EnumDatatype>1049</EnumDatatype>
       <Description>Method under which assignment was conducted</Description>
    </Field>
-   <Field added="FIX.5.0SP2" addedEP="161">
+   <Field added="FIX.5.0SP2" addedEP="161" updated="FIX.Latest" updatedEP="271">
       <Tag>2011</Tag>
       <Name>UnderlyingSecurityStatus</Name>
       <Type>String</Type>
       <AbbrName>Status</AbbrName>
       <NotReqXML>0</NotReqXML>
       <EnumDatatype>965</EnumDatatype>
-      <Description>Gives the current state of the instrument</Description>
+      <Description>Indicates the current state of the underlying instrument.</Description>
    </Field>
    <Field added="FIX.5.0SP2" addedEP="161">
       <Tag>2012</Tag>
@@ -17267,13 +17405,13 @@ Other values may be used by mutual agreement of the counterparties.</Description
       <NotReqXML>0</NotReqXML>
       <Description>The type of quote used to determine the cash settlement price.</Description>
    </Field>
-   <Field added="FIX.5.0SP2" addedEP="161" updated="FIX.5.0SP2" updatedEP="169">
+   <Field added="FIX.5.0SP2" addedEP="161" updated="FIX.Latest" updatedEP="271">
       <Tag>40028</Tag>
       <Name>CashSettlQuoteAmount</Name>
       <Type>Amt</Type>
       <AbbrName>QteAmt</AbbrName>
       <NotReqXML>0</NotReqXML>
-      <Description>When determining the cash settlement amount, if weighted average price quotes are to be obtained for the reference obligation, this is the upper limit to the outstanding principal balance of the reference obligation for which the quote should be obtained. If not specifed, the ISDA definitions provide for a fallback amount equal to floating rate payer calculation amount.</Description>
+      <Description>When determining the cash settlement amount, if weighted average price quotes are to be obtained for the reference obligation, this is the upper limit to the outstanding principal balance of the reference obligation for which the quote should be obtained. If not specified, the ISDA definitions provide for a fallback amount equal to floating rate payer calculation amount.</Description>
       <Elaboration>ISDA 2003 Term: Quotation Amount.</Elaboration>
    </Field>
    <Field added="FIX.5.0SP2" addedEP="161">
@@ -17284,13 +17422,13 @@ Other values may be used by mutual agreement of the counterparties.</Description
       <NotReqXML>0</NotReqXML>
       <Description>Specifies the currency the CashSettlQuoteAmount(40028) is denominated in.  Uses ISO 4217 Currency Code.</Description>
    </Field>
-   <Field added="FIX.5.0SP2" addedEP="161">
+   <Field added="FIX.5.0SP2" addedEP="161" updated="FIX.Latest" updatedEP="271">
       <Tag>40030</Tag>
       <Name>CashSettlMinimumQuoteAmount</Name>
       <Type>Amt</Type>
       <AbbrName>MinQteAmt</AbbrName>
       <NotReqXML>0</NotReqXML>
-      <Description>When determining the cash settlement amount, if weighted average price quotes are to be obtained for the reference obligation, this is the minimum intended threshold amount of outstanding principal balance of the reference obligation for which the quote should be obtained.  If not specified, the ISDA definitions provide for a fallback amount of the lower of either USD1,000,000 (or its equivalent in the relevent obligation currency) or the (minimum) quoted amount.</Description>
+      <Description>When determining the cash settlement amount, if weighted average price quotes are to be obtained for the reference obligation, this is the minimum intended threshold amount of outstanding principal balance of the reference obligation for which the quote should be obtained. If not specified, the ISDA definitions provide for a fallback amount of the lower of either USD1,000,000 (or its equivalent in the relevant obligation currency) or the (minimum) quoted amount.</Description>
       <Elaboration>ISDA 2003 Term: Minimum Quotation Amount.</Elaboration>
    </Field>
    <Field added="FIX.5.0SP2" addedEP="161">
@@ -17410,13 +17548,15 @@ For physical settlement this specifies whether the buyer should deliver the obli
       <NotReqXML>0</NotReqXML>
       <Description>The publication date of the applicable version of the contract matrix. If not specified, the ISDA Standard Terms Supplement defines rules for which version of the matrix is applicable.</Description>
    </Field>
-   <Field added="FIX.5.0SP2" addedEP="161">
+   <Field added="FIX.5.0SP2" addedEP="161" updated="FIX.Latest" updatedEP="271">
       <Tag>40045</Tag>
       <Name>ContractualMatrixTerm</Name>
       <Type>String</Type>
       <AbbrName>Trm</AbbrName>
       <NotReqXML>0</NotReqXML>
-      <Description>Specifies the applicable key into the relevent contract matrix.  In the case of 2000 ISDA Definitions Settlement Matrix for Early Termination and Swaptions, the ContractualMatrixTerm(40045) is not applicable and is to be omitted. See http://www.fpml.org/coding-scheme/credit-matrix-transaction-type for values.</Description>
+      <Description>Specifies the applicable key into the relevant contract matrix. In the case of 2000 ISDA Definitions Settlement Matrix for Early Termination and Swaptions, the ContractualMatrixTerm(40045) is not applicable and is to be omitted. 
+See http://www.fpml.org/coding-scheme/credit-matrix-transaction-type for values.
+</Description>
    </Field>
    <Field added="FIX.5.0SP2" addedEP="161">
       <Tag>40046</Tag>
@@ -18688,13 +18828,12 @@ See http://www.fixtradingcommunity.org/codelists#Protection_Term_Event_Types for
       <NotReqXML>0</NotReqXML>
       <Description>Time unit associated with protection term events.</Description>
    </Field>
-   <Field added="FIX.5.0SP2" addedEP="161">
+   <Field added="FIX.5.0SP2" addedEP="161" updated="FIX.Latest" updatedEP="271">
       <Tag>40197</Tag>
       <Name>ProtectionTermEventDayType</Name>
       <Type>int</Type>
       <AbbrName>DayTyp</AbbrName>
       <NotReqXML>0</NotReqXML>
-      <EnumDatatype>40810</EnumDatatype>
       <Description>Day type for events that specify a period and unit. </Description>
    </Field>
    <Field added="FIX.5.0SP2" addedEP="161">
@@ -18760,22 +18899,22 @@ See http://www.fixtradingcommunity.org/codelists#Protection_Term_Obligation_Type
       <NotReqXML>0</NotReqXML>
       <Description>Specifies the currency of physical settlement.  Uses ISO 4217 currency codes.</Description>
    </Field>
-   <Field added="FIX.5.0SP2" addedEP="161">
+   <Field added="FIX.5.0SP2" addedEP="161" updated="FIX.Latest" updatedEP="271">
       <Tag>40206</Tag>
       <Name>PhysicalSettlBusinessDays</Name>
       <Type>int</Type>
       <AbbrName>BizDays</AbbrName>
       <NotReqXML>0</NotReqXML>
-      <Description>The number of business days used in the determination of physical settlement. Its precise meaning is dependant on the context in which this element is used. </Description>
+      <Description>The number of business days used in the determination of physical settlement. Its precise meaning depends on the context in which this element is used.</Description>
       <Elaboration>ISDA 2003 Term: Business Day.</Elaboration>
    </Field>
-   <Field added="FIX.5.0SP2" addedEP="161">
+   <Field added="FIX.5.0SP2" addedEP="161" updated="FIX.Latest" updatedEP="271">
       <Tag>40207</Tag>
       <Name>PhysicalSettlMaximumBusinessDays</Name>
       <Type>int</Type>
       <AbbrName>MaxBizDays</AbbrName>
       <NotReqXML>0</NotReqXML>
-      <Description>A maximum number of business days. Its precise meaning is dependant on the context in which this element is used. Intended to be used to limit a particular ISDA fallback provision.</Description>
+      <Description>A maximum number of business days. Its precise meaning depends on the context in which this element is used. Intended to be used to limit a particular ISDA fallback provision.</Description>
    </Field>
    <Field added="FIX.5.0SP2" addedEP="161">
       <Tag>40208</Tag>
@@ -19747,14 +19886,14 @@ See http://www.fpml.org/coding-scheme/business-center for standard 4-character c
       <NotReqXML>0</NotReqXML>
       <Description>The adjusted fixing date.</Description>
    </Field>
-   <Field added="FIX.5.0SP2" addedEP="161" updated="FIX.5.0SP2" updatedEP="208">
+   <Field added="FIX.5.0SP2" addedEP="161" updated="FIX.Latest" updatedEP="271">
       <Tag>40323</Tag>
       <Name>LegPaymentStreamRateCutoffDateOffsetPeriod</Name>
       <Type>int</Type>
       <AbbrName>CutoffPeriod</AbbrName>
       <NotReqXML>0</NotReqXML>
       <Description>Time unit multiplier for the relative rate cut-off date offset.</Description>
-      <Elaboration>This is generally the number of days preceeding the period end date or termination date, as appropriate, for the specified floating rate index.  </Elaboration>
+      <Elaboration>This is generally the number of days preceding the period end date or termination date, as appropriate, for the specified floating rate index.</Elaboration>
    </Field>
    <Field added="FIX.5.0SP2" addedEP="161" updated="FIX.5.0SP2" updatedEP="208">
       <Tag>40324</Tag>
@@ -21555,14 +21694,13 @@ See http://www.fixtradingcommunity.org/codelists#Relative_To_Date for values.</D
       <NotReqXML>0</NotReqXML>
       <Description>The party identifier/code for the payment settlement party. </Description>
    </Field>
-   <Field added="FIX.5.0SP2" addedEP="161">
+   <Field added="FIX.5.0SP2" addedEP="161" updated="FIX.Latest" updatedEP="271">
       <Tag>40535</Tag>
       <Name>LegProvisionPartyIDSource</Name>
       <Type>char</Type>
       <AbbrName>Src</AbbrName>
       <NotReqXML>0</NotReqXML>
       <EnumDatatype>447</EnumDatatype>
-      <UnionDataType>Reserved4000Plus</UnionDataType>
       <Description>Identifies the class or source of LegProvisionPartyID(40534). </Description>
    </Field>
    <Field added="FIX.5.0SP2" addedEP="161">
@@ -22539,9 +22677,9 @@ See http://www.fpml.org/coding-scheme/business-center for standard 4-character c
       <NotReqXML>0</NotReqXML>
       <Description>The non-deliverable settlement reference currency.  Uses ISO 4217 currency codes.</Description>
    </Field>
-   <Field added="FIX.5.0SP2" addedEP="161">
+   <Field added="FIX.5.0SP2" addedEP="161" updated="FIX.Latest" updatedEP="271">
       <Tag>40649</Tag>
-      <Name>UnderlyingPaymentStreamNonDeliverableFixingDatesBusinessDayConvention</Name>
+      <Name>UnderlyingPaymentStreamNonDeliverableFixingDatesBizDayConvention</Name>
       <Type>int</Type>
       <AbbrName>BizDayCnvtn</AbbrName>
       <NotReqXML>0</NotReqXML>
@@ -22953,9 +23091,9 @@ See http://www.fixtradingcommunity.org/codelists#Relative_To_Date for values. </
       <Description>Specifies the anchor date when the interim exchange payment date is relative to an anchor date.
 See http://www.fixtradingcommunity.org/codelists#Relative_To_Date for values.</Description>
    </Field>
-   <Field added="FIX.5.0SP2" addedEP="161">
+   <Field added="FIX.5.0SP2" addedEP="161" updated="FIX.Latest" updatedEP="271">
       <Tag>40698</Tag>
-      <Name>UnderlyingPaymentScheduleInterimExchangeDatesBusinessDayConvention</Name>
+      <Name>UnderlyingPaymentScheduleInterimExchangeDatesBizDayConvention</Name>
       <Type>int</Type>
       <AbbrName>IntrmExchDtBizDayCnvtn</AbbrName>
       <NotReqXML>0</NotReqXML>
@@ -25099,9 +25237,9 @@ See http://www.fpml.org/coding-scheme/business-center for standard 4-character c
       <NotReqXML>1</NotReqXML>
       <Description>Number of business centers in the repeating group.</Description>
    </Field>
-   <Field added="FIX.5.0SP2" addedEP="161">
+   <Field added="FIX.5.0SP2" addedEP="161" updated="FIX.Latest" updatedEP="271">
       <Tag>40960</Tag>
-      <Name>NoStreamEffectiveBusinessCenters</Name>
+      <Name>NoStreamEffectiveDateBusinessCenters</Name>
       <Type>NumInGroup</Type>
       <NotReqXML>1</NotReqXML>
       <Description>Number of business centers in the repeating group.</Description>
@@ -25160,9 +25298,9 @@ See http://www.fpml.org/coding-scheme/business-center for standard 4-character c
       <NotReqXML>1</NotReqXML>
       <Description>Number of business centers in the repeating group.</Description>
    </Field>
-   <Field added="FIX.5.0SP2" addedEP="161">
+   <Field added="FIX.5.0SP2" addedEP="161" updated="FIX.Latest" updatedEP="271">
       <Tag>40968</Tag>
-      <Name>NoUnderlyingPaymentStreamNonDeliverableFixingDatesBusinessCenters</Name>
+      <Name>NoUnderlyingPaymentStreamNonDeliverableFixingDatesBizCenters</Name>
       <Type>NumInGroup</Type>
       <NotReqXML>1</NotReqXML>
       <Description>Number of business centers in the repeating group.</Description>
@@ -25411,13 +25549,14 @@ A specific date can be appended to the month-year. For instance, if multiple eve
       <NotReqXML>0</NotReqXML>
       <Description>The valuation time of the trade.</Description>
    </Field>
-   <Field added="FIX.5.0SP2" addedEP="162">
+   <Field added="FIX.5.0SP2" addedEP="162" updated="FIX.Latest" updatedEP="271">
       <Tag>2087</Tag>
       <Name>ValuationBusinessCenter</Name>
       <Type>String</Type>
       <AbbrName>ValBizCtr</AbbrName>
       <NotReqXML>0</NotReqXML>
-      <Description>Identifies the business center whose calendar is used for valuation, e.g. "GLOB". See http://www.fpml.org/coding-scheme/business-center for standard 4-character code values.</Description>
+      <Description>Identifies the business center whose calendar is used for valuation, e.g. "GBLO". 
+See http://www.fpml.org/coding-scheme/business-center for standard 4-character code values.</Description>
    </Field>
    <Field added="FIX.5.0SP2" addedEP="162">
       <Tag>2088</Tag>
@@ -25604,7 +25743,7 @@ pretrade//termsheet</Description>
       <NotReqXML>0</NotReqXML>
       <Description>Used to specify an external URL where the attachment can be obtained.</Description>
    </Field>
-   <Field added="FIX.5.0SP2" addedEP="167">
+   <Field added="FIX.5.0SP2" addedEP="167" updated="FIX.Latest" updatedEP="271">
       <Tag>2109</Tag>
       <Name>AttachmentEncodingType</Name>
       <Type>int</Type>
@@ -25612,7 +25751,7 @@ pretrade//termsheet</Description>
       <NotReqXML>0</NotReqXML>
       <UnionDataType>Reserved100Plus</UnionDataType>
       <Description>The encoding type of the content provided in EncodedAttachment(2112).</Description>
-      <Elaboration>MessageEncoding(347) that defines how FIX fields of type Data are encoded. The MessageEncoding(347) is used embed text in another character set (e.g. Unicode or Shift-JIS) within FIX.</Elaboration>
+      <Elaboration>The AttachmentEncodingType(2109) is a distinct and separate concept from MessageEncoding(347) that defines how FIX fields of type data are encoded. The MessageEncoding(347) is used to embed text in another character set (e.g. Unicode or Shift-JIS) within FIX.</Elaboration>
    </Field>
    <Field added="FIX.5.0SP2" addedEP="167">
       <Tag>2110</Tag>
@@ -26861,14 +27000,14 @@ See http://www.fpml.org/coding-scheme/commodity-coal-product-source for values.<
       <EnumDatatype>1049</EnumDatatype>
       <Description>Specifies the method under which assignment was conducted.</Description>
    </Field>
-   <Field added="FIX.5.0SP2" addedEP="169">
+   <Field added="FIX.5.0SP2" addedEP="169" updated="FIX.Latest" updatedEP="271">
       <Tag>2148</Tag>
       <Name>LegSecurityStatus</Name>
       <Type>String</Type>
       <AbbrName>Status</AbbrName>
       <NotReqXML>0</NotReqXML>
       <EnumDatatype>965</EnumDatatype>
-      <Description>Used for derivatives. Denotes the current state of the InstrumentLeg.</Description>
+      <Description>Indicates the current state of the leg instrument.</Description>
    </Field>
    <Field added="FIX.5.0SP2" addedEP="169">
       <Tag>2149</Tag>
@@ -29633,13 +29772,13 @@ See http://www.fpml.org/coding-scheme/business-center for standard 4-character c
       <EnumDatatype>40027</EnumDatatype>
       <Description>The type of quote used to determine the cash settlement price.</Description>
    </Field>
-   <Field added="FIX.5.0SP2" addedEP="169">
+   <Field added="FIX.5.0SP2" addedEP="169" updated="FIX.Latest" updatedEP="271">
       <Tag>41352</Tag>
       <Name>LegCashSettlQuoteAmount</Name>
       <Type>Amt</Type>
       <AbbrName>QteAmt</AbbrName>
       <NotReqXML>0</NotReqXML>
-      <Description>When determining the cash settlement amount, if weighted average price quotes are to be obtained for the reference obligation, this is the upper limit to the outstanding principal balance of the reference obligation for which the quote should be obtained.  If not specifed, the ISDA definitions provide for a fallback amount equal to floating rate payer calculation amount.</Description>
+      <Description>When determining the cash settlement amount, if weighted average price quotes are to be obtained for the reference obligation, this is the upper limit to the outstanding principal balance of the reference obligation for which the quote should be obtained. If not specified, the ISDA definitions provide for a fallback amount equal to floating rate payer calculation amount.</Description>
       <Elaboration>ISDA 2003 Term: Quotation Amount.</Elaboration>
    </Field>
    <Field added="FIX.5.0SP2" addedEP="169">
@@ -29650,13 +29789,13 @@ See http://www.fpml.org/coding-scheme/business-center for standard 4-character c
       <NotReqXML>0</NotReqXML>
       <Description>Specifies the currency the LegCashSettlQuoteAmount(41352) is denominated in.  Uses ISO 4217 Currency Code.</Description>
    </Field>
-   <Field added="FIX.5.0SP2" addedEP="169">
+   <Field added="FIX.5.0SP2" addedEP="169" updated="FIX.Latest" updatedEP="271">
       <Tag>41354</Tag>
       <Name>LegCashSettlMinimumQuoteAmount</Name>
       <Type>Amt</Type>
       <AbbrName>MinQteAmt</AbbrName>
       <NotReqXML>0</NotReqXML>
-      <Description>When determining the cash settlement amount, if weighted average price quotes are to be obtained for the reference obligation, this is the minimum intended threshold amount of outstanding principal balance of the reference obligation for which the quote should be obtained.  If not specified, the ISDA definitions provide for a fallback amount of the lower of either USD1,000,000 (or its equivalent in the relevent obligation currency) or the (minimum) quoted amount.</Description>
+      <Description>When determining the cash settlement amount, if weighted average price quotes are to be obtained for the reference obligation, this is the minimum intended threshold amount of outstanding principal balance of the reference obligation for which the quote should be obtained. If not specified, the ISDA definitions provide for a fallback amount of the lower of either USD1,000,000 (or its equivalent in the relevant obligation currency) or the (minimum) quoted amount.</Description>
       <Elaboration>ISDA 2003 Term: Minimum Quotation Amount.</Elaboration>
    </Field>
    <Field added="FIX.5.0SP2" addedEP="169">
@@ -32078,22 +32217,22 @@ See http://www.fpml.org/coding-scheme/commodity-business-calendar for values.</D
       <NotReqXML>0</NotReqXML>
       <Description>Specifies the currency of physical settlement.  Uses ISO 4217 currency codes.</Description>
    </Field>
-   <Field added="FIX.5.0SP2" addedEP="169">
+   <Field added="FIX.5.0SP2" addedEP="169" updated="FIX.Latest" updatedEP="271">
       <Tag>41602</Tag>
       <Name>LegPhysicalSettlBusinessDays</Name>
       <Type>int</Type>
       <AbbrName>BizDays</AbbrName>
       <NotReqXML>0</NotReqXML>
-      <Description>The number of business days used in the determination of physical settlement. Its precise meaning is dependant on the context in which this is used.</Description>
+      <Description>The number of business days used in the determination of physical settlement. Its precise meaning depends on the context in which this is used.</Description>
       <Elaboration>ISDA 2003 Term: Business Day.</Elaboration>
    </Field>
-   <Field added="FIX.5.0SP2" addedEP="169">
+   <Field added="FIX.5.0SP2" addedEP="169" updated="FIX.Latest" updatedEP="271">
       <Tag>41603</Tag>
       <Name>LegPhysicalSettlMaximumBusinessDays</Name>
       <Type>int</Type>
       <AbbrName>MaxBizDays</AbbrName>
       <NotReqXML>0</NotReqXML>
-      <Description>A maximum number of business days. Its precise meaning is dependant on the context in which this element is used. Intended to be used to limit a particular ISDA fallback provision.</Description>
+      <Description>A maximum number of business days. Its precise meaning depends on the context in which this element is used. Intended to be used to limit a particular ISDA fallback provision.</Description>
    </Field>
    <Field added="FIX.5.0SP2" addedEP="169">
       <Tag>41604</Tag>
@@ -32199,13 +32338,13 @@ See http://www.fpml.org/coding-scheme/business-center for standard 4-character c
       <NotReqXML>1</NotReqXML>
       <Description>Number of protection terms in the repeating group.</Description>
    </Field>
-   <Field added="FIX.5.0SP2" addedEP="169">
+   <Field added="FIX.5.0SP2" addedEP="169" updated="FIX.Latest" updatedEP="271">
       <Tag>41617</Tag>
       <Name>LegProtectionTermXID</Name>
       <Type>XID</Type>
       <AbbrName>XID</AbbrName>
       <NotReqXML>0</NotReqXML>
-      <Description>A named string value referenced from UnderlyingLegProtectionTermXIDRef(41314).</Description>
+      <Description>A named string value referenced from UnderlyingProtectionTermXIDRef(41314).</Description>
    </Field>
    <Field added="FIX.5.0SP2" addedEP="169">
       <Tag>41618</Tag>
@@ -32317,14 +32456,14 @@ See http://www.fixtradingcommunity.org/codelists#Protection_Term_Event_Types for
       <EnumDatatype>40196</EnumDatatype>
       <Description>Time unit associated with protection term events.</Description>
    </Field>
-   <Field added="FIX.5.0SP2" addedEP="169">
+   <Field added="FIX.5.0SP2" addedEP="169" updated="FIX.Latest" updatedEP="271">
       <Tag>41631</Tag>
       <Name>LegProtectionTermEventDayType</Name>
       <Type>int</Type>
       <AbbrName>DayTyp</AbbrName>
       <NotReqXML>0</NotReqXML>
       <EnumDatatype>40810</EnumDatatype>
-      <Description>Specifies the day type for protection term events.</Description>
+      <Description>Day type for events that specify a period and unit.</Description>
    </Field>
    <Field added="FIX.5.0SP2" addedEP="169">
       <Tag>41632</Tag>
@@ -34684,9 +34823,9 @@ See http://www.fpml.org/coding-scheme/commodity-market-disruption-fallback for v
       <NotReqXML>0</NotReqXML>
       <Description>Specifies the description of underlying security.</Description>
    </Field>
-   <Field added="FIX.5.0SP2" addedEP="169">
+   <Field added="FIX.5.0SP2" addedEP="169" updated="FIX.Latest" updatedEP="271">
       <Tag>41873</Tag>
-      <Name>EncodedUnderlyingMarketDisruptionFallbackUnderlierSecurityDescLen</Name>
+      <Name>EncodedUnderlyingMarketDisruptionFallbackUnderlierSecDescLen</Name>
       <Type>Length</Type>
       <AssociatedDataTag>41874</AssociatedDataTag>
       <AbbrName>EncDescLen</AbbrName>
@@ -34783,13 +34922,13 @@ See http://www.fpml.org/coding-scheme/commodity-market-disruption-fallback for v
       <EnumDatatype>996</EnumDatatype>
       <Description>The schedule rate unit of measure (UOM).</Description>
    </Field>
-   <Field added="FIX.5.0SP2" addedEP="169">
+   <Field added="FIX.5.0SP2" addedEP="169" updated="FIX.Latest" updatedEP="271">
       <Tag>41885</Tag>
       <Name>UnderlyingPaymentScheduleRateConversionFactor</Name>
       <Type>float</Type>
       <AbbrName>RtFctr</AbbrName>
       <NotReqXML>0</NotReqXML>
-      <Description>The number to be multiplied by the derived floating rate of the underlying's payment schedule in order to arrive at the payment rate. If ommitted, the schedule rate conversion factor is 1. </Description>
+      <Description>The number to be multiplied by the derived floating rate of the underlying's payment schedule in order to arrive at the payment rate. If omitted, the schedule rate conversion factor is 1.</Description>
    </Field>
    <Field added="FIX.5.0SP2" addedEP="169">
       <Tag>41886</Tag>
@@ -36434,7 +36573,7 @@ For uncleared OTC swaps, LegMidPx(2346) and the MidPx(631) fields are mutually e
       <EnumDatatype>1674</EnumDatatype>
       <Description>Used to further qualify the value of PartyRole(452).</Description>
    </Field>
-   <Field added="FIX.5.0SP2" addedEP="179">
+   <Field added="FIX.5.0SP2" addedEP="179" updated="FIX.Latest" updatedEP="271">
       <Tag>2377</Tag>
       <Name>DerivativeInstrumentPartyRoleQualifier</Name>
       <Type>int</Type>
@@ -37148,13 +37287,13 @@ See http://www.fpml.org/coding-scheme/business-center for standard 4-character c
       <EnumDatatype>40027</EnumDatatype>
       <Description>The type of quote used to determine the cash settlement price.</Description>
    </Field>
-   <Field added="FIX.5.0SP2" addedEP="187">
+   <Field added="FIX.5.0SP2" addedEP="187" updated="FIX.Latest" updatedEP="271">
       <Tag>42049</Tag>
       <Name>UnderlyingCashSettlQuoteAmount</Name>
       <Type>Amt</Type>
       <AbbrName>QteAmt</AbbrName>
       <NotReqXML>0</NotReqXML>
-      <Description>When determining the cash settlement amount, if weighted average price quotes are to be obtained for the reference obligation, this is the upper limit to the outstanding principal balance of the reference obligation for which the quote should be obtained.  If not specifed, the ISDA definitions provide for a fallback amount equal to floating rate payer calculation amount.</Description>
+      <Description>When determining the cash settlement amount, if weighted average price quotes are to be obtained for the reference obligation, this is the upper limit to the outstanding principal balance of the reference obligation for which the quote should be obtained. If not specified, the ISDA definitions provide for a fallback amount equal to floating rate payer calculation amount.</Description>
       <Elaboration>ISDA 2003 Term: Quotation Amount.</Elaboration>
    </Field>
    <Field added="FIX.5.0SP2" addedEP="187">
@@ -37165,13 +37304,13 @@ See http://www.fpml.org/coding-scheme/business-center for standard 4-character c
       <NotReqXML>0</NotReqXML>
       <Description>Specifies the currency the UnderlyingCashSettlQuoteAmount(42049) is denominated in.  Uses ISO 4217 currency codes.</Description>
    </Field>
-   <Field added="FIX.5.0SP2" addedEP="187">
+   <Field added="FIX.5.0SP2" addedEP="187" updated="FIX.Latest" updatedEP="271">
       <Tag>42051</Tag>
       <Name>UnderlyingCashSettlMinimumQuoteAmount</Name>
       <Type>Amt</Type>
       <AbbrName>MinQteAmt</AbbrName>
       <NotReqXML>0</NotReqXML>
-      <Description>When determining the cash settlement amount, if weighted average price quotes are to be obtained for the reference obligation, this is the minimum intended threshold amount of outstanding principal balance of the reference obligation for which the quote should be obtained.  If not specified, the ISDA definitions provide for a fallback amount of the lower of either USD1,000,000 (or its equivalent in the relevent obligation currency) or the (minimum) quoted amount.</Description>
+      <Description>When determining the cash settlement amount, if weighted average price quotes are to be obtained for the reference obligation, this is the minimum intended threshold amount of outstanding principal balance of the reference obligation for which the quote should be obtained. If not specified, the ISDA definitions provide for a fallback amount of the lower of either USD1,000,000 (or its equivalent in the relevant obligation currency) or the (minimum) quoted amount.</Description>
       <Elaboration>ISDA 2003 Term: Minimum Quotation Amount.</Elaboration>
    </Field>
    <Field added="FIX.5.0SP2" addedEP="187">
@@ -37280,13 +37419,13 @@ For physical settlement this specifies whether the buyer should deliver the obli
       <NotReqXML>0</NotReqXML>
       <Description>A maximum number of business days. Its precise meaning is dependent on the context in which this element is used. Intended to be used to limit a particular ISDA fallback provision.</Description>
    </Field>
-   <Field added="FIX.5.0SP2" addedEP="187">
+   <Field added="FIX.5.0SP2" addedEP="187" updated="FIX.Latest" updatedEP="271">
       <Tag>42064</Tag>
       <Name>UnderlyingPhysicalSettlTermXID</Name>
       <Type>XID</Type>
       <AbbrName>XID</AbbrName>
       <NotReqXML>0</NotReqXML>
-      <Description>A named string value referenced by UnderlyingSettlementTermXIDRef(41315).</Description>
+      <Description>A named string value referenced by UnderlyingSettlTermXIDRef(41315).</Description>
    </Field>
    <Field added="FIX.5.0SP2" addedEP="187">
       <Tag>42065</Tag>
@@ -37442,13 +37581,13 @@ See http://www.fixtradingcommunity.org/codelists#Protection_Term_Event_Types for
       <EnumDatatype>40196</EnumDatatype>
       <Description>Time unit associated with protection term events.</Description>
    </Field>
-   <Field added="FIX.5.0SP2" addedEP="187">
+   <Field added="FIX.5.0SP2" addedEP="187" updated="FIX.Latest" updatedEP="271">
       <Tag>42083</Tag>
       <Name>UnderlyingProtectionTermEventDayType</Name>
       <Type>int</Type>
       <AbbrName>DayTyp</AbbrName>
       <NotReqXML>0</NotReqXML>
-      <EnumDatatype>40810</EnumDatatype>
+      <EnumDatatype>40197</EnumDatatype>
       <Description>Day type for events that specify a period and unit.</Description>
    </Field>
    <Field added="FIX.5.0SP2" addedEP="187">
@@ -37950,9 +38089,9 @@ See http://www.fpml.org/coding-scheme/business-center for standard 4-character c
       <NotReqXML>0</NotReqXML>
       <Description>The unadjusted date on the underlying set by the exercise of an option. What this date is depends on the option (e.g. in a swaption it is the swap effective date, in an extendible/cancelable provision it is the swap termination date).</Description>
    </Field>
-   <Field added="FIX.5.0SP2" addedEP="187">
+   <Field added="FIX.5.0SP2" addedEP="187" updated="FIX.Latest" updatedEP="271">
       <Tag>42143</Tag>
-      <Name>UnderlyingProvisionOptionRelevantUnderlyingDateBusinessDayConvention</Name>
+      <Name>UnderlyingProvisionOptionRelevantUnderlyingDateBizDayConvention</Name>
       <Type>int</Type>
       <AbbrName>BizDayCnvtn</AbbrName>
       <NotReqXML>0</NotReqXML>
@@ -38392,13 +38531,13 @@ See http://www.fpml.org/coding-scheme/business-center for standard 4-character c
       <NotReqXML>0</NotReqXML>
       <Description>Unique message identifier for a mass order request as assigned by the submitter of the orders.</Description>
    </Field>
-   <Field added="FIX.5.0SP2" addedEP="188">
+   <Field added="FIX.5.0SP2" addedEP="188" updated="FIX.Latest" updatedEP="271">
       <Tag>2424</Tag>
       <Name>MassOrderReportID</Name>
       <Type>String</Type>
       <AbbrName>MassOrdRptID</AbbrName>
       <NotReqXML>0</NotReqXML>
-      <Description>Unique message identifier for a mass order request as assigned by the receiver of the orders.</Description>
+      <Description>Unique message identifier for the response to a mass order request as assigned by the receiver of the orders.</Description>
    </Field>
    <Field added="FIX.5.0SP2" addedEP="188">
       <Tag>2425</Tag>
@@ -38938,13 +39077,13 @@ Special meaning for a value of zero which represents  an event-driven disseminat
       <NotReqXML>0</NotReqXML>
       <Description>Identifies the applicable contract matrix. See http://www.fpml.org/coding-scheme/matrix-type-1-0.xml for values.</Description>
    </Field>
-   <Field added="FIX.5.0SP2" addedEP="192">
+   <Field added="FIX.5.0SP2" addedEP="192" updated="FIX.Latest" updatedEP="271">
       <Tag>42206</Tag>
       <Name>LegContractualMatrixTerm</Name>
       <Type>String</Type>
       <AbbrName>Trm</AbbrName>
       <NotReqXML>0</NotReqXML>
-      <Description>Specifies the applicable key into the relevent contract matrix. In the case of 2000 ISDA Definitions Settlement Matrix for Early Termination and Swaptions, the LegContractualMatrixTerm(42206) is not applicable and is to be omitted. See http://www.fpml.org/coding-scheme/credit-matrix-transaction-type for values.</Description>
+      <Description>Specifies the applicable key into the relevant contract matrix. In the case of 2000 ISDA Definitions Settlement Matrix for Early Termination and Swaptions, the LegContractualMatrixTerm(42206) is not applicable and is to be omitted. See http://www.fpml.org/coding-scheme/credit-matrix-transaction-type for values.</Description>
    </Field>
    <Field added="FIX.5.0SP2" addedEP="192">
       <Tag>42203</Tag>
@@ -48101,11 +48240,11 @@ Reasons may be specific to regulatory trade publication rules.
       <UnionDataType>Reserved100Plus</UnionDataType>
       <Description>Reason for submission of mass action.</Description>
    </Field>
-   <Field added="FIX.5.0SP2" addedEP="223">
+   <Field added="FIX.5.0SP2" addedEP="223" updated="FIX.Latest" updatedEP="271">
       <Tag>2676</Tag>
-      <Name>MaximumPricePercentage</Name>
+      <Name>MaximumPriceDeviation</Name>
       <Type>Percentage</Type>
-      <AbbrName>MaxPxPctage</AbbrName>
+      <AbbrName>MaxPxDeviatn</AbbrName>
       <NotReqXML>0</NotReqXML>
       <Description>Maximum deviation, in percentage terms, of an execution price from a reference price, e.g. the initial price of a match event.</Description>
    </Field>
@@ -48168,14 +48307,16 @@ Reasons may be specific to regulatory trade publication rules.
       <EnumDatatype>2681</EnumDatatype>
       <Description>Specifies an option instrument's "in the money" condition in general terms.</Description>
    </Field>
-   <Field added="FIX.5.0SP2" addedEP="224">
+   <Field added="FIX.5.0SP2" addedEP="224" updated="FIX.Latest" updatedEP="271">
       <Tag>2684</Tag>
       <Name>DerivativeInTheMoneyCondition</Name>
       <Type>int</Type>
       <AbbrName>ITMCond</AbbrName>
       <NotReqXML>0</NotReqXML>
       <EnumDatatype>2681</EnumDatatype>
-      <Description>Specifies an option instrument's "in the money" condition in general terms.</Description>
+      <Description>Specifies an option instrument's "in the money" condition in general terms.
+See InTheMoneyCondition(2681) for complete definition.
+</Description>
    </Field>
    <Field added="FIX.5.0SP2" addedEP="224">
       <Tag>2685</Tag>
@@ -48201,13 +48342,15 @@ Reasons may be specific to regulatory trade publication rules.
       <NotReqXML>0</NotReqXML>
       <Description>	Identifies whether the option instrument is eligible for contrary instructions at the time of exercise.  The contrariness of an instruction will be determined in the context of UnderlyingInTheMoneyCondition(2683).  When not specified, the eligibility is undefined or not applicable.</Description>
    </Field>
-   <Field added="FIX.5.0SP2" addedEP="224">
+   <Field added="FIX.5.0SP2" addedEP="224" updated="FIX.Latest" updatedEP="271">
       <Tag>2688</Tag>
       <Name>DerivativeContraryInstructionEligibilityIndicator</Name>
       <Type>Boolean</Type>
       <AbbrName>CntraryInstEligInd</AbbrName>
       <NotReqXML>0</NotReqXML>
-      <Description>Identifies whether the option instrument is eligible for contrary instructions at the time of exercise.  The contrariness of an instruction will be determined in the context of DerivativeInTheMoneyCondition(2684).  When not specified, the eligibility is undefined or not applicable.</Description>
+      <Description>Identifies whether the option instrument is eligible for contrary instructions at the time of exercise. The contrariness of an instruction will be determined in the context of DerivativeInTheMoneyCondition(2684). When not specified, the eligibility is undefined or not applicable.
+See ContraryInstructionEligibilityIndicator(2685) for complete definition.
+</Description>
    </Field>
    <Field added="FIX.5.0SP2" addedEP="227">
       <Tag>2689</Tag>
@@ -49114,9 +49257,9 @@ See https://www.fixtrading.org/codelists/AssetSubType for code list of applicabl
       <NotReqXML>0</NotReqXML>
       <Description>Byte length of encoded (non-ASCII characters) EncodedMatchExceptionText(2798) field.</Description>
    </Field>
-   <Field added="FIX.5.0SP2" addedEP="246">
+   <Field added="FIX.5.0SP2" addedEP="246" updated="FIX.Latest" updatedEP="271">
       <Tag>2798</Tag>
-      <Name>EncodedMatchExecptionText</Name>
+      <Name>EncodedMatchExceptionText</Name>
       <Type>data</Type>
       <AbbrName>EncTxt</AbbrName>
       <NotReqXML>0</NotReqXML>
@@ -49924,27 +50067,30 @@ See ISITC "Payments Cash Purpose Codes" for list of payment type codes to use av
       <EnumDatatype>2883</EnumDatatype>
       <Description>Indicates whether a routing arrangement is in place, e.g. between two brokers. May be used together with ContraOrderOrigination(2882) to further describe the origin of an order.</Description>
    </Field>
-   <Field added="FIX.5.0SP2" addedEP="257">
+   <Field added="FIX.5.0SP2" addedEP="257" updated="FIX.Latest" updatedEP="271">
       <Tag>43109</Tag>
       <Name>PaymentStreamFormulaLength</Name>
       <Type>Length</Type>
       <AssociatedDataTag>42684</AssociatedDataTag>
+      <AbbrName>FrmlaLen</AbbrName>
       <NotReqXML>1</NotReqXML>
       <Description>Byte length of encoded (non-ASCII characters) PaymentStreamFormula(42648) field.</Description>
    </Field>
-   <Field added="FIX.5.0SP2" addedEP="257">
+   <Field added="FIX.5.0SP2" addedEP="257" updated="FIX.Latest" updatedEP="271">
       <Tag>43110</Tag>
       <Name>LegPaymentStreamFormulaLength</Name>
       <Type>Length</Type>
       <AssociatedDataTag>42486</AssociatedDataTag>
+      <AbbrName>FrmlaLen</AbbrName>
       <NotReqXML>1</NotReqXML>
       <Description>Byte length of encoded (non-ASCII characters) LegPaymentStreamFormula(42486) field.</Description>
    </Field>
-   <Field added="FIX.5.0SP2" addedEP="257">
+   <Field added="FIX.5.0SP2" addedEP="257" updated="FIX.Latest" updatedEP="271">
       <Tag>43111</Tag>
       <Name>UnderlyingPaymentStreamFormulaLength</Name>
       <Type>Length</Type>
       <AssociatedDataTag>42982</AssociatedDataTag>
+      <AbbrName>FrmlaLen</AbbrName>
       <NotReqXML>1</NotReqXML>
       <Description>Byte length of encoded (non-ASCII characters) UnderlyingPaymentStreamFormula(42982) field.</Description>
    </Field>
@@ -50004,13 +50150,13 @@ See ISITC "Payments Cash Purpose Codes" for list of payment type codes to use av
       <NotReqXML>0</NotReqXML>
       <Description>Uniquely identifies the product of a security using ISO 4914 standard, Unique Product Identifier (UPI). The DSB (Derivative Service Bureau Ltd) is acting as designated service provider for UPI System.</Description>
    </Field>
-   <Field added="FIX.Latest" addedEP="266">
+   <Field added="FIX.Latest" addedEP="266" updated="FIX.Latest" updatedEP="271">
       <Tag>2892</Tag>
       <Name>DerivativeUPICode</Name>
       <Type>String</Type>
       <AbbrName>UPI</AbbrName>
       <NotReqXML>0</NotReqXML>
-      <Description>Uniquely identifies the product of a derivative instrument using ISO 4914. See UPICode(2891) for further detail.</Description>
+      <Description>Uniquely identifies the product of a derivative instrument using ISO 4914. See UPICode(2891) for complete definition.</Description>
    </Field>
    <Field added="FIX.Latest" addedEP="266">
       <Tag>2893</Tag>
@@ -50045,5 +50191,107 @@ See ISITC "Payments Cash Purpose Codes" for list of payment type codes to use av
       <EnumDatatype>828</EnumDatatype>
       <UnionDataType>Reserved1000Plus</UnionDataType>
       <Description>Type of trade  assigned to a trade. Used in addition to TrdType(828) and SecondaryTrdType(855). Must not be used when only one additional trade type needs to be assigned.</Description>
+   </Field>
+   <Field added="FIX.Latest" addedEP="271">
+      <Tag>43112</Tag>
+      <Name>PaymentStreamRateIndex2</Name>
+      <Type>String</Type>
+      <AbbrName>Ndx2</AbbrName>
+      <NotReqXML>0</NotReqXML>
+      <Description>The payment stream's second floating rate index.</Description>
+   </Field>
+   <Field added="FIX.Latest" addedEP="271">
+      <Tag>43113</Tag>
+      <Name>PaymentStreamRateIndex2Source</Name>
+      <Type>int</Type>
+      <AbbrName>Ndx2Src</AbbrName>
+      <NotReqXML>0</NotReqXML>
+      <EnumDatatype>40790</EnumDatatype>
+      <Description>The source of the payment stream's second floating rate index.</Description>
+   </Field>
+   <Field added="FIX.Latest" addedEP="271">
+      <Tag>43114</Tag>
+      <Name>PaymentStreamRateIndex2ID</Name>
+      <Type>String</Type>
+      <AbbrName>Ndx2ID</AbbrName>
+      <NotReqXML>0</NotReqXML>
+      <Description>Security identifier of the second floating rate index.</Description>
+   </Field>
+   <Field added="FIX.Latest" addedEP="271">
+      <Tag>43115</Tag>
+      <Name>PaymentStreamRateIndex2IDSource</Name>
+      <Type>String</Type>
+      <AbbrName>Ndx2IDSrc</AbbrName>
+      <NotReqXML>0</NotReqXML>
+      <EnumDatatype>22</EnumDatatype>
+      <Description>Source for the second floating rate index identified in PaymentStreamRateIndex2ID(43114).</Description>
+   </Field>
+   <Field added="FIX.Latest" addedEP="271">
+      <Tag>43116</Tag>
+      <Name>LegPaymentStreamRateIndex2</Name>
+      <Type>String</Type>
+      <AbbrName>Ndx2</AbbrName>
+      <NotReqXML>0</NotReqXML>
+      <Description>The payment stream's second floating rate index.</Description>
+   </Field>
+   <Field added="FIX.Latest" addedEP="271">
+      <Tag>43117</Tag>
+      <Name>LegPaymentStreamRateIndex2Source</Name>
+      <Type>int</Type>
+      <AbbrName>Ndx2Src</AbbrName>
+      <NotReqXML>0</NotReqXML>
+      <EnumDatatype>40790</EnumDatatype>
+      <Description>The source of the payment stream's second floating rate index.</Description>
+   </Field>
+   <Field added="FIX.Latest" addedEP="271">
+      <Tag>43118</Tag>
+      <Name>LegPaymentStreamRateIndex2ID</Name>
+      <Type>String</Type>
+      <AbbrName>Ndx2ID</AbbrName>
+      <NotReqXML>0</NotReqXML>
+      <Description>Security identifier of the second floating rate index.</Description>
+   </Field>
+   <Field added="FIX.Latest" addedEP="271">
+      <Tag>43119</Tag>
+      <Name>LegPaymentStreamRateIndex2IDSource</Name>
+      <Type>String</Type>
+      <AbbrName>Ndx2IDSrc</AbbrName>
+      <NotReqXML>0</NotReqXML>
+      <EnumDatatype>22</EnumDatatype>
+      <Description>Source for the second floating rate index identified in LegPaymentStreamRateIndex2ID(43118).</Description>
+   </Field>
+   <Field added="FIX.Latest" addedEP="271">
+      <Tag>43120</Tag>
+      <Name>UnderlyingPaymentStreamRateIndex2</Name>
+      <Type>String</Type>
+      <AbbrName>Ndx2</AbbrName>
+      <NotReqXML>0</NotReqXML>
+      <Description>The payment stream's second floating rate index.</Description>
+   </Field>
+   <Field added="FIX.Latest" addedEP="271">
+      <Tag>43121</Tag>
+      <Name>UnderlyingPaymentStreamRateIndex2Source</Name>
+      <Type>int</Type>
+      <AbbrName>Ndx2Src</AbbrName>
+      <NotReqXML>0</NotReqXML>
+      <EnumDatatype>40790</EnumDatatype>
+      <Description>The source of the payment stream's second floating rate index.</Description>
+   </Field>
+   <Field added="FIX.Latest" addedEP="271">
+      <Tag>43122</Tag>
+      <Name>UnderlyingPaymentStreamRateIndex2ID</Name>
+      <Type>String</Type>
+      <AbbrName>Ndx2ID</AbbrName>
+      <NotReqXML>0</NotReqXML>
+      <Description>Security identifier of the second floating rate index.</Description>
+   </Field>
+   <Field added="FIX.Latest" addedEP="271">
+      <Tag>43123</Tag>
+      <Name>UnderlyingPaymentStreamRateIndex2IDSource</Name>
+      <Type>String</Type>
+      <AbbrName>Ndx2IDSrc</AbbrName>
+      <NotReqXML>0</NotReqXML>
+      <EnumDatatype>22</EnumDatatype>
+      <Description>Source for the second floating rate index identified in UnderlyingPaymentStreamRateIndex2ID(43122).</Description>
    </Field>
 </Fields>

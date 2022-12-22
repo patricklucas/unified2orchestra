@@ -4,8 +4,8 @@
           edition="2010"
           version="FIX.Latest"
           xsi:noNamespaceSchemaLocation="../../schema/Messages.xsd"
-          generated="2020-11-13T11:36:39.964Z"
-          latestEP="257">
+          generated="2022-08-01T13:01:00.859Z"
+          latestEP="271">
    <Message added="FIX.2.7">
 		    <ComponentID>1</ComponentID>
 		    <MsgType>0</MsgType>
@@ -763,16 +763,16 @@ The Quote Cancel message supports cancellation of:
 		    <NotReqXML>0</NotReqXML>
 		    <Description>The Position Maintenance Request message allows the position owner to submit requests to the holder of a position which will result in a specific action being taken which will affect the position. Generally, the holder of the position is a central counter party or clearing organization but can also be a party providing investment services.</Description>
 	  </Message>
-   <Message added="FIX.4.4">
-		    <ComponentID>72</ComponentID>
-		    <MsgType>AM</MsgType>
-		    <Name>PositionMaintenanceReport</Name>
-		    <CategoryID>PositionMaintenance</CategoryID>
-		    <SectionID>PostTrade</SectionID>
-		    <AbbrName>PosMntRpt</AbbrName>
-		    <NotReqXML>0</NotReqXML>
-		    <Description>The Position Maintenance Report message is sent by the holder of a positon in response to a Position Maintenance Request and is used to confirm that a request has been successfully processed or rejected.</Description>
-	  </Message>
+   <Message added="FIX.4.4" updated="FIX.Latest" updatedEP="271">
+      <ComponentID>72</ComponentID>
+      <MsgType>AM</MsgType>
+      <Name>PositionMaintenanceReport</Name>
+      <CategoryID>PositionMaintenance</CategoryID>
+      <SectionID>PostTrade</SectionID>
+      <AbbrName>PosMntRpt</AbbrName>
+      <NotReqXML>0</NotReqXML>
+      <Description>The Position Maintenance Report message is sent by the holder of a position in response to a Position Maintenance Request and is used to confirm that a request has been successfully processed or rejected.</Description>
+   </Message>
    <Message added="FIX.4.4">
 		    <ComponentID>73</ComponentID>
 		    <MsgType>AN</MsgType>

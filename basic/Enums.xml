@@ -4,8 +4,8 @@
        edition="2010"
        version="FIX.Latest"
        xsi:noNamespaceSchemaLocation="../../schema/Enums.xsd"
-       generated="2022-08-01T11:55:36.172Z"
-       latestEP="270">
+       generated="2022-08-01T13:01:00.859Z"
+       latestEP="271">
    <Enum added="FIX.2.7">
 		    <Tag>4</Tag>
 		    <Value>B</Value>
@@ -1761,14 +1761,14 @@
 		    <Sort>10</Sort>
 		    <Description>T+5</Description>
 	  </Enum>
-   <Enum added="FIX.4.4" addedEP="25" updated="FIX.5.0SP2" updatedEP="131">
+   <Enum added="FIX.4.4" addedEP="25" updated="FIX.Latest" updatedEP="271">
       <Tag>63</Tag>
       <Value>B</Value>
       <SymbolicName>BrokenDate</SymbolicName>
       <Group/>
       <Sort>12</Sort>
       <Description>Broken date</Description>
-      <Elaboration>Use within FX to specify a non-standard tenor. The use of SettlDate(64) is required to specify the actual settlement date when SettlType(63) = b (Broken Date).</Elaboration>
+      <Elaboration>Use within FX to specify a non-standard tenor. The use of SettlDate(64) is required to specify the actual settlement date when SettlType(63) = B (Broken date).</Elaboration>
    </Enum>
    <Enum added="FIX.4.4" addedEP="21">
 		    <Tag>63</Tag>
@@ -2034,10 +2034,10 @@
       <Sort>2</Sort>
       <Description>Incorrect or missing block quantity</Description>
    </Enum>
-   <Enum added="FIX.2.7" updated="FIX.5.0SP2" updatedEP="170">
+   <Enum added="FIX.2.7" updated="FIX.Latest" updatedEP="271">
       <Tag>88</Tag>
       <Value>2</Value>
-      <SymbolicName>IncorrectAveragegPrice</SymbolicName>
+      <SymbolicName>IncorrectAveragePrice</SymbolicName>
       <Group/>
       <Sort>3</Sort>
       <Description>Incorrect or missing average price</Description>
@@ -2058,22 +2058,22 @@
       <Sort>5</Sort>
       <Description>Incorrect or missing commission</Description>
    </Enum>
-   <Enum added="FIX.2.7">
-		    <Tag>88</Tag>
-		    <Value>5</Value>
-		    <SymbolicName>UnknownOrderID</SymbolicName>
-		    <Group/>
-		    <Sort>6</Sort>
-		    <Description>Unknown OrderID (37)</Description>
-	  </Enum>
-   <Enum added="FIX.2.7">
-		    <Tag>88</Tag>
-		    <Value>6</Value>
-		    <SymbolicName>UnknownListID</SymbolicName>
-		    <Group/>
-		    <Sort>7</Sort>
-		    <Description>Unknown ListID (66)</Description>
-	  </Enum>
+   <Enum added="FIX.2.7" updated="FIX.Latest" updatedEP="271">
+      <Tag>88</Tag>
+      <Value>5</Value>
+      <SymbolicName>UnknownOrderID</SymbolicName>
+      <Group/>
+      <Sort>6</Sort>
+      <Description>Unknown OrderID(37)</Description>
+   </Enum>
+   <Enum added="FIX.2.7" updated="FIX.Latest" updatedEP="271">
+      <Tag>88</Tag>
+      <Value>6</Value>
+      <SymbolicName>UnknownListID</SymbolicName>
+      <Group/>
+      <Sort>7</Sort>
+      <Description>Unknown ListID(66)</Description>
+   </Enum>
    <Enum added="FIX.2.7">
 		    <Tag>88</Tag>
 		    <Value>7</Value>
@@ -2098,14 +2098,14 @@
 		    <Sort>10</Sort>
 		    <Description>Calculation difference</Description>
 	  </Enum>
-   <Enum added="FIX.4.4">
-		    <Tag>88</Tag>
-		    <Value>10</Value>
-		    <SymbolicName>UnknownOrStaleExecID</SymbolicName>
-		    <Group/>
-		    <Sort>11</Sort>
-		    <Description>Unknown or stale ExecID</Description>
-	  </Enum>
+   <Enum added="FIX.4.4" updated="FIX.Latest" updatedEP="271">
+      <Tag>88</Tag>
+      <Value>10</Value>
+      <SymbolicName>UnknownOrStaleExecID</SymbolicName>
+      <Group/>
+      <Sort>11</Sort>
+      <Description>Unknown or Stale ExecID(17)</Description>
+   </Enum>
    <Enum added="FIX.4.4">
 		    <Tag>88</Tag>
 		    <Value>11</Value>
@@ -2114,14 +2114,14 @@
 		    <Sort>12</Sort>
 		    <Description>Mismatched data</Description>
 	  </Enum>
-   <Enum added="FIX.4.4">
-		    <Tag>88</Tag>
-		    <Value>12</Value>
-		    <SymbolicName>UnknownClOrdID</SymbolicName>
-		    <Group/>
-		    <Sort>13</Sort>
-		    <Description>Unknown ClOrdID</Description>
-	  </Enum>
+   <Enum added="FIX.4.4" updated="FIX.Latest" updatedEP="271">
+      <Tag>88</Tag>
+      <Value>12</Value>
+      <SymbolicName>UnknownClOrdID</SymbolicName>
+      <Group/>
+      <Sort>13</Sort>
+      <Description>Unknown ClOrdID(11)</Description>
+   </Enum>
    <Enum added="FIX.4.4">
 		    <Tag>88</Tag>
 		    <Value>13</Value>
@@ -3053,14 +3053,14 @@
 		    <Sort>2</Sort>
 		    <Description>Divide</Description>
 	  </Enum>
-   <Enum added="FIX.4.1">
-		    <Tag>160</Tag>
-		    <Value>0</Value>
-		    <SymbolicName>Default</SymbolicName>
-		    <Group/>
-		    <Sort>1</Sort>
-		    <Description>Default (Replaced)</Description>
-	  </Enum>
+   <Enum added="FIX.4.1" deprecated="FIX.Latest" deprecatedEP="271">
+      <Tag>160</Tag>
+      <Value>0</Value>
+      <SymbolicName>Default</SymbolicName>
+      <Group/>
+      <Sort>1</Sort>
+      <Description>Default (Replaced)</Description>
+   </Enum>
    <Enum added="FIX.4.1">
 		    <Tag>160</Tag>
 		    <Value>1</Value>
@@ -3069,22 +3069,22 @@
 		    <Sort>2</Sort>
 		    <Description>Standing Instructions Provided</Description>
 	  </Enum>
-   <Enum added="FIX.4.1">
-		    <Tag>160</Tag>
-		    <Value>2</Value>
-		    <SymbolicName>SpecificAllocationAccountOverriding</SymbolicName>
-		    <Group/>
-		    <Sort>3</Sort>
-		    <Description>Specific Allocation Account Overriding (Replaced)</Description>
-	  </Enum>
-   <Enum added="FIX.4.1">
-		    <Tag>160</Tag>
-		    <Value>3</Value>
-		    <SymbolicName>SpecificAllocationAccountStanding</SymbolicName>
-		    <Group/>
-		    <Sort>4</Sort>
-		    <Description>Specific Allocation Account Standing (Replaced)</Description>
-	  </Enum>
+   <Enum added="FIX.4.1" deprecated="FIX.Latest" deprecatedEP="271">
+      <Tag>160</Tag>
+      <Value>2</Value>
+      <SymbolicName>SpecificAllocationAccountOverriding</SymbolicName>
+      <Group/>
+      <Sort>3</Sort>
+      <Description>Specific Allocation Account Overriding (Replaced)</Description>
+   </Enum>
+   <Enum added="FIX.4.1" deprecated="FIX.Latest" deprecatedEP="271">
+      <Tag>160</Tag>
+      <Value>3</Value>
+      <SymbolicName>SpecificAllocationAccountStanding</SymbolicName>
+      <Group/>
+      <Sort>4</Sort>
+      <Description>Specific Allocation Account Standing (Replaced)</Description>
+   </Enum>
    <Enum added="FIX.4.3">
 		    <Tag>160</Tag>
 		    <Value>4</Value>
@@ -6755,14 +6755,14 @@
 		    <Sort>72</Sort>
 		    <Description>Stopped Out of Sequence</Description>
 	  </Enum>
-   <Enum added="FIX.4.4" addedEP="7">
-		    <Tag>277</Tag>
-		    <Value>AN</Value>
-		    <SymbolicName>OfficalClosingPrice</SymbolicName>
-		    <Group/>
-		    <Sort>73</Sort>
-		    <Description>Offical Closing Price (duplicate enumeration - use 'AJ' instead)</Description>
-	  </Enum>
+   <Enum added="FIX.4.4" addedEP="7" updated="FIX.Latest" updatedEP="271">
+      <Tag>277</Tag>
+      <Value>AN</Value>
+      <SymbolicName>OfficialClosingPriceDup</SymbolicName>
+      <Group/>
+      <Sort>73</Sort>
+      <Description>Official Closing Price (duplicate enumeration - use 'AJ' instead)</Description>
+   </Enum>
    <Enum added="FIX.4.4" addedEP="7">
 		    <Tag>277</Tag>
 		    <Value>AO</Value>
@@ -8316,22 +8316,22 @@
 		    <Sort>16</Sort>
 		    <Description>Incorrect NumInGroup count for repeating group</Description>
 	  </Enum>
-   <Enum added="FIX.4.3">
-		    <Tag>373</Tag>
-		    <Value>17</Value>
-		    <SymbolicName>Non</SymbolicName>
-		    <Group/>
-		    <Sort>17</Sort>
-		    <Description>Non "Data" value includes field delimiter (&lt;SOH&gt; character)</Description>
-	  </Enum>
-   <Enum added="FIX.5.0" addedEP="56">
-		    <Tag>373</Tag>
-		    <Value>18</Value>
-		    <SymbolicName>Invalid</SymbolicName>
-		    <Group/>
-		    <Sort>19</Sort>
-		    <Description>Invalid/Unsupported Application Version</Description>
-	  </Enum>
+   <Enum added="FIX.4.3" updated="FIX.Latest" updatedEP="271">
+      <Tag>373</Tag>
+      <Value>17</Value>
+      <SymbolicName>NonDataValueIncludesFieldDelimiter</SymbolicName>
+      <Group/>
+      <Sort>17</Sort>
+      <Description>Non "Data" value includes field delimiter (&lt;SOH&gt; character)</Description>
+   </Enum>
+   <Enum added="FIX.5.0" addedEP="56" updated="FIX.Latest" updatedEP="271">
+      <Tag>373</Tag>
+      <Value>18</Value>
+      <SymbolicName>InvalidUnsupportedApplVer</SymbolicName>
+      <Group/>
+      <Sort>19</Sort>
+      <Description>Invalid/Unsupported Application Version</Description>
+   </Enum>
    <Enum added="FIX.4.4">
 		    <Tag>373</Tag>
 		    <Value>99</Value>
@@ -8636,14 +8636,14 @@
 		    <Sort>1</Sort>
 		    <Description>"Non Disclosed" style (e.g. US/European)</Description>
 	  </Enum>
-   <Enum added="FIX.4.3">
-		    <Tag>394</Tag>
-		    <Value>2</Value>
-		    <SymbolicName>Disclosed</SymbolicName>
-		    <Group/>
-		    <Sort>2</Sort>
-		    <Description>"Disclosed" sytle (e.g. Japanese)</Description>
-	  </Enum>
+   <Enum added="FIX.4.3" updated="FIX.Latest" updatedEP="271">
+      <Tag>394</Tag>
+      <Value>2</Value>
+      <SymbolicName>Disclosed</SymbolicName>
+      <Group/>
+      <Sort>2</Sort>
+      <Description>"Disclosed" style (e.g. Japanese)</Description>
+   </Enum>
    <Enum added="FIX.4.3">
 		    <Tag>394</Tag>
 		    <Value>3</Value>
@@ -10070,13 +10070,13 @@
 		    <Sort>80</Sort>
 		    <Description>Step-Out Firm (Prime Broker)</Description>
 	  </Enum>
-   <Enum added="FIX.5.0" addedEP="68" updated="FIX.5.0SP2" updatedEP="223">
+   <Enum added="FIX.5.0" addedEP="68" updated="FIX.Latest" updatedEP="271">
       <Tag>452</Tag>
       <Value>81</Value>
       <SymbolicName>BrokerClearingID</SymbolicName>
       <Group/>
       <Sort>81</Sort>
-      <Description>Broker cient ID</Description>
+      <Description>Broker clearing identifier</Description>
    </Enum>
    <Enum added="FIX.4.3">
 		    <Tag>460</Tag>
@@ -11743,78 +11743,78 @@
 		    <Sort>0</Sort>
 		    <Description>Mass Cancel Not Supported</Description>
 	  </Enum>
-   <Enum added="FIX.4.3">
-		    <Tag>532</Tag>
-		    <Value>1</Value>
-		    <SymbolicName>InvalidOrUnknownSecurity</SymbolicName>
-		    <Group/>
-		    <Sort>1</Sort>
-		    <Description>Invalid or Unknown Security</Description>
-	  </Enum>
-   <Enum added="FIX.4.3">
-		    <Tag>532</Tag>
-		    <Value>2</Value>
-		    <SymbolicName>InvalidOrUnkownUnderlyingSecurity</SymbolicName>
-		    <Group/>
-		    <Sort>2</Sort>
-		    <Description>Invalid or Unkown Underlying security</Description>
-	  </Enum>
-   <Enum added="FIX.4.3">
-		    <Tag>532</Tag>
-		    <Value>3</Value>
-		    <SymbolicName>InvalidOrUnknownProduct</SymbolicName>
-		    <Group/>
-		    <Sort>3</Sort>
-		    <Description>Invalid or Unknown Product</Description>
-	  </Enum>
-   <Enum added="FIX.4.3">
-		    <Tag>532</Tag>
-		    <Value>4</Value>
-		    <SymbolicName>InvalidOrUnknownCFICode</SymbolicName>
-		    <Group/>
-		    <Sort>4</Sort>
-		    <Description>Invalid or Unknown CFICode</Description>
-	  </Enum>
-   <Enum added="FIX.4.3">
-		    <Tag>532</Tag>
-		    <Value>5</Value>
-		    <SymbolicName>InvalidOrUnknownSecurityType</SymbolicName>
-		    <Group/>
-		    <Sort>5</Sort>
-		    <Description>Invalid or Unknown SecurityType</Description>
-	  </Enum>
-   <Enum added="FIX.4.3">
-		    <Tag>532</Tag>
-		    <Value>6</Value>
-		    <SymbolicName>InvalidOrUnknownTradingSession</SymbolicName>
-		    <Group/>
-		    <Sort>6</Sort>
-		    <Description>Invalid or Unknown Trading Session</Description>
-	  </Enum>
-   <Enum added="FIX.5.0" addedEP="58">
-		    <Tag>532</Tag>
-		    <Value>7</Value>
-		    <SymbolicName>InvalidOrUnknownMarket</SymbolicName>
-		    <Group/>
-		    <Sort>8</Sort>
-		    <Description>Invalid or unknown Market</Description>
-	  </Enum>
-   <Enum added="FIX.5.0" addedEP="58">
-		    <Tag>532</Tag>
-		    <Value>8</Value>
-		    <SymbolicName>InvalidOrUnkownMarketSegment</SymbolicName>
-		    <Group/>
-		    <Sort>9</Sort>
-		    <Description>Invalid or unkown Market Segment</Description>
-	  </Enum>
-   <Enum added="FIX.5.0" addedEP="58">
-		    <Tag>532</Tag>
-		    <Value>9</Value>
-		    <SymbolicName>InvalidOrUnknownSecurityGroup</SymbolicName>
-		    <Group/>
-		    <Sort>10</Sort>
-		    <Description>Invalid or unknown Security Group</Description>
-	  </Enum>
+   <Enum added="FIX.4.3" updated="FIX.Latest" updatedEP="271">
+      <Tag>532</Tag>
+      <Value>1</Value>
+      <SymbolicName>InvalidOrUnknownSecurity</SymbolicName>
+      <Group/>
+      <Sort>1</Sort>
+      <Description>Invalid or unknown security</Description>
+   </Enum>
+   <Enum added="FIX.4.3" updated="FIX.Latest" updatedEP="271">
+      <Tag>532</Tag>
+      <Value>2</Value>
+      <SymbolicName>InvalidOrUnknownUnderlyingSecurity</SymbolicName>
+      <Group/>
+      <Sort>2</Sort>
+      <Description>Invalid or unknown underlying security</Description>
+   </Enum>
+   <Enum added="FIX.4.3" updated="FIX.Latest" updatedEP="271">
+      <Tag>532</Tag>
+      <Value>3</Value>
+      <SymbolicName>InvalidOrUnknownProduct</SymbolicName>
+      <Group/>
+      <Sort>3</Sort>
+      <Description>Invalid or unknown product</Description>
+   </Enum>
+   <Enum added="FIX.4.3" updated="FIX.Latest" updatedEP="271">
+      <Tag>532</Tag>
+      <Value>4</Value>
+      <SymbolicName>InvalidOrUnknownCFICode</SymbolicName>
+      <Group/>
+      <Sort>4</Sort>
+      <Description>Invalid or unknown CFI Code</Description>
+   </Enum>
+   <Enum added="FIX.4.3" updated="FIX.Latest" updatedEP="271">
+      <Tag>532</Tag>
+      <Value>5</Value>
+      <SymbolicName>InvalidOrUnknownSecurityType</SymbolicName>
+      <Group/>
+      <Sort>5</Sort>
+      <Description>Invalid or unknown security type</Description>
+   </Enum>
+   <Enum added="FIX.4.3" updated="FIX.Latest" updatedEP="271">
+      <Tag>532</Tag>
+      <Value>6</Value>
+      <SymbolicName>InvalidOrUnknownTradingSession</SymbolicName>
+      <Group/>
+      <Sort>6</Sort>
+      <Description>Invalid or unknown trading session</Description>
+   </Enum>
+   <Enum added="FIX.5.0" addedEP="58" updated="FIX.Latest" updatedEP="271">
+      <Tag>532</Tag>
+      <Value>7</Value>
+      <SymbolicName>InvalidOrUnknownMarket</SymbolicName>
+      <Group/>
+      <Sort>8</Sort>
+      <Description>Invalid or unknown market</Description>
+   </Enum>
+   <Enum added="FIX.5.0" addedEP="58" updated="FIX.Latest" updatedEP="271">
+      <Tag>532</Tag>
+      <Value>8</Value>
+      <SymbolicName>InvalidOrUnkownMarketSegment</SymbolicName>
+      <Group/>
+      <Sort>9</Sort>
+      <Description>Invalid or unknown market segment</Description>
+   </Enum>
+   <Enum added="FIX.5.0" addedEP="58" updated="FIX.Latest" updatedEP="271">
+      <Tag>532</Tag>
+      <Value>9</Value>
+      <SymbolicName>InvalidOrUnknownSecurityGroup</SymbolicName>
+      <Group/>
+      <Sort>10</Sort>
+      <Description>Invalid or unknown security group</Description>
+   </Enum>
    <Enum added="FIX.4.4">
 		    <Tag>532</Tag>
 		    <Value>99</Value>
@@ -12637,46 +12637,46 @@
 		    <Sort>4</Sort>
 		    <Description>All other</Description>
 	  </Enum>
-   <Enum added="FIX.4.3">
-		    <Tag>585</Tag>
-		    <Value>1</Value>
-		    <SymbolicName>StatusForOrdersForASecurity</SymbolicName>
-		    <Group/>
-		    <Sort>1</Sort>
-		    <Description>Status for orders for a Security</Description>
-	  </Enum>
-   <Enum added="FIX.4.3">
-		    <Tag>585</Tag>
-		    <Value>2</Value>
-		    <SymbolicName>StatusForOrdersForAnUnderlyingSecurity</SymbolicName>
-		    <Group/>
-		    <Sort>2</Sort>
-		    <Description>Status for orders for an Underlying Security</Description>
-	  </Enum>
-   <Enum added="FIX.4.3">
-		    <Tag>585</Tag>
-		    <Value>3</Value>
-		    <SymbolicName>StatusForOrdersForAProduct</SymbolicName>
-		    <Group/>
-		    <Sort>3</Sort>
-		    <Description>Status for orders for a Product</Description>
-	  </Enum>
-   <Enum added="FIX.4.3">
-		    <Tag>585</Tag>
-		    <Value>4</Value>
-		    <SymbolicName>StatusForOrdersForACFICode</SymbolicName>
-		    <Group/>
-		    <Sort>4</Sort>
-		    <Description>Status for orders for a CFICode</Description>
-	  </Enum>
-   <Enum added="FIX.4.3">
-		    <Tag>585</Tag>
-		    <Value>5</Value>
-		    <SymbolicName>StatusForOrdersForASecurityType</SymbolicName>
-		    <Group/>
-		    <Sort>5</Sort>
-		    <Description>Status for orders for a SecurityType</Description>
-	  </Enum>
+   <Enum added="FIX.4.3" updated="FIX.Latest" updatedEP="271">
+      <Tag>585</Tag>
+      <Value>1</Value>
+      <SymbolicName>StatusForOrdersForASecurity</SymbolicName>
+      <Group/>
+      <Sort>1</Sort>
+      <Description>Status for orders for a security</Description>
+   </Enum>
+   <Enum added="FIX.4.3" updated="FIX.Latest" updatedEP="271">
+      <Tag>585</Tag>
+      <Value>2</Value>
+      <SymbolicName>StatusForOrdersForAnUnderlyingSecurity</SymbolicName>
+      <Group/>
+      <Sort>2</Sort>
+      <Description>Status for orders for an underlying security</Description>
+   </Enum>
+   <Enum added="FIX.4.3" updated="FIX.Latest" updatedEP="271">
+      <Tag>585</Tag>
+      <Value>3</Value>
+      <SymbolicName>StatusForOrdersForAProduct</SymbolicName>
+      <Group/>
+      <Sort>3</Sort>
+      <Description>Status for orders for a product)</Description>
+   </Enum>
+   <Enum added="FIX.4.3" updated="FIX.Latest" updatedEP="271">
+      <Tag>585</Tag>
+      <Value>4</Value>
+      <SymbolicName>StatusForOrdersForACFICode</SymbolicName>
+      <Group/>
+      <Sort>4</Sort>
+      <Description>Status for orders for a CFI Code</Description>
+   </Enum>
+   <Enum added="FIX.4.3" updated="FIX.Latest" updatedEP="271">
+      <Tag>585</Tag>
+      <Value>5</Value>
+      <SymbolicName>StatusForOrdersForASecurityType</SymbolicName>
+      <Group/>
+      <Sort>5</Sort>
+      <Description>Status for orders for a security type</Description>
+   </Enum>
    <Enum added="FIX.4.3">
 		    <Tag>585</Tag>
 		    <Value>6</Value>
@@ -12693,14 +12693,14 @@
 		    <Sort>7</Sort>
 		    <Description>Status for all orders</Description>
 	  </Enum>
-   <Enum added="FIX.4.3">
-		    <Tag>585</Tag>
-		    <Value>8</Value>
-		    <SymbolicName>StatusForOrdersForAPartyID</SymbolicName>
-		    <Group/>
-		    <Sort>8</Sort>
-		    <Description>Status for orders for a PartyID</Description>
-	  </Enum>
+   <Enum added="FIX.4.3" updated="FIX.Latest" updatedEP="271">
+      <Tag>585</Tag>
+      <Value>8</Value>
+      <SymbolicName>StatusForOrdersForAPartyID</SymbolicName>
+      <Group/>
+      <Sort>8</Sort>
+      <Description>Status for orders for a party identifier</Description>
+   </Enum>
    <Enum added="FIX.4.3">
 		    <Tag>589</Tag>
 		    <Value>0</Value>
@@ -14143,14 +14143,15 @@
 		    <Sort>5</Sort>
 		    <Description>Request for position not supported</Description>
 	  </Enum>
-   <Enum added="FIX.4.4">
-		    <Tag>728</Tag>
-		    <Value>99</Value>
-		    <SymbolicName>Other</SymbolicName>
-		    <Group/>
-		    <Sort>99</Sort>
-		    <Description>Other (use Text (58) in conjunction with this code for an explaination)</Description>
-	  </Enum>
+   <Enum added="FIX.4.4" updated="FIX.Latest" updatedEP="271">
+      <Tag>728</Tag>
+      <Value>99</Value>
+      <SymbolicName>Other</SymbolicName>
+      <Group/>
+      <Sort>99</Sort>
+      <Description>Other</Description>
+      <Elaboration>Use Text(58) for further explanation.</Elaboration>
+   </Enum>
    <Enum added="FIX.4.4">
 		    <Tag>729</Tag>
 		    <Value>0</Value>
@@ -18640,14 +18641,14 @@ iii) submitting a transaction report to the Exchange, where the transaction repo
 		    <Sort>2</Sort>
 		    <Description>Accepted</Description>
 	  </Enum>
-   <Enum added="FIX.4.4" addedEP="-1">
-		    <Tag>1036</Tag>
-		    <Value>2</Value>
-		    <SymbolicName>Don</SymbolicName>
-		    <Group/>
-		    <Sort>3</Sort>
-		    <Description>Don't know / Rejected</Description>
-	  </Enum>
+   <Enum added="FIX.4.4" addedEP="-1" updated="FIX.Latest" updatedEP="271">
+      <Tag>1036</Tag>
+      <Value>2</Value>
+      <SymbolicName>DontKnow</SymbolicName>
+      <Group/>
+      <Sort>3</Sort>
+      <Description>Don't know / Rejected</Description>
+   </Enum>
    <Enum added="FIX.4.4" addedEP="-1">
 		    <Tag>1043</Tag>
 		    <Value>0</Value>
@@ -19918,78 +19919,6 @@ iii) submitting a transaction report to the Exchange, where the transaction repo
 		    <Sort>3</Sort>
 		    <Description>Percentage</Description>
 	  </Enum>
-   <Enum added="FIX.5.0" addedEP="52">
-		    <Tag>1307</Tag>
-		    <Value>0</Value>
-		    <SymbolicName>Symbol</SymbolicName>
-		    <Group/>
-		    <Sort>1</Sort>
-		    <Description>Symbol</Description>
-	  </Enum>
-   <Enum added="FIX.5.0" addedEP="52">
-		    <Tag>1307</Tag>
-		    <Value>1</Value>
-		    <SymbolicName>SecurityTypeAndOrCFICode</SymbolicName>
-		    <Group/>
-		    <Sort>2</Sort>
-		    <Description>SecurityType and or CFICode</Description>
-	  </Enum>
-   <Enum added="FIX.5.0" addedEP="52">
-		    <Tag>1307</Tag>
-		    <Value>2</Value>
-		    <SymbolicName>Product</SymbolicName>
-		    <Group/>
-		    <Sort>3</Sort>
-		    <Description>Product</Description>
-	  </Enum>
-   <Enum added="FIX.5.0" addedEP="52">
-		    <Tag>1307</Tag>
-		    <Value>3</Value>
-		    <SymbolicName>TradingSessionID</SymbolicName>
-		    <Group/>
-		    <Sort>4</Sort>
-		    <Description>TradingSessionID</Description>
-	  </Enum>
-   <Enum added="FIX.5.0" addedEP="52">
-		    <Tag>1307</Tag>
-		    <Value>4</Value>
-		    <SymbolicName>AllSecurities</SymbolicName>
-		    <Group/>
-		    <Sort>5</Sort>
-		    <Description>All Securities</Description>
-	  </Enum>
-   <Enum added="FIX.5.0" addedEP="52">
-		    <Tag>1307</Tag>
-		    <Value>5</Value>
-		    <SymbolicName>UndelyingSymbol</SymbolicName>
-		    <Group/>
-		    <Sort>6</Sort>
-		    <Description>UndelyingSymbol</Description>
-	  </Enum>
-   <Enum added="FIX.5.0" addedEP="52">
-		    <Tag>1307</Tag>
-		    <Value>6</Value>
-		    <SymbolicName>UnderlyingSecurityTypeAndOrCFICode</SymbolicName>
-		    <Group/>
-		    <Sort>7</Sort>
-		    <Description>Underlying SecurityType and or CFICode</Description>
-	  </Enum>
-   <Enum added="FIX.5.0" addedEP="52">
-		    <Tag>1307</Tag>
-		    <Value>7</Value>
-		    <SymbolicName>UnderlyingProduct</SymbolicName>
-		    <Group/>
-		    <Sort>8</Sort>
-		    <Description>Underlying Product</Description>
-	  </Enum>
-   <Enum added="FIX.5.0" addedEP="52">
-		    <Tag>1307</Tag>
-		    <Value>8</Value>
-		    <SymbolicName>MarketIDOrMarketID</SymbolicName>
-		    <Group/>
-		    <Sort>9</Sort>
-		    <Description>MarketID or MarketID + MarketSegmentID</Description>
-	  </Enum>
    <Enum added="FIX.5.0" addedEP="56">
 		    <Tag>1409</Tag>
 		    <Value>0</Value>
@@ -21244,34 +21173,34 @@ iii) submitting a transaction report to the Exchange, where the transaction repo
 		    <Sort>12</Sort>
 		    <Description>Cancel Orders for Issuer of Underlying Security</Description>
 	  </Enum>
-   <Enum added="FIX.5.0SP1" addedEP="85">
-		    <Tag>532</Tag>
-		    <Value>10</Value>
-		    <SymbolicName>InvalidOrUnknownSecurityIssuer</SymbolicName>
-		    <Sort>11</Sort>
-		    <Description>Invalid or unknown Security Issuer</Description>
-	  </Enum>
-   <Enum added="FIX.5.0SP1" addedEP="85">
-		    <Tag>532</Tag>
-		    <Value>11</Value>
-		    <SymbolicName>InvalidOrUnknownIssuerOfUnderlyingSecurity</SymbolicName>
-		    <Sort>12</Sort>
-		    <Description>Invalid or unknown Issuer of Underlying Security</Description>
-	  </Enum>
-   <Enum added="FIX.5.0SP1" addedEP="85">
-		    <Tag>585</Tag>
-		    <Value>9</Value>
-		    <SymbolicName>StatusForSecurityIssuer</SymbolicName>
-		    <Sort>9</Sort>
-		    <Description>Status for Security Issuer</Description>
-	  </Enum>
-   <Enum added="FIX.5.0SP1" addedEP="85">
-		    <Tag>585</Tag>
-		    <Value>10</Value>
-		    <SymbolicName>StatusForIssuerOfUnderlyingSecurity</SymbolicName>
-		    <Sort>10</Sort>
-		    <Description>Status for Issuer of Underlying Security</Description>
-	  </Enum>
+   <Enum added="FIX.5.0SP1" addedEP="85" updated="FIX.Latest" updatedEP="271">
+      <Tag>532</Tag>
+      <Value>10</Value>
+      <SymbolicName>InvalidOrUnknownSecurityIssuer</SymbolicName>
+      <Sort>11</Sort>
+      <Description>Invalid or unknown security issuer</Description>
+   </Enum>
+   <Enum added="FIX.5.0SP1" addedEP="85" updated="FIX.Latest" updatedEP="271">
+      <Tag>532</Tag>
+      <Value>11</Value>
+      <SymbolicName>InvalidOrUnknownIssuerOfUnderlyingSecurity</SymbolicName>
+      <Sort>12</Sort>
+      <Description>Invalid or unknown issuer of underlying security</Description>
+   </Enum>
+   <Enum added="FIX.5.0SP1" addedEP="85" updated="FIX.Latest" updatedEP="271">
+      <Tag>585</Tag>
+      <Value>9</Value>
+      <SymbolicName>StatusForSecurityIssuer</SymbolicName>
+      <Sort>9</Sort>
+      <Description>Status for security issuer</Description>
+   </Enum>
+   <Enum added="FIX.5.0SP1" addedEP="85" updated="FIX.Latest" updatedEP="271">
+      <Tag>585</Tag>
+      <Value>10</Value>
+      <SymbolicName>StatusForIssuerOfUnderlyingSecurity</SymbolicName>
+      <Sort>10</Sort>
+      <Description>Status for issuer of underlying security</Description>
+   </Enum>
    <Enum added="FIX.5.0SP1" addedEP="85">
 		    <Tag>1374</Tag>
 		    <Value>11</Value>
@@ -21826,11 +21755,11 @@ iii) submitting a transaction report to the Exchange, where the transaction repo
 		    <Sort>2</Sort>
 		    <Description>Random</Description>
 	  </Enum>
-   <Enum added="FIX.5.0SP1" addedEP="95" updated="FIX.5.0SP2" updatedEP="170">
+   <Enum added="FIX.5.0SP1" addedEP="95" updated="FIX.Latest" updatedEP="271">
       <Tag>88</Tag>
       <Value>99</Value>
       <SymbolicName>Other</SymbolicName>
-      <Sort>99</Sort>
+      <Sort>100</Sort>
       <Description>Other</Description>
       <Elaboration>Use Text(58) for further reject reasons.</Elaboration>
    </Enum>
@@ -24420,27 +24349,6 @@ Variation margin (a daily offsetting of profits and losses) occurs as a result o
       <Sort>99</Sort>
       <Description>Other</Description>
    </Enum>
-   <Enum added="FIX.5.0SP2" addedEP="128">
-      <Tag>1763</Tag>
-      <Value>0</Value>
-      <SymbolicName>Accepted</SymbolicName>
-      <Sort>0</Sort>
-      <Description>Accepted</Description>
-   </Enum>
-   <Enum added="FIX.5.0SP2" addedEP="128">
-      <Tag>1763</Tag>
-      <Value>1</Value>
-      <SymbolicName>AcceptedWithChanges</SymbolicName>
-      <Sort>1</Sort>
-      <Description>Accepted with changes</Description>
-   </Enum>
-   <Enum added="FIX.5.0SP2" addedEP="128">
-      <Tag>1763</Tag>
-      <Value>2</Value>
-      <SymbolicName>Rejected</SymbolicName>
-      <Sort>2</Sort>
-      <Description>Rejected</Description>
-   </Enum>
    <Enum added="FIX.5.0SP2" addedEP="129" updated="FIX.5.0SP2" updatedEP="173">
       <Tag>1775</Tag>
       <Value>0</Value>
@@ -25341,13 +25249,13 @@ Variation margin (a daily offsetting of profits and losses) occurs as a result o
       <Sort>8</Sort>
       <Description>Any auction</Description>
    </Enum>
-   <Enum added="FIX.5.0SP2" addedEP="131">
+   <Enum added="FIX.5.0SP2" addedEP="131" updated="FIX.Latest" updatedEP="271">
       <Tag>770</Tag>
       <Value>9</Value>
       <SymbolicName>OrderbookEntryTime</SymbolicName>
       <Sort>9</Sort>
       <Description>Orderbook entry time</Description>
-      <Elaboration>Timestamp for an order representing the time it was entered in the orderbook of the execution venue. The orderbook entry tiime cannot change during the lifetime of the order.</Elaboration>
+      <Elaboration>Timestamp for an order representing the time it was entered in the orderbook of the execution venue. The orderbook entry time cannot change during the lifetime of the order.</Elaboration>
    </Enum>
    <Enum added="FIX.5.0SP2" addedEP="131">
       <Tag>1375</Tag>
@@ -26992,10 +26900,10 @@ Variation margin (a daily offsetting of profits and losses) occurs as a result o
       <Sort>99</Sort>
       <Description>Other</Description>
    </Enum>
-   <Enum added="FIX.5.0SP2" addedEP="149">
+   <Enum added="FIX.5.0SP2" addedEP="149" updated="FIX.Latest" updatedEP="271">
       <Tag>103</Tag>
       <Value>21</Value>
-      <SymbolicName>AlgorithRiskThresholdBreached</SymbolicName>
+      <SymbolicName>AlgorithmRiskThresholdBreached</SymbolicName>
       <Sort>21</Sort>
       <Description>Algorithm risk threshold breached</Description>
       <Elaboration>A sell-side broker algorithm has detected that a risk limit has been breached which requires further communication with the client.  Used in conjunction with Text(58) to convey the details of the specific event.</Elaboration>
@@ -30630,20 +30538,20 @@ In the context of Market Model Typology (MMT), the "benchmark" price depends on 
       <Description>Stop Limit on Bid or Offer</Description>
       <Elaboration>A stop order that is triggered by a bid or offer price movement (quote) at which point the stopped order becomes a limit order, also known as "stop limit on quote" in some markets (e.g. US markets).  In the US equities market it is common to trigger a stop off the National Best Bid or Offer (NBBO).</Elaboration>
    </Enum>
-   <Enum added="FIX.5.0SP2" addedEP="167">
+   <Enum added="FIX.5.0SP2" addedEP="167" updated="FIX.Latest" updatedEP="271">
       <Tag>2109</Tag>
       <Value>0</Value>
       <SymbolicName>Base64</SymbolicName>
       <Sort>0</Sort>
       <Description>Base64 encoding</Description>
-      <Elaboration>Base64 Encoding.</Elaboration>
+      <Elaboration/>
    </Enum>
-   <Enum added="FIX.5.0SP2" addedEP="167">
+   <Enum added="FIX.5.0SP2" addedEP="167" updated="FIX.Latest" updatedEP="271">
       <Tag>2109</Tag>
       <Value>1</Value>
       <SymbolicName>RawBinary</SymbolicName>
       <Sort>1</Sort>
-      <Description>Unencoded binary content</Description>
+      <Description>Raw binary</Description>
       <Elaboration>Unencoded binary content.</Elaboration>
    </Enum>
    <Enum added="FIX.5.0SP2" addedEP="168">
@@ -32004,109 +31912,109 @@ In the context of Market Model Typology (MMT), the "benchmark" price depends on 
       <Sort>6</Sort>
       <Description>Per month</Description>
    </Enum>
-   <Enum added="FIX.5.0SP2" addedEP="170">
+   <Enum added="FIX.5.0SP2" addedEP="170" updated="FIX.Latest" updatedEP="271">
       <Tag>88</Tag>
       <Value>14</Value>
-      <SymbolicName>DuplicateOrMissingIndividualAllocId</SymbolicName>
-      <Sort>14</Sort>
-      <Description>Duplicate or missing IndividualAllocId(467)</Description>
+      <SymbolicName>DuplicateOrMissingIndividualAllocID</SymbolicName>
+      <Sort>15</Sort>
+      <Description>Duplicate or missing IndividualAllocID(467)</Description>
    </Enum>
-   <Enum added="FIX.5.0SP2" addedEP="170">
+   <Enum added="FIX.5.0SP2" addedEP="170" updated="FIX.Latest" updatedEP="271">
       <Tag>88</Tag>
       <Value>15</Value>
       <SymbolicName>TradeNotRecognized</SymbolicName>
-      <Sort>15</Sort>
+      <Sort>16</Sort>
       <Description>Trade not recognized</Description>
    </Enum>
-   <Enum added="FIX.5.0SP2" addedEP="170">
+   <Enum added="FIX.5.0SP2" addedEP="170" updated="FIX.Latest" updatedEP="271">
       <Tag>88</Tag>
       <Value>16</Value>
       <SymbolicName>DuplicateTrade</SymbolicName>
-      <Sort>16</Sort>
+      <Sort>17</Sort>
       <Description>Trade previously allocated </Description>
    </Enum>
-   <Enum added="FIX.5.0SP2" addedEP="170">
+   <Enum added="FIX.5.0SP2" addedEP="170" updated="FIX.Latest" updatedEP="271">
       <Tag>88</Tag>
       <Value>17</Value>
       <SymbolicName>IncorrectOrMissingInstrument</SymbolicName>
-      <Sort>17</Sort>
+      <Sort>18</Sort>
       <Description>Incorrect or missing instrument </Description>
    </Enum>
-   <Enum added="FIX.5.0SP2" addedEP="170">
+   <Enum added="FIX.5.0SP2" addedEP="170" updated="FIX.Latest" updatedEP="271">
       <Tag>88</Tag>
       <Value>18</Value>
       <SymbolicName>IncorrectOrMissingSettlDate</SymbolicName>
-      <Sort>18</Sort>
+      <Sort>19</Sort>
       <Description>Incorrect or missing settlement date </Description>
    </Enum>
-   <Enum added="FIX.5.0SP2" addedEP="170">
+   <Enum added="FIX.5.0SP2" addedEP="170" updated="FIX.Latest" updatedEP="271">
       <Tag>88</Tag>
       <Value>19</Value>
       <SymbolicName>IncorrectOrMissingFundIDOrFundName</SymbolicName>
-      <Sort>19</Sort>
+      <Sort>20</Sort>
       <Description>Incorrect or missing fund ID or fund name </Description>
    </Enum>
-   <Enum added="FIX.5.0SP2" addedEP="170">
+   <Enum added="FIX.5.0SP2" addedEP="170" updated="FIX.Latest" updatedEP="271">
       <Tag>88</Tag>
       <Value>20</Value>
       <SymbolicName>IncorrectOrMissingSettlInstructions</SymbolicName>
-      <Sort>20</Sort>
+      <Sort>21</Sort>
       <Description>Incorrect or missing settlement instructions  </Description>
    </Enum>
-   <Enum added="FIX.5.0SP2" addedEP="170">
+   <Enum added="FIX.5.0SP2" addedEP="170" updated="FIX.Latest" updatedEP="271">
       <Tag>88</Tag>
       <Value>21</Value>
       <SymbolicName>IncorrectOrMissingFees</SymbolicName>
-      <Sort>21</Sort>
+      <Sort>22</Sort>
       <Description>Incorrect or missing fees</Description>
    </Enum>
-   <Enum added="FIX.5.0SP2" addedEP="170">
+   <Enum added="FIX.5.0SP2" addedEP="170" updated="FIX.Latest" updatedEP="271">
       <Tag>88</Tag>
       <Value>22</Value>
       <SymbolicName>IncorrectOrMissingTax</SymbolicName>
-      <Sort>22</Sort>
+      <Sort>23</Sort>
       <Description>Incorrect or missing tax</Description>
    </Enum>
-   <Enum added="FIX.5.0SP2" addedEP="170">
+   <Enum added="FIX.5.0SP2" addedEP="170" updated="FIX.Latest" updatedEP="271">
       <Tag>88</Tag>
       <Value>23</Value>
       <SymbolicName>UnknownOrMissingParty</SymbolicName>
-      <Sort>23</Sort>
+      <Sort>24</Sort>
       <Description>Unknown or missing party</Description>
    </Enum>
-   <Enum added="FIX.5.0SP2" addedEP="170">
+   <Enum added="FIX.5.0SP2" addedEP="170" updated="FIX.Latest" updatedEP="271">
       <Tag>88</Tag>
       <Value>24</Value>
       <SymbolicName>IncorrectOrMissingSide</SymbolicName>
-      <Sort>24</Sort>
+      <Sort>25</Sort>
       <Description>Incorrect or missing side</Description>
    </Enum>
-   <Enum added="FIX.5.0SP2" addedEP="170">
+   <Enum added="FIX.5.0SP2" addedEP="170" updated="FIX.Latest" updatedEP="271">
       <Tag>88</Tag>
       <Value>25</Value>
       <SymbolicName>IncorrectOrMissingNetMoney</SymbolicName>
-      <Sort>25</Sort>
+      <Sort>26</Sort>
       <Description>Incorrect or missing net-money</Description>
    </Enum>
-   <Enum added="FIX.5.0SP2" addedEP="170">
+   <Enum added="FIX.5.0SP2" addedEP="170" updated="FIX.Latest" updatedEP="271">
       <Tag>88</Tag>
       <Value>26</Value>
       <SymbolicName>IncorrectOrMissingTradeDate</SymbolicName>
-      <Sort>26</Sort>
+      <Sort>27</Sort>
       <Description>Incorrect or missing trade date</Description>
    </Enum>
-   <Enum added="FIX.5.0SP2" addedEP="170">
+   <Enum added="FIX.5.0SP2" addedEP="170" updated="FIX.Latest" updatedEP="271">
       <Tag>88</Tag>
       <Value>27</Value>
       <SymbolicName>IncorrectOrMissingSettlCcyInstructions</SymbolicName>
-      <Sort>27</Sort>
+      <Sort>28</Sort>
       <Description>Incorrect or missing settlement currency instructions</Description>
    </Enum>
-   <Enum added="FIX.5.0SP2" addedEP="170">
+   <Enum added="FIX.5.0SP2" addedEP="170" updated="FIX.Latest" updatedEP="271">
       <Tag>88</Tag>
       <Value>28</Value>
       <SymbolicName>IncorrectOrMissingProcessCode</SymbolicName>
-      <Sort>28</Sort>
+      <Sort>29</Sort>
       <Description>Incorrrect or missing ProcessCode(81)</Description>
    </Enum>
    <Enum added="FIX.5.0SP2" addedEP="170">
@@ -33521,13 +33429,13 @@ In the context of EU SFTR reporting use the appropriate 4- or 1-character code n
       <Description>Pending verification</Description>
       <Elaboration>Used in reports from the SDR to the regulator and to trading parties to indicate that the trade details have not been verified by one or both parties.</Elaboration>
    </Enum>
-   <Enum added="FIX.5.0SP2" addedEP="187">
+   <Enum added="FIX.5.0SP2" addedEP="187" updated="FIX.Latest" updatedEP="271">
       <Tag>939</Tag>
       <Value>9</Value>
       <SymbolicName>DeemedVerified</SymbolicName>
       <Sort>10</Sort>
       <Description>Deemed verified</Description>
-      <Elaboration>Used in reports from the SDR to the regulator and to trading parties to indicate that the trade details are deemed verified by the SDR by have not been confirmed by the trading parties.</Elaboration>
+      <Elaboration>Used in reports from the SDR to the regulator and to trading parties to indicate that the trade details are deemed verified by the SDR but have not been confirmed by the trading parties.</Elaboration>
    </Enum>
    <Enum added="FIX.5.0SP2" addedEP="187">
       <Tag>939</Tag>
@@ -33806,11 +33714,11 @@ In the context of EU SFTR reporting use the appropriate 4- or 1-character code n
       <Sort>3</Sort>
       <Description>Delete / Cancel</Description>
    </Enum>
-   <Enum added="FIX.5.0SP2" addedEP="188">
+   <Enum added="FIX.5.0SP2" addedEP="188" updated="FIX.Latest" updatedEP="271">
       <Tag>2429</Tag>
       <Value>4</Value>
       <SymbolicName>Suspend</SymbolicName>
-      <Sort> 4</Sort>
+      <Sort>4</Sort>
       <Description>Suspend</Description>
    </Enum>
    <Enum added="FIX.5.0SP2" addedEP="188">
@@ -37508,12 +37416,12 @@ In the context of Market Model Typology (MMT), use of this value applies to TrdT
       <Description>Algorithmic order</Description>
       <Elaboration>When OrderAttributeValue(2595)=Y, it signifies the order submitted to the dealer/investment firm resulted from an algorithm.</Elaboration>
    </Enum>
-   <Enum added="FIX.5.0SP2" addedEP="222">
+   <Enum added="FIX.5.0SP2" addedEP="222" updated="FIX.Latest" updatedEP="271">
       <Tag>2594</Tag>
       <Value>5</Value>
-      <SymbolicName>SystemicInternaliserOrder</SymbolicName>
+      <SymbolicName>SystematicInternaliserOrder</SymbolicName>
       <Sort>5</Sort>
-      <Description>Systemic internaliser order</Description>
+      <Description>Systematic internaliser order</Description>
       <Elaboration>When OrderAttributeValue(2595)=Y, it signifies the order is submitted by a systematic internaliser.</Elaboration>
    </Enum>
    <Enum added="FIX.5.0SP2" addedEP="222" updated="FIX.5.0SP2" updatedEP="237">
@@ -38099,12 +38007,12 @@ Mutually exclusive with TrdSubType(829) = 42 =(Auction).</Elaboration>
       <Description>Hybrid market</Description>
       <Elaboration>A hybrid system falling into two or more types of trading systems. Can also be used for ESMA RTS 1 "other type of trading system".</Elaboration>
    </Enum>
-   <Enum added="FIX.5.0SP2" addedEP="228">
+   <Enum added="FIX.5.0SP2" addedEP="228" updated="FIX.Latest" updatedEP="271">
       <Tag>1430</Tag>
       <Value>V</Value>
       <SymbolicName>VoiceNegotiation</SymbolicName>
       <Sort>11</Sort>
-      <Description>Voice neotiation</Description>
+      <Description>Voice negotiation</Description>
       <Elaboration>A trading system where transactions between members are arranged through voice negotiation.</Elaboration>
    </Enum>
    <Enum added="FIX.5.0SP2" addedEP="228">
@@ -38147,14 +38055,13 @@ Mutually exclusive with TrdSubType(829) = 42 =(Auction).</Elaboration>
       <Description>Order execution instructed by client</Description>
       <Elaboration>In the context of ESMA RTS 22, Annex I, Table 2, Field 59, when OrderAttributeValue(2595)=Y, it signifies that the execution (e.g. the details of the trade including the venue of execution) was instructed by a client or by another person from outside the Investment Firm but within the same group (Field 59 'CLIENT' in ESMA 2016-1452 Guidelines).</Elaboration>
    </Enum>
-   <Enum added="FIX.5.0SP2" addedEP="228" updated="FIX.5.0SP2" updatedEP="253">
+   <Enum added="FIX.5.0SP2" addedEP="228" updated="FIX.Latest" updatedEP="271">
       <Tag>2594</Tag>
       <Value>8</Value>
       <SymbolicName>LargeInScale</SymbolicName>
       <Sort>8</Sort>
       <Description>Large in scale order</Description>
-      <Elaboration>In the context of MiFIR Article 4(1)(c) and Article 9(1)(a), when OrderAttributeValue(2595)=Y, it signifies that the order size is above normal market size.
-In the context of MiFIR Article 4(1)(c) and Article 9(1)(a), when OrderAttributeValue(2595)=Y, it signifies that the order is large in scale compared to normal market size.</Elaboration>
+      <Elaboration>In the context of MiFIR Article 4(1)(c) and Article 9(1)(a), when OrderAttributeValue(2595)=Y, it signifies that the order size is large in scale compared to normal market size.</Elaboration>
    </Enum>
    <Enum added="FIX.5.0SP2" addedEP="228" updated="FIX.5.0SP2" updatedEP="253">
       <Tag>2594</Tag>
@@ -38180,13 +38087,13 @@ In the context of MiFIR Article 4(1)(c) and Article 9(1)(a), when OrderAttribute
       <Description>No public price and/or size quoted as transaction is "large in scale"</Description>
       <Elaboration>In the context of ESMA, as per MiFIR Article 4(1)(c) and Article 9(1)(a), the trading venue was not obliged to quote prior to closing the trade as the order size was above normal market size.</Elaboration>
    </Enum>
-   <Enum added="FIX.5.0SP2" addedEP="228">
+   <Enum added="FIX.5.0SP2" addedEP="228" updated="FIX.Latest" updatedEP="271">
       <Tag>2670</Tag>
       <Value>10</Value>
       <SymbolicName>NoPublicPriceSizeDueToOrderHidden</SymbolicName>
       <Sort>10</Sort>
       <Description>No public price and/or size quoted due to order being hidden</Description>
-      <Elaboration>In the ccontext of ESMA, as per MiFIR Article 4(1)(d) and Article 9(1)(a), a transaction arising from an order that was not fully pre-trade transparent due to all or part of it being held in a trading venue order management facility, such as a reserve order.</Elaboration>
+      <Elaboration>In the context of ESMA, as per MiFIR Article 4(1)(d) and Article 9(1)(a), a transaction arising from an order that was not fully pre-trade transparent due to all or part of it being held in a trading venue order management facility, such as a reserve order.</Elaboration>
    </Enum>
    <Enum added="FIX.5.0SP2" addedEP="228">
       <Tag>2670</Tag>
@@ -38950,13 +38857,13 @@ In the context of MiFIR Article 4(1)(c) and Article 9(1)(a), when OrderAttribute
       <Sort>0</Sort>
       <Description>Research payment account (RPA)</Description>
    </Enum>
-   <Enum added="FIX.5.0SP2" addedEP="233">
+   <Enum added="FIX.5.0SP2" addedEP="233" updated="FIX.Latest" updatedEP="271">
       <Tag>2725</Tag>
       <Value>1</Value>
       <SymbolicName>CommissionSharingAgreement</SymbolicName>
       <Group>Research Payment</Group>
       <Sort>1</Sort>
-      <Description>Comission sharing agreement (CSA)</Description>
+      <Description>Commission sharing agreement (CSA)</Description>
    </Enum>
    <Enum added="FIX.5.0SP2" addedEP="233">
       <Tag>2725</Tag>
@@ -39610,10 +39517,10 @@ In the context of MiFIR Article 4(1)(c) and Article 9(1)(a), when OrderAttribute
       <Description>Volume weighted average price</Description>
       <Elaboration>VWAP is the sum of the currency amount traded for all trades in the averaging group (price times quantity) divided by the total quantity.</Elaboration>
    </Enum>
-   <Enum added="FIX.5.0SP2" addedEP="240">
+   <Enum added="FIX.5.0SP2" addedEP="240" updated="FIX.Latest" updatedEP="271">
       <Tag>2763</Tag>
       <Value>2</Value>
-      <SymbolicName>PercentOfVolumeAvveragePrice</SymbolicName>
+      <SymbolicName>PercentOfVolumeAveragePrice</SymbolicName>
       <Sort>2</Sort>
       <Description>Percent of volume average price</Description>
       <Elaboration>POV is the sum of the currency amount traded for all trades executed as part of an order intended to purchase a specified percentage of the total volume of an instrument, divided by the total quantity.</Elaboration>
@@ -41745,6 +41652,20 @@ in that foreign jurisdiction.</Elaboration>
       <Description>Session profile FIXT or LFXIT</Description>
       <Elaboration>The choice between FIXT and LFIXT is subject to counterparty agreement.</Elaboration>
    </Enum>
+   <Enum added="FIX.Latest" addedEP="271">
+      <Tag>477</Tag>
+      <Value>999</Value>
+      <SymbolicName>Other</SymbolicName>
+      <Sort>999</Sort>
+      <Description>Other</Description>
+   </Enum>
+   <Enum added="FIX.Latest" addedEP="271">
+      <Tag>492</Tag>
+      <Value>999</Value>
+      <SymbolicName>Other</SymbolicName>
+      <Sort>999</Sort>
+      <Description>Other</Description>
+   </Enum>
    <Enum>
       <Tag>35</Tag>
       <Value>0</Value>
@@ -43004,7 +42925,7 @@ Indication messages can be transmitted in various transaction types; NEW, CANCEL
       <Group/>
       <Sort>72</Sort>
       <Description>PositionMaintenanceReport</Description>
-      <Elaboration>The Position Maintenance Report message is sent by the holder of a positon in response to a Position Maintenance Request and is used to confirm that a request has been successfully processed or rejected.</Elaboration>
+      <Elaboration>The Position Maintenance Report message is sent by the holder of a position in response to a Position Maintenance Request and is used to confirm that a request has been successfully processed or rejected.</Elaboration>
    </Enum>
    <Enum>
       <Tag>35</Tag>

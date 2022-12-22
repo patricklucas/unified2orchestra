@@ -4,17 +4,18 @@
            edition="2010"
            version="FIX.Latest"
            xsi:noNamespaceSchemaLocation="../../schema/Datatypes.xsd"
-           generated="2020-11-13T11:31:27.902Z"
-           latestEP="256">
-   <Datatype added="FIX.2.7" issue="SPEC-370" updated="FIX.5.0SP2" updatedEP="206">
+           generated="2022-08-01T13:01:00.859Z"
+           latestEP="271">
+   <Datatype added="FIX.2.7" issue="SPEC-370" updated="FIX.Latest" updatedEP="271">
       <Name>int</Name>
       <Description>Sequence of digits without commas or decimals and optional sign character (ASCII characters "-" and "0" - "9" ). The sign character utilizes one byte (i.e. positive int is "99999" while negative int is "-99999"). Note that int values may contain leading zeros (e.g. "00023" = "23").</Description>
-      <Example>723 in field 21 would be mapped int as |21=723|. -723 in field 12 would be mapped int as |12=-723|.</Example>
+      <Example>723 in field 21 would be mapped as |21=723|.
+-723 in field 12 would be mapped as |12=-723|.</Example>
       <XML>
          <BuiltIn>1</BuiltIn>
          <Base>xs:integer</Base>
-         <Description>Sequence of digits without commas or decimals and optional sign character (ASCII characters "-" and "0" - "9" ). The sign character utilizes one byte (i.e. positive int is "99999" while negative int is "-99999"). Note that int values may contain leading zeros (e.g. "00023" = "23").</Description>
-         <Example>723 in field 21 would be mapped int as |21=723|. -723 in field 12 would be mapped int as |12=-723|.</Example>
+         <Example>723 in field 21 would be mapped as |21=723|.
+-723 in field 12 would be mapped as |12=-723|.</Example>
       </XML>
    </Datatype>
    <Datatype added="FIX.4.3">
@@ -27,13 +28,14 @@
 					    <Description>int field representing the length in bytes. Value must be positive.</Description>
 		    </XML>
 	  </Datatype>
-   <Datatype added="FIX.4.3" updated="FIX.5.0SP2" updatedEP="99">
+   <Datatype added="FIX.4.3" updated="FIX.Latest" updatedEP="271">
       <Name>TagNum</Name>
       <BaseType>int</BaseType>
       <Description>int field representing a field's tag number when using FIX "Tag=Value" syntax. Value must be positive and may not contain leading zeros.</Description>
       <XML>
          <BuiltIn>0</BuiltIn>
          <Base>xs:nonNegativeInteger</Base>
+         <Description>int field representing a tag number. Value must be positive and may not contain leading zeros.</Description>
       </XML>
    </Datatype>
    <Datatype added="FIX.4.3">
@@ -51,11 +53,16 @@
 		    <BaseType>int</BaseType>
 		    <Description>int field representing the number of entries in a repeating group. Value must be positive.</Description>
 	  </Datatype>
-   <Datatype added="FIX.4.1">
-		    <Name>DayOfMonth</Name>
-		    <BaseType>int</BaseType>
-		    <Description>int field representing a day during a particular monthy (values 1 to 31).</Description>
-	  </Datatype>
+   <Datatype added="FIX.4.1" updated="FIX.Latest" updatedEP="271">
+      <Name>DayOfMonth</Name>
+      <BaseType>int</BaseType>
+      <Description>int field representing a day during a particular month (values 1 to 31).</Description>
+      <XML>
+         <BuiltIn>0</BuiltIn>
+         <Base>xs:integer</Base>
+         <Description>int field representing a day during a particular month (values 1 to 31).</Description>
+      </XML>
+   </Datatype>
    <Datatype added="FIX.2.7" updated="FIX.5.0SP2" updatedEP="206">
       <Name>float</Name>
       <Description>Sequence of digits with optional decimal point and sign character (ASCII characters "-", "0" - "9" and "."); the absence of the decimal point within the string will be interpreted as the float representation of an integer value. All float fields must accommodate up to fifteen significant digits. The number of decimal places used should be a factor of business/market needs and mutual agreement between counterparties. Note that float values may contain leading zeros (e.g. "00023.23" = "23.23") and may contain or omit trailing zeros after the decimal point (e.g. "23.0" = "23.0000" = "23" = "23."). Note that fields which are derived from float may contain negative values unless explicitly specified otherwise.</Description>
@@ -290,22 +297,22 @@ Tm="13:20:00.123456789" nanoseconds
 Tm="13:20:00.123456789123" picoseconds</Example>
       </XML>
    </Datatype>
-   <Datatype added="FIX.4.4">
-		    <Name>UTCDateOnly</Name>
-		    <BaseType>String</BaseType>
-		    <Description>string field representing Date represented in UTC (Universal Time Coordinated, also known as "GMT") in YYYYMMDD format. This special-purpose field is paired with UTCTimeOnly to form a proper UTCTimestamp for bandwidth-sensitive messages.
+   <Datatype added="FIX.4.4" updated="FIX.Latest" updatedEP="271">
+      <Name>UTCDateOnly</Name>
+      <BaseType>String</BaseType>
+      <Description>string field representing Date represented in UTC (Universal Time Coordinated, also known as "GMT") in YYYYMMDD format. This special-purpose field is paired with UTCTimeOnly to form a proper UTCTimestamp for bandwidth-sensitive messages.
 Valid values:
 YYYY = 0000-9999, MM = 01-12, DD = 01-31.</Description>
-		    <Example>MDEntryDate="20030910"</Example>
-		    <XML>
-			      <BuiltIn>0</BuiltIn>
-			      <Base>xs:date</Base>
-		       <Description>string field representing Date represented in UTC (Universal Time Coordinated, also known as "GMT") in YYYY-MM-DD format specifed in ISO 8601. This special-purpose field is paired with UTCTimeOnly to form a proper UTCTimestamp for bandwidth-sensitive messages.
+      <Example>MDEntryDate="20030910"</Example>
+      <XML>
+         <BuiltIn>0</BuiltIn>
+         <Base>xs:date</Base>
+         <Description>string field representing Date represented in UTC (Universal Time Coordinated, also known as GMT) in YYYY-MM-DD format specified in ISO 8601. This special-purpose field is paired with UTCTimeOnly to form a proper UTCTimestamp for bandwidth-sensitive messages.
 Valid values:
 YYYY = 0000-9999, MM = 01-12, DD = 01-31.</Description>
-		       <Example>MDEntryDate="2003-09-10"</Example>
-		    </XML>
-	  </Datatype>
+         <Example>MDEntryDate="2003-09-10"</Example>
+      </XML>
+   </Datatype>
    <Datatype added="FIX.4.2" updated="FIX.5.0SP2" updatedEP="206">
       <Name>LocalMktDate</Name>
       <BaseType>String</BaseType>

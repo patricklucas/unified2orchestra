@@ -4,8 +4,8 @@
                edition="2010"
                version="FIX.Latest"
                xsi:noNamespaceSchemaLocation="../../schema/Abbreviations.xsd"
-               generated="2021-08-05T07:54:58.183Z"
-               latestEP="266">
+               generated="2022-08-01T13:01:00.859Z"
+               latestEP="271">
    <Abbreviation added="FIX.4.4">
 		    <Term>Account</Term>
 		    <AbbrTerm>Acct</AbbrTerm>
@@ -1998,32 +1998,7 @@
       <AbbrTerm>OvrNite</AbbrTerm>
       <Usage>OvernightInterestRate</Usage>
    </Abbreviation>
-   <Abbreviation added="FIX.5.0SP2" addedEP="199">
-      <Term>EP199</Term>
-      <AbbrTerm>EP199 Dummy term</AbbrTerm>
-      <Usage>Please remove me when you code this EP.  Thank you.</Usage>
-   </Abbreviation>
-   <Abbreviation added="FIX.5.0SP2" addedEP="200">
-      <Term>EP200</Term>
-      <AbbrTerm>EP200 Dummy Abbreviation</AbbrTerm>
-      <Usage>Please remove me when you code the EP.  Thanks!</Usage>
-   </Abbreviation>
-   <Abbreviation added="FIX.5.0SP2" addedEP="201">
-      <Term>EP201</Term>
-      <AbbrTerm>EP201 dummy abbreviation.</AbbrTerm>
-      <Usage>Please delete me when coding EP201.  Thanks!</Usage>
-   </Abbreviation>
-   <Abbreviation added="FIX.5.0SP2" addedEP="202">
-      <Term>EP202</Term>
-      <AbbrTerm>EP202 dummy abbreviation.</AbbrTerm>
-      <Usage>Please delete me when coding EP202.  Thanks!</Usage>
-   </Abbreviation>
-   <Abbreviation added="FIX.5.0SP2" addedEP="203">
-      <Term>EP203</Term>
-      <AbbrTerm>EP203 Dummy abbreviation.</AbbrTerm>
-      <Usage>Please delete me when coding EP203.  Thanks!</Usage>
-   </Abbreviation>
-   <Abbreviation added="FIX.5.0SP2" addedEP="204">
+   <!--DELETED Abbreviation identified by Term='EP199'--><!--DELETED Abbreviation identified by Term='EP200'--><!--DELETED Abbreviation identified by Term='EP201'--><!--DELETED Abbreviation identified by Term='EP202'--><!--DELETED Abbreviation identified by Term='EP203'--><Abbreviation added="FIX.5.0SP2" addedEP="204">
       <Term>Basis</Term>
       <AbbrTerm>Basis</AbbrTerm>
       <Usage>CommissionBasis</Usage>
@@ -2033,15 +2008,7 @@
       <AbbrTerm>Shared</AbbrTerm>
       <Usage>CommissionSharedIndicator</Usage>
    </Abbreviation>
-   <Abbreviation added="FIX.5.0SP2" addedEP="206">
-      <Term>Dummy1</Term>
-      <AbbrTerm>Dummy1</AbbrTerm>
-   </Abbreviation>
-   <Abbreviation added="FIX.5.0SP2" addedEP="206">
-      <Term>Dummy</Term>
-      <AbbrTerm>Dummy</AbbrTerm>
-   </Abbreviation>
-   <Abbreviation added="FIX.5.0SP2" addedEP="208">
+   <!--DELETED Abbreviation identified by Term='Dummy1'--><!--DELETED Abbreviation identified by Term='Dummy'--><Abbreviation added="FIX.5.0SP2" addedEP="208">
       <Term>Average</Term>
       <AbbrTerm>Avg</AbbrTerm>
       <Usage>UnderlyingAverageVolumeLimitationPercentage</Usage>
@@ -2381,5 +2348,10 @@ LegUPICode,
 UnderlyingInstrumentUPICode,
 InstrumentScopeUPICode
 </Usage>
+   </Abbreviation>
+   <Abbreviation added="FIX.Latest" addedEP="271">
+      <Term>Deviation</Term>
+      <AbbrTerm>Deviatn</AbbrTerm>
+      <Usage>MaximumPriceDeviation(2676)</Usage>
    </Abbreviation>
 </Abbreviations>

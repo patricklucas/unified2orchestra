@@ -4,8 +4,8 @@
           edition="2010"
           version="FIX.Latest"
           xsi:noNamespaceSchemaLocation="../../schema/Sections.xsd"
-          generated="2019-05-13T21:23:17.734Z"
-          latestEP="249">
+          generated="2022-08-01T13:01:00.859Z"
+          latestEP="271">
    <Section>
 		    <SectionID>Session</SectionID>
 		    <Name>Session</Name>
@@ -15,14 +15,14 @@
 		    <FIXMLFileName>session</FIXMLFileName>
 		    <Description>Session level messages to establish and control a FIX session</Description>
 	  </Section>
-   <Section updated="FIX.5.0SP2" updatedEP="249">
+   <Section updated="FIX.Latest" updatedEP="271">
       <SectionID>PreTrade</SectionID>
       <Name>PreTrade</Name>
       <DisplayOrder>1</DisplayOrder>
       <Volume>3</Volume>
       <NotReqXML>0</NotReqXML>
       <FIXMLFileName>pretrade</FIXMLFileName>
-      <Description>A description added to the PreTrade section.</Description>
+      <Description>Pre trade messages including reference data, market data, quoting, news and email, indication of interest.</Description>
    </Section>
    <Section>
 		    <SectionID>Trade</SectionID>

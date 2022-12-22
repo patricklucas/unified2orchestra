@@ -4,8 +4,8 @@
             edition="2010"
             version="FIX.Latest"
             xsi:noNamespaceSchemaLocation="../../schema/Components.xsd"
-            generated="2020-11-15T07:32:33.614Z"
-            latestEP="259">
+            generated="2022-08-01T13:01:00.859Z"
+            latestEP="271">
    <Component added="FIX.4.3" updated="FIX.5.0SP2" updatedEP="204">
       <ComponentID>1000</ComponentID>
       <ComponentType>Block</ComponentType>
@@ -205,15 +205,15 @@
 		    <NotReqXML>0</NotReqXML>
 		    <Description>The UnderlyingStipulations component block has the same usage as the Stipulations component block, but for an underlying security.</Description>
 	  </Component>
-   <Component added="FIX.4.0">
-		    <ComponentID>1024</ComponentID>
-		    <ComponentType>Block</ComponentType>
-		    <CategoryID>Session</CategoryID>
-		    <Name>StandardHeader</Name>
-		    <AbbrName>BaseHeader</AbbrName>
-		    <NotReqXML>0</NotReqXML>
-		    <Description>The standard FIX message header</Description>
-	  </Component>
+   <Component added="FIX.4.0" updated="FIX.Latest" updatedEP="271">
+      <ComponentID>1024</ComponentID>
+      <ComponentType>Block</ComponentType>
+      <CategoryID>Session</CategoryID>
+      <Name>StandardHeader</Name>
+      <AbbrName>Hdr</AbbrName>
+      <NotReqXML>0</NotReqXML>
+      <Description>The standard FIX message header</Description>
+   </Component>
    <Component added="FIX.4.0">
 		    <ComponentID>1025</ComponentID>
 		    <ComponentType>Block</ComponentType>
@@ -1092,15 +1092,15 @@ The EventMonthYear(2340) may be used instead of EventDate(866) when month-year, 
 		    <NotReqXML>0</NotReqXML>
 		    <Description/>
 	  </Component>
-   <Component added="FIX.4.4" addedEP="-1">
-		    <ComponentID>2098</ComponentID>
-		    <ComponentType>ImplicitBlockRepeating</ComponentType>
-		    <CategoryID>Common</CategoryID>
-		    <Name>MsgTypeGrp</Name>
-		    <AbbrName>MsgTypeGrp</AbbrName>
-		    <NotReqXML>0</NotReqXML>
-		    <Description/>
-	  </Component>
+   <Component added="FIX.4.4" addedEP="-1" updated="FIX.Latest" updatedEP="271">
+      <ComponentID>2098</ComponentID>
+      <ComponentType>ImplicitBlockRepeating</ComponentType>
+      <CategoryID>Session</CategoryID>
+      <Name>MsgTypeGrp</Name>
+      <AbbrName>MsgTypeGrp</AbbrName>
+      <NotReqXML>0</NotReqXML>
+      <Description/>
+   </Component>
    <Component added="FIX.5.0" addedEP="-1">
 		    <ComponentID>1058</ComponentID>
 		    <ComponentType>Block</ComponentType>
@@ -2267,7 +2267,7 @@ The LegEventDate(2061), and optional LegEventTime(2062), may be used to express 
 Either LegEventDate(2061) or LegEventMonthYear(2341), and the optional LegEventTime(2062), must be specified or LegEventTimeUnit(2063) and LegEventTimePeriod(2064) must be specified.
 The LegEventMonthYear(2341) may be used instead of LegEventDate(2061) when month-year, with optional day of month or week of month, is required instead of a date.</Elaboration>
    </Component>
-   <Component added="FIX.5.0SP2" addedEP="161" updated="FIX.5.0SP2" updatedEP="169">
+   <Component added="FIX.5.0SP2" addedEP="161" updated="FIX.Latest" updatedEP="271">
       <ComponentID>4043</ComponentID>
       <ComponentType>BlockRepeating</ComponentType>
       <CategoryID>Common</CategoryID>
@@ -2275,7 +2275,7 @@ The LegEventMonthYear(2341) may be used instead of LegEventDate(2061) when month
       <AbbrName>PmtSched</AbbrName>
       <NotReqXML>0</NotReqXML>
       <Description>The LegPaymentScheduleGrp is a repeating subcomponent of the LegPaymentStream component used to specify notional and rate steps in the payment stream.</Description>
-      <Elaboration>The Fixing Lag Interval (LegPaymentScheduleFixingLagPeriod(41545) and LegPaymentScheduleFixingLagUnit(41546)) and the First Observation Offset Duration (LegPaymentScheduleFixingFirstObservationOffsetPeriod(41547) and LegPaymentScheduleFixingFirstObservationOffsetUnit(41548)) are used together.  If the First Observation Offset Duration is specified, the observation starts the Fixing Lag Interval prior to each calculation.  If the First Observation Offset Duration is not specified, the observation starts immediately preceeding each calculation.</Elaboration>
+      <Elaboration>The Fixing Lag Interval (LegPaymentScheduleFixingLagPeriod(41545) and LegPaymentScheduleFixingLagUnit(41546)) and the First Observation Offset Duration (LegPaymentScheduleFixingFirstObservationOffsetPeriod(41547) and LegPaymentScheduleFixingFirstObservationOffsetUnit(41548)) are used together. If the First Observation Offset Duration is specified, the observation starts the Fixing Lag Interval prior to each calculation. If the First Observation Offset Duration is not specified, the observation starts immediately preceding each calculation.</Elaboration>
    </Component>
    <Component added="FIX.5.0SP2" addedEP="161">
       <ComponentID>4044</ComponentID>
@@ -2304,7 +2304,7 @@ The LegEventMonthYear(2341) may be used instead of LegEventDate(2061) when month
       <NotReqXML>0</NotReqXML>
       <Description>LegPaymentStreamFixedRate is a subcomponent of the LegPaymentStream component used to report the fixed rate or fixed payment amount of the payment stream.</Description>
    </Component>
-   <Component added="FIX.5.0SP2" addedEP="161" updated="FIX.5.0SP2" updatedEP="169">
+   <Component added="FIX.5.0SP2" addedEP="161" updated="FIX.Latest" updatedEP="271">
       <ComponentID>4039</ComponentID>
       <ComponentType>Block</ComponentType>
       <CategoryID>Common</CategoryID>
@@ -2313,8 +2313,7 @@ The LegEventMonthYear(2341) may be used instead of LegEventDate(2061) when month
       <NotReqXML>0</NotReqXML>
       <Description>LegPaymentStreamFloatingRate is a subcomponent of the LegPaymentStream component used to report the floating rate attributes of the payment stream.</Description>
       <Elaboration>Note that if the floating rate index or the rate calculation goes negative for a calculation period and LegPaymentStreamNegativeRateTreatment(40349)=1 (Negative interest rate method) the Receiver pays the Payer the absolute floating rate, i.e. the Receiver pays the cash flow amount to the Payer.
-
-The Calculation Lag Interval (LegPaymentStreamCalculationLagPeriod(41578) and LegPaymentStreamCalculationLagUnit(41579)) and the First Observation Offset Duration (LegPaymentStreamFirstObservationOffsetPeriod(41580) and LegPaymentStreamFirstObservationOffsetUnit(41581)) are used together.  If the First Observation Offset Duration is specified, the observation starts the Fixing Lag Interval prior to each calculation.  If the First Observation Offset Duration is not specified, the observation starts immediately preceeding each calculation.</Elaboration>
+The Calculation Lag Interval (LegPaymentStreamCalculationLagPeriod(41578) and LegPaymentStreamCalculationLagUnit(41579)) and the First Observation Offset Duration (LegPaymentStreamFirstObservationOffsetPeriod(41580) and LegPaymentStreamFirstObservationOffsetUnit(41581)) are used together. If the First Observation Offset Duration is specified, the observation starts the Fixing Lag Interval prior to each calculation. If the First Observation Offset Duration is not specified, the observation starts immediately preceding each calculation.</Elaboration>
    </Component>
    <Component added="FIX.5.0SP2" addedEP="161" updated="FIX.5.0SP2" updatedEP="253">
       <ComponentID>4041</ComponentID>
@@ -2524,7 +2523,7 @@ LegStreamPaySide(40244) and LegStreamReceiveSide(40245) link the appropriate swa
       <Elaboration>This component is positioned outside the Instrument component as it is used to specify payments based on the price and terms of the contract, e.g. upfront fee, premium amount, security lending fee and contract-based rebates.
 When PaymentFrequencyUnit(43103) and PaymentFrequencyPeriod(43102) are specified the payments are deemed to be periodic for the specified PaymentType(40213).</Elaboration>
    </Component>
-   <Component added="FIX.5.0SP2" addedEP="161" updated="FIX.5.0SP2" updatedEP="169">
+   <Component added="FIX.5.0SP2" addedEP="161" updated="FIX.Latest" updatedEP="271">
       <ComponentID>4077</ComponentID>
       <ComponentType>BlockRepeating</ComponentType>
       <CategoryID>Common</CategoryID>
@@ -2532,7 +2531,7 @@ When PaymentFrequencyUnit(43103) and PaymentFrequencyPeriod(43102) are specified
       <AbbrName>PmtSched</AbbrName>
       <NotReqXML>0</NotReqXML>
       <Description>The PaymentScheduleGrp is a repeating subcomponent of the StreamGrp component used to specify notional and rate steps of the payment stream.</Description>
-      <Elaboration>The Fixing Lag Interval (PaymentScheduleFixingLagPeriod(41176) and PaymentScheduleFixingLagUnit(41177)) and the First Observation Offset Duration (PaymentScheduleFixingFirstObservationOffsetPeriod(41178) and PaymentScheduleFixingFirstObservationOffsetUnit(41179)) are used together.  If the First Observation Offset Duration is specified, the observation starts the Fixing Lag Interval prior to each calculation.  If the First Observation Offset Duration is not specified, the observation starts immediately preceeding each calculation.</Elaboration>
+      <Elaboration>The Fixing Lag Interval (PaymentScheduleFixingLagPeriod(41176) and PaymentScheduleFixingLagUnit(41177)) and the First Observation Offset Duration (PaymentScheduleFixingFirstObservationOffsetPeriod(41178) and PaymentScheduleFixingFirstObservationOffsetUnit(41179)) are used together. If the First Observation Offset Duration is specified, the observation starts the Fixing Lag Interval prior to each calculation. If the First Observation Offset Duration is not specified, the observation starts immediately preceding each calculation.</Elaboration>
    </Component>
    <Component added="FIX.5.0SP2" addedEP="161">
       <ComponentID>4078</ComponentID>
@@ -2589,7 +2588,7 @@ When PaymentFrequencyUnit(43103) and PaymentFrequencyPeriod(43102) are specified
       <NotReqXML>0</NotReqXML>
       <Description>PaymentStreamFixedRate is a subcomponent of the PaymentStream component used to report the fixed rate or fixed payment amount of the stream.</Description>
    </Component>
-   <Component added="FIX.5.0SP2" addedEP="161" updated="FIX.5.0SP2" updatedEP="169">
+   <Component added="FIX.5.0SP2" addedEP="161" updated="FIX.Latest" updatedEP="271">
       <ComponentID>4074</ComponentID>
       <ComponentType>Block</ComponentType>
       <CategoryID>Common</CategoryID>
@@ -2598,8 +2597,8 @@ When PaymentFrequencyUnit(43103) and PaymentFrequencyPeriod(43102) are specified
       <NotReqXML>0</NotReqXML>
       <Description>PaymentStreamFloatingRate is a subcomponent of the PaymentStream component used to report the floating rate attributes of the stream.</Description>
       <Elaboration>Note that if the floating rate index or the rate calculation goes negative for a calculation period and PaymentStreamNegativeRateTreatment(40807)=1 (Negative interest rate method) the Receiver pays the Payer the absolute floating rate, i.e. the Receiver pays the cash flow amount to the Payer.
-
-The Calculation Lag Interval (PaymentStreamCalculationLagPeriod(41209) and PaymentStreamCalculationLagUnit(41210)) and the First Observation Offset Duration (PaymentStreamFirstObservationOffsetPeriod(41211) and PaymentStreamFirstObservationOffsetUnit(41212)) are used together.  If the First Observation Offset Duration is specified, the observation starts the Fixing Lag Interval prior to each calculation.  If the First Observation Offset Duration is not specified, the observation starts immediately preceeding each calculation.</Elaboration>
+The Calculation Lag Interval (PaymentStreamCalculationLagPeriod(41209) and PaymentStreamCalculationLagUnit(41210)) and the First Observation Offset Duration (PaymentStreamFirstObservationOffsetPeriod(41211) and PaymentStreamFirstObservationOffsetUnit(41212)) are used together. If the First Observation Offset Duration is specified, the observation starts the Fixing Lag Interval prior to each calculation. If the First Observation Offset Duration is not specified, the observation starts immediately preceding each calculation.
+</Elaboration>
    </Component>
    <Component added="FIX.5.0SP2" addedEP="161" updated="FIX.5.0SP2" updatedEP="253">
       <ComponentID>4076</ComponentID>
@@ -2913,7 +2912,7 @@ The UnderlyingEventDate(1983), and optional UnderlyingEventTime(1984), may be us
 Either UnderlyingEventDate(1983) or UnderlyingEventMonthYear(2342), and the optional UnderlyingEventTime(1984), must be specified or UnderlyingEventTimeUnit(1985) and UnderlyingEventTimePeriod(1986) must be specified.
 The UnderlyingEventMonthYear(2342) may be used instead of UnderlyingEventDate(1983) when month-year, with optional day of month or week of month, is required instead of a date.</Elaboration>
    </Component>
-   <Component added="FIX.5.0SP2" addedEP="161" updated="FIX.5.0SP2" updatedEP="169">
+   <Component added="FIX.5.0SP2" addedEP="161" updated="FIX.Latest" updatedEP="271">
       <ComponentID>4067</ComponentID>
       <ComponentType>BlockRepeating</ComponentType>
       <CategoryID>Common</CategoryID>
@@ -2921,7 +2920,7 @@ The UnderlyingEventMonthYear(2342) may be used instead of UnderlyingEventDate(19
       <AbbrName>PmtSched</AbbrName>
       <NotReqXML>0</NotReqXML>
       <Description>The UnderlyingPaymentScheduleGrp is a repeating subcomponent of the UnderlyingPaymentStream component used to specify notional and rate steps in the payment stream.</Description>
-      <Elaboration>The Fixing Lag Interval (UnderlyingPaymentScheduleFixingLagPeriod(41893) and UnderlyingPaymentScheduleFixingLagUnit(41894)) and the First Observation Offset Duration (UnderlyingPaymentScheduleFixingFirstObservationOffsetPeriod(41895) and UnderlyingPaymentScheduleFixingFirstObservationOffsetUnit(41896)) are used together.  If the First Observation Offset Duration is specified, the observation starts the Fixing Lag Interval prior to each calculation.  If the First Observation Offset Duration is not specified, the observation starts immediately preceeding each calculation. </Elaboration>
+      <Elaboration>The Fixing Lag Interval (UnderlyingPaymentScheduleFixingLagPeriod(41893) and UnderlyingPaymentScheduleFixingLagUnit(41894)) and the First Observation Offset Duration (UnderlyingPaymentScheduleFixingFirstObservationOffsetPeriod(41895) and UnderlyingPaymentScheduleFixingFirstObservationOffsetUnit(41896)) are used together. If the First Observation Offset Duration is specified, the observation starts the Fixing Lag Interval prior to each calculation. If the First Observation Offset Duration is not specified, the observation starts immediately preceding each calculation.</Elaboration>
    </Component>
    <Component added="FIX.5.0SP2" addedEP="161">
       <ComponentID>4068</ComponentID>
@@ -2950,7 +2949,7 @@ The UnderlyingEventMonthYear(2342) may be used instead of UnderlyingEventDate(19
       <NotReqXML>0</NotReqXML>
       <Description>UnderlyingPaymentStreamFixedRate is a subcomponent of the UnderlyingPaymentStream component used to report the fixed rate or fixed payment amount of the stream.</Description>
    </Component>
-   <Component added="FIX.5.0SP2" addedEP="161" updated="FIX.5.0SP2" updatedEP="169">
+   <Component added="FIX.5.0SP2" addedEP="161" updated="FIX.Latest" updatedEP="271">
       <ComponentID>4063</ComponentID>
       <ComponentType>Block</ComponentType>
       <CategoryID>Common</CategoryID>
@@ -2959,8 +2958,7 @@ The UnderlyingEventMonthYear(2342) may be used instead of UnderlyingEventDate(19
       <NotReqXML>0</NotReqXML>
       <Description>UnderlyingPaymentStreamFloatingRate is a subcomponent of the UnderlyingPaymentStream component used to report the floating rate attributes of the stream.</Description>
       <Elaboration>Note that if the floating rate index or the rate calculation goes negative for a calculation period and UnderlyingPaymentStreamNegativeRateTreatment(40638)=1 (Negative interest rate method) the Receiver pays the Payer the absolute floating rate, i.e. the Receiver pays the cash flow amount to the Payer.
-
-The Calculation Lag Interval (UnderlyingPaymentStreamCalculationLagPeriod(41926) and UnderlyingPaymentStreamCalculationLagUnit(41927)) and the First Observation Offset Duration (UnderlyingPaymentStreamFirstObservationOffsetPeriod(41928) and UnderlyingPaymentStreamFirstObservationOffsetUnit(41929)) are used together.  If the First Observation Offset Duration is specified, the observation starts the Fixing Lag Interval prior to each calculation.  If the First Observation Offset Duration is not specified, the observation starts immediately preceeding each calculation.</Elaboration>
+The Calculation Lag Interval (UnderlyingPaymentStreamCalculationLagPeriod(41926) and UnderlyingPaymentStreamCalculationLagUnit(41927)) and the First Observation Offset Duration (UnderlyingPaymentStreamFirstObservationOffsetPeriod(41928) and UnderlyingPaymentStreamFirstObservationOffsetUnit(41929)) are used together. If the First Observation Offset Duration is specified, the observation starts the Fixing Lag Interval prior to each calculation. If the First Observation Offset Duration is not specified, the observation starts immediately preceding each calculation.</Elaboration>
    </Component>
    <Component added="FIX.5.0SP2" addedEP="161" updated="FIX.5.0SP2" updatedEP="253">
       <ComponentID>4065</ComponentID>
@@ -3416,14 +3414,14 @@ UnderlyingStreamPaySide(40543) and UnderlyingStreamReceiveSide(40544) link the a
       <NotReqXML>0</NotReqXML>
       <Description>StreamFirstPeriodStartDateBusinessCenterGrp is a repeating subcomponent within the StreamCalculationPeriodDates component. It is used to specify the set of business centers whose calendars drive the date adjustment. Used only to override the business centers defined in the DateAdjustment component in Instrument.</Description>
    </Component>
-   <Component added="FIX.5.0SP2" addedEP="161">
+   <Component added="FIX.5.0SP2" addedEP="161" updated="FIX.Latest" updatedEP="271">
       <ComponentID>4122</ComponentID>
       <ComponentType>BlockRepeating</ComponentType>
       <CategoryID>Common</CategoryID>
-      <Name>StreamEffectiveBusinessCenterGrp</Name>
+      <Name>StreamEffectiveDateBusinessCenterGrp</Name>
       <AbbrName>BizCtr</AbbrName>
       <NotReqXML>0</NotReqXML>
-      <Description>StreamEffectiveBusinessCenterGrp is a repeating subcomponent of the StreamEffectiveDate component used to specify the set of business centers whose calendars drive date adjustment. Used only to override the business centers defined in the DateAdjustment component in Instrument.</Description>
+      <Description>StreamEffectiveDateBusinessCenterGrp is a repeating subcomponent of the StreamEffectiveDate component used to specify the set of business centers whose calendars drive date adjustment. Used only to override the business centers defined in the DateAdjustment component in Instrument.</Description>
    </Component>
    <Component added="FIX.5.0SP2" addedEP="161">
       <ComponentID>4123</ComponentID>
