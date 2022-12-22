@@ -4,8 +4,8 @@
         edition="2010"
         version="FIX.Latest"
         xsi:noNamespaceSchemaLocation="../../schema/Fields.xsd"
-        generated="2022-12-21T10:51:33.076Z"
-        latestEP="275">
+        generated="2022-12-21T10:57:02.991Z"
+        latestEP="276">
    <Field added="FIX.2.7">
 		    <Tag>1</Tag>
 		    <Name>Account</Name>
@@ -50907,5 +50907,14 @@ Conditionally required when one or both symbols in UnderlyingSymbol(311) represe
       <AbbrName>AnonymsTrdInd</AbbrName>
       <NotReqXML>0</NotReqXML>
       <Description>Indicates whether the trade or transaction was executed anonymously. </Description>
+   </Field>
+   <Field added="FIX.Latest" addedEP="276">
+      <Tag>2962</Tag>
+      <Name>SecurityReferenceDataSupplement</Name>
+      <Type>String</Type>
+      <AbbrName>SecRefDataSupplmnt</AbbrName>
+      <NotReqXML>0</NotReqXML>
+      <Description>May be  used to generically assist in disambiguating an instrument where the security identifier and core reference data attributes are not sufficient to uniquely identify the instrument. The values used are bilaterally agreed.</Description>
+      <Elaboration>The data used for disambiguation can be of synthetic nature (e.g. 1, 2, 3,... or A, B, C,...) or based on other characteristic of the instrument. An example of the latter is an energy futures or options contract which may have the same expiration date with different delivery dates that fall on a non-business day; in such a use case the first day of delivery date may be used to disambiguate such contract (date expression used should be bilaterally agreed).</Elaboration>
    </Field>
 </Fields>

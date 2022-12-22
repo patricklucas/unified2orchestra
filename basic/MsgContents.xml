@@ -4,8 +4,8 @@
              edition="2010"
              version="FIX.Latest"
              xsi:noNamespaceSchemaLocation="../../schema/MsgContents.xsd"
-             generated="2022-12-21T10:51:33.076Z"
-             latestEP="275">
+             generated="2022-12-21T10:57:02.991Z"
+             latestEP="276">
    <MsgContent added="FIX.2.7">
 		    <ComponentID>1</ComponentID>
 		    <TagText>StandardHeader</TagText>
@@ -88753,6 +88753,13 @@ If specified, ExecID(17) is required.
       <TagText>RegulatoryTradeIDGrp</TagText>
       <Indent>0</Indent>
       <Position>5.3</Position>
+      <Reqd>0</Reqd>
+   </MsgContent>
+   <MsgContent added="FIX.Latest" addedEP="276">
+      <ComponentID>1003</ComponentID>
+      <TagText>2962</TagText>
+      <Indent>0</Indent>
+      <Position>50.8</Position>
       <Reqd>0</Reqd>
    </MsgContent>
 </MsgContents>
