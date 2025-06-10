@@ -2,7 +2,7 @@
 <fixRepository xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
                copyright="Copyright (c) FIX Protocol Ltd. All Rights Reserved."
                xsi:noNamespaceSchemaLocation="FixRepository.xsd"
-               generated="2025-06-10T08:27:13Z"
+               generated="2025-06-10T09:10:18Z"
                edition="2010">
    <fix version="FIX.Latest_EP299" fixml="1" components="1" specUrl="">
       <abbreviations>
@@ -5247,10 +5247,6 @@ Using decimal seconds:
                 updatedEP="174"
                 abbrName="Typ"
                 notReqXML="0">
-            <enum value="f" symbolicName="CorporateActionReferencePrice" added="FIX.Latest"
-                  addedEP="299"
-                  textId="ENUM_269_f"
-                  elaborationTextId="ENUM_ELAB_269_f"/>
             <enum value="0" symbolicName="Bid" group="" sort="1" added="FIX.4.2"
                   textId="ENUM_269_0"/>
             <enum value="1" symbolicName="Offer" group="" sort="2" added="FIX.4.2"
@@ -5439,6 +5435,11 @@ Using decimal seconds:
             <enum value="e" symbolicName="PreviousClosingPrice" sort="40" added="FIX.5.0SP2"
                   addedEP="190"
                   textId="ENUM_269_e"/>
+            <enum value="f" symbolicName="CorporateActionReferencePrice" sort="41"
+                  added="FIX.Latest"
+                  addedEP="299"
+                  textId="ENUM_269_f"
+                  elaborationTextId="ENUM_ELAB_269_f"/>
             <enum value="g" symbolicName="ThresholdLimitPriceBanding" sort="42"
                   added="FIX.Latest"
                   addedEP="267"
