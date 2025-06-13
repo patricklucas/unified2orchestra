@@ -3,7 +3,7 @@
          xsi:noNamespaceSchemaLocation="FixPhrases.xsd"
          version="FIX.Latest_EP299"
          langId="en"
-         generated="2025-06-10T09:10:18Z">
+         generated="2025-06-13T08:53:14Z">
    <phrase textId="AT_Acct">
       <text>
          <para>Account</para>
@@ -53963,16 +53963,13 @@
       <text purpose="SYNOPSIS">
          <para>Undefined/unspecified - (default when not specified)</para>
       </text>
-      <text purpose="ELABORATION">
-         <para>In the context of Market Model Typology (MMT), this value represents an off book non-automated transaction type.</para>
-      </text>
    </phrase>
    <phrase textId="ENUM_2405_1">
       <text purpose="SYNOPSIS">
          <para>Manual</para>
       </text>
       <text purpose="ELABORATION">
-         <para>The transaction was executed in a manual or other non-automated manner, e.g. by voice directly between the counterparties. Also used to identify MTT code M "Off Book Non-Automated".</para>
+         <para>The transaction was executed in a manual or other non-automated manner, e.g. by voice directly between the counterparties. In the context of Market Model Typology (MMT), this value represents an off book non-automated transaction type.</para>
       </text>
    </phrase>
    <phrase textId="ENUM_2405_2">

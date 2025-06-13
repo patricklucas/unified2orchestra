@@ -2,7 +2,7 @@
 <fixRepository xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
                copyright="Copyright (c) FIX Protocol Ltd. All Rights Reserved."
                xsi:noNamespaceSchemaLocation="FixRepository.xsd"
-               generated="2025-06-10T09:10:18Z"
+               generated="2025-06-13T08:53:14Z"
                edition="2010">
    <fix version="FIX.Latest_EP299" fixml="1" components="1" specUrl="">
       <abbreviations>
@@ -42081,12 +42081,11 @@ Using decimal seconds:
                 notReqXML="0">
             <enum value="0" symbolicName="Unspecified" sort="0" added="FIX.5.0SP2" addedEP="186"
                   updated="FIX.Latest"
-                  updatedEP="282"
-                  textId="ENUM_2405_0"
-                  elaborationTextId="ENUM_ELAB_2405_0"/>
+                  updatedEP="299"
+                  textId="ENUM_2405_0"/>
             <enum value="1" symbolicName="Manual" sort="1" added="FIX.5.0SP2" addedEP="186"
-                  updated="FIX.5.0SP2"
-                  updatedEP="201"
+                  updated="FIX.Latest"
+                  updatedEP="299"
                   textId="ENUM_2405_1"
                   elaborationTextId="ENUM_ELAB_2405_1"/>
             <enum value="2" symbolicName="Automated" sort="2" added="FIX.5.0SP2" addedEP="186"
