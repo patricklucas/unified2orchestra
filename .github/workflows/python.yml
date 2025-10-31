@@ -10,22 +10,23 @@ jobs:
     steps:
     - uses: actions/checkout@v3
     - name: Install dependencies
-      uses: actions/setup-python@v3
+      uses: actions/setup-python@v5
       with:
         python-version: '3.9'
         cache: 'pip'
-    - run: pip install -r requirements.txt
+    - name: Install orchestratransposer
+      run: pip install .
     - name: Run unified2orchestra
-      run: python3 orchestratransposer.py unified/FixRepository.xml unified/FixPhrases_en.xml -f unif -t orch -o orchestra-p.xml
+      run: python3 -m orchestratransposer unified/FixRepository.xml unified/FixPhrases_en.xml -f unif -t orch -o orchestra-p.xml
     - name: Run orchestra2unified
-      run: python3 orchestratransposer.py orchestra-p.xml -f orch -t unif -o FixRepository-p.xml FixPhrases_en-p.xml
+      run: python3 -m orchestratransposer orchestra-p.xml -f orch -t unif -o FixRepository-p.xml FixPhrases_en-p.xml
     - name: Upload a Build Artifact
-      uses: actions/upload-artifact@v2
+      uses: actions/upload-artifact@v4
       with:
         name: orchestra-python
         path: "*-p.xml"
     - name: Upload Process Log
-      uses: actions/upload-artifact@v2
+      uses: actions/upload-artifact@v4
       with:
         name: log-python
         path: orchestra.log
