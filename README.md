@@ -51,7 +51,7 @@ See `https://github.com/FIXTradingCommunity/unified2orchestra/actions` to retrie
 
 ### Python build
 
-The Python script orchestratransposer.py is invoked to transform Unified Repository to Orchestra v1.0. The script was copied from the orchestra-transposer project in GitHub, which should be considered the golden copy. See that repository for documentation.
+The Python tool orchestratransposer is invoked to transform Unified Repository to Orchestra v1.0. The tool lives in the orchestra-transposer GitHub repo, and installed directly from there in CI.
 
 The Python script validates that the files conform to their respective XML schemas.
 
@@ -64,7 +64,7 @@ The GitHub workflow provides arguments to the orchestra-transposer script. The U
 The file to edit is called `.github\workflows\python.yml`. This is the line to edit:
 
 ```
-run: python3 orchestratransposer.py unified/FixRepository.xml unified/FIX.Latest_EP272_en_phrases.xml -f unif -t orch -o orchestra-p.xml
+run: python3 -m orchestratransposer unified/FixRepository.xml unified/FIX.Latest_EP272_en_phrases.xml -f unif -t orch -o orchestra-p.xml
 ```
 
 ### Build failure

@@ -15,7 +15,7 @@ jobs:
         python-version: '3.9'
         cache: 'pip'
     - name: Install orchestratransposer
-      run: pip install .
+      run: pip install -r requirements.txt
     - name: Run unified2orchestra
       run: python3 -m orchestratransposer unified/FixRepository.xml unified/FixPhrases_en.xml -f unif -t orch -o orchestra-p.xml
     - name: Run orchestra2unified
